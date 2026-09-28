@@ -1,4 +1,4 @@
-# A1_replica, executado em 2026-09-28 19:50:08
+# A1_replica, executado em 2026-09-28 21:41:06
 R version 4.6.1 (2026-06-24)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 24.04.4 LTS

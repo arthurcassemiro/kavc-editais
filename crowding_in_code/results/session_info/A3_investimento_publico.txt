@@ -1,4 +1,4 @@
-# A3_investimento_publico, executado em 2026-09-28 20:08:43
+# A3_investimento_publico, executado em 2026-09-28 21:22:18
 R version 4.6.1 (2026-06-24)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 24.04.4 LTS

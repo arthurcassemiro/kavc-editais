@@ -1,11 +1,11 @@
 # A3: classificacao das series de investimento publico
 
-Gerado por R/A3_investimento_publico.R em 2026-09-28 20:08.
+Gerado por R/A3_investimento_publico.R em 2026-09-28 21:22.
 
 ## Uniao: funcoes (Portaria MOG 42/1999)
 
 Economica: 24, 25, 26. Social: 08, 10, 12, 15, 16, 17, 27. Outras: demais funcoes. Valores: GND 4, somas nominais 2003-2025
-do dashboard trimestral (direta = grupo 0, modalidades 90 e 91; transferencia = grupo 1, demais exceto 67 e 99).
+do dashboard trimestral (direta = grupo 0, modalidades 90 e 91; transferencia = grupos 1 e 2, todas as demais modalidades).
 
 | funcao | nome | tipo | direta R$ bi | transf. R$ bi |
 |---|---|---|---|---|
@@ -14,12 +14,12 @@ do dashboard trimestral (direta = grupo 0, modalidades 90 e 91; transferencia = 
 | 02 | JUDICIARIA | outras | 21,0 | 0,0 |
 | 03 | ESSENCIAL A JUSTICA | outras | 3,7 | 0,0 |
 | 04 | ADMINISTRACAO | outras | 12,1 | 1,4 |
-| 05 | DEFESA NACIONAL | outras | 140,4 | 1,6 |
+| 05 | DEFESA NACIONAL | outras | 140,4 | 6,1 |
 | 06 | SEGURANCA PUBLICA | outras | 13,4 | 18,8 |
 | 07 | RELACOES EXTERIORES | outras | 0,9 | 0,0 |
 | 08 | ASSISTENCIA SOCIAL | social | 0,7 | 7,2 |
 | 09 | PREVIDENCIA SOCIAL | outras | 1,7 | 0,0 |
-| 10 | SAUDE | social | 19,6 | 59,4 |
+| 10 | SAUDE | social | 19,6 | 59,5 |
 | 11 | TRABALHO | outras | 0,4 | 0,4 |
 | 12 | EDUCACAO | social | 48,5 | 49,0 |
 | 13 | CULTURA | outras | 1,2 | 2,0 |
@@ -28,26 +28,28 @@ do dashboard trimestral (direta = grupo 0, modalidades 90 e 91; transferencia = 
 | 16 | HABITACAO | social | 0,0 | 4,2 |
 | 17 | SANEAMENTO | social | 0,7 | 20,7 |
 | 18 | GESTAO AMBIENTAL | outras | 24,8 | 16,6 |
-| 19 | CIENCIA E TECNOLOGIA | outras | 7,7 | 10,9 |
+| 19 | CIENCIA E TECNOLOGIA | outras | 7,7 | 11,0 |
 | 20 | AGRICULTURA | outras | 9,5 | 16,5 |
 | 21 | ORGANIZACAO AGRARIA | outras | 7,4 | 4,5 |
-| 22 | INDUSTRIA | outras | 1,0 | 0,7 |
+| 22 | INDUSTRIA | outras | 1,0 | 0,9 |
 | 23 | COMERCIO E SERVICOS | outras | 0,5 | 11,6 |
 | 24 | COMUNICACOES | economica | 1,4 | 0,1 |
 | 25 | ENERGIA | economica | 0,8 | 0,1 |
-| 26 | TRANSPORTE | economica | 189,0 | 12,2 |
+| 26 | TRANSPORTE | economica | 189,0 | 16,4 |
 | 27 | DESPORTO E LAZER | social | 1,4 | 9,0 |
 | 28 | ENCARGOS ESPECIAIS | outras | 2,7 | 24,2 |
 | 99 | RESERVA DE CONTINGENCIA | outras | 0,0 | 0,0 |
 
 ## Uniao: modalidades
 
-- aplicacao direta (grupo 0): 90 e 91;
-- transferencia (grupo 1): todas as demais exceto 67 e 99; destino estados e municipios = 30, 31, 32, 40, 41, 42, 71, 72;
-  entidades privadas = 50 e 60; exterior = 80; outras = demais (na base, 70);
-- outra (grupo 2): 67 e 99.
+- aplicacao direta (grupo 0 do dashboard): 90 e 91;
+- transferencia (grupos 1 e 2 do dashboard): todas as demais. O grupo 2 do dashboard trimestral nao e 67 e 99 (que nao
+  aparecem na base anual): em 2012-2025 ele e exatamente a execucao orcamentaria delegada a estados (32) e a municipios (42);
+  as series _g1 excluem esse grupo;
+- destino das transferencias: estados e municipios = 30, 31, 32, 40, 41, 42, 71, 72; entidades privadas = 50 e 60;
+  exterior = 80; outras = demais (na base, so a 70, instituicoes multigovernamentais).
 
-Destino das transferencias (grupo 1), base anual, 2003-2025:
+Destino das transferencias, base anual, 2003-2025 (somas nominais):
 
 | tipo | destino | R$ bi nominais | participacao |
 |---|---|---|---|
@@ -59,7 +61,41 @@ Destino das transferencias (grupo 1), base anual, 2003-2025:
 | social | exterior | 0,3 | 0,1% |
 | social | outras | 0,2 | 0,1% |
 
-## Estatais: segmentos da OI (classificacao aprovada pelo autor em 2026-09-28)
+## Uniao: composicao por elemento da aplicacao direta
+
+As series por funcao vem do dashboard trimestral, sem elemento: sao GND 4 com todos os elementos, nao o filtro da dissertacao. Parcela do filtro da dissertacao (modalidade 90 e 6 elementos) e do elemento 39 (OUTROS SERVIÇOS DE TERCEIROS - PESSOA JURÍDICA) na aplicacao direta (90 e 91), base anual do painel fed_B, nominal. Candidata a quebra de composicao para a A4: 2011-2016 (economica: filtro 93,7% em 2010, 76,0% em 2011, 41,3% em 2016).
+
+| ano | economica filtro | economica el. 39 | social filtro | social el. 39 | outras filtro | outras el. 39 | total filtro | total el. 39 |
+|---|---|---|---|---|---|---|---|---|
+| 2003 | 99,6% | 0,0% | 99,8% | 0,0% | 75,1% | 12,5% | 85,2% | 7,3% |
+| 2004 | 97,3% | 0,5% | 99,0% | 0,8% | 83,4% | 6,2% | 90,4% | 3,5% |
+| 2005 | 94,8% | 0,5% | 99,2% | 0,1% | 86,4% | 5,3% | 91,0% | 2,9% |
+| 2006 | 94,3% | 0,7% | 98,0% | 0,3% | 77,2% | 8,8% | 87,4% | 4,2% |
+| 2007 | 93,4% | 1,3% | 98,6% | 0,3% | 79,5% | 11,3% | 88,7% | 5,1% |
+| 2008 | 92,5% | 2,0% | 96,6% | 1,7% | 74,4% | 15,4% | 84,8% | 8,1% |
+| 2009 | 93,9% | 1,4% | 97,0% | 2,1% | 80,9% | 12,0% | 88,7% | 6,1% |
+| 2010 | 93,7% | 2,8% | 97,1% | 2,2% | 75,9% | 16,1% | 86,7% | 8,3% |
+| 2011 | 76,0% | 21,1% | 96,5% | 3,0% | 71,7% | 18,4% | 77,6% | 17,0% |
+| 2012 | 72,0% | 25,1% | 96,3% | 2,7% | 70,5% | 22,4% | 75,7% | 19,7% |
+| 2013 | 60,4% | 37,2% | 96,0% | 2,9% | 71,5% | 21,6% | 72,1% | 23,5% |
+| 2014 | 53,4% | 42,6% | 94,6% | 3,7% | 78,9% | 15,4% | 73,5% | 21,9% |
+| 2015 | 46,4% | 42,2% | 94,7% | 4,9% | 72,3% | 19,6% | 68,3% | 24,0% |
+| 2016 | 41,3% | 53,9% | 88,6% | 9,9% | 67,1% | 25,4% | 61,0% | 33,4% |
+| 2017 | 60,1% | 36,0% | 90,4% | 8,7% | 60,9% | 28,0% | 64,7% | 28,2% |
+| 2018 | 65,6% | 29,7% | 91,5% | 6,4% | 69,7% | 20,9% | 71,4% | 21,9% |
+| 2019 | 64,5% | 30,0% | 94,3% | 2,3% | 71,0% | 20,6% | 72,5% | 20,7% |
+| 2020 | 66,2% | 29,5% | 91,9% | 4,1% | 73,3% | 16,7% | 74,3% | 18,6% |
+| 2021 | 61,1% | 34,8% | 90,5% | 5,8% | 66,6% | 16,6% | 69,3% | 20,3% |
+| 2022 | 61,0% | 35,0% | 90,0% | 6,5% | 74,2% | 14,4% | 73,6% | 18,7% |
+| 2023 | 55,6% | 42,4% | 90,9% | 6,5% | 71,7% | 12,7% | 68,0% | 24,1% |
+| 2024 | 45,3% | 52,9% | 86,2% | 10,1% | 77,0% | 12,0% | 65,4% | 28,4% |
+| 2025 | 47,4% | 51,1% | 83,1% | 11,6% | 70,7% | 18,2% | 64,0% | 29,5% |
+
+Em 2003-2025: economica filtro 65,1%, elemento 39 31,0%; outras filtro 72,7%, elemento 39 17,6%; social filtro 92,7%, elemento 39 5,2%; total filtro 73,2%, elemento 39 20,4%. Tabela em results/A3_composicao_elementos_direta.csv.
+
+## Estatais: segmentos da OI
+
+Classificacao aprovada pelo autor em 2026-09-28, conforme o registro do coordenador em results/log_parts/A0_ambiente.md (incluido no commit 862af3f), que lista as tres classes: petroleo = Oil, gas & derivatives; economica = Electricity, Transport, Port administration, Airport administration; outras = Financial, Commerce & services, Industry, Research, development & planning, Food supply. O registro nao diz o meio da aprovacao; o briefing cobre so petroleo e economica.
 
 | segmento | classe | R$ bi nominais 2016-2025 | grupo Petrobras R$ bi | trimestres |
 |---|---|---|---|---|
@@ -76,38 +112,75 @@ Destino das transferencias (grupo 1), base anual, 2003-2025:
 
 Antes de 2016 (boletim) nao ha abertura por segmento: so o total Brasil.
 
+Series so da OI: nivel da OI sem encadeamento (multiplicar por 0,9303 para comparar com estatais_total). X-11 com os AO de estatais_total de 2016 em diante fixos (AO2018.3, AO2020.3, AO2021.2), sem deteccao automatica. Sensibilidade em results/A3_sensibilidade_outliers_oi.csv.
+
+## Itens para aprovacao do autor antes da A5
+
+1. Transferencia = grupos 1 e 2 do dashboard (inclui a execucao delegada 32 e 42, a partir de 2012) contra so o grupo 1 (leitura literal do briefing; variantes _g1). A definicao do briefing foi alterada e isso vai para o LOG consolidado. Ate a confirmacao, a A5 estima obrigatoriamente os dois membros de cada par (coluna par_a5 dos metadados) e reporta a diferenca. As series de transferencia incluem ainda as modalidades 50 e 60 (entidades privadas), 70 (instituicoes multigovernamentais) e 80 (exterior) (4,9% na social, 1,5% na economica), que o dashboard trimestral nao separa.
+2. Outliers das series so da OI: AO do total de 2016 em diante (AO2018.3, AO2020.3, AO2021.2), conferidos no total da OI, no baseline; variantes na tabela de sensibilidade (so AO com |z| > 2 na propria serie; AO e LS; sem outliers: estatais_petro_semout, estatais_sempetro_semout).
+3. inf_diss real por ajuste indireto (decisao do coordenador em results/log_parts/A0_ambiente.md); inf_diss_x11soma como variante.
+4. Encadeamento boletim/OI pela razao media 2016-2019 (0,9303); variante e2020_r1618 (razao 2016-2018, 0,8948) para isolar 2019.
+5. Series por funcao sao GND 4 completo; quebra de composicao 2011-2016 a testar na A4.
+6. Queda de Electricity fora do grupo Petrobras a partir de 2022T3 (saida da Eletrobras?), a confirmar.
+7. Regra de aptidao para as LP: fora toda serie com Q do X-11 > 1, erro de arredondamento > 2% ou sem log10. Saem do conjunto base: uniao_transf_econ e estatais_outras.
+8. As series ajustadas mantem AO e LS do regARIMA. Dummies em data/processed/A3_dummies_outliers.csv; variante sem o efeito dos AO em data/processed/A3_choques_semao_wide.csv.
+
 ## Series de choque
 
-| serie | definicao | inicio | fim | base_indice |
+Principais (conjunto base, aptas para as LP; log10 do indice em data/processed/A3_choques_wide.csv):
+
+| serie | definicao | inicio | fim | base_indice | unidade_nivel | q_x11 | observacao |
+|---|---|---|---|---|---|---|---|
+| uniao_econ_dir | Uniao, funcoes economicas (24, 25, 26), aplicacao direta (grupo 0: modalidades 90 e 91), GND 4, todos os elementos | 2003Q1 | 2025Q4 | media 2003 = 100 | R$ bi de 2025 (IPCA medio do trimestre) | 0.52 | GND 4 com todos os elementos (o dashboard trimestral nao tem elemento), nao o filtro da dissertacao. Parcela do filtro da dissertacao na direta (economica): 2003 99,6%, 2010 93,7%, 2016 41,3%, 2025 47,4%; elemento 39 (servicos de terceiros PJ) 31,0% da direta em 2003-2025. Candidata a quebra de composicao 2011-2016 (A4). A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2005.1 AO2016.1 AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2005T1 ao2016T1 ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| uniao_econ_dt | Uniao, funcoes economicas, direta + transferencias (grupos 0, 1 e 2: todas as modalidades), GND 4, todos os elementos | 2003Q1 | 2025Q4 | media 2003 = 100 | R$ bi de 2025 (IPCA medio do trimestre) | 0.38 | GND 4 com todos os elementos (o dashboard trimestral nao tem elemento), nao o filtro da dissertacao. Parcela do filtro da dissertacao na direta (economica): 2003 99,6%, 2010 93,7%, 2016 41,3%, 2025 47,4%; elemento 39 (servicos de terceiros PJ) 31,0% da direta em 2003-2025. Candidata a quebra de composicao 2011-2016 (A4). Transferencia inclui as modalidades 50 e 60 (entidades privadas), 70 (instituicoes multigovernamentais) e 80 (exterior), alem de estados e municipios: 1,5% da transferencia economica em 2003-2025 (base anual); o dashboard trimestral nao permite separa-las. Transferencia = grupos 1 e 2 (inclui a execucao delegada 32 e 42): escolha a confirmar pelo autor antes da A5; ver variantes _g1. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2005.1 AO2016.1 AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2005T1 ao2016T1 ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| uniao_soc_dir | Uniao, funcoes sociais (08, 10, 12, 15, 16, 17, 27), aplicacao direta (grupo 0), GND 4, todos os elementos | 2003Q1 | 2025Q4 | media 2003 = 100 | R$ bi de 2025 (IPCA medio do trimestre) | 0.75 | GND 4 com todos os elementos (o dashboard trimestral nao tem elemento), nao o filtro da dissertacao. Parcela do filtro da dissertacao na direta (social): 2003 99,8%, 2010 97,1%, 2016 88,6%, 2025 83,1%; elemento 39 (servicos de terceiros PJ) 5,2% da direta em 2003-2025. Candidata a quebra de composicao 2011-2016 (A4). Sem outliers no regARIMA; a variante sem AO (_semao) e igual a serie ajustada. |
+| uniao_soc_dt | Uniao, funcoes sociais, direta + transferencias (grupos 0, 1 e 2), GND 4, todos os elementos | 2003Q1 | 2025Q4 | media 2003 = 100 | R$ bi de 2025 (IPCA medio do trimestre) | 0.68 | GND 4 com todos os elementos (o dashboard trimestral nao tem elemento), nao o filtro da dissertacao. Parcela do filtro da dissertacao na direta (social): 2003 99,8%, 2010 97,1%, 2016 88,6%, 2025 83,1%; elemento 39 (servicos de terceiros PJ) 5,2% da direta em 2003-2025. Candidata a quebra de composicao 2011-2016 (A4). Transferencia inclui as modalidades 50 e 60 (entidades privadas), 70 (instituicoes multigovernamentais) e 80 (exterior), alem de estados e municipios: 4,9% da transferencia social em 2003-2025 (base anual); o dashboard trimestral nao permite separa-las. Transferencia = grupos 1 e 2 (inclui a execucao delegada 32 e 42): escolha a confirmar pelo autor antes da A5; ver variantes _g1. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| uniao_transf_soc | Uniao, funcoes sociais, transferencias (grupos 1 e 2), GND 4 | 2003Q1 | 2025Q4 | media 2003 = 100 | R$ bi de 2025 (IPCA medio do trimestre) | 0.65 | GND 4 com todos os elementos (o dashboard trimestral nao tem elemento). Transferencia inclui as modalidades 50 e 60 (entidades privadas), 70 (instituicoes multigovernamentais) e 80 (exterior), alem de estados e municipios: 4,9% da transferencia social em 2003-2025 (base anual); o dashboard trimestral nao permite separa-las. Transferencia = grupos 1 e 2 (inclui a execucao delegada 32 e 42): escolha a confirmar pelo autor antes da A5; ver variantes _g1. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2014.4 AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2014T4 ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| uniao_gnd4_dir | Uniao, todas as funcoes, aplicacao direta (grupo 0), GND 4, todos os elementos | 2003Q1 | 2025Q4 | media 2003 = 100 | R$ bi de 2025 (IPCA medio do trimestre) | 0.46 | GND 4 com todos os elementos (o dashboard trimestral nao tem elemento), nao o filtro da dissertacao. Parcela do filtro da dissertacao na direta (total): 2003 85,2%, 2010 86,7%, 2016 61,0%, 2025 64,0%; elemento 39 (servicos de terceiros PJ) 20,4% da direta em 2003-2025. Candidata a quebra de composicao 2011-2016 (A4). A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2014.4 AO2016.1 AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2014T4 ao2016T1 ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| uniao_filtro_diss | Uniao, filtro da dissertacao (modalidade 90, 6 elementos); 2017 com total anual exato e perfil trimestral do grupo 0 | 2003Q1 | 2025Q4 | media 2003 = 100 | R$ bi de 2025 (IPCA medio do trimestre) | 0.45 | A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_total | Estatais federais: boletim SEST (Brasil) ate 2019T4; OI x razao media boletim/OI 2016-2019 a partir de 2020T1 | 2003Q1 | 2025Q4 | media 2003 = 100 | R$ bi de 2025 (IPCA medio do trimestre) | 0.44 | A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_petro | Estatais, segmento Oil, gas & derivatives (OI, sem encadeamento) | 2016Q1 | 2025Q4 | media 2016 = 100 | R$ bi de 2025 (IPCA medio do trimestre), nivel da OI sem encadeamento; multiplicar por 0,9303 para comparar com estatais_total | 0.49 | Nivel da OI, sem encadeamento; multiplicar por 0,9303 (razao media boletim/OI 2016-2019) para comparar ou somar com estatais_total (coluna fator_escala_boletim). A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2018.3 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2018T3 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_sempetro | Estatais, todos os segmentos exceto Oil, gas & derivatives (OI, sem encadeamento) | 2016Q1 | 2025Q4 | media 2016 = 100 | R$ bi de 2025 (IPCA medio do trimestre), nivel da OI sem encadeamento; multiplicar por 0,9303 para comparar com estatais_total | 0.87 | Nivel da OI, sem encadeamento; multiplicar por 0,9303 (razao media boletim/OI 2016-2019) para comparar ou somar com estatais_total (coluna fator_escala_boletim). A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2018.3 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2018T3 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_econ | Estatais, segmentos Electricity, Transport, Port administration e Airport administration (OI, sem encadeamento) | 2016Q1 | 2025Q4 | media 2016 = 100 | R$ bi de 2025 (IPCA medio do trimestre), nivel da OI sem encadeamento; multiplicar por 0,9303 para comparar com estatais_total | 0.60 | Nivel da OI, sem encadeamento; multiplicar por 0,9303 (razao media boletim/OI 2016-2019) para comparar ou somar com estatais_total (coluna fator_escala_boletim). A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2018.3 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2018T3 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_grupopetro | Estatais do grupo Petrobras, todos os segmentos (OI, grupo_petrobras = True, sem encadeamento) | 2016Q1 | 2025Q4 | media 2016 = 100 | R$ bi de 2025 (IPCA medio do trimestre), nivel da OI sem encadeamento; multiplicar por 0,9303 para comparar com estatais_total | 0.49 | Nivel da OI, sem encadeamento; multiplicar por 0,9303 (razao media boletim/OI 2016-2019) para comparar ou somar com estatais_total (coluna fator_escala_boletim). A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2018.3 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2018T3 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_semgrupopetro | Estatais fora do grupo Petrobras (OI, grupo_petrobras = False, sem encadeamento) | 2016Q1 | 2025Q4 | media 2016 = 100 | R$ bi de 2025 (IPCA medio do trimestre), nivel da OI sem encadeamento; multiplicar por 0,9303 para comparar com estatais_total | 0.93 | Nivel da OI, sem encadeamento; multiplicar por 0,9303 (razao media boletim/OI 2016-2019) para comparar ou somar com estatais_total (coluna fator_escala_boletim). A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2018.3 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2018T3 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss | Agregado da dissertacao, real: ajuste indireto, uniao_filtro_diss com ajuste + estatais_total com ajuste | 2003Q1 | 2025Q4 | media 2003 = 100 | R$ bi de 2025 (IPCA medio do trimestre) | NA | Ajuste indireto: nivel com ajuste = soma de uniao_filtro_diss + estatais_total com ajuste. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.3 AO2021.1 AO2021.2, dos componentes): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T3 ao2021T1 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+
+Fora das LP (regra de aptidao):
+
+| serie | definicao | q_x11 | erro_arred_max_pct | motivo_fora_lp |
 |---|---|---|---|---|
-| uniao_econ_dir | Uniao, funcoes economicas (24, 25, 26), aplicacao direta (grupo 0: modalidades 90 e 91), GND 4, todos os elementos | 2003Q1 | 2025Q4 | media 2003 = 100 |
-| uniao_econ_dt | Uniao, funcoes economicas, direta + transferencias (grupos 0 e 1) | 2003Q1 | 2025Q4 | media 2003 = 100 |
-| uniao_soc_dir | Uniao, funcoes sociais (08, 10, 12, 15, 16, 17, 27), aplicacao direta (grupo 0) | 2003Q1 | 2025Q4 | media 2003 = 100 |
-| uniao_soc_dt | Uniao, funcoes sociais, direta + transferencias (grupos 0 e 1) | 2003Q1 | 2025Q4 | media 2003 = 100 |
-| uniao_transf_econ | Uniao, funcoes economicas, transferencias (grupo 1) | 2003Q1 | 2025Q4 | media 2003 = 100 |
-| uniao_transf_soc | Uniao, funcoes sociais, transferencias (grupo 1) | 2003Q1 | 2025Q4 | media 2003 = 100 |
-| uniao_gnd4_dir | Uniao, todas as funcoes, aplicacao direta (grupo 0), GND 4 | 2003Q1 | 2025Q4 | media 2003 = 100 |
-| uniao_filtro_diss | Uniao, filtro da dissertacao (modalidade 90, 6 elementos); 2017 imputado pelo perfil do grupo 0 | 2003Q1 | 2025Q4 | media 2003 = 100 |
-| estatais_total | Estatais federais: boletim SEST (Brasil) ate 2019T4; OI x razao media boletim/OI 2016-2019 a partir de 2020T1 | 2003Q1 | 2025Q4 | media 2003 = 100 |
-| estatais_petro | Estatais, segmento Oil, gas & derivatives (OI, sem encadeamento) | 2016Q1 | 2025Q4 | media 2016 = 100 |
-| estatais_sempetro | Estatais, todos os segmentos exceto Oil, gas & derivatives (OI) | 2016Q1 | 2025Q4 | media 2016 = 100 |
-| estatais_econ | Estatais, segmentos Electricity, Transport, Port administration e Airport administration (OI) | 2016Q1 | 2025Q4 | media 2016 = 100 |
-| estatais_outras | Estatais, segmentos Financial, Commerce & services, Industry, Research, development & planning e Food supply (OI) | 2016Q1 | 2025Q4 | media 2016 = 100 |
-| estatais_grupopetro | Estatais do grupo Petrobras, todos os segmentos (OI, grupo_petrobras = True) | 2016Q1 | 2025Q4 | media 2016 = 100 |
-| estatais_semgrupopetro | Estatais fora do grupo Petrobras (OI, grupo_petrobras = False) | 2016Q1 | 2025Q4 | media 2016 = 100 |
-| inf_diss | Agregado da dissertacao: uniao_filtro_diss + estatais_total | 2003Q1 | 2025Q4 | media 2003 = 100 |
+| uniao_transf_econ | Uniao, funcoes economicas, transferencias (grupos 1 e 2: todas exceto 90 e 91, com execucao delegada 32 e 42), GND 4 | 1.57 | 6.522 | Q do X-11 1,57 > 1; erro de arredondamento de ate 6,5% (2023T3) > 2%; trimestres acima: 2017T2 2021T1 2023T3 2023T4 2025T1 2025T2 |
+| estatais_outras | Estatais, segmentos Financial, Commerce & services, Industry, Research, development & planning e Food supply (OI, sem encadeamento) | 1.48 | 0.065 | Q do X-11 1,48 > 1 |
+| uniao_transf_econ_g1 | Como uniao_transf_econ, so grupo 1 | 1.43 |   Inf | Q do X-11 1,43 > 1; erro de arredondamento de ate 100% ou mais (trimestre arredondado a zero) (2023T1) > 2%; trimestres acima: 2016T2 2017T2 2017T3 2018T1 2019T1 2020T2 2021T1 2023T1 2023T3 2024T1 2025T2; sem log10 (valor ou ajuste <= 0) |
+| estatais_sempetro_semout | Como estatais_sempetro, X-11 sem outliers (nem detectados nem fixos) | 1.25 | 0.059 | Q do X-11 1,25 > 1 |
 
 Variantes de robustez:
 
-| serie | definicao | inicio | fim |
-|---|---|---|---|
-| uniao_filtro_diss_imprazao | Como uniao_filtro_diss, 2017 imputado pela razao filtro/dashboard do trimestre (media de 2016 e 2018) | 2003Q1 | 2025Q4 |
-| estatais_total_e2017 | Como estatais_total, emenda em 2017T1 com a razao media boletim/OI de 2016 | 2003Q1 | 2025Q4 |
-| estatais_total_e2018 | Como estatais_total, emenda em 2018T1 com a razao media boletim/OI de 2017 | 2003Q1 | 2025Q4 |
-| estatais_total_e2019 | Como estatais_total, emenda em 2019T1 com a razao media boletim/OI de 2018 | 2003Q1 | 2025Q4 |
-| estatais_total_e2020 | Como estatais_total, emenda em 2020T1 com a razao media boletim/OI de 2019 | 2003Q1 | 2025Q4 |
-| inf_diss_imprazao | Como inf_diss, com 2017 imputado pela razao do trimestre | 2003Q1 | 2025Q4 |
-| inf_diss_e2017 | Como inf_diss, com estatais_total_e2017 | 2003Q1 | 2025Q4 |
-| inf_diss_e2018 | Como inf_diss, com estatais_total_e2018 | 2003Q1 | 2025Q4 |
-| inf_diss_e2019 | Como inf_diss, com estatais_total_e2019 | 2003Q1 | 2025Q4 |
-| inf_diss_e2020 | Como inf_diss, com estatais_total_e2020 | 2003Q1 | 2025Q4 |
+| serie | definicao | inicio | fim | apta_lp | par_a5 | observacao |
+|---|---|---|---|---|---|---|
+| uniao_transf_econ | Uniao, funcoes economicas, transferencias (grupos 1 e 2: todas exceto 90 e 91, com execucao delegada 32 e 42), GND 4 | 2003Q1 | 2025Q4 | FALSE | uniao_transf_econ_g1 | NAO usar como choque nas LP da A5 (fora de A3_choques_wide.csv): Q do X-11 1,57 > 1; erro de arredondamento de ate 6,5% (2023T3) > 2%; trimestres acima: 2017T2 2021T1 2023T3 2023T4 2025T1 2025T2. GND 4 com todos os elementos (o dashboard trimestral nao tem elemento). Transferencia inclui as modalidades 50 e 60 (entidades privadas), 70 (instituicoes multigovernamentais) e 80 (exterior), alem de estados e municipios: 1,5% da transferencia economica em 2003-2025 (base anual); o dashboard trimestral nao permite separa-las. Transferencia = grupos 1 e 2 (inclui a execucao delegada 32 e 42): escolha a confirmar pelo autor antes da A5; ver variantes _g1. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2013.3 LS2014.4): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2013T3 ls2014T4); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv. |
+| estatais_outras | Estatais, segmentos Financial, Commerce & services, Industry, Research, development & planning e Food supply (OI, sem encadeamento) | 2016Q1 | 2025Q4 | FALSE | NA | NAO usar como choque nas LP da A5 (fora de A3_choques_wide.csv): Q do X-11 1,48 > 1. Nivel da OI, sem encadeamento; multiplicar por 0,9303 (razao media boletim/OI 2016-2019) para comparar ou somar com estatais_total (coluna fator_escala_boletim). A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2018.3 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2018T3 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv. |
+| uniao_econ_dt_g1 | Como uniao_econ_dt, so grupos 0 e 1 (sem execucao delegada 32 e 42) | 2003Q1 | 2025Q4 | TRUE | uniao_econ_dt | GND 4 com todos os elementos (o dashboard trimestral nao tem elemento), nao o filtro da dissertacao. Parcela do filtro da dissertacao na direta (economica): 2003 99,6%, 2010 93,7%, 2016 41,3%, 2025 47,4%; elemento 39 (servicos de terceiros PJ) 31,0% da direta em 2003-2025. Candidata a quebra de composicao 2011-2016 (A4). Transferencia inclui as modalidades 50 e 60 (entidades privadas), 70 (instituicoes multigovernamentais) e 80 (exterior), alem de estados e municipios: 1,5% da transferencia economica em 2003-2025 (base anual); o dashboard trimestral nao permite separa-las. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2005.1 AO2016.1 AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2005T1 ao2016T1 ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| uniao_soc_dt_g1 | Como uniao_soc_dt, so grupos 0 e 1 | 2003Q1 | 2025Q4 | TRUE | uniao_soc_dt | GND 4 com todos os elementos (o dashboard trimestral nao tem elemento), nao o filtro da dissertacao. Parcela do filtro da dissertacao na direta (social): 2003 99,8%, 2010 97,1%, 2016 88,6%, 2025 83,1%; elemento 39 (servicos de terceiros PJ) 5,2% da direta em 2003-2025. Candidata a quebra de composicao 2011-2016 (A4). Transferencia inclui as modalidades 50 e 60 (entidades privadas), 70 (instituicoes multigovernamentais) e 80 (exterior), alem de estados e municipios: 4,9% da transferencia social em 2003-2025 (base anual); o dashboard trimestral nao permite separa-las. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| uniao_transf_econ_g1 | Como uniao_transf_econ, so grupo 1 | 2003Q1 | 2025Q4 | FALSE | uniao_transf_econ | NAO usar como choque nas LP da A5 (fora de A3_choques_wide.csv): Q do X-11 1,43 > 1; erro de arredondamento de ate 100% ou mais (trimestre arredondado a zero) (2023T1) > 2%; trimestres acima: 2016T2 2017T2 2017T3 2018T1 2019T1 2020T2 2021T1 2023T1 2023T3 2024T1 2025T2; sem log10 (valor ou ajuste <= 0). GND 4 com todos os elementos (o dashboard trimestral nao tem elemento). Transferencia inclui as modalidades 50 e 60 (entidades privadas), 70 (instituicoes multigovernamentais) e 80 (exterior), alem de estados e municipios: 1,5% da transferencia economica em 2003-2025 (base anual); o dashboard trimestral nao permite separa-las. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2003.4 LS2007.4 AO2008.1 AO2008.4 AO2009.1 LS2010.2 AO2010.4 AO2011.4 LS2013.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2003T4 ls2007T4 ao2008T1 ao2008T4 ao2009T1 ls2010T2 ao2010T4 ao2011T4 ls2013T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv. |
+| uniao_transf_soc_g1 | Como uniao_transf_soc, so grupo 1 | 2003Q1 | 2025Q4 | TRUE | uniao_transf_soc | GND 4 com todos os elementos (o dashboard trimestral nao tem elemento). Transferencia inclui as modalidades 50 e 60 (entidades privadas), 70 (instituicoes multigovernamentais) e 80 (exterior), alem de estados e municipios: 4,9% da transferencia social em 2003-2025 (base anual); o dashboard trimestral nao permite separa-las. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2014.4 AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2014T4 ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| uniao_filtro_diss_imprazao | Como uniao_filtro_diss, 2017 pela razao filtro/dashboard do trimestre (media de 2016 e 2018), reescalada ao total anual | 2003Q1 | 2025Q4 | TRUE | NA | A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| uniao_filtro_diss_impapendice | Como uniao_filtro_diss, 2017 implicito no Apendice A (Ipub x razao interpolada - SEST), reescalado ao total anual | 2003Q1 | 2025Q4 | TRUE | NA | A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2021.1): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2021T1); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss_imprazao | Como inf_diss (ajuste indireto), com uniao_filtro_diss_imprazao | 2003Q1 | 2025Q4 | TRUE | NA | Ajuste indireto: nivel com ajuste = soma de uniao_filtro_diss_imprazao + estatais_total com ajuste. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.3 AO2021.1 AO2021.2, dos componentes): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T3 ao2021T1 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss_impapendice | Como inf_diss (ajuste indireto), com uniao_filtro_diss_impapendice | 2003Q1 | 2025Q4 | TRUE | NA | Ajuste indireto: nivel com ajuste = soma de uniao_filtro_diss_impapendice + estatais_total com ajuste. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.3 AO2021.1 AO2021.2, dos componentes): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T3 ao2021T1 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss_x11soma | Como inf_diss, mas com X-11 depois de somar (definicao anterior de inf_diss) | 2003Q1 | 2025Q4 | TRUE | NA | A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2019.1 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2019T1 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss_nominal | Agregado da dissertacao NOMINAL (sem deflacao), como o INF da dissertacao; X-11 depois de somar, janela 2003T1-2025T4; colunas reais vazias | 2003Q1 | 2025Q4 | TRUE | NA | Nominal: nivel com ajuste na coluna nominal_sa_rs_bi; colunas reais vazias. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (AO2018.3 LS2019.1 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ao2018T3 ls2019T1 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss_nominal_2019 | Como inf_diss_nominal, com X-11 so em 2003T1-2019T4 (boletim da SEST, sem OI): a variante que reproduz INF; colunas reais vazias | 2003Q1 | 2019Q4 | TRUE | NA | Nominal: nivel com ajuste na coluna nominal_sa_rs_bi; colunas reais vazias. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_petro_semout | Como estatais_petro, X-11 sem outliers (nem detectados nem fixos) | 2016Q1 | 2025Q4 | TRUE | NA | Nivel da OI, sem encadeamento; multiplicar por 0,9303 (razao media boletim/OI 2016-2019) para comparar ou somar com estatais_total (coluna fator_escala_boletim). Sem outliers no regARIMA; a variante sem AO (_semao) e igual a serie ajustada. |
+| estatais_sempetro_semout | Como estatais_sempetro, X-11 sem outliers (nem detectados nem fixos) | 2016Q1 | 2025Q4 | FALSE | NA | NAO usar como choque nas LP da A5 (fora de A3_choques_wide.csv): Q do X-11 1,25 > 1. Nivel da OI, sem encadeamento; multiplicar por 0,9303 (razao media boletim/OI 2016-2019) para comparar ou somar com estatais_total (coluna fator_escala_boletim). Sem outliers no regARIMA; a variante sem AO (_semao) e igual a serie ajustada. |
+| estatais_total_e2017 | Como estatais_total, emenda em 2017T1 com a razao media boletim/OI de 2016 (0,8860) | 2003Q1 | 2025Q4 | TRUE | NA | A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.1 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T1 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_total_e2018 | Como estatais_total, emenda em 2018T1 com a razao media boletim/OI de 2017 (0,8914) | 2003Q1 | 2025Q4 | TRUE | NA | A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.1 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T1 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_total_e2019 | Como estatais_total, emenda em 2019T1 com a razao media boletim/OI de 2018 (0,9070) | 2003Q1 | 2025Q4 | TRUE | NA | A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.1 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T1 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_total_e2020 | Como estatais_total, emenda em 2020T1 com a razao media boletim/OI de 2019 (1,0369) | 2003Q1 | 2025Q4 | TRUE | NA | A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| estatais_total_e2020_r1618 | Como estatais_total, emenda em 2020T1 com a razao media boletim/OI de 2016-2018 (0,8948) | 2003Q1 | 2025Q4 | TRUE | NA | A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.3 AO2021.2): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T3 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss_e2017 | Como inf_diss (ajuste indireto), com estatais_total_e2017 | 2003Q1 | 2025Q4 | TRUE | NA | Ajuste indireto: nivel com ajuste = soma de uniao_filtro_diss + estatais_total_e2017 com ajuste. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.1 AO2020.3 AO2021.1 AO2021.2, dos componentes): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T1 ao2020T3 ao2021T1 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss_e2018 | Como inf_diss (ajuste indireto), com estatais_total_e2018 | 2003Q1 | 2025Q4 | TRUE | NA | Ajuste indireto: nivel com ajuste = soma de uniao_filtro_diss + estatais_total_e2018 com ajuste. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.1 AO2020.3 AO2021.1 AO2021.2, dos componentes): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T1 ao2020T3 ao2021T1 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss_e2019 | Como inf_diss (ajuste indireto), com estatais_total_e2019 | 2003Q1 | 2025Q4 | TRUE | NA | Ajuste indireto: nivel com ajuste = soma de uniao_filtro_diss + estatais_total_e2019 com ajuste. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.1 AO2020.3 AO2021.1 AO2021.2, dos componentes): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T1 ao2020T3 ao2021T1 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss_e2020 | Como inf_diss (ajuste indireto), com estatais_total_e2020 | 2003Q1 | 2025Q4 | TRUE | NA | Ajuste indireto: nivel com ajuste = soma de uniao_filtro_diss + estatais_total_e2020 com ajuste. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.3 AO2021.1 AO2021.2, dos componentes): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T3 ao2021T1 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |
+| inf_diss_e2020_r1618 | Como inf_diss (ajuste indireto), com estatais_total_e2020_r1618 | 2003Q1 | 2025Q4 | TRUE | NA | Ajuste indireto: nivel com ajuste = soma de uniao_filtro_diss + estatais_total_e2020_r1618 com ajuste. A serie ajustada (tabela D11 do X-11) mantem os efeitos de AO e LS do regARIMA (LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.3 AO2021.1 AO2021.2, dos componentes): os picos de AO ficam no choque. Dummies em A3_dummies_outliers.csv (ls2018T2 ao2018T3 ls2019T1 ls2019T3 ao2020T3 ao2021T1 ao2021T2); variante sem o efeito dos AO nas colunas _semao de A3_invpub_trimestral.csv e em A3_choques_semao_wide.csv. |

@@ -1,7 +1,7 @@
 % Gerado por R/A1_replica.R. Requer \usepackage{booktabs}.
 \begin{table}[htbp]
 \centering
-\caption{Replica do modelo da disserta\c{c}\~ao: VAR(3) em diferen\c{c}as, 2002T1--2019T4}
+\caption{R\'eplica do modelo da disserta\c{c}\~ao: VAR(3) em diferen\c{c}as; dados de 2002T1 a 2019T4, amostra efetiva 2003T1--2019T4}
 \label{tab:a1_baseline}
 \small
 \begin{tabular}{lcc}
@@ -12,7 +12,9 @@
 Impacto em PVD ($h = 0$) & 0{,}0118 & [0{,}0036; 0{,}0175] \\
 Resposta acumulada de PVD ($h = 40$) & 0{,}0194 & [0{,}0016; 0{,}0315] \\
 Resposta acumulada de INF ($h = 40$) & 0{,}0465 & [0{,}0263; 0{,}0584] \\
-Elasticidade de longo prazo & 0{,}42 & [0{,}05; 0{,}66] \\
+Elasticidade de longo prazo (IC percentil) & 0{,}42 & [0{,}05; 0{,}66] \\
+\quad IC b\'asico de Hall & & [0{,}17; 0{,}78] \\
+\quad Corrigida de vi\'es (Kilian, 1998) & 0{,}48 & [0{,}11; 0{,}82] \\
 \midrule
 \multicolumn{3}{l}{\textit{B. Covari\^ancia dos res\'iduos}} \\
 $\mathrm{var}(u_{INF})$ & 0{,}00398 & \\
@@ -26,13 +28,16 @@ PVD $\rightarrow$ INF, VAR em diferen\c{c}as (gl 3 e 114) & 1{,}27 & 0{,}2883 \\
 INF $\rightarrow$ PVD, VAR em n\'ivel (gl 3 e 116) & 2{,}92 & 0{,}0372 \\
 PVD $\rightarrow$ INF, VAR em n\'ivel (gl 3 e 116) & 1{,}91 & 0{,}1320 \\
 \midrule
-\multicolumn{3}{l}{\textit{D. Johansen, tra\c{c}o (ecdet = tend\^encia, K = 2, dummy restrita)}} \\
+\multicolumn{3}{l}{\textit{D. Johansen, tra\c{c}o}} \\
+\multicolumn{3}{l}{\quad \footnotesize tend\^encia restrita ao vetor de cointegra\c{c}\~ao, K = 2, dummy DUM irrestrita} \\
 $r = 0$ (valor cr\'itico 5\%: 25{,}32; 10\%: 22{,}76) & 25{,}01 & \\
 $r \leq 1$ (valor cr\'itico 5\%: 12{,}25) & 2{,}53 & \\
+Configura\c{c}\~oes que rejeitam $r = 0$ a 5\% (a 10\%) & \multicolumn{2}{c}{7 de 12 (12 de 12)} \\
+\multicolumn{3}{l}{\quad \footnotesize Evid\^encia lim\'itrofe de um vetor de cointegra\c{c}\~ao: a configura\c{c}\~ao do Rmd fica 0{,}31 abaixo do valor cr\'itico de 5\%.} \\
 \bottomrule
 \end{tabular}
 \begin{minipage}{0.95\linewidth}\footnotesize
-\medskip Notas: VAR(3) em primeiras diferen\c{c}as de INF e PVD (log10), com constante, tend\^encia e as ex\'ogenas diferenciadas (PIB, Selic e dummy); 68 observa\c{c}\~oes efetivas. Respostas em log10. Elasticidade = resposta acumulada de PVD / resposta acumulada de INF em $h = 40$. IC 90\% por bootstrap de res\'iduos com 2000 r\'eplicas (percentis 5\% e 95\%). VAR em n\'ivel: VAR(3) nos log10 com ex\'ogenas em n\'ivel.
+\medskip Notas: VAR(3) em primeiras diferen\c{c}as de INF e PVD (log10), com constante, tend\^encia e as ex\'ogenas diferenciadas (PIB, Selic e dummy); 68 observa\c{c}\~oes efetivas. Respostas em log10. Elasticidade = resposta acumulada de PVD / resposta acumulada de INF em $h = 40$. IC 90\% por bootstrap de res\'iduos com 2000 r\'eplicas (percentis 5\% e 95\%, como no pacote vars); o intervalo b\'asico de Hall e o bootstrap-after-bootstrap de Kilian (1998; 1000 e 2000 r\'eplicas) corrigem o vi\'es do bootstrap. Os tr\^es IC reamostram res\'iduos iid e sup\~oem aus\^encia de autocorrela\c{c}\~ao residual, que os testes BG e ES rejeitam (Tabela \ref{tab:a1_diagnosticos}). INF do arquivo original \'e nominal com ajuste sazonal (ver A3). VAR em n\'ivel: VAR(3) nos log10 com ex\'ogenas em n\'ivel. Johansen: valores cr\'iticos tabelados (Osterwald-Lenum), aproximados com dummy em degraus e amostra curta; a contagem de rejei\c{c}\~oes cobre 12 configura\c{c}\~oes (tend\^encia restrita ou constante restrita, K de 2 a 4, sem dummy ou com DUM), sem as ex\'ogenas estoc\'asticas (PIB, Selic) como dumvar.
 \end{minipage}
 \end{table}
 
@@ -45,22 +50,25 @@ $r \leq 1$ (valor cr\'itico 5\%: 12{,}25) & 2{,}53 & \\
 \toprule
 Teste & Estat\'istica & gl & p-valor \\
 \midrule
-Portmanteau assintotico (lags.pt = 16) & 44{,}79 & 52 & 0{,}7506 \\
-Portmanteau ajustado (lags.pt = 16) & 52{,}34 & 52 & 0{,}4606 \\
-Breusch-Godfrey LM (lags.bg = 5) & 41{,}81 & 20 & 0{,}0029 \\
-Edgerton-Shukur F (lags.bg = 5) & 2{,}10 & 20; 92 & 0{,}0093 \\
-ARCH-LM multivariado (lags.multi = 5) & 42{,}23 & 45 & 0{,}5899 \\
+Portmanteau assint\'otico (16 defasagens) & 44{,}79 & 52 & 0{,}7506 \\
+Portmanteau ajustado (16 defasagens) & 52{,}34 & 52 & 0{,}4606 \\
+Breusch-Godfrey LM (5 defasagens) & 41{,}81 & 20 & 0{,}0029 \\
+Edgerton-Shukur F (5 defasagens) & 2{,}10 & 20; 92 & 0{,}0093 \\
+ARCH-LM multivariado (5 defasagens) & 42{,}23 & 45 & 0{,}5899 \\
 Jarque-Bera multivariado & 18{,}03 & 4 & 0{,}0012 \\
 Assimetria multivariada & 5{,}44 & 2 & 0{,}0659 \\
 Curtose multivariada & 12{,}59 & 2 & 0{,}0018 \\
 Jarque-Bera univariado, INF & 15{,}10 & 2 & 0{,}0005 \\
 Jarque-Bera univariado, PVD & 3{,}63 & 2 & 0{,}1632 \\
 \midrule
+Breusch-Godfrey, 1 a 8 defasagens: maior p-valor & & & 0{,}0080 \\
+Edgerton-Shukur, 1 a 8 defasagens: maior p-valor & & & 0{,}0234 \\
+\midrule
 M\'odulo m\'aximo das ra\'izes & 0{,}7358 & & \\
 VARselect (m\'aximo 8): AIC, HQ, SC, FPE & \multicolumn{3}{c}{3, 3, 2, 3} \\
 \bottomrule
 \end{tabular}
 \begin{minipage}{0.95\linewidth}\footnotesize
-\medskip Notas: H0 de aus\^encia de autocorrela\c{c}\~ao (Portmanteau, BG, ES), de efeitos ARCH e de normalidade (Jarque-Bera). Testes do pacote vars.
+\medskip Notas: H0 de aus\^encia de autocorrela\c{c}\~ao (Portmanteau, BG, ES), de efeitos ARCH e de normalidade (Jarque-Bera). Testes do pacote vars. O Portmanteau (16 defasagens) n\~ao rejeita aus\^encia de autocorrela\c{c}\~ao. Com 1 a 8 defasagens, o Breusch-Godfrey rejeita a 1\% em 8 de 8 casos e o Edgerton-Shukur rejeita a 5\% em 8 de 8 (a 1\% em 7 de 8). BG por equa\c{c}\~ao, 5 defasagens: INF, p = 0{,}003; PVD, p = 0{,}009. A especifica\c{c}\~ao tem autocorrela\c{c}\~ao residual; os IC por bootstrap iid de res\'iduos ficam condicionados a isso. Na Tabela 7 da disserta\c{c}\~ao, os r\'otulos de autocorrela\c{c}\~ao e homocedasticidade est\~ao trocados.
 \end{minipage}
 \end{table}

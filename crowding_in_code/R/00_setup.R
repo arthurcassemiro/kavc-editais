@@ -25,10 +25,34 @@ for (p in PATHS[c("downloads", "processed", "results", "figuras", "log_parts")])
 HOJE <- format(Sys.Date(), "%Y-%m-%d")
 
 # Protecao: nunca escrever em data/original nem em data/raw.
+# O conteiner roda como root, entao chmod nao protege: toda escrita deve passar por guard_path
+# (write_csv_safe, write_lines_safe, ggsave_safe, log_part, save_session_info).
+# Caminho absoluto: relativo ao diretorio de trabalho, com "." e ".." resolvidos e links
+# simbolicos resolvidos no maior prefixo que existe (vale para arquivos e pastas ainda inexistentes).
+abs_path <- function(path) {
+  p <- path.expand(as.character(path))
+  if (!startsWith(p, "/")) p <- file.path(getwd(), p)
+  pilha <- character(0)
+  for (s in strsplit(p, "/", fixed = TRUE)[[1]]) {
+    if (s %in% c("", ".")) next
+    if (s == "..") pilha <- head(pilha, -1) else pilha <- c(pilha, s)
+  }
+  n <- length(pilha)
+  for (k in n:0) {
+    pref <- paste0("/", paste(pilha[seq_len(k)], collapse = "/"))
+    if (file.exists(pref)) {
+      base <- normalizePath(pref, mustWork = TRUE)
+      resto <- pilha[setdiff(seq_len(n), seq_len(k))]
+      return(if (length(resto)) paste(c(sub("/$", "", base), resto), collapse = "/") else base)
+    }
+  }
+}
+
 guard_path <- function(path) {
-  np <- file.path(normalizePath(dirname(path), mustWork = FALSE), basename(path))
+  alvo <- abs_path(path)
   for (d in c(PATHS$original, PATHS$raw)) {
-    if (startsWith(np, paste0(normalizePath(d, mustWork = FALSE), "/"))) {
+    pd <- abs_path(d)
+    if (identical(alvo, pd) || startsWith(alvo, paste0(pd, "/"))) {
       stop("Escrita proibida em ", d, ": ", path)
     }
   }
@@ -41,6 +65,18 @@ write_csv_safe <- function(x, path, ...) {
   invisible(path)
 }
 
+write_lines_safe <- function(text, path, ...) {
+  guard_path(path)
+  writeLines(text, path, ...)
+  invisible(path)
+}
+
+ggsave_safe <- function(filename, plot = ggplot2::last_plot(), ...) {
+  guard_path(filename)
+  ggplot2::ggsave(filename, plot, ...)
+  invisible(filename)
+}
+
 # Arquivo de download com a data no nome: data/downloads/AAAA-MM-DD_<fonte>_<codigo>.csv
 download_path <- function(fonte, codigo, ext = "csv") {
   file.path(PATHS$downloads, sprintf("%s_%s_%s.%s", HOJE, fonte, codigo, ext))
@@ -49,22 +85,22 @@ download_path <- function(fonte, codigo, ext = "csv") {
 # Registro de decisoes. Cada script escreve em results/log_parts/<etapa>.md;
 # o LOG.md principal e consolidado a partir dessas partes.
 log_part <- function(etapa, ...) {
-  f <- file.path(PATHS$log_parts, paste0(etapa, ".md"))
+  f <- guard_path(file.path(PATHS$log_parts, paste0(etapa, ".md")))
   txt <- paste0(...)
   cat(txt, "\n", file = f, append = TRUE, sep = "")
   invisible(txt)
 }
 log_reset <- function(etapa) {
-  f <- file.path(PATHS$log_parts, paste0(etapa, ".md"))
+  f <- guard_path(file.path(PATHS$log_parts, paste0(etapa, ".md")))
   cat(sprintf("### %s (execucao de %s)\n", etapa, format(Sys.time(), "%Y-%m-%d %H:%M")), file = f)
 }
 
 save_session_info <- function(script) {
   si <- capture.output(sessionInfo())
   hdr <- sprintf("# %s, executado em %s", script, format(Sys.time(), "%Y-%m-%d %H:%M:%S"))
-  writeLines(c(hdr, si), file.path(PATHS$results, "session_info.txt"))
+  write_lines_safe(c(hdr, si), file.path(PATHS$results, "session_info.txt"))
   dir.create(file.path(PATHS$results, "session_info"), showWarnings = FALSE)
-  writeLines(c(hdr, si), file.path(PATHS$results, "session_info", paste0(script, ".txt")))
+  write_lines_safe(c(hdr, si), file.path(PATHS$results, "session_info", paste0(script, ".txt")))
 }
 
 # Trimestres: chave textual "2003Q1" e conversoes.

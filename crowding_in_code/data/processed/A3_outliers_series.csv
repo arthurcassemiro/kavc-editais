@@ -1,0 +1,160 @@
+serie,outlier,tipo,trimestre,coef,z,efeito,unidade_efeito,origem,dummy,apta_lp
+uniao_econ_dir,AO2005.1,AO,2005Q1,-1.49887480199079,-8.61404180610283,-0.7766186329373204,proporcao (fator - 1),detectado (X-13 automatico),ao2005T1,TRUE
+uniao_econ_dir,AO2016.1,AO,2016Q1,1.0051535610127,5.917837582565934,1.7323268194855252,proporcao (fator - 1),detectado (X-13 automatico),ao2016T1,TRUE
+uniao_econ_dir,AO2021.1,AO,2021Q1,-0.831870526232726,-4.877056100041921,-0.5647655929431734,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+uniao_econ_dt,AO2005.1,AO,2005Q1,-1.23379301790188,-6.6744515791255985,-0.7088139933503206,proporcao (fator - 1),detectado (X-13 automatico),ao2005T1,TRUE
+uniao_econ_dt,AO2016.1,AO,2016Q1,0.96101725878355,5.316654217631682,1.61435459637091,proporcao (fator - 1),detectado (X-13 automatico),ao2016T1,TRUE
+uniao_econ_dt,AO2021.1,AO,2021Q1,-0.845049671528501,-4.656655797212709,-0.5704639780299158,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+uniao_soc_dt,AO2021.1,AO,2021Q1,-1.35836800101737,-6.402196392882659,-0.7429200109357507,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+uniao_transf_econ,AO2013.3,AO,2013Q3,-2.93626345135491,-3.694160144698226,-0.9469363663842187,proporcao (fator - 1),detectado (X-13 automatico),ao2013T3,FALSE
+uniao_transf_econ,LS2014.4,LS,2014Q4,-1.86406336899325,-4.532995414473076,-0.8449586415573781,proporcao (fator - 1),detectado (X-13 automatico),ls2014T4,FALSE
+uniao_transf_soc,AO2014.4,AO,2014Q4,-1.14364006722782,-3.9577147668228863,-0.6813430246770629,proporcao (fator - 1),detectado (X-13 automatico),ao2014T4,TRUE
+uniao_transf_soc,AO2021.1,AO,2021Q1,-1.44333616492165,-4.994851979300233,-0.7638613543578352,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+uniao_gnd4_dir,LS2014.4,LS,2014Q4,-0.512548290839115,-3.98974503407348,-0.40103271048031663,proporcao (fator - 1),detectado (X-13 automatico),ls2014T4,TRUE
+uniao_gnd4_dir,AO2016.1,AO,2016Q1,0.539998689930727,4.756701256970392,0.7160046140984686,proporcao (fator - 1),detectado (X-13 automatico),ao2016T1,TRUE
+uniao_gnd4_dir,AO2021.1,AO,2021Q1,-0.493539495056859,-4.355591495102394,-0.38953816093363114,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+uniao_filtro_diss,AO2021.1,AO,2021Q1,-0.625785669878752,-4.387071332505204,-0.46515894510358446,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+estatais_total,LS2018.2,LS,2018Q2,0.562550953660693,4.5644243317541635,0.7551440856981284,proporcao (fator - 1),detectado (X-13 automatico),ls2018T2,TRUE
+estatais_total,AO2018.3,AO,2018Q3,0.491783259885587,5.039247648497162,0.6352296609301624,proporcao (fator - 1),detectado (X-13 automatico),ao2018T3,TRUE
+estatais_total,LS2019.1,LS,2019Q1,-0.781157007910354,-6.3436506271043145,-0.54212406136774,proporcao (fator - 1),detectado (X-13 automatico),ls2019T1,TRUE
+estatais_total,LS2019.3,LS,2019Q3,0.596789783573471,4.807320820244627,0.816278783560739,proporcao (fator - 1),detectado (X-13 automatico),ls2019T3,TRUE
+estatais_total,AO2020.3,AO,2020Q3,0.669224965505291,6.9293788342862825,0.9527233060841369,proporcao (fator - 1),detectado (X-13 automatico),ao2020T3,TRUE
+estatais_total,AO2021.2,AO,2021Q2,0.517420869137884,5.385181122236434,0.6776950698235129,proporcao (fator - 1),detectado (X-13 automatico),ao2021T2,TRUE
+estatais_petro,AO2018.3,AO,2018Q3,0.444893346974812,2.181119634847905,0.5603237737073743,proporcao (fator - 1),fixo (AO comum da OI),ao2018T3,TRUE
+estatais_petro,AO2020.3,AO,2020Q3,0.70229299350787,3.4430387987620996,1.018375527377684,proporcao (fator - 1),fixo (AO comum da OI),ao2020T3,TRUE
+estatais_petro,AO2021.2,AO,2021Q2,0.511098986147994,2.5179521375837264,0.6671223329148401,proporcao (fator - 1),fixo (AO comum da OI),ao2021T2,TRUE
+estatais_sempetro,AO2018.3,AO,2018Q3,0.330739321201843,1.7500280620219426,0.3919968809346388,proporcao (fator - 1),fixo (AO comum da OI),ao2018T3,TRUE
+estatais_sempetro,AO2020.3,AO,2020Q3,0.0713141681233914,0.3773909621515123,0.07391856385504325,proporcao (fator - 1),fixo (AO comum da OI),ao2020T3,TRUE
+estatais_sempetro,AO2021.2,AO,2021Q2,0.57772950265831,3.064081586752146,0.7819878354139922,proporcao (fator - 1),fixo (AO comum da OI),ao2021T2,TRUE
+estatais_econ,AO2018.3,AO,2018Q3,0.122998695879531,0.6711804259152035,0.1308829461389296,proporcao (fator - 1),fixo (AO comum da OI),ao2018T3,TRUE
+estatais_econ,AO2020.3,AO,2020Q3,-7.67641250665831e-4,-0.0040822247983867905,-7.673466894981829e-4,proporcao (fator - 1),fixo (AO comum da OI),ao2020T3,TRUE
+estatais_econ,AO2021.2,AO,2021Q2,0.214825320110054,1.1424154815989727,0.23964533694124301,proporcao (fator - 1),fixo (AO comum da OI),ao2021T2,TRUE
+estatais_outras,AO2018.3,AO,2018Q3,0.455982173592737,2.5968125021871735,0.5777222193969607,proporcao (fator - 1),fixo (AO comum da OI),ao2018T3,FALSE
+estatais_outras,AO2020.3,AO,2020Q3,0.419172315345038,2.219559759008417,0.5207023725687352,proporcao (fator - 1),fixo (AO comum da OI),ao2020T3,FALSE
+estatais_outras,AO2021.2,AO,2021Q2,0.551170425425886,2.920290812824849,0.7352828489202168,proporcao (fator - 1),fixo (AO comum da OI),ao2021T2,FALSE
+estatais_grupopetro,AO2018.3,AO,2018Q3,0.438225854847953,2.164815865662321,0.5499549327262296,proporcao (fator - 1),fixo (AO comum da OI),ao2018T3,TRUE
+estatais_grupopetro,AO2020.3,AO,2020Q3,0.700699393872921,3.461423286583818,1.0151616064058704,proporcao (fator - 1),fixo (AO comum da OI),ao2020T3,TRUE
+estatais_grupopetro,AO2021.2,AO,2021Q2,0.511533880709536,2.539287182444291,0.667847513027864,proporcao (fator - 1),fixo (AO comum da OI),ao2021T2,TRUE
+estatais_semgrupopetro,AO2018.3,AO,2018Q3,0.375641765119882,2.26518607906922,0.45592547705011666,proporcao (fator - 1),fixo (AO comum da OI),ao2018T3,TRUE
+estatais_semgrupopetro,AO2020.3,AO,2020Q3,0.126038673369273,0.75698130509722406,0.1343260356444227,proporcao (fator - 1),fixo (AO comum da OI),ao2020T3,TRUE
+estatais_semgrupopetro,AO2021.2,AO,2021Q2,0.615886681882371,3.6989813664364912,0.8512973838731264,proporcao (fator - 1),fixo (AO comum da OI),ao2021T2,TRUE
+inf_diss,LS2018.2,LS,2018Q2,0.562550953660693,4.5644243317541635,0.7551440856981284,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ls2018T2,TRUE
+inf_diss,AO2018.3,AO,2018Q3,0.491783259885587,5.039247648497162,0.6352296609301624,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ao2018T3,TRUE
+inf_diss,LS2019.1,LS,2019Q1,-0.781157007910354,-6.3436506271043145,-0.54212406136774,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss,LS2019.3,LS,2019Q3,0.596789783573471,4.807320820244627,0.816278783560739,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ls2019T3,TRUE
+inf_diss,AO2020.3,AO,2020Q3,0.669224965505291,6.9293788342862825,0.9527233060841369,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ao2020T3,TRUE
+inf_diss,AO2021.1,AO,2021Q1,-0.625785669878752,-4.387071332505204,-0.46515894510358446,proporcao (fator - 1),componente uniao_filtro_diss: detectado (X-13 automatico),ao2021T1,TRUE
+inf_diss,AO2021.2,AO,2021Q2,0.517420869137884,5.385181122236434,0.6776950698235129,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ao2021T2,TRUE
+uniao_econ_dt_g1,AO2005.1,AO,2005Q1,-1.20605353443885,-6.884954025729105,-0.7006235700683892,proporcao (fator - 1),detectado (X-13 automatico),ao2005T1,TRUE
+uniao_econ_dt_g1,AO2016.1,AO,2016Q1,0.996397924540916,5.824887584436514,1.708507985821155,proporcao (fator - 1),detectado (X-13 automatico),ao2016T1,TRUE
+uniao_econ_dt_g1,AO2021.1,AO,2021Q1,-0.842050379830371,-4.904764519344316,-0.5691737402726975,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+uniao_soc_dt_g1,AO2021.1,AO,2021Q1,-1.36276429529322,-6.422274796942915,-0.7440477295124256,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+uniao_transf_econ_g1,AO2003.4,AO,2003Q4,-0.545629992902585,-4.7244127611622,-0.545629992902585,R$ bi (X-11 aditivo),detectado (X-13 automatico),ao2003T4,FALSE
+uniao_transf_econ_g1,LS2007.4,LS,2007Q4,0.747996385937534,13.812475041348696,0.747996385937534,R$ bi (X-11 aditivo),detectado (X-13 automatico),ls2007T4,FALSE
+uniao_transf_econ_g1,AO2008.1,AO,2008Q1,-0.781256190737429,-7.068665587335522,-0.781256190737429,R$ bi (X-11 aditivo),detectado (X-13 automatico),ao2008T1,FALSE
+uniao_transf_econ_g1,AO2008.4,AO,2008Q4,-0.664986895416202,-6.353299729676424,-0.664986895416202,R$ bi (X-11 aditivo),detectado (X-13 automatico),ao2008T4,FALSE
+uniao_transf_econ_g1,AO2009.1,AO,2009Q1,-0.587697541564987,-5.4031088474552424,-0.587697541564987,R$ bi (X-11 aditivo),detectado (X-13 automatico),ao2009T1,FALSE
+uniao_transf_econ_g1,LS2010.2,LS,2010Q2,-0.51806061989979,-9.261053779291743,-0.51806061989979,R$ bi (X-11 aditivo),detectado (X-13 automatico),ls2010T2,FALSE
+uniao_transf_econ_g1,AO2010.4,AO,2010Q4,0.907633157240759,8.193813060789026,0.907633157240759,R$ bi (X-11 aditivo),detectado (X-13 automatico),ao2010T4,FALSE
+uniao_transf_econ_g1,AO2011.4,AO,2011Q4,1.66155910660549,15.29751838329589,1.66155910660549,R$ bi (X-11 aditivo),detectado (X-13 automatico),ao2011T4,FALSE
+uniao_transf_econ_g1,LS2013.1,LS,2013Q1,-0.60561295471864,-11.949853061630655,-0.60561295471864,R$ bi (X-11 aditivo),detectado (X-13 automatico),ls2013T1,FALSE
+uniao_transf_soc_g1,AO2014.4,AO,2014Q4,-1.14491125358943,-3.9621251927522585,-0.6817478397259285,proporcao (fator - 1),detectado (X-13 automatico),ao2014T4,TRUE
+uniao_transf_soc_g1,AO2021.1,AO,2021Q1,-1.45283774268467,-5.027747786761206,-0.7660944184461593,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+uniao_filtro_diss_imprazao,AO2021.1,AO,2021Q1,-0.622903133202485,-4.497092609989372,-0.46361502200843885,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+uniao_filtro_diss_impapendice,AO2021.1,AO,2021Q1,-0.626707704842628,-4.537260717727923,-0.4656518599790197,proporcao (fator - 1),detectado (X-13 automatico),ao2021T1,TRUE
+inf_diss_imprazao,LS2018.2,LS,2018Q2,0.562550953660693,4.5644243317541635,0.7551440856981284,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ls2018T2,TRUE
+inf_diss_imprazao,AO2018.3,AO,2018Q3,0.491783259885587,5.039247648497162,0.6352296609301624,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ao2018T3,TRUE
+inf_diss_imprazao,LS2019.1,LS,2019Q1,-0.781157007910354,-6.3436506271043145,-0.54212406136774,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss_imprazao,LS2019.3,LS,2019Q3,0.596789783573471,4.807320820244627,0.816278783560739,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ls2019T3,TRUE
+inf_diss_imprazao,AO2020.3,AO,2020Q3,0.669224965505291,6.9293788342862825,0.9527233060841369,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ao2020T3,TRUE
+inf_diss_imprazao,AO2021.1,AO,2021Q1,-0.622903133202485,-4.497092609989372,-0.46361502200843885,proporcao (fator - 1),componente uniao_filtro_diss_imprazao: detectado (X-13 automatico),ao2021T1,TRUE
+inf_diss_imprazao,AO2021.2,AO,2021Q2,0.517420869137884,5.385181122236434,0.6776950698235129,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ao2021T2,TRUE
+inf_diss_impapendice,LS2018.2,LS,2018Q2,0.562550953660693,4.5644243317541635,0.7551440856981284,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ls2018T2,TRUE
+inf_diss_impapendice,AO2018.3,AO,2018Q3,0.491783259885587,5.039247648497162,0.6352296609301624,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ao2018T3,TRUE
+inf_diss_impapendice,LS2019.1,LS,2019Q1,-0.781157007910354,-6.3436506271043145,-0.54212406136774,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss_impapendice,LS2019.3,LS,2019Q3,0.596789783573471,4.807320820244627,0.816278783560739,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ls2019T3,TRUE
+inf_diss_impapendice,AO2020.3,AO,2020Q3,0.669224965505291,6.9293788342862825,0.9527233060841369,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ao2020T3,TRUE
+inf_diss_impapendice,AO2021.1,AO,2021Q1,-0.626707704842628,-4.537260717727923,-0.4656518599790197,proporcao (fator - 1),componente uniao_filtro_diss_impapendice: detectado (X-13 automatico),ao2021T1,TRUE
+inf_diss_impapendice,AO2021.2,AO,2021Q2,0.517420869137884,5.385181122236434,0.6776950698235129,proporcao (fator - 1),componente estatais_total: detectado (X-13 automatico),ao2021T2,TRUE
+inf_diss_x11soma,LS2019.1,LS,2019Q1,-0.657040312382358,-4.369311808913422,-0.4816166810340212,proporcao (fator - 1),detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss_x11soma,AO2020.3,AO,2020Q3,0.503398554940968,4.721294112036822,0.6543340728267419,proporcao (fator - 1),detectado (X-13 automatico),ao2020T3,TRUE
+inf_diss_x11soma,AO2021.2,AO,2021Q2,0.511073696449969,4.7806799641909565,0.6670801724275852,proporcao (fator - 1),detectado (X-13 automatico),ao2021T2,TRUE
+inf_diss_nominal,AO2018.3,AO,2018Q3,0.400197340137571,3.81954059518025,0.49211912358240717,proporcao (fator - 1),detectado (X-13 automatico),ao2018T3,TRUE
+inf_diss_nominal,LS2019.1,LS,2019Q1,-0.646873837757027,-4.675373933398412,-0.4763196698341935,proporcao (fator - 1),detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss_nominal,AO2020.3,AO,2020Q3,0.528662910611628,5.048057165027047,0.6966622022629032,proporcao (fator - 1),detectado (X-13 automatico),ao2020T3,TRUE
+inf_diss_nominal,AO2021.2,AO,2021Q2,0.466115328970835,4.448845705884947,0.5937907990021438,proporcao (fator - 1),detectado (X-13 automatico),ao2021T2,TRUE
+inf_diss_nominal_2019,LS2018.2,LS,2018Q2,0.393940231620026,3.995536963916151,0.482811920759896,proporcao (fator - 1),detectado (X-13 automatico),ls2018T2,TRUE
+inf_diss_nominal_2019,AO2018.3,AO,2018Q3,0.535744919066906,5.925361625198819,0.7087206268585604,proporcao (fator - 1),detectado (X-13 automatico),ao2018T3,TRUE
+inf_diss_nominal_2019,LS2019.1,LS,2019Q1,-0.575667777376415,-5.269825224900928,-0.4376707673394131,proporcao (fator - 1),detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss_nominal_2019,LS2019.3,LS,2019Q3,0.585319962613213,5.35268415746303,0.7955654075382244,proporcao (fator - 1),detectado (X-13 automatico),ls2019T3,TRUE
+estatais_total_e2017,LS2018.2,LS,2018Q2,0.554691031164317,5.13262468850155,0.7414028624319788,proporcao (fator - 1),detectado (X-13 automatico),ls2018T2,TRUE
+estatais_total_e2017,AO2018.3,AO,2018Q3,0.476383002610006,5.6791271901334675,0.6102396238483525,proporcao (fator - 1),detectado (X-13 automatico),ao2018T3,TRUE
+estatais_total_e2017,LS2019.1,LS,2019Q1,-0.700928298486605,-6.460551093129061,-0.5038754616975291,proporcao (fator - 1),detectado (X-13 automatico),ls2019T1,TRUE
+estatais_total_e2017,LS2019.3,LS,2019Q3,0.506673487929612,4.61257213834567,0.6597607872689442,proporcao (fator - 1),detectado (X-13 automatico),ls2019T3,TRUE
+estatais_total_e2017,AO2020.1,AO,2020Q1,0.387108019545744,4.664194017652153,0.47271556474777254,proporcao (fator - 1),detectado (X-13 automatico),ao2020T1,TRUE
+estatais_total_e2017,AO2020.3,AO,2020Q3,0.686777377494002,8.215620994243645,0.9873008822459342,proporcao (fator - 1),detectado (X-13 automatico),ao2020T3,TRUE
+estatais_total_e2017,AO2021.2,AO,2021Q2,0.507673262858359,6.127959039040859,0.6614210042751534,proporcao (fator - 1),detectado (X-13 automatico),ao2021T2,TRUE
+estatais_total_e2018,LS2018.2,LS,2018Q2,0.55010333123882,5.0598528047781235,0.733432126302509,proporcao (fator - 1),detectado (X-13 automatico),ls2018T2,TRUE
+estatais_total_e2018,AO2018.3,AO,2018Q3,0.476681042342976,5.647930750835069,0.6107196107598944,proporcao (fator - 1),detectado (X-13 automatico),ao2018T3,TRUE
+estatais_total_e2018,LS2019.1,LS,2019Q1,-0.70449667317816,-6.456127722745362,-0.5056426650468202,proporcao (fator - 1),detectado (X-13 automatico),ls2019T1,TRUE
+estatais_total_e2018,LS2019.3,LS,2019Q3,0.509151376979119,4.610704446167652,0.6638785899707109,proporcao (fator - 1),detectado (X-13 automatico),ls2019T3,TRUE
+estatais_total_e2018,AO2020.1,AO,2020Q1,0.387139040143154,4.6360664946353,0.47276124997299385,proporcao (fator - 1),detectado (X-13 automatico),ao2020T1,TRUE
+estatais_total_e2018,AO2020.3,AO,2020Q3,0.687035140129166,8.16999510165803,0.9878132001835798,proporcao (fator - 1),detectado (X-13 automatico),ao2020T3,TRUE
+estatais_total_e2018,AO2021.2,AO,2021Q2,0.505673361781814,6.065713376467511,0.6581016469196264,proporcao (fator - 1),detectado (X-13 automatico),ao2021T2,TRUE
+estatais_total_e2019,LS2018.2,LS,2018Q2,0.55990213059617,5.137525485409719,0.7505011714062604,proporcao (fator - 1),detectado (X-13 automatico),ls2018T2,TRUE
+estatais_total_e2019,AO2018.3,AO,2018Q3,0.488090849789575,5.7747615117864,0.6292028559859562,proporcao (fator - 1),detectado (X-13 automatico),ao2018T3,TRUE
+estatais_total_e2019,LS2019.1,LS,2019Q1,-0.719233413521086,-6.576028991593899,-0.5128744632843185,proporcao (fator - 1),detectado (X-13 automatico),ls2019T1,TRUE
+estatais_total_e2019,LS2019.3,LS,2019Q3,0.505279827701138,4.565978207618022,0.6574492557898297,proporcao (fator - 1),detectado (X-13 automatico),ls2019T3,TRUE
+estatais_total_e2019,AO2020.1,AO,2020Q1,0.387212048225654,4.6294106168051155,0.4728687773729716,proporcao (fator - 1),detectado (X-13 automatico),ao2020T1,TRUE
+estatais_total_e2019,AO2020.3,AO,2020Q3,0.685922632564921,8.144184635878602,0.9856029726374631,proporcao (fator - 1),detectado (X-13 automatico),ao2020T3,TRUE
+estatais_total_e2019,AO2021.2,AO,2021Q2,0.506754096747272,6.067916034952469,0.6598945840161305,proporcao (fator - 1),detectado (X-13 automatico),ao2021T2,TRUE
+estatais_total_e2020,LS2018.2,LS,2018Q2,0.556420866071777,4.461283853358586,0.7444178088193076,proporcao (fator - 1),detectado (X-13 automatico),ls2018T2,TRUE
+estatais_total_e2020,AO2018.3,AO,2018Q3,0.485786176081835,4.907204084701797,0.6254523984496809,proporcao (fator - 1),detectado (X-13 automatico),ao2018T3,TRUE
+estatais_total_e2020,LS2019.1,LS,2019Q1,-0.79915164926452,-6.41138467081605,-0.5502896855890675,proporcao (fator - 1),detectado (X-13 automatico),ls2019T1,TRUE
+estatais_total_e2020,LS2019.3,LS,2019Q3,0.598245127522531,4.774642938502765,0.8189240182944924,proporcao (fator - 1),detectado (X-13 automatico),ls2019T3,TRUE
+estatais_total_e2020,AO2020.3,AO,2020Q3,0.668238500340485,6.826281917541997,0.9507979623645664,proporcao (fator - 1),detectado (X-13 automatico),ao2020T3,TRUE
+estatais_total_e2020,AO2021.2,AO,2021Q2,0.512329849139084,5.251075944693444,0.6691755954792669,proporcao (fator - 1),detectado (X-13 automatico),ao2021T2,TRUE
+estatais_total_e2020_r1618,LS2018.2,LS,2018Q2,0.564573678690456,4.591704005760941,0.7586978525059851,proporcao (fator - 1),detectado (X-13 automatico),ls2018T2,TRUE
+estatais_total_e2020_r1618,AO2018.3,AO,2018Q3,0.494029607490107,5.080382379651996,0.6389070840007056,proporcao (fator - 1),detectado (X-13 automatico),ao2018T3,TRUE
+estatais_total_e2020_r1618,LS2019.1,LS,2019Q1,-0.774097381215906,-6.3017172349988355,-0.5388801913854766,proporcao (fator - 1),detectado (X-13 automatico),ls2019T1,TRUE
+estatais_total_e2020_r1618,LS2019.3,LS,2019Q3,0.596065250759785,4.807525338305457,0.8149633065939079,proporcao (fator - 1),detectado (X-13 automatico),ls2019T3,TRUE
+estatais_total_e2020_r1618,AO2020.3,AO,2020Q3,0.669712184658119,6.956442603979722,0.9536749420878532,proporcao (fator - 1),detectado (X-13 automatico),ao2020T3,TRUE
+estatais_total_e2020_r1618,AO2021.2,AO,2021Q2,0.519419437368696,5.427063903655134,0.6810514107120089,proporcao (fator - 1),detectado (X-13 automatico),ao2021T2,TRUE
+inf_diss_e2017,LS2018.2,LS,2018Q2,0.554691031164317,5.13262468850155,0.7414028624319788,proporcao (fator - 1),componente estatais_total_e2017: detectado (X-13 automatico),ls2018T2,TRUE
+inf_diss_e2017,AO2018.3,AO,2018Q3,0.476383002610006,5.6791271901334675,0.6102396238483525,proporcao (fator - 1),componente estatais_total_e2017: detectado (X-13 automatico),ao2018T3,TRUE
+inf_diss_e2017,LS2019.1,LS,2019Q1,-0.700928298486605,-6.460551093129061,-0.5038754616975291,proporcao (fator - 1),componente estatais_total_e2017: detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss_e2017,LS2019.3,LS,2019Q3,0.506673487929612,4.61257213834567,0.6597607872689442,proporcao (fator - 1),componente estatais_total_e2017: detectado (X-13 automatico),ls2019T3,TRUE
+inf_diss_e2017,AO2020.1,AO,2020Q1,0.387108019545744,4.664194017652153,0.47271556474777254,proporcao (fator - 1),componente estatais_total_e2017: detectado (X-13 automatico),ao2020T1,TRUE
+inf_diss_e2017,AO2020.3,AO,2020Q3,0.686777377494002,8.215620994243645,0.9873008822459342,proporcao (fator - 1),componente estatais_total_e2017: detectado (X-13 automatico),ao2020T3,TRUE
+inf_diss_e2017,AO2021.1,AO,2021Q1,-0.625785669878752,-4.387071332505204,-0.46515894510358446,proporcao (fator - 1),componente uniao_filtro_diss: detectado (X-13 automatico),ao2021T1,TRUE
+inf_diss_e2017,AO2021.2,AO,2021Q2,0.507673262858359,6.127959039040859,0.6614210042751534,proporcao (fator - 1),componente estatais_total_e2017: detectado (X-13 automatico),ao2021T2,TRUE
+inf_diss_e2018,LS2018.2,LS,2018Q2,0.55010333123882,5.0598528047781235,0.733432126302509,proporcao (fator - 1),componente estatais_total_e2018: detectado (X-13 automatico),ls2018T2,TRUE
+inf_diss_e2018,AO2018.3,AO,2018Q3,0.476681042342976,5.647930750835069,0.6107196107598944,proporcao (fator - 1),componente estatais_total_e2018: detectado (X-13 automatico),ao2018T3,TRUE
+inf_diss_e2018,LS2019.1,LS,2019Q1,-0.70449667317816,-6.456127722745362,-0.5056426650468202,proporcao (fator - 1),componente estatais_total_e2018: detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss_e2018,LS2019.3,LS,2019Q3,0.509151376979119,4.610704446167652,0.6638785899707109,proporcao (fator - 1),componente estatais_total_e2018: detectado (X-13 automatico),ls2019T3,TRUE
+inf_diss_e2018,AO2020.1,AO,2020Q1,0.387139040143154,4.6360664946353,0.47276124997299385,proporcao (fator - 1),componente estatais_total_e2018: detectado (X-13 automatico),ao2020T1,TRUE
+inf_diss_e2018,AO2020.3,AO,2020Q3,0.687035140129166,8.16999510165803,0.9878132001835798,proporcao (fator - 1),componente estatais_total_e2018: detectado (X-13 automatico),ao2020T3,TRUE
+inf_diss_e2018,AO2021.1,AO,2021Q1,-0.625785669878752,-4.387071332505204,-0.46515894510358446,proporcao (fator - 1),componente uniao_filtro_diss: detectado (X-13 automatico),ao2021T1,TRUE
+inf_diss_e2018,AO2021.2,AO,2021Q2,0.505673361781814,6.065713376467511,0.6581016469196264,proporcao (fator - 1),componente estatais_total_e2018: detectado (X-13 automatico),ao2021T2,TRUE
+inf_diss_e2019,LS2018.2,LS,2018Q2,0.55990213059617,5.137525485409719,0.7505011714062604,proporcao (fator - 1),componente estatais_total_e2019: detectado (X-13 automatico),ls2018T2,TRUE
+inf_diss_e2019,AO2018.3,AO,2018Q3,0.488090849789575,5.7747615117864,0.6292028559859562,proporcao (fator - 1),componente estatais_total_e2019: detectado (X-13 automatico),ao2018T3,TRUE
+inf_diss_e2019,LS2019.1,LS,2019Q1,-0.719233413521086,-6.576028991593899,-0.5128744632843185,proporcao (fator - 1),componente estatais_total_e2019: detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss_e2019,LS2019.3,LS,2019Q3,0.505279827701138,4.565978207618022,0.6574492557898297,proporcao (fator - 1),componente estatais_total_e2019: detectado (X-13 automatico),ls2019T3,TRUE
+inf_diss_e2019,AO2020.1,AO,2020Q1,0.387212048225654,4.6294106168051155,0.4728687773729716,proporcao (fator - 1),componente estatais_total_e2019: detectado (X-13 automatico),ao2020T1,TRUE
+inf_diss_e2019,AO2020.3,AO,2020Q3,0.685922632564921,8.144184635878602,0.9856029726374631,proporcao (fator - 1),componente estatais_total_e2019: detectado (X-13 automatico),ao2020T3,TRUE
+inf_diss_e2019,AO2021.1,AO,2021Q1,-0.625785669878752,-4.387071332505204,-0.46515894510358446,proporcao (fator - 1),componente uniao_filtro_diss: detectado (X-13 automatico),ao2021T1,TRUE
+inf_diss_e2019,AO2021.2,AO,2021Q2,0.506754096747272,6.067916034952469,0.6598945840161305,proporcao (fator - 1),componente estatais_total_e2019: detectado (X-13 automatico),ao2021T2,TRUE
+inf_diss_e2020,LS2018.2,LS,2018Q2,0.556420866071777,4.461283853358586,0.7444178088193076,proporcao (fator - 1),componente estatais_total_e2020: detectado (X-13 automatico),ls2018T2,TRUE
+inf_diss_e2020,AO2018.3,AO,2018Q3,0.485786176081835,4.907204084701797,0.6254523984496809,proporcao (fator - 1),componente estatais_total_e2020: detectado (X-13 automatico),ao2018T3,TRUE
+inf_diss_e2020,LS2019.1,LS,2019Q1,-0.79915164926452,-6.41138467081605,-0.5502896855890675,proporcao (fator - 1),componente estatais_total_e2020: detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss_e2020,LS2019.3,LS,2019Q3,0.598245127522531,4.774642938502765,0.8189240182944924,proporcao (fator - 1),componente estatais_total_e2020: detectado (X-13 automatico),ls2019T3,TRUE
+inf_diss_e2020,AO2020.3,AO,2020Q3,0.668238500340485,6.826281917541997,0.9507979623645664,proporcao (fator - 1),componente estatais_total_e2020: detectado (X-13 automatico),ao2020T3,TRUE
+inf_diss_e2020,AO2021.1,AO,2021Q1,-0.625785669878752,-4.387071332505204,-0.46515894510358446,proporcao (fator - 1),componente uniao_filtro_diss: detectado (X-13 automatico),ao2021T1,TRUE
+inf_diss_e2020,AO2021.2,AO,2021Q2,0.512329849139084,5.251075944693444,0.6691755954792669,proporcao (fator - 1),componente estatais_total_e2020: detectado (X-13 automatico),ao2021T2,TRUE
+inf_diss_e2020_r1618,LS2018.2,LS,2018Q2,0.564573678690456,4.591704005760941,0.7586978525059851,proporcao (fator - 1),componente estatais_total_e2020_r1618: detectado (X-13 automatico),ls2018T2,TRUE
+inf_diss_e2020_r1618,AO2018.3,AO,2018Q3,0.494029607490107,5.080382379651996,0.6389070840007056,proporcao (fator - 1),componente estatais_total_e2020_r1618: detectado (X-13 automatico),ao2018T3,TRUE
+inf_diss_e2020_r1618,LS2019.1,LS,2019Q1,-0.774097381215906,-6.3017172349988355,-0.5388801913854766,proporcao (fator - 1),componente estatais_total_e2020_r1618: detectado (X-13 automatico),ls2019T1,TRUE
+inf_diss_e2020_r1618,LS2019.3,LS,2019Q3,0.596065250759785,4.807525338305457,0.8149633065939079,proporcao (fator - 1),componente estatais_total_e2020_r1618: detectado (X-13 automatico),ls2019T3,TRUE
+inf_diss_e2020_r1618,AO2020.3,AO,2020Q3,0.669712184658119,6.956442603979722,0.9536749420878532,proporcao (fator - 1),componente estatais_total_e2020_r1618: detectado (X-13 automatico),ao2020T3,TRUE
+inf_diss_e2020_r1618,AO2021.1,AO,2021Q1,-0.625785669878752,-4.387071332505204,-0.46515894510358446,proporcao (fator - 1),componente uniao_filtro_diss: detectado (X-13 automatico),ao2021T1,TRUE
+inf_diss_e2020_r1618,AO2021.2,AO,2021Q2,0.519419437368696,5.427063903655134,0.6810514107120089,proporcao (fator - 1),componente estatais_total_e2020_r1618: detectado (X-13 automatico),ao2021T2,TRUE

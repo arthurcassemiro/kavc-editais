@@ -55,8 +55,8 @@ gravar_metadados <- function(meta, fontes) {
       filter(!fonte %in% fontes)
     meta <- bind_rows(velho, meta)
   }
-  ordem_fonte <- c("Ipeadata", "Ipea/Carta de Conjuntura", "Comex Stat/MDIC", "BCB/SGS", "BNDES/Dados Abertos",
-                   "FGV IBRE")
+  ordem_fonte <- c("Ipea/Carta de Conjuntura", "Ipeadata", "Comex Stat/MDIC", "BCB/SGS", "BNDES/Dados Abertos",
+                   "FGV IBRE", "Ipeadata (IBGE/SCN)")
   meta <- meta %>% mutate(o = match(fonte, ordem_fonte)) %>% arrange(o) %>% select(-o)
   write_csv_safe(meta, F_META_A2ICB)
 }

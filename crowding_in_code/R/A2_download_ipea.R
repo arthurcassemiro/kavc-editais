@@ -290,7 +290,11 @@ meta_carta <- tibble(
 meta_ipd <- meta_ip %>% transmute(
   serie, fonte = "Ipeadata", codigo, titulo_nos_metadados = titulo,
   unidade = ifelse(trimws(unidade) == "-", "indice", trimws(unidade)), periodicidade = freq,
-  periodo = map_chr(serie, function(s) if (s %in% names(dados_ip)) sprintf("%s a %s", min(dados_ip[[s]]$date), max(dados_ip[[s]]$date)) else "nao baixada"),
+  periodo = map_chr(serie, function(s) {
+    if (!s %in% names(dados_ip)) return("nao baixada")
+    fmt <- if (s == "brent_usd_barril") "%Y-%m-%d" else "%Y-%m"
+    sprintf("%s a %s", format(min(dados_ip[[s]]$date), fmt), format(max(dados_ip[[s]]$date), fmt))
+  }),
   url = sprintf("https://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='%s')", codigo),
   arquivo_download = ifelse(serie %in% names(arquivos), arquivos[serie], ""),
   transformacao = case_when(

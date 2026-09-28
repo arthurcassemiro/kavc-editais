@@ -1,0 +1,320 @@
+tabela,chave,descricao,valor_texto,valor,casas,linha_txt
+6,t6_sel_AIC,Defasagem escolhida pelo AIC,3,3,0,3421
+6,t6_sel_HQ,Defasagem escolhida pelo HQ,3,3,0,3421
+6,t6_sel_SC,Defasagem escolhida pelo SC,2,2,0,3421
+6,t6_sel_FPE,Defasagem escolhida pelo FPE,3,3,0,3421
+7,t7_col_autocorrelacao_estat,"Coluna 'Autocorrelacao' (nota: Portmanteau pequenas amostras, 16 lags), estatistica","42,33",42.33,2,3428
+7,t7_col_autocorrelacao_p,"Coluna 'Autocorrelacao', p-valor","0,589",0.589,3,3428
+7,t7_col_homocedasticidade_estat,"Coluna 'Homocedasticidade' (nota: ARCH-LM multivariado), estatistica","52,34",52.34,2,3428
+7,t7_col_homocedasticidade_p,"Coluna 'Homocedasticidade', p-valor","0,46",0.46,2,3428
+8,t8_traco_r1,"Johansen, traco, r <= 1","2,53",2.53,2,3444
+8,t8_cv5_r1,"Johansen, valor critico 5%, r <= 1","12,25",12.25,2,3444
+8,t8_traco_r0,"Johansen, traco, r = 0","25,01",25.01,2,3446
+8,t8_cv5_r0,"Johansen, valor critico 5%, r = 0","25,32",25.32,2,3446
+9,t9_INF_INF.l1_coef,"Equacao de INF, Ipub l1 (INF.l1), coeficiente","0,01",0.01,2,3473
+9,t9_INF_INF.l1_ep,"Equacao de INF, Ipub l1 (INF.l1), erro padrao","0,13",0.13,2,3473
+9,t9_INF_INF.l1_t,"Equacao de INF, Ipub l1 (INF.l1), valor t","0,06",0.06,2,3473
+9,t9_INF_INF.l1_p,"Equacao de INF, Ipub l1 (INF.l1), p-valor","0,96",0.96,2,3473
+9,t9_INF_PVD.l1_coef,"Equacao de INF, Imeq l1 (PVD.l1), coeficiente","0,08",0.08,2,3474
+9,t9_INF_PVD.l1_ep,"Equacao de INF, Imeq l1 (PVD.l1), erro padrao","0,30",0.3,2,3474
+9,t9_INF_PVD.l1_t,"Equacao de INF, Imeq l1 (PVD.l1), valor t","0,28",0.28,2,3474
+9,t9_INF_PVD.l1_p,"Equacao de INF, Imeq l1 (PVD.l1), p-valor","0,78",0.78,2,3474
+9,t9_INF_INF.l2_coef,"Equacao de INF, Ipub l2 (INF.l2), coeficiente","-0,49",-0.49,2,3475
+9,t9_INF_INF.l2_ep,"Equacao de INF, Ipub l2 (INF.l2), erro padrao","0,13",0.13,2,3475
+9,t9_INF_INF.l2_t,"Equacao de INF, Ipub l2 (INF.l2), valor t","-3,84",-3.84,2,3475
+9,t9_INF_INF.l2_p,"Equacao de INF, Ipub l2 (INF.l2), p-valor","0,0003",3e-4,4,3475
+9,t9_INF_PVD.l2_coef,"Equacao de INF, Imeq l2 (PVD.l2), coeficiente","0,06",0.06,2,3476
+9,t9_INF_PVD.l2_ep,"Equacao de INF, Imeq l2 (PVD.l2), erro padrao","0,27",0.27,2,3476
+9,t9_INF_PVD.l2_t,"Equacao de INF, Imeq l2 (PVD.l2), valor t","0,23",0.23,2,3476
+9,t9_INF_PVD.l2_p,"Equacao de INF, Imeq l2 (PVD.l2), p-valor","0,82",0.82,2,3476
+9,t9_INF_INF.l3_coef,"Equacao de INF, Ipub l3 (INF.l3), coeficiente","-0,16",-0.16,2,3477
+9,t9_INF_INF.l3_ep,"Equacao de INF, Ipub l3 (INF.l3), erro padrao","0,15",0.15,2,3477
+9,t9_INF_INF.l3_t,"Equacao de INF, Ipub l3 (INF.l3), valor t","-1,04",-1.04,2,3477
+9,t9_INF_INF.l3_p,"Equacao de INF, Ipub l3 (INF.l3), p-valor","0,30",0.3,2,3477
+9,t9_INF_PVD.l3_coef,"Equacao de INF, Imeq l3 (PVD.l3), coeficiente","0,53",0.53,2,3478
+9,t9_INF_PVD.l3_ep,"Equacao de INF, Imeq l3 (PVD.l3), erro padrao","0,28",0.28,2,3478
+9,t9_INF_PVD.l3_t,"Equacao de INF, Imeq l3 (PVD.l3), valor t","1,89",1.89,2,3478
+9,t9_INF_PVD.l3_p,"Equacao de INF, Imeq l3 (PVD.l3), p-valor","0,0636",0.0636,4,3478
+9,t9_INF_const_coef,"Equacao de INF, k (const), coeficiente","0,03",0.03,2,3479
+9,t9_INF_const_ep,"Equacao de INF, k (const), erro padrao","0,02",0.02,2,3479
+9,t9_INF_const_t,"Equacao de INF, k (const), valor t","1,70",1.7,2,3479
+9,t9_INF_const_p,"Equacao de INF, k (const), p-valor","0,094",0.094,3,3479
+9,t9_INF_trend_coef,"Equacao de INF, t (trend), coeficiente","0,00",0,2,3480
+9,t9_INF_trend_ep,"Equacao de INF, t (trend), erro padrao","0,00",0,2,3480
+9,t9_INF_trend_t,"Equacao de INF, t (trend), valor t","-1,51",-1.51,2,3480
+9,t9_INF_trend_p,"Equacao de INF, t (trend), p-valor","0,14",0.14,2,3480
+9,t9_INF_PIB_coef,"Equacao de INF, Cpib (PIB), coeficiente","0,01",0.01,2,3481
+9,t9_INF_PIB_ep,"Equacao de INF, Cpib (PIB), erro padrao","0,68",0.68,2,3481
+9,t9_INF_PIB_t,"Equacao de INF, Cpib (PIB), valor t","0,02",0.02,2,3481
+9,t9_INF_PIB_p,"Equacao de INF, Cpib (PIB), p-valor","0,99",0.99,2,3481
+9,t9_INF_JUR_coef,"Equacao de INF, Cjur (JUR), coeficiente","0,04",0.04,2,3482
+9,t9_INF_JUR_ep,"Equacao de INF, Cjur (JUR), erro padrao","0,69",0.69,2,3482
+9,t9_INF_JUR_t,"Equacao de INF, Cjur (JUR), valor t","0,05",0.05,2,3482
+9,t9_INF_JUR_p,"Equacao de INF, Cjur (JUR), p-valor","0,96",0.96,2,3482
+9,t9_INF_DUM_coef,"Equacao de INF, Cdummy (DUM), coeficiente","0,13",0.13,2,3493
+9,t9_INF_DUM_ep,"Equacao de INF, Cdummy (DUM), erro padrao","0,04",0.04,2,3493
+9,t9_INF_DUM_t,"Equacao de INF, Cdummy (DUM), valor t","2,90",2.9,2,3493
+9,t9_INF_DUM_p,"Equacao de INF, Cdummy (DUM), p-valor","0,005",0.005,3,3493
+10,t10_PVD_INF.l1_coef,"Equacao de PVD, Ipub l1 (INF.l1), coeficiente","-0,01",-0.01,2,3499
+10,t10_PVD_INF.l1_ep,"Equacao de PVD, Ipub l1 (INF.l1), erro padrao","0,06",0.06,2,3499
+10,t10_PVD_INF.l1_t,"Equacao de PVD, Ipub l1 (INF.l1), valor t","-0,25",-0.25,2,3499
+10,t10_PVD_INF.l1_p,"Equacao de PVD, Ipub l1 (INF.l1), p-valor","0,80",0.8,2,3499
+10,t10_PVD_PVD.l1_coef,"Equacao de PVD, Imeq l1 (PVD.l1), coeficiente","0,21",0.21,2,3500
+10,t10_PVD_PVD.l1_ep,"Equacao de PVD, Imeq l1 (PVD.l1), erro padrao","0,14",0.14,2,3500
+10,t10_PVD_PVD.l1_t,"Equacao de PVD, Imeq l1 (PVD.l1), valor t","1,51",1.51,2,3500
+10,t10_PVD_PVD.l1_p,"Equacao de PVD, Imeq l1 (PVD.l1), p-valor","0,14",0.14,2,3500
+10,t10_PVD_INF.l2_coef,"Equacao de PVD, Ipub l2 (INF.l2), coeficiente","-0,13",-0.13,2,3501
+10,t10_PVD_INF.l2_ep,"Equacao de PVD, Ipub l2 (INF.l2), erro padrao","0,06",0.06,2,3501
+10,t10_PVD_INF.l2_t,"Equacao de PVD, Ipub l2 (INF.l2), valor t","-2,16",-2.16,2,3501
+10,t10_PVD_INF.l2_p,"Equacao de PVD, Ipub l2 (INF.l2), p-valor","0,0349",0.0349,4,3501
+10,t10_PVD_PVD.l2_coef,"Equacao de PVD, Imeq l2 (PVD.l2), coeficiente","0,04",0.04,2,3502
+10,t10_PVD_PVD.l2_ep,"Equacao de PVD, Imeq l2 (PVD.l2), erro padrao","0,13",0.13,2,3502
+10,t10_PVD_PVD.l2_t,"Equacao de PVD, Imeq l2 (PVD.l2), valor t","0,29",0.29,2,3502
+10,t10_PVD_PVD.l2_p,"Equacao de PVD, Imeq l2 (PVD.l2), p-valor","0,77",0.77,2,3502
+10,t10_PVD_INF.l3_coef,"Equacao de PVD, Ipub l3 (INF.l3), coeficiente","0,14",0.14,2,3503
+10,t10_PVD_INF.l3_ep,"Equacao de PVD, Ipub l3 (INF.l3), erro padrao","0,07",0.07,2,3503
+10,t10_PVD_INF.l3_t,"Equacao de PVD, Ipub l3 (INF.l3), valor t","2,03",2.03,2,3503
+10,t10_PVD_INF.l3_p,"Equacao de PVD, Ipub l3 (INF.l3), p-valor","0,0469",0.0469,4,3503
+10,t10_PVD_PVD.l3_coef,"Equacao de PVD, Imeq l3 (PVD.l3), coeficiente","0,14",0.14,2,3504
+10,t10_PVD_PVD.l3_ep,"Equacao de PVD, Imeq l3 (PVD.l3), erro padrao","0,13",0.13,2,3504
+10,t10_PVD_PVD.l3_t,"Equacao de PVD, Imeq l3 (PVD.l3), valor t","1,11",1.11,2,3504
+10,t10_PVD_PVD.l3_p,"Equacao de PVD, Imeq l3 (PVD.l3), p-valor","0,27",0.27,2,3504
+10,t10_PVD_const_coef,"Equacao de PVD, k (const), coeficiente","0,01",0.01,2,3505
+10,t10_PVD_const_ep,"Equacao de PVD, k (const), erro padrao","0,01",0.01,2,3505
+10,t10_PVD_const_t,"Equacao de PVD, k (const), valor t","1,20",1.2,2,3505
+10,t10_PVD_const_p,"Equacao de PVD, k (const), p-valor","0,24",0.24,2,3505
+10,t10_PVD_trend_coef,"Equacao de PVD, t (trend), coeficiente","0,00",0,2,3506
+10,t10_PVD_trend_ep,"Equacao de PVD, t (trend), erro padrao","0,00",0,2,3506
+10,t10_PVD_trend_t,"Equacao de PVD, t (trend), valor t","-1,17",-1.17,2,3506
+10,t10_PVD_trend_p,"Equacao de PVD, t (trend), p-valor","0,25",0.25,2,3506
+10,t10_PVD_PIB_coef,"Equacao de PVD, Cpib (PIB), coeficiente","0,80",0.8,2,3507
+10,t10_PVD_PIB_ep,"Equacao de PVD, Cpib (PIB), erro padrao","0,31",0.31,2,3507
+10,t10_PVD_PIB_t,"Equacao de PVD, Cpib (PIB), valor t","2,56",2.56,2,3507
+10,t10_PVD_PIB_p,"Equacao de PVD, Cpib (PIB), p-valor","0,0132",0.0132,4,3507
+10,t10_PVD_JUR_coef,"Equacao de PVD, Cjur (JUR), coeficiente","-0,11",-0.11,2,3508
+10,t10_PVD_JUR_ep,"Equacao de PVD, Cjur (JUR), erro padrao","0,32",0.32,2,3508
+10,t10_PVD_JUR_t,"Equacao de PVD, Cjur (JUR), valor t","-0,36",-0.36,2,3508
+10,t10_PVD_JUR_p,"Equacao de PVD, Cjur (JUR), p-valor","0,72",0.72,2,3508
+10,t10_PVD_DUM_coef,"Equacao de PVD, Cdummy (DUM), coeficiente","0,02",0.02,2,3509
+10,t10_PVD_DUM_ep,"Equacao de PVD, Cdummy (DUM), erro padrao","0,02",0.02,2,3509
+10,t10_PVD_DUM_t,"Equacao de PVD, Cdummy (DUM), valor t","0,99",0.99,2,3509
+10,t10_PVD_DUM_p,"Equacao de PVD, Cdummy (DUM), p-valor","0,33",0.33,2,3509
+11,t11_cov_INF_INF,"Tabela 11, cov, linha INF, coluna INF","0,0039",0.0039,4,3569
+11,t11_cov_INF_PVD,"Tabela 11, cov, linha INF, coluna PVD","0,0007",7e-4,4,3569
+11,t11_cov_PVD_INF,"Tabela 11, cov, linha PVD, coluna INF","0,0007",7e-4,4,3570
+11,t11_cov_PVD_PVD,"Tabela 11, cov, linha PVD, coluna PVD","0,0008",8e-4,4,3570
+11,t11_cor_INF_INF,"Tabela 11, cor, linha INF, coluna INF",1,1,0,3573
+11,t11_cor_INF_PVD,"Tabela 11, cor, linha INF, coluna PVD","0,405",0.405,3,3573
+11,t11_cor_PVD_INF,"Tabela 11, cor, linha PVD, coluna INF","0,405",0.405,3,3574
+11,t11_cor_PVD_PVD,"Tabela 11, cor, linha PVD, coluna PVD",1,1,0,3574
+11,t11_chol_INF_INF,"Tabela 11, chol, linha INF, coluna INF","0,063",0.063,3,3577
+11,t11_chol_INF_PVD,"Tabela 11, chol, linha INF, coluna PVD",0,0,0,3577
+11,t11_chol_PVD_INF,"Tabela 11, chol, linha PVD, coluna INF","0,0118",0.0118,4,3578
+11,t11_chol_PVD_PVD,"Tabela 11, chol, linha PVD, coluna PVD","0,0266",0.0266,4,3578
+12,t12_causa_INF_F,"Granger, causa INF, F","2,91",2.91,2,3598
+12,t12_causa_INF_gl1,"Granger, causa INF, gl1",3,3,0,3598
+12,t12_causa_INF_gl2,"Granger, causa INF, gl2",116,116,0,3598
+12,t12_causa_INF_p,"Granger, causa INF, p-valor","0,03",0.03,2,3598
+12,t12_causa_PVD_F,"Granger, causa PVD, F","1,90",1.9,2,3599
+12,t12_causa_PVD_gl1,"Granger, causa PVD, gl1",3,3,0,3599
+12,t12_causa_PVD_gl2,"Granger, causa PVD, gl2",116,116,0,3599
+12,t12_causa_PVD_p,"Granger, causa PVD, p-valor","0,56",0.56,2,3599
+14,t14_AIC_1,"VARselect, AIC com 1 defasagens",-12.188,-12.188,3,4313
+14,t14_AIC_2,"VARselect, AIC com 2 defasagens",-12.375,-12.375,3,4313
+14,t14_AIC_3,"VARselect, AIC com 3 defasagens",-12.468,-12.468,3,4313
+14,t14_AIC_4,"VARselect, AIC com 4 defasagens",-12.417,-12.417,3,4313
+14,t14_AIC_5,"VARselect, AIC com 5 defasagens",-12.316,-12.316,3,4313
+14,t14_AIC_6,"VARselect, AIC com 6 defasagens",-12.273,-12.273,3,4313
+14,t14_AIC_7,"VARselect, AIC com 7 defasagens",-12.205,-12.205,3,4313
+14,t14_AIC_8,"VARselect, AIC com 8 defasagens",-12.316,-12.316,3,4313
+14,t14_HQ_1,"VARselect, HQ com 1 defasagens",-12.001,-12.001,3,4314
+14,t14_HQ_2,"VARselect, HQ com 2 defasagens",-12.134,-12.134,3,4314
+14,t14_HQ_3,"VARselect, HQ com 3 defasagens",-12.174,-12.174,3,4314
+14,t14_HQ_4,"VARselect, HQ com 4 defasagens",-12.069,-12.069,3,4314
+14,t14_HQ_5,"VARselect, HQ com 5 defasagens",-11.914,-11.914,3,4314
+14,t14_HQ_6,"VARselect, HQ com 6 defasagens",-11.818,-11.818,3,4314
+14,t14_HQ_7,"VARselect, HQ com 7 defasagens",-11.696,-11.696,3,4314
+14,t14_HQ_8,"VARselect, HQ com 8 defasagens",-11.754,-11.754,3,4314
+14,t14_SC_1,"VARselect, SC com 1 defasagens",-11.712,-11.712,3,4315
+14,t14_SC_2,"VARselect, SC com 2 defasagens",-11.762,-11.762,3,4315
+14,t14_SC_3,"VARselect, SC com 3 defasagens",-11.720,-11.72,3,4315
+14,t14_SC_4,"VARselect, SC com 4 defasagens",-11.533,-11.533,3,4315
+14,t14_SC_5,"VARselect, SC com 5 defasagens",-11.295,-11.295,3,4315
+14,t14_SC_6,"VARselect, SC com 6 defasagens",-11.116,-11.116,3,4315
+14,t14_SC_7,"VARselect, SC com 7 defasagens",-10.912,-10.912,3,4315
+14,t14_SC_8,"VARselect, SC com 8 defasagens",-10.887,-10.887,3,4315
+14,t14_FPE_1,"VARselect, FPE com 1 defasagens",0.00001,1e-5,5,4316
+14,t14_FPE_2,"VARselect, FPE com 2 defasagens",0.00000,0,5,4316
+14,t14_FPE_3,"VARselect, FPE com 3 defasagens",0.00000,0,5,4316
+14,t14_FPE_4,"VARselect, FPE com 4 defasagens",0.00000,0,5,4316
+14,t14_FPE_5,"VARselect, FPE com 5 defasagens",0.00000,0,5,4316
+14,t14_FPE_6,"VARselect, FPE com 6 defasagens",0.00000,0,5,4316
+14,t14_FPE_7,"VARselect, FPE com 7 defasagens",0.00001,1e-5,5,4316
+14,t14_FPE_8,"VARselect, FPE com 8 defasagens",0.00000,0,5,4316
+15,t15_raiz_1,Modulo da raiz 1,0.736,0.736,3,4323
+15,t15_raiz_2,Modulo da raiz 2,0.736,0.736,3,4323
+15,t15_raiz_3,Modulo da raiz 3,0.694,0.694,3,4323
+15,t15_raiz_4,Modulo da raiz 4,0.694,0.694,3,4323
+15,t15_raiz_5,Modulo da raiz 5,0.670,0.67,3,4323
+15,t15_raiz_6,Modulo da raiz 6,0.563,0.563,3,4323
+16,t16_irfcum_PVD_h00,"Resposta acumulada de PVD ao choque de INF, h = 0","0,011831053",0.011831053,9,4332
+16,t16_irfcum_PVD_h01,"Resposta acumulada de PVD ao choque de INF, h = 1","0,013332227",0.013332227,9,4333
+16,t16_irfcum_PVD_h02,"Resposta acumulada de PVD ao choque de INF, h = 2","0,006063194",0.006063194,9,4334
+16,t16_irfcum_PVD_h03,"Resposta acumulada de PVD ao choque de INF, h = 3","0,015583049",0.015583049,9,4335
+16,t16_irfcum_PVD_h04,"Resposta acumulada de PVD ao choque de INF, h = 4","0,021557614",0.021557614,9,4336
+16,t16_irfcum_PVD_h05,"Resposta acumulada de PVD ao choque de INF, h = 5","0,018251815",0.018251815,9,4337
+16,t16_irfcum_PVD_h06,"Resposta acumulada de PVD ao choque de INF, h = 6","0,016405805",0.016405805,9,4338
+16,t16_irfcum_PVD_h07,"Resposta acumulada de PVD ao choque de INF, h = 7","0,018406923",0.018406923,9,4339
+16,t16_irfcum_PVD_h08,"Resposta acumulada de PVD ao choque de INF, h = 8","0,019146729",0.019146729,9,4344
+16,t16_irfcum_PVD_h09,"Resposta acumulada de PVD ao choque de INF, h = 9","0,019150553",0.019150553,9,4345
+16,t16_irfcum_PVD_h10,"Resposta acumulada de PVD ao choque de INF, h = 10","0,019411078",0.019411078,9,4346
+16,t16_irfcum_PVD_h11,"Resposta acumulada de PVD ao choque de INF, h = 11","0,019253522",0.019253522,9,4347
+16,t16_irfcum_PVD_h12,"Resposta acumulada de PVD ao choque de INF, h = 12","0,018988935",0.018988935,9,4348
+16,t16_irfcum_PVD_h13,"Resposta acumulada de PVD ao choque de INF, h = 13","0,019233032",0.019233032,9,4349
+16,t16_irfcum_PVD_h14,"Resposta acumulada de PVD ao choque de INF, h = 14","0,019477963",0.019477963,9,4350
+16,t16_irfcum_PVD_h15,"Resposta acumulada de PVD ao choque de INF, h = 15","0,019397711",0.019397711,9,4351
+16,t16_irfcum_PVD_h16,"Resposta acumulada de PVD ao choque de INF, h = 16","0,019298596",0.019298596,9,4352
+16,t16_irfcum_PVD_h17,"Resposta acumulada de PVD ao choque de INF, h = 17","0,019322991",0.019322991,9,4353
+16,t16_irfcum_PVD_h18,"Resposta acumulada de PVD ao choque de INF, h = 18","0,019356489",0.019356489,9,4354
+16,t16_irfcum_PVD_h19,"Resposta acumulada de PVD ao choque de INF, h = 19","0,019369838",0.019369838,9,4355
+16,t16_irfcum_PVD_h20,"Resposta acumulada de PVD ao choque de INF, h = 20","0,019377512",0.019377512,9,4356
+16,t16_irfcum_PVD_h21,"Resposta acumulada de PVD ao choque de INF, h = 21","0,019367081",0.019367081,9,4357
+16,t16_irfcum_PVD_h22,"Resposta acumulada de PVD ao choque de INF, h = 22","0,019354566",0.019354566,9,4358
+16,t16_irfcum_PVD_h23,"Resposta acumulada de PVD ao choque de INF, h = 23","0,019360779",0.019360779,9,4359
+16,t16_irfcum_PVD_h24,"Resposta acumulada de PVD ao choque de INF, h = 24","0,019370876",0.019370876,9,4360
+16,t16_irfcum_PVD_h25,"Resposta acumulada de PVD ao choque de INF, h = 25","0,019370258",0.019370258,9,4361
+16,t16_irfcum_PVD_h26,"Resposta acumulada de PVD ao choque de INF, h = 26","0,019366018",0.019366018,9,4362
+16,t16_irfcum_PVD_h27,"Resposta acumulada de PVD ao choque de INF, h = 27","0,019365182",0.019365182,9,4363
+16,t16_irfcum_PVD_h28,"Resposta acumulada de PVD ao choque de INF, h = 28","0,019366214",0.019366214,9,4364
+16,t16_irfcum_PVD_h29,"Resposta acumulada de PVD ao choque de INF, h = 29","0,019367257",0.019367257,9,4365
+16,t16_irfcum_PVD_h30,"Resposta acumulada de PVD ao choque de INF, h = 30","0,019367739",0.019367739,9,4366
+16,t16_irfcum_PVD_h31,"Resposta acumulada de PVD ao choque de INF, h = 31","0,019367274",0.019367274,9,4367
+16,t16_irfcum_PVD_h32,"Resposta acumulada de PVD ao choque de INF, h = 32","0,019366649",0.019366649,9,4368
+16,t16_irfcum_PVD_h33,"Resposta acumulada de PVD ao choque de INF, h = 33","0,019366745",0.019366745,9,4369
+16,t16_irfcum_PVD_h34,"Resposta acumulada de PVD ao choque de INF, h = 34","0,019367156",0.019367156,9,4370
+16,t16_irfcum_PVD_h35,"Resposta acumulada de PVD ao choque de INF, h = 35","0,019367243",0.019367243,9,4371
+16,t16_irfcum_PVD_h36,"Resposta acumulada de PVD ao choque de INF, h = 36","0,019367094",0.019367094,9,4372
+16,t16_irfcum_PVD_h37,"Resposta acumulada de PVD ao choque de INF, h = 37","0,019367001",0.019367001,9,4373
+16,t16_irfcum_PVD_h38,"Resposta acumulada de PVD ao choque de INF, h = 38","0,019367014",0.019367014,9,4374
+16,t16_irfcum_PVD_h39,"Resposta acumulada de PVD ao choque de INF, h = 39","0,019367069",0.019367069,9,4375
+16,t16_irfcum_PVD_h40,"Resposta acumulada de PVD ao choque de INF, h = 40","0,019367102",0.019367102,9,4376
+17,t17_fevd_INF_por_INF_h01,"FEVD de INF, parcela do choque de INF, h = 1",1,1,0,4386
+17,t17_fevd_INF_por_PVD_h01,"FEVD de INF, parcela do choque de PVD, h = 1",0.000000000,0,9,4386
+17,t17_fevd_INF_por_INF_h02,"FEVD de INF, parcela do choque de INF, h = 2",0.9988068,0.9988068,7,4387
+17,t17_fevd_INF_por_PVD_h02,"FEVD de INF, parcela do choque de PVD, h = 2",0.001193237,0.001193237,9,4387
+17,t17_fevd_INF_por_INF_h03,"FEVD de INF, parcela do choque de INF, h = 3",0.9980880,0.998088,7,4388
+17,t17_fevd_INF_por_PVD_h03,"FEVD de INF, parcela do choque de PVD, h = 3",0.001912049,0.001912049,9,4388
+17,t17_fevd_INF_por_INF_h04,"FEVD de INF, parcela do choque de INF, h = 4",0.9618138,0.9618138,7,4389
+17,t17_fevd_INF_por_PVD_h04,"FEVD de INF, parcela do choque de PVD, h = 4",0.038186218,0.038186218,9,4389
+17,t17_fevd_INF_por_INF_h05,"FEVD de INF, parcela do choque de INF, h = 5",0.9627222,0.9627222,7,4390
+17,t17_fevd_INF_por_PVD_h05,"FEVD de INF, parcela do choque de PVD, h = 5",0.037277783,0.037277783,9,4390
+17,t17_fevd_INF_por_INF_h06,"FEVD de INF, parcela do choque de INF, h = 6",0.9575328,0.9575328,7,4391
+17,t17_fevd_INF_por_PVD_h06,"FEVD de INF, parcela do choque de PVD, h = 6",0.042467236,0.042467236,9,4391
+17,t17_fevd_INF_por_INF_h07,"FEVD de INF, parcela do choque de INF, h = 7",0.9573840,0.957384,7,4392
+17,t17_fevd_INF_por_PVD_h07,"FEVD de INF, parcela do choque de PVD, h = 7",0.042616028,0.042616028,9,4392
+17,t17_fevd_INF_por_INF_h08,"FEVD de INF, parcela do choque de INF, h = 8",0.9554898,0.9554898,7,4393
+17,t17_fevd_INF_por_PVD_h08,"FEVD de INF, parcela do choque de PVD, h = 8",0.044510232,0.044510232,9,4393
+17,t17_fevd_INF_por_INF_h09,"FEVD de INF, parcela do choque de INF, h = 9",0.9552245,0.9552245,7,4394
+17,t17_fevd_INF_por_PVD_h09,"FEVD de INF, parcela do choque de PVD, h = 9",0.044775478,0.044775478,9,4394
+17,t17_fevd_INF_por_INF_h10,"FEVD de INF, parcela do choque de INF, h = 10",0.9552207,0.9552207,7,4395
+17,t17_fevd_INF_por_PVD_h10,"FEVD de INF, parcela do choque de PVD, h = 10",0.044779337,0.044779337,9,4395
+17,t17_fevd_INF_por_INF_h11,"FEVD de INF, parcela do choque de INF, h = 11",0.9552455,0.9552455,7,4396
+17,t17_fevd_INF_por_PVD_h11,"FEVD de INF, parcela do choque de PVD, h = 11",0.044754465,0.044754465,9,4396
+17,t17_fevd_INF_por_INF_h12,"FEVD de INF, parcela do choque de INF, h = 12",0.9552321,0.9552321,7,4397
+17,t17_fevd_INF_por_PVD_h12,"FEVD de INF, parcela do choque de PVD, h = 12",0.044767941,0.044767941,9,4397
+17,t17_fevd_INF_por_INF_h13,"FEVD de INF, parcela do choque de INF, h = 13",0.9552414,0.9552414,7,4398
+17,t17_fevd_INF_por_PVD_h13,"FEVD de INF, parcela do choque de PVD, h = 13",0.044758550,0.04475855,9,4398
+17,t17_fevd_INF_por_INF_h14,"FEVD de INF, parcela do choque de INF, h = 14",0.9552048,0.9552048,7,4399
+17,t17_fevd_INF_por_PVD_h14,"FEVD de INF, parcela do choque de PVD, h = 14",0.044795183,0.044795183,9,4399
+17,t17_fevd_INF_por_INF_h15,"FEVD de INF, parcela do choque de INF, h = 15",0.9552020,0.955202,7,4400
+17,t17_fevd_INF_por_PVD_h15,"FEVD de INF, parcela do choque de PVD, h = 15",0.044797959,0.044797959,9,4400
+17,t17_fevd_INF_por_INF_h16,"FEVD de INF, parcela do choque de INF, h = 16",0.9551952,0.9551952,7,4401
+17,t17_fevd_INF_por_PVD_h16,"FEVD de INF, parcela do choque de PVD, h = 16",0.044804822,0.044804822,9,4401
+17,t17_fevd_INF_por_INF_h17,"FEVD de INF, parcela do choque de INF, h = 17",0.9551931,0.9551931,7,4402
+17,t17_fevd_INF_por_PVD_h17,"FEVD de INF, parcela do choque de PVD, h = 17",0.044806919,0.044806919,9,4402
+17,t17_fevd_INF_por_INF_h18,"FEVD de INF, parcela do choque de INF, h = 18",0.9551921,0.9551921,7,4403
+17,t17_fevd_INF_por_PVD_h18,"FEVD de INF, parcela do choque de PVD, h = 18",0.044807852,0.044807852,9,4403
+17,t17_fevd_INF_por_INF_h19,"FEVD de INF, parcela do choque de INF, h = 19",0.9551913,0.9551913,7,4404
+17,t17_fevd_INF_por_PVD_h19,"FEVD de INF, parcela do choque de PVD, h = 19",0.044808683,0.044808683,9,4404
+17,t17_fevd_INF_por_INF_h20,"FEVD de INF, parcela do choque de INF, h = 20",0.9551913,0.9551913,7,4405
+17,t17_fevd_INF_por_PVD_h20,"FEVD de INF, parcela do choque de PVD, h = 20",0.044808709,0.044808709,9,4405
+17,t17_fevd_INF_por_INF_h21,"FEVD de INF, parcela do choque de INF, h = 21",0.9551913,0.9551913,7,4406
+17,t17_fevd_INF_por_PVD_h21,"FEVD de INF, parcela do choque de PVD, h = 21",0.044808706,0.044808706,9,4406
+17,t17_fevd_INF_por_INF_h22,"FEVD de INF, parcela do choque de INF, h = 22",0.9551912,0.9551912,7,4407
+17,t17_fevd_INF_por_PVD_h22,"FEVD de INF, parcela do choque de PVD, h = 22",0.044808787,0.044808787,9,4407
+17,t17_fevd_INF_por_INF_h23,"FEVD de INF, parcela do choque de INF, h = 23",0.9551912,0.9551912,7,4408
+17,t17_fevd_INF_por_PVD_h23,"FEVD de INF, parcela do choque de PVD, h = 23",0.044808777,0.044808777,9,4408
+17,t17_fevd_INF_por_INF_h24,"FEVD de INF, parcela do choque de INF, h = 24",0.9551912,0.9551912,7,4409
+17,t17_fevd_INF_por_PVD_h24,"FEVD de INF, parcela do choque de PVD, h = 24",0.044808826,0.044808826,9,4409
+17,t17_fevd_INF_por_INF_h25,"FEVD de INF, parcela do choque de INF, h = 25",0.9551912,0.9551912,7,4410
+17,t17_fevd_INF_por_PVD_h25,"FEVD de INF, parcela do choque de PVD, h = 25",0.044808841,0.044808841,9,4410
+17,t17_fevd_INF_por_INF_h26,"FEVD de INF, parcela do choque de INF, h = 26",0.9551912,0.9551912,7,4411
+17,t17_fevd_INF_por_PVD_h26,"FEVD de INF, parcela do choque de PVD, h = 26",0.044808847,0.044808847,9,4411
+17,t17_fevd_INF_por_INF_h27,"FEVD de INF, parcela do choque de INF, h = 27",0.9551911,0.9551911,7,4412
+17,t17_fevd_INF_por_PVD_h27,"FEVD de INF, parcela do choque de PVD, h = 27",0.044808854,0.044808854,9,4412
+17,t17_fevd_INF_por_INF_h28,"FEVD de INF, parcela do choque de INF, h = 28",0.9551911,0.9551911,7,4413
+17,t17_fevd_INF_por_PVD_h28,"FEVD de INF, parcela do choque de PVD, h = 28",0.044808854,0.044808854,9,4413
+17,t17_fevd_INF_por_INF_h29,"FEVD de INF, parcela do choque de INF, h = 29",0.9551911,0.9551911,7,4414
+17,t17_fevd_INF_por_PVD_h29,"FEVD de INF, parcela do choque de PVD, h = 29",0.044808856,0.044808856,9,4414
+17,t17_fevd_INF_por_INF_h30,"FEVD de INF, parcela do choque de INF, h = 30",0.9551911,0.9551911,7,4415
+17,t17_fevd_INF_por_PVD_h30,"FEVD de INF, parcela do choque de PVD, h = 30",0.044808856,0.044808856,9,4415
+18,t18_fevd_PVD_por_INF_h01,"FEVD de PVD, parcela do choque de INF, h = 1",0.1645501,0.1645501,7,4420
+18,t18_fevd_PVD_por_PVD_h01,"FEVD de PVD, parcela do choque de PVD, h = 1",0.8354499,0.8354499,7,4420
+18,t18_fevd_PVD_por_INF_h02,"FEVD de PVD, parcela do choque de INF, h = 2",0.1610501,0.1610501,7,4421
+18,t18_fevd_PVD_por_PVD_h02,"FEVD de PVD, parcela do choque de PVD, h = 2",0.8389499,0.8389499,7,4421
+18,t18_fevd_PVD_por_INF_h03,"FEVD de PVD, parcela do choque de INF, h = 3",0.2074481,0.2074481,7,4426
+18,t18_fevd_PVD_por_PVD_h03,"FEVD de PVD, parcela do choque de PVD, h = 3",0.7925519,0.7925519,7,4426
+18,t18_fevd_PVD_por_INF_h04,"FEVD de PVD, parcela do choque de INF, h = 4",0.2725809,0.2725809,7,4427
+18,t18_fevd_PVD_por_PVD_h04,"FEVD de PVD, parcela do choque de PVD, h = 4",0.7274191,0.7274191,7,4427
+18,t18_fevd_PVD_por_INF_h05,"FEVD de PVD, parcela do choque de INF, h = 5",0.2958773,0.2958773,7,4428
+18,t18_fevd_PVD_por_PVD_h05,"FEVD de PVD, parcela do choque de PVD, h = 5",0.7041227,0.7041227,7,4428
+18,t18_fevd_PVD_por_INF_h06,"FEVD de PVD, parcela do choque de INF, h = 6",0.3027641,0.3027641,7,4429
+18,t18_fevd_PVD_por_PVD_h06,"FEVD de PVD, parcela do choque de PVD, h = 6",0.6972359,0.6972359,7,4429
+18,t18_fevd_PVD_por_INF_h07,"FEVD de PVD, parcela do choque de INF, h = 7",0.3035026,0.3035026,7,4430
+18,t18_fevd_PVD_por_PVD_h07,"FEVD de PVD, parcela do choque de PVD, h = 7",0.6964974,0.6964974,7,4430
+18,t18_fevd_PVD_por_INF_h08,"FEVD de PVD, parcela do choque de INF, h = 8",0.3052464,0.3052464,7,4431
+18,t18_fevd_PVD_por_PVD_h08,"FEVD de PVD, parcela do choque de PVD, h = 8",0.6947536,0.6947536,7,4431
+18,t18_fevd_PVD_por_INF_h09,"FEVD de PVD, parcela do choque de INF, h = 9",0.3055494,0.3055494,7,4432
+18,t18_fevd_PVD_por_PVD_h09,"FEVD de PVD, parcela do choque de PVD, h = 9",0.6944506,0.6944506,7,4432
+18,t18_fevd_PVD_por_INF_h10,"FEVD de PVD, parcela do choque de INF, h = 10",0.3055301,0.3055301,7,4433
+18,t18_fevd_PVD_por_PVD_h10,"FEVD de PVD, parcela do choque de PVD, h = 10",0.6944699,0.6944699,7,4433
+18,t18_fevd_PVD_por_INF_h11,"FEVD de PVD, parcela do choque de INF, h = 11",0.3055089,0.30550890000000003,7,4434
+18,t18_fevd_PVD_por_PVD_h11,"FEVD de PVD, parcela do choque de PVD, h = 11",0.6944911,0.6944911,7,4434
+18,t18_fevd_PVD_por_INF_h12,"FEVD de PVD, parcela do choque de INF, h = 12",0.3055080,0.305508,7,4435
+18,t18_fevd_PVD_por_PVD_h12,"FEVD de PVD, parcela do choque de PVD, h = 12",0.6944920,0.694492,7,4435
+18,t18_fevd_PVD_por_INF_h13,"FEVD de PVD, parcela do choque de INF, h = 13",0.3055510,0.305551,7,4436
+18,t18_fevd_PVD_por_PVD_h13,"FEVD de PVD, parcela do choque de PVD, h = 13",0.6944490,0.694449,7,4436
+18,t18_fevd_PVD_por_INF_h14,"FEVD de PVD, parcela do choque de INF, h = 14",0.3055863,0.3055863,7,4437
+18,t18_fevd_PVD_por_PVD_h14,"FEVD de PVD, parcela do choque de PVD, h = 14",0.6944137,0.6944137,7,4437
+18,t18_fevd_PVD_por_INF_h15,"FEVD de PVD, parcela do choque de INF, h = 15",0.3056237,0.3056237,7,4438
+18,t18_fevd_PVD_por_PVD_h15,"FEVD de PVD, parcela do choque de PVD, h = 15",0.6943763,0.6943763,7,4438
+18,t18_fevd_PVD_por_INF_h16,"FEVD de PVD, parcela do choque de INF, h = 16",0.3056272,0.3056272,7,4439
+18,t18_fevd_PVD_por_PVD_h16,"FEVD de PVD, parcela do choque de PVD, h = 16",0.6943728,0.6943728,7,4439
+18,t18_fevd_PVD_por_INF_h17,"FEVD de PVD, parcela do choque de INF, h = 17",0.3056325,0.3056325,7,4440
+18,t18_fevd_PVD_por_PVD_h17,"FEVD de PVD, parcela do choque de PVD, h = 17",0.6943675,0.6943675,7,4440
+18,t18_fevd_PVD_por_INF_h18,"FEVD de PVD, parcela do choque de INF, h = 18",0.3056320,0.305632,7,4441
+18,t18_fevd_PVD_por_PVD_h18,"FEVD de PVD, parcela do choque de PVD, h = 18",0.6943680,0.694368,7,4441
+18,t18_fevd_PVD_por_INF_h19,"FEVD de PVD, parcela do choque de INF, h = 19",0.3056327,0.3056327,7,4442
+18,t18_fevd_PVD_por_PVD_h19,"FEVD de PVD, parcela do choque de PVD, h = 19",0.6943673,0.6943673,7,4442
+18,t18_fevd_PVD_por_INF_h20,"FEVD de PVD, parcela do choque de INF, h = 20",0.3056327,0.3056327,7,4443
+18,t18_fevd_PVD_por_PVD_h20,"FEVD de PVD, parcela do choque de PVD, h = 20",0.6943673,0.6943673,7,4443
+18,t18_fevd_PVD_por_INF_h21,"FEVD de PVD, parcela do choque de INF, h = 21",0.3056327,0.3056327,7,4444
+18,t18_fevd_PVD_por_PVD_h21,"FEVD de PVD, parcela do choque de PVD, h = 21",0.6943673,0.6943673,7,4444
+18,t18_fevd_PVD_por_INF_h22,"FEVD de PVD, parcela do choque de INF, h = 22",0.3056328,0.3056328,7,4445
+18,t18_fevd_PVD_por_PVD_h22,"FEVD de PVD, parcela do choque de PVD, h = 22",0.6943672,0.6943672,7,4445
+18,t18_fevd_PVD_por_INF_h23,"FEVD de PVD, parcela do choque de INF, h = 23",0.3056329,0.3056329,7,4446
+18,t18_fevd_PVD_por_PVD_h23,"FEVD de PVD, parcela do choque de PVD, h = 23",0.6943671,0.6943671,7,4446
+18,t18_fevd_PVD_por_INF_h24,"FEVD de PVD, parcela do choque de INF, h = 24",0.3056329,0.3056329,7,4447
+18,t18_fevd_PVD_por_PVD_h24,"FEVD de PVD, parcela do choque de PVD, h = 24",0.6943671,0.6943671,7,4447
+18,t18_fevd_PVD_por_INF_h25,"FEVD de PVD, parcela do choque de INF, h = 25",0.3056329,0.3056329,7,4448
+18,t18_fevd_PVD_por_PVD_h25,"FEVD de PVD, parcela do choque de PVD, h = 25",0.6943671,0.6943671,7,4448
+18,t18_fevd_PVD_por_INF_h26,"FEVD de PVD, parcela do choque de INF, h = 26",0.3056329,0.3056329,7,4449
+18,t18_fevd_PVD_por_PVD_h26,"FEVD de PVD, parcela do choque de PVD, h = 26",0.6943671,0.6943671,7,4449
+18,t18_fevd_PVD_por_INF_h27,"FEVD de PVD, parcela do choque de INF, h = 27",0.3056329,0.3056329,7,4450
+18,t18_fevd_PVD_por_PVD_h27,"FEVD de PVD, parcela do choque de PVD, h = 27",0.6943671,0.6943671,7,4450
+18,t18_fevd_PVD_por_INF_h28,"FEVD de PVD, parcela do choque de INF, h = 28",0.3056329,0.3056329,7,4451
+18,t18_fevd_PVD_por_PVD_h28,"FEVD de PVD, parcela do choque de PVD, h = 28",0.6943671,0.6943671,7,4451
+18,t18_fevd_PVD_por_INF_h29,"FEVD de PVD, parcela do choque de INF, h = 29",0.3056329,0.3056329,7,4452
+18,t18_fevd_PVD_por_PVD_h29,"FEVD de PVD, parcela do choque de PVD, h = 29",0.6943671,0.6943671,7,4452
+18,t18_fevd_PVD_por_INF_h30,"FEVD de PVD, parcela do choque de INF, h = 30",0.3056329,0.3056329,7,4453
+18,t18_fevd_PVD_por_PVD_h30,"FEVD de PVD, parcela do choque de PVD, h = 30",0.6943671,0.6943671,7,4453

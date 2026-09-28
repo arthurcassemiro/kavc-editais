@@ -1,0 +1,195 @@
+{
+  "author": "Pedro Henrique Ribeiro da Silva - AP/DEPEC/GINFO",
+  "author_email": "dadosabertos@bndes.gov.br",
+  "creator_user_id": "c10fa9d1-1db0-4f04-972d-1c944bc0825c",
+  "id": "102e89ec-836a-4ae0-acc7-74ac2a804c1c",
+  "isopen": true,
+  "license_id": "odc-odbl",
+  "license_title": "Licença Aberta para Bases de Dados (ODbL) do Open Data Commons",
+  "license_url": "http://www.opendefinition.org/licenses/odc-odbl",
+  "maintainer": "BNDES",
+  "maintainer_email": "dadosabertos@bndes.gov.br",
+  "metadata_created": "2025-02-14T19:48:34.700520",
+  "metadata_modified": "2026-09-25T23:38:56.477471",
+  "name": "desembolsos-mensais",
+  "notes": "Base de dados com desembolsos mensais com informações de porte do cliente, setor CNAE, Unidade da Federação, município, grupo de produtos, entre outros.\n\nDados a partir de 1995.\n\nPara maiores informações sobre os produtos do BNDES, consulte o [Catálogo de soluções financeiras](https://www.bndes.gov.br/wps/portal/site/home/financiamento/navegador#!/)",
+  "num_resources": 3,
+  "num_tags": 5,
+  "organization": {
+    "id": "da4a39b9-ff28-434f-a8c4-1f53de7d85d0",
+    "name": "bndes",
+    "title": "BNDES",
+    "type": "organization",
+    "description": "O Banco Nacional de Desenvolvimento Econômico e Social (BNDES) é uma empresa pública federal cujo principal objetivo é o financiamento de longo prazo e investimento em todos os segmentos da economia brasileira.",
+    "image_url": "https://www.bndes.gov.br/wps/wcm/connect/site/0c1130fc-e2ac-4062-961d-5f7fa7276443/logo-bndes-cor.jpg?MOD=AJPERES&CVID=lt8Tkw6",
+    "created": "2025-02-14T16:17:21.426788",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "da4a39b9-ff28-434f-a8c4-1f53de7d85d0",
+  "private": false,
+  "state": "active",
+  "title": "Desembolsos Mensais",
+  "type": "dataset",
+  "url": "https://dadosabertos.bndes.gov.br/dataset/desembolsos-mensais",
+  "version": {},
+  "extras": [
+    {
+      "key": "Atualização automática",
+      "value": "true"
+    },
+    {
+      "key": "Categorias no VCGE",
+      "value": "Outros em Economia e Finanças"
+    },
+    {
+      "key": "Frequência atualização (meses)",
+      "value": "3"
+    }
+  ],
+  "groups": [
+    {
+      "description": "",
+      "display_name": "Desembolsos",
+      "id": "af9f5f3c-849e-4922-bc43-445b4e6fa15d",
+      "image_display_url": "",
+      "name": "desembolsos",
+      "title": "Desembolsos"
+    },
+    {
+      "description": "",
+      "display_name": "Estatísticas operacionais do Sistema BNDES",
+      "id": "24cb4ea3-8dfc-4700-9081-b1fe957d1f79",
+      "image_display_url": "",
+      "name": "estatisticas-operacionais-do-sistema-bndes",
+      "title": "Estatísticas operacionais do Sistema BNDES"
+    }
+  ],
+  "resources": [
+    {
+      "created": "2025-02-14T19:48:35.155712",
+      "datastore_active": true,
+      "description": "Detalhamento de desembolsos mensais do Sistema BNDES a partir de 1995.\n\n## Formatação dos dados\n\nNossos arquivos CSV estão no encoding \"`Windows-1252`\" , o delimitador de campos é\n\"`;`\" e o separador de números decimais é a \"`,`\".\nO Excel abrirá o arquivo normalmente.\n\nO menu no botão de `Baixar` permite escolher outros formatos.\nSelecione CSV para baixar um arquivo em formato americano e encoding UTF-8.\n\nHash MD5 do arquivo: `167ff851b3098ac8e85eedd5f4ee5746`. \n\nTamanho arquivo: 719.7Mb.",
+      "encoding": "Windows-1252",
+      "file_mask": "BASE*.xlsx",
+      "filename": "/tmp/dauser/desembolsos-mensais.csv",
+      "format": "CSV",
+      "hash": "167ff851b3098ac8e85eedd5f4ee5746",
+      "hash_metadados": "78204304bcecb16ad686393bbff43b81",
+      "id": "179950b8-b504-4cc7-b0db-9c9eed99e9ba",
+      "ignore_hash": "False",
+      "last_modified": "2026-09-24T23:37:15.839161",
+      "metadata_modified": "2026-09-24T23:37:15.854352",
+      "mimetype": "text/csv",
+      "name": "Desembolsos Mensais",
+      "package_id": "102e89ec-836a-4ae0-acc7-74ac2a804c1c",
+      "position": 0,
+      "size": 754618440,
+      "state": "active",
+      "tamanho_em_bytes": "754618440",
+      "tracking_summary": {
+        "total": 0,
+        "recent": 0
+      },
+      "type": "CSV",
+      "url": "https://dadosabertos.bndes.gov.br/dataset/102e89ec-836a-4ae0-acc7-74ac2a804c1c/resource/179950b8-b504-4cc7-b0db-9c9eed99e9ba/download/desembolsos-mensais.csv",
+      "url_type": "upload"
+    },
+    {
+      "created": "2025-02-14T21:14:28.806231",
+      "datastore_active": false,
+      "description": "Dicionário de dados dos dados de desembolsos mensais.\n\nTamanho arquivo: 10.6Kb.",
+      "file_mask": "dicionario-de-dados-desembolsos-mensais-do-sistema-bndes.pdf",
+      "filename": "/opt/sch/apps/cka/publish_bat/arquivos/source/desembolsos-mensais/dicionario-de-dados-desembolsos-mensais-do-sistema-bndes.pdf",
+      "format": "PDF",
+      "hash": "d5068ff173040a02f03f701f83b6abac",
+      "hash_metadados": "d56abbef49de9d2d92bbeac4f318a477",
+      "id": "d11d3295-abb5-438d-8a1d-847b0a135eff",
+      "ignore_hash": "False",
+      "last_modified": "2025-05-05T18:28:27.757364",
+      "metadata_modified": "2025-05-05T18:28:27.772415",
+      "mimetype": "application/pdf",
+      "name": "Dicionário de dados de desembolsos mensais",
+      "package_id": "102e89ec-836a-4ae0-acc7-74ac2a804c1c",
+      "position": 1,
+      "size": 10835,
+      "state": "active",
+      "tamanho_em_bytes": "10835",
+      "tracking_summary": {
+        "total": 0,
+        "recent": 0
+      },
+      "type": "PDF",
+      "url": "https://dadosabertos.bndes.gov.br/dataset/102e89ec-836a-4ae0-acc7-74ac2a804c1c/resource/d11d3295-abb5-438d-8a1d-847b0a135eff/download/dicionario-de-dados-desembolsos-mensais-do-sistema-bndes.pdf",
+      "url_type": "upload"
+    },
+    {
+      "created": "2025-02-14T21:14:29.765595",
+      "datastore_active": true,
+      "description": "Mapeia as correspondências entre as classificações utilizadas pelo BNDES e os códigos CNAEs do IBGE. \n\n## Formatação dos dados\n\nNossos arquivos CSV estão no encoding \"`Windows-1252`\" , o delimitador de campos é\n\"`;`\" e o separador de números decimais é a \"`,`\".\nO Excel abrirá o arquivo normalmente.\n\nO menu no botão de `Baixar` permite escolher outros formatos.\nSelecione CSV para baixar um arquivo em formato americano e encoding UTF-8.\n\nHash MD5 do arquivo: `115635d7d070c0ebf961d6a1f036fd0e`. \n\nTamanho arquivo: 6.8Kb.",
+      "encoding": "Windows-1252",
+      "file_mask": "BASE*2020.xlsx",
+      "filename": "/tmp/dauser/desembolsos-mensais-mapeamento-de-bndes-para-cnae.csv",
+      "format": "CSV",
+      "hash": "115635d7d070c0ebf961d6a1f036fd0e",
+      "hash_metadados": "3d1d837b19817dafc7192019efec045d",
+      "id": "94ca01fe-7554-49a2-9200-e9625a304b88",
+      "ignore_hash": "True",
+      "last_modified": "2025-05-05T16:02:43.398074",
+      "metadata_modified": "2025-05-05T16:02:43.414366",
+      "mimetype": "text/csv",
+      "name": "Mapeamento de BNDES para CNAE",
+      "package_id": "102e89ec-836a-4ae0-acc7-74ac2a804c1c",
+      "position": 2,
+      "size": 6923,
+      "state": "active",
+      "tamanho_em_bytes": "6923",
+      "tracking_summary": {
+        "total": 0,
+        "recent": 0
+      },
+      "type": "CSV",
+      "url": "https://dadosabertos.bndes.gov.br/dataset/102e89ec-836a-4ae0-acc7-74ac2a804c1c/resource/94ca01fe-7554-49a2-9200-e9625a304b88/download/desembolsos-mensais-mapeamento-de-bndes-para-cnae.csv",
+      "url_type": "upload"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Apoio direto",
+      "id": "cabc4990-d03c-4893-99b8-00755cfd60bb",
+      "name": "Apoio direto",
+      "state": "active"
+    },
+    {
+      "display_name": "Apoio indireto",
+      "id": "2694bc4e-9b46-4d99-b5eb-f31ea56e3582",
+      "name": "Apoio indireto",
+      "state": "active"
+    },
+    {
+      "display_name": "Desembolsos",
+      "id": "29eef6da-eed7-446f-be8d-143ea8541a99",
+      "name": "Desembolsos",
+      "state": "active"
+    },
+    {
+      "display_name": "Financiamentos",
+      "id": "e2512e9d-50ba-4db0-b5b9-95b06d83c86c",
+      "name": "Financiamentos",
+      "state": "active"
+    },
+    {
+      "display_name": "Operações financeiras",
+      "id": "fbdedb24-1992-471a-8840-45c8c5dc4187",
+      "name": "Operações financeiras",
+      "state": "active"
+    }
+  ],
+  "relationships_as_subject": [],
+  "relationships_as_object": [],
+  "tracking_summary": {
+    "total": 0,
+    "recent": 0
+  }
+}
