@@ -160,8 +160,41 @@ L("Imputacao de robustez: razao filtro/dashboard do trimestre, media de 2016 e 2
   "anual (fator de reescala ", fmt(TOT_2017 / sum(imp_raz$bruto), 4), "). Resultado: ",
   paste0("T", imp_raz$tri, " ", fmt(imp_raz$nom, 3), collapse = "; "), ".")
 
+# Conferencia pelo Apendice A da dissertacao (Ipub nominal, com 2017 observado na epoca):
+# (filtro + SEST)/Ipub varia de forma suave; interpolando essa razao em 2017, Ipub x razao - SEST
+# recupera o filtro trimestral de 2017 usado na dissertacao.
+bol0 <- read_csv("data/raw/sest_boletim_trimestral_2003_2019.csv", show_col_types = FALSE) %>%
+  filter(regiao == "Brazil (total)") %>% transmute(q = q_key(ano, trimestre), sest = valor_nominal_bi)
+apx <- read_csv("data/dados_dissertacao_apendiceA.csv", show_col_types = FALSE) %>%
+  transmute(q = trimestre, ipub = ipub_rs / 1e9) %>%
+  inner_join(bol0, by = "q") %>% left_join(fil_raw %>% select(q, fil = nom), by = "q") %>%
+  mutate(r = (fil + sest) / ipub, c_sest = sest / (ipub - fil))
+r_ok <- apx %>% filter(!is.na(r))
+q17 <- q_seq("2017Q1", "2017Q4")
+interp <- function(v) v[apx$q == "2016Q4"] + (v[apx$q == "2018Q1"] - v[apx$q == "2016Q4"]) * (1:4) / 5
+r17 <- interp(apx$r); c17 <- interp(apx$c_sest)
+a17 <- apx %>% filter(q %in% q17) %>% arrange(q)
+impl_tot <- r17 * a17$ipub - a17$sest
+impl_sest <- a17$ipub - a17$sest / c17
+imp_apx <- tibble(q = q17, tri = 1:4, bruto = impl_tot, nom = impl_tot * TOT_2017 / sum(impl_tot))
+L("Conferencia pelo Apendice A (data/dados_dissertacao_apendiceA.csv, Ipub nominal 2002-2019, com 2017): a razao ",
+  "(filtro + SEST boletim)/Ipub sobe de forma suave de ", fmt(r_ok$r[1], 3), " (2003T1) a ", fmt(r_ok$r[nrow(r_ok)], 3),
+  " (2019T4), desvio padrao das variacoes trimestrais ", fmt(sd(diff(r_ok$r)), 5), ". Interpolando linearmente a razao entre ",
+  "2016T4 e 2018T1, Ipub x razao - SEST da o filtro de 2017 usado na dissertacao: ",
+  paste0("T", 1:4, " ", fmt(impl_tot, 3), collapse = "; "), "; soma R$ ", fmt(sum(impl_tot), 3), " bi contra R$ ",
+  fmt(TOT_2017, 3), " bi exatos da base anual (diferenca ", pct(sum(impl_tot) / TOT_2017 - 1, 2), "). Supondo a diferenca so ",
+  "na SEST (razao SEST/(Ipub - filtro), menos suave: desvio padrao ", fmt(sd(diff(r_ok$c_sest)), 5), "), o resultado quase nao muda: ",
+  paste0("T", 1:4, " ", fmt(impl_sest, 3), collapse = "; "), "; soma ", fmt(sum(impl_sest), 3), ".")
+L("Perfil trimestral de 2017 (participacao no ano): baseline (grupo 0) ", paste(pct(imp_base$nom / TOT_2017), collapse = ", "),
+  "; razao do trimestre ", paste(pct(imp_raz$nom / TOT_2017), collapse = ", "), "; implicito no Apendice A ",
+  paste(pct(imp_apx$bruto / sum(imp_apx$bruto)), collapse = ", "), ". Desvio absoluto medio contra o Apendice A: baseline ",
+  fmt(mean(abs(imp_base$nom - imp_apx$nom)), 3), " bi; razao ", fmt(mean(abs(imp_raz$nom - imp_apx$nom)), 3), " bi. ",
+  "A serie implicita no Apendice A, reescalada ao total exato, entra como terceira variante (uniao_filtro_diss_impapendice).")
+
 fil_base <- bind_rows(fil_raw %>% select(q, nom), imp_base %>% select(q, nom)) %>% arrange(q)
 fil_raz <- bind_rows(fil_raw %>% select(q, nom), imp_raz %>% select(q, nom)) %>% arrange(q)
+fil_apx <- bind_rows(fil_raw %>% select(q, nom), imp_apx %>% select(q, nom)) %>% arrange(q)
+FIL <- list(base = fil_base, razao = fil_raz, apendice = fil_apx)
 stopifnot(all(QS %in% fil_base$q))
 
 # ---------------------------------------------------------------------------

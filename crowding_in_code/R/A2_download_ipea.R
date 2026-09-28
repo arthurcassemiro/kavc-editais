@@ -58,17 +58,18 @@ CAND <- tribble(
 )
 
 meta_ip <- metadata(CAND$codigo, language = "br") %>%
+  mutate(across(everything(), as.character)) %>%
   transmute(codigo = code, titulo = name, comentario = comment, fonte_meta = source, freq = freq,
-            unidade = paste(ifelse(is.na(unity), "", unity), ifelse(is.na(mf), "", mf)), atualizacao = as.character(lastupdate),
-            status = status)
+            unidade = trimws(paste(ifelse(is.na(unity), "", unity), ifelse(is.na(mf), "", mf))),
+            atualizacao = lastupdate, status = status)
 meta_ip <- CAND %>% left_join(meta_ip, by = "codigo") %>%
-  mutate(confere = grepl(esperado, sem_acento(titulo)) & sem_acento(fonte_meta) == fonte_esp &
+  mutate(confere = str_detect(sem_acento(titulo), esperado) & sem_acento(fonte_meta) == fonte_esp &
            sem_acento(freq) == freq_esp)
 print(meta_ip %>% select(serie, codigo, titulo, fonte_meta, freq, unidade, confere))
 for (i in seq_len(nrow(meta_ip))) {
   m <- meta_ip[i, ]
   lp(sprintf("  - %s: \"%s\"; fonte %s; periodicidade %s; unidade \"%s\"; atualizada em %s; %s.",
-             m$codigo, m$titulo, m$fonte_meta, m$freq, trimws(m$unidade), m$atualizacao,
+             m$codigo, sem_acento(m$titulo), m$fonte_meta, sem_acento(m$freq), sem_acento(m$unidade), m$atualizacao,
              ifelse(m$confere, "confere com a descricao pedida", "NAO confere, serie descartada")))
 }
 if (any(meta_ip$codigo == "EIA366_PBRENT366")) {
@@ -196,7 +197,7 @@ ipea_m <- tibble(periodo = format(seq(as.Date("1996-01-01"), as.Date(paste0(max(
 write_csv_safe(ipea_m, file.path(PATHS$processed, "A2_ipea_mensal.csv"))
 
 fun <- setNames(rep("media", ncol(ipea_m) - 2), setdiff(names(ipea_m), c("periodo", "trimestre")))
-fun["funcex_imp_bk_valor_usd_mi"] <- "soma"
+if ("funcex_imp_bk_valor_usd_mi" %in% names(fun)) fun["funcex_imp_bk_valor_usd_mi"] <- "soma"
 ipea_q <- mensal_para_trimestral(ipea_m %>% select(-trimestre), fun) %>%
   select(trimestre, all_of(names(fun)))
 write_csv_safe(ipea_q, file.path(PATHS$processed, "A2_ipea_trimestral.csv"))

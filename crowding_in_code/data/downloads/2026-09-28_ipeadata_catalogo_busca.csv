@@ -1,0 +1,16 @@
+code,name,theme,source,freq,lastupdate,status
+EIA366_PBRENT366,Preço - petróleo bruto - Brent (FOB),Macroeconômico,EIA,Diária,2026-09-28,Ativa
+FUNCEX_MDPBK,Importações - bens de capital - preços - índice (média 2018 = 100),Macroeconômico,Funcex,Anual,2026-03-26,Ativa
+FUNCEX_MDQBK,Importações - bens de capital - quantum - índice (média 2018 = 100),Macroeconômico,Funcex,Anual,2026-03-26,Ativa
+FUNCEX_MDVBK,Importações - bens de capital - (FOB),Macroeconômico,Funcex,Anual,2026-03-26,Ativa
+FUNCEX12_MDPBKGCE12,Importações - bens de capital - preços - índice (média 2018 = 100) (série nova),Macroeconômico,Funcex,Mensal,2026-08-25,Ativa
+FUNCEX12_MDQBKGCE12,Importações - bens de capital - quantum - índice (média 2018 = 100) (série nova),Macroeconômico,Funcex,Mensal,2026-08-25,Ativa
+FUNCEX12_MDVBKGCE12,Importações - bens de capital - (FOB) (série nova),Macroeconômico,Funcex,Mensal,2026-08-25,Ativa
+GAC12_FBKFCAMI12,Consumo aparente - bens de capital - índice real (média 2012 = 100),Macroeconômico,IPEA,Mensal,2026-09-01,Ativa
+GAC12_FBKFCAMIDESSAZ12,Consumo aparente - bens de capital - índice dessazonalizado (média 2012 = 100),Macroeconômico,IPEA,Mensal,2026-09-01,Ativa
+GAC12_INDFBCF12,Indicador IPEA de FBCF - índice real (média 1995 = 100),Macroeconômico,IPEA,Mensal,2026-08-20,Ativa
+GAC12_INDFBCFCC12,Indicador IPEA de FBCF - construção civil - índice real (média1995 = 100),Macroeconômico,IPEA,Mensal,2026-08-20,Ativa
+GAC12_INDFBCFCCDESSAZ12,Indicador IPEA de FBCF - construção civil - índice real dessazonalizado (média 1995 = 100),Macroeconômico,IPEA,Mensal,2026-08-20,Ativa
+GAC12_INDFBCFDESSAZ12,Indicador IPEA de FBCF - índice real dessazonalizado (média 1995 = 100),Macroeconômico,IPEA,Mensal,2026-08-20,Ativa
+GAC12_TCERMBK12,Taxa de câmbio - efetiva real - IPA-EP-DI - importações - bens de capital - índice (média 2010 = 100) - INATIVA,Macroeconômico,IPEA,Mensal,2025-01-13,Inativa
+SECEX12_MBENCAPGCE12,Importações - bens de capital - (FOB) - SECEX,Macroeconômico,MDIC/SECEX,Mensal,2026-09-10,Ativa

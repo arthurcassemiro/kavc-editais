@@ -26,6 +26,7 @@ ler_secoes <- function() {
 
 # Reescreve o log com as secoes na ordem fixa.
 escrever_secoes <- function(secoes) {
+  force(secoes)  # avaliar antes de apagar o arquivo
   log_reset(ETAPA)
   ordem <- c(intersect(SECOES_A2ICB, names(secoes)), setdiff(names(secoes), SECOES_A2ICB))
   for (s in ordem) log_part(ETAPA, paste(secoes[[s]], collapse = "\n"))
