@@ -205,17 +205,22 @@ print(cmp_dash, n = 30)
 write_csv_safe(cmp_dash, file.path(PATHS$results, "A2_comparacao_deflator_dashboard.csv"))
 mx_media <- max(abs(cmp_dash$dif_pct_media))
 mx_dez <- max(abs(cmp_dash$dif_pct_dez))
+conclusao_dash <- if (mx_media < 0.001) {
+  "Conclusao: o dashboard usa o fator anual pela media do ano; as diferencas sao so de arredondamento (o arquivo tem 6 casas), e o deflator mensal construido aqui e compativel."
+} else if (mx_media < mx_dez) {
+  "Conclusao: o conceito mais proximo e a media do ano, mas ha diferenca alem de arredondamento; verificar a fonte do dashboard."
+} else {
+  "Conclusao: o dashboard nao usa a media anual; verificar o conceito antes de misturar os dois deflatores."
+}
 log_part(ETAPA, sprintf(paste0("- Comparacao com data/raw/dashboard_fator_ipca_anual.csv (%d anos, %d a %d): fator anual = media de 2025 / media do ano. ",
-                               "Diferenca maxima em modulo %s%% (media %s%%); em 2000 %s%%, em 2003 %s%%, em 2019 %s%%. ",
-                               "Com o indice de dezembro no lugar da media anual a diferenca maxima seria %s%%. ",
-                               "Conclusao: o dashboard usa fator anual pela media do ano, e o deflator mensal construido aqui e compativel. ",
+                               "Diferenca maxima em modulo %s%% (media %s%%); em 2003 %s%%, em 2019 %s%%. ",
+                               "Com o indice de dezembro no lugar da media anual a diferenca maxima seria %s%%. %s ",
                                "Tabela em results/A2_comparacao_deflator_dashboard.csv."),
                         nrow(cmp_dash), min(cmp_dash$ano), max(cmp_dash$ano),
-                        num_br(mx_media, 3), num_br(mean(cmp_dash$dif_pct_media), 3),
-                        num_br(cmp_dash$dif_pct_media[cmp_dash$ano == 2000], 3),
-                        num_br(cmp_dash$dif_pct_media[cmp_dash$ano == 2003], 3),
-                        num_br(cmp_dash$dif_pct_media[cmp_dash$ano == 2019], 3),
-                        num_br(mx_dez, 2)))
+                        num_br(mx_media, 5), num_br(mean(cmp_dash$dif_pct_media), 5),
+                        num_br(cmp_dash$dif_pct_media[cmp_dash$ano == 2003], 5),
+                        num_br(cmp_dash$dif_pct_media[cmp_dash$ano == 2019], 5),
+                        num_br(mx_dez, 2), conclusao_dash))
 
 # ---------------------------------------------------------------------------
 # 5. Series trimestrais
@@ -263,6 +268,10 @@ cmp_jur <- inexo %>% select(periodo, JUR) %>%
   left_join(bcb_q %>% select(periodo, selic_meta_fim, selic_meta_media, selic_efetiva_media, selic_efetiva_fim), by = "periodo") %>%
   mutate(across(starts_with("selic"), ~ .x / 100))
 conceitos <- c("selic_meta_fim", "selic_meta_media", "selic_efetiva_media", "selic_efetiva_fim")
+rotulo <- c(selic_meta_fim = "Meta Selic no ultimo dia do trimestre (432)",
+            selic_meta_media = "Meta Selic media do trimestre (432)",
+            selic_efetiva_media = "Selic efetiva media do trimestre (4189)",
+            selic_efetiva_fim = "Selic efetiva do ultimo mes do trimestre (4189)")
 res_jur <- map_dfr(conceitos, function(v) {
   d <- cmp_jur$JUR - cmp_jur[[v]]
   tibble(conceito = v, correlacao = cor(cmp_jur$JUR, cmp_jur[[v]]),
@@ -272,11 +281,12 @@ print(res_jur)
 write_csv_safe(cmp_jur, file.path(PATHS$results, "A2_comparacao_selic_jur.csv"))
 melhor <- res_jur %>% arrange(desc(iguais_ate_0_0001), dif_media_abs) %>% slice(1)
 dif_q <- cmp_jur %>% filter(abs(JUR - .data[[melhor$conceito]]) >= 1e-4)
-log_part(ETAPA, sprintf("- JUR de 0124_inexo.txt (2002T1 a 2019T4, 72 trimestres, em fracao) contra a Selic do BCB: %s. ",
-                        paste(sprintf("%s: %d de 72 iguais, correlacao %s, diferenca media absoluta %s p.p.",
-                                      res_jur$conceito, res_jur$iguais_ate_0_0001, num_br(res_jur$correlacao, 4),
-                                      num_br(100 * res_jur$dif_media_abs, 3)), collapse = "; ")),
-         sprintf("Conclusao: a dissertacao usou %s.", melhor$conceito),
+log_part(ETAPA, "- JUR de 0124_inexo.txt (2002T1 a 2019T4, 72 trimestres, em fracao; BCB dividido por 100) contra a Selic do BCB: ",
+         paste(sprintf("%s: %d de 72 iguais, correlacao %s, diferenca media absoluta %s p.p.",
+                       rotulo[res_jur$conceito], res_jur$iguais_ate_0_0001, num_br(res_jur$correlacao, 4),
+                       num_br(100 * res_jur$dif_media_abs, 3)), collapse = "; "),
+         sprintf(". Conclusao: a dissertacao usou %s%s.", rotulo[melhor$conceito],
+                 ifelse(melhor$iguais_ate_0_0001 == 72, ", identica nos 72 trimestres", "")),
          if (nrow(dif_q)) sprintf(" Trimestres que nao batem: %s.", paste(sprintf("%s (JUR %s; BCB %s)", dif_q$periodo,
                                    num_br(dif_q$JUR, 4), num_br(dif_q[[melhor$conceito]], 4)), collapse = ", ")) else "",
          " Tabela em results/A2_comparacao_selic_jur.csv.")
