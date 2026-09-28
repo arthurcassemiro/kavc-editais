@@ -1,6 +1,6 @@
 # A5: projecoes locais, elasticidades e multiplicadores
 
-Gerado por R/A5_lp.R em 2026-09-28 23:21. Numeros com virgula decimal. IC de 90% pontuais (estimativa +- 1,645 EP), sem correcao para testes multiplos. Newey-West sem ajuste de graus de liberdade: com n/(n - k) o EP cresce 9% a 27% (mediana 9%) nas medidas acumuladas do baseline, e os IC deste relatorio ficam um pouco estreitos; os CSV trazem a versao ajustada (ep_aj, ic90_inf_aj, ic90_sup_aj com t de n - k graus, p_valor_aj).
+Gerado por R/A5_lp.R em 2026-09-28 23:45. Numeros com virgula decimal. IC de 90% pontuais (estimativa +- 1,645 EP), sem correcao para testes multiplos. Newey-West sem ajuste de graus de liberdade: com n/(n - k) o EP cresce 9% a 27% (mediana 9%) nas medidas acumuladas do baseline, e os IC deste relatorio ficam um pouco estreitos; os CSV trazem a versao ajustada (ep_aj, ic90_inf_aj, ic90_sup_aj com t de n - k graus, p_valor_aj).
 
 ## Especificacao
 
@@ -14,7 +14,7 @@ Gerado por R/A5_lp.R em 2026-09-28 23:21. Numeros com virgula decimal. IC de 90%
 ## Leitura curta
 
 - inf_diss -> fbcf_me, elasticidade acumulada: h = 4 0,086 [-0,076; 0,248]; h = 8 0,075 [-0,087; 0,237]; h = 12 0,099 [-0,038; 0,236]. IRF em h = 0: 0,032 [-0,101; 0,164].
-- Elasticidade de fbcf_me em h = 12: uniao_econ_dir 0,176 [-0,043; 0,395]; uniao_soc_dir 0,162 [0,012; 0,312]; uniao_econ_dt_g1 0,191 [-0,027; 0,410]; uniao_soc_dt_g1 0,159 [-0,060; 0,377]; uniao_transf_soc_g1 0,088 [-0,083; 0,258]; estatais_total 0,027 [-0,089; 0,144]; uniao_gnd4_dir 0,276 [0,102; 0,450].
+- Elasticidade de fbcf_me em h = 12 (regressoes separadas, um choque por vez; para comparar rubricas valem as regressoes conjuntas abaixo): uniao_econ_dir 0,176 [-0,043; 0,395]; uniao_soc_dir 0,162 [0,012; 0,312]; uniao_econ_dt_g1 0,191 [-0,027; 0,410]; uniao_soc_dt_g1 0,159 [-0,060; 0,377]; uniao_transf_soc_g1 0,088 [-0,083; 0,258]; estatais_total 0,027 [-0,089; 0,144]; uniao_gnd4_dir 0,276 [0,102; 0,450].
 - Multiplicador acumulado da FBCF (R$) em h = 12, so nos agregados: inf_diss 1,83 [0,36; 3,30]; estatais_total 1,83 [0,08; 3,58]; uniao_gnd4_dir 6,64 [0,15; 13,12]. Nas rubricas (Uniao por tipo e modalidade, estatais por segmento), os M_h de regressoes separadas nao sao lidos em R$: a razao FBCF / G vai de 24 a 406, e o M_h separado cai quando o outro componente entra como controle (uniao_soc_dir em h = 12: 49,50 [30,50; 68,50] na separada, 13,64 [-24,59; 51,86] na conjunta com uniao_econ_dir); isso indica comovimento com a FBCF agregada, nao efeito causal. Nas rubricas valem as comparacoes conjuntas abaixo, de preferencia em elasticidade.
 - Uniao economica x social (direta), regressao conjunta. Elasticidade da FBCF (fbcf_cnt_vol): h = 4: 0,018 x 0,089, p de Wald 0,338 (amostra pequena 0,396); h = 8: 0,036 x 0,079, p de Wald 0,664 (amostra pequena 0,701); h = 12: 0,075 x 0,037, p de Wald 0,792 (amostra pequena 0,817). M_h da FBCF em R$: h = 4: 6,35 x 24,31, p de Wald 0,348 (amostra pequena 0,404); h = 8: 9,93 x 22,45, p de Wald 0,610 (amostra pequena 0,652); h = 12: 16,38 x 13,64, p de Wald 0,928 (amostra pequena 0,936).
 - Uniao economica x social (direta + transferencia), regressao conjunta. Elasticidade da FBCF (fbcf_cnt_vol): h = 4: 0,051 x -0,000, p de Wald 0,456 (amostra pequena 0,508); h = 8: 0,054 x 0,024, p de Wald 0,690 (amostra pequena 0,725); h = 12: 0,085 x 0,013, p de Wald 0,452 (amostra pequena 0,511). M_h da FBCF em R$: h = 4: 7,84 x 2,18, p de Wald 0,233 (amostra pequena 0,290); h = 8: 9,35 x 4,68, p de Wald 0,493 (amostra pequena 0,545); h = 12: 14,08 x 3,73, p de Wald 0,307 (amostra pequena 0,372).
@@ -77,6 +77,8 @@ Gerado por R/A5_lp.R em 2026-09-28 23:21. Numeros com virgula decimal. IC de 90%
 | estatais_econ | 8 | -0,035 (0,070) | 0,068 (0,024)* | 0,040 (0,015)* | 0,019 (0,051) | 0,090 (0,052)* | 0,146 (0,159) | -0,219 (0,095)* | 0,040 (0,015)* |
 
 ## 4. Multiplicadores acumulados em R$ (estimativas separadas)
+
+Leitura em R$ so nos agregados (inf_diss, estatais_total, uniao_gnd4_dir; uniao_filtro_diss como conferencia). Nas rubricas (Uniao por tipo e modalidade, estatais por segmento), o M_h separado mede o comovimento da rubrica com a FBCF agregada: a razao FBCF / G e de dezenas a centenas e o M_h cai quando o outro componente entra como controle. Para as rubricas, use os M_h e as elasticidades da regressao conjunta (secao 5).
 
 | choque | h | M_h FBCF [IC 90%] | p (M = 0) | M_h - 1 | p (M = 1) | F1 | M_h BNDES | M_h import. BK | FBCF / G medio | n |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -297,7 +299,7 @@ Especificacoes: pib_cresc (PIB em crescimento em vez de aceleracao); ordem_inver
 ## Figuras
 
 - results/figuras/A5_lp_irf_comparacoes.png e .pdf: IRF de fbcf_me aos dois choques de cada comparacao, IC 90%.
-- results/figuras/A5_lp_mult_comparacoes.png e .pdf: multiplicador acumulado da FBCF em R$, h = 0 ao horizonte maximo, IC 90%.
+- results/figuras/A5_lp_mult_comparacoes.png e .pdf: multiplicador acumulado da FBCF em R$, h = 0 ao horizonte maximo, IC 90%, da regressao conjunta dos dois choques de cada par.
 
 ## Arquivos
 

@@ -415,12 +415,23 @@ for (i in seq_len(nrow(PARES))) {
 }
 cmp <- bind_rows(cmp_rows)
 
-# Trajetoria do multiplicador (FBCF em R$) de h = 0 ao horizonte maximo, estimativas separadas (so para a figura)
-choques_fig <- unique(c(PARES$a, PARES$b))
-mult_path <- bind_rows(lapply(choques_fig, function(s) {
-  sp <- sp_base(s); G <- get_G(s, sp)
-  bind_rows(lapply(0:sp$hmax, function(h) linha_cum(lp_mult(list(G), YRS$fbcf_real_rs_bi, sp, h), "multiplicador", s, "fbcf_real_rs_bi", "baseline", "diferenca", sp, h)))
+# Trajetoria do multiplicador (FBCF em R$) de h = 0 ao horizonte maximo, da regressao conjunta de cada par (so para a
+# figura): nas rubricas o M_h separado mistura o efeito do outro componente (revisao adversarial), entao a figura usa o conjunto.
+mult_path <- bind_rows(lapply(seq_len(nrow(PARES)), function(i) {
+  a <- PARES$a[i]; b <- PARES$b[i]
+  sp <- if (a %in% CURTOS || b %in% CURTOS) sp_base(CURTOS[1]) else SP0
+  Ga <- get_G(a, sp); Gb <- get_G(b, sp)
+  bind_rows(lapply(0:sp$hmax, function(h) {
+    r <- lp_mult(list(Ga, Gb), YRS$fbcf_real_rs_bi, sp, h)
+    ep <- sqrt(diag(r$V))
+    tibble(par = i, choque = c(a, b), h = h, estimativa = r$b, ic90_inf = r$b - Z90 * ep, ic90_sup = r$b + Z90 * ep)
+  }))
 }))
+# Conferencia: nos horizontes da tabela, a trajetoria conjunta coincide com A5_lp_comparacoes.csv
+chk_mp <- cmp %>% filter(medida == "multiplicador", resposta == "fbcf_real_rs_bi") %>%
+  mutate(par = match(rotulo, PARES$rotulo)) %>% dplyr::select(par, h, est_a, est_b) %>%
+  inner_join(mult_path %>% group_by(par, h) %>% summarise(pa = estimativa[1], pb = estimativa[2], .groups = "drop"), by = c("par", "h"))
+stopifnot(nrow(chk_mp) > 0, max(abs(chk_mp$est_a - chk_mp$pa)) < 1e-10, max(abs(chk_mp$est_b - chk_mp$pb)) < 1e-10)
 
 # ------------------------------------------------------------------------------------------------
 # 7. Robustez: inf_diss e Uniao economica/social -> fbcf_me (IRF e elasticidade) e -> FBCF em R$ (multiplicador)
@@ -509,14 +520,14 @@ g1 <- wrap_plots(pl_irf, ncol = 2) +
 ggsave_safe(file.path(PATHS$figuras, "A5_lp_irf_comparacoes.png"), g1, width = 9, height = 10, dpi = 200, bg = "white")
 ggsave_safe(file.path(PATHS$figuras, "A5_lp_irf_comparacoes.pdf"), g1, width = 9, height = 10)
 pl_mult <- lapply(seq_len(nrow(PARES)), function(i) {
-  df <- mult_path %>% filter(choque %in% c(PARES$a[i], PARES$b[i])) %>%
+  df <- mult_path %>% filter(par == i) %>%
     transmute(choque = factor(choque, levels = c(PARES$a[i], PARES$b[i])), h, beta = estimativa, ic90_inf, ic90_sup) %>%
     arrange(choque) %>% mutate(choque = as.character(choque))
   painel(df, PARES$rotulo[i], "M_h (R$ de FBCF por R$ de G)")
 })
 g2 <- wrap_plots(pl_mult, ncol = 2) +
   plot_annotation(title = "Multiplicador acumulado da FBCF (Contas Nacionais, R$) por R$ de investimento publico, IC 90%",
-                  caption = "Soma de dY/PIB(t-1) em soma de dG/PIB(t-1), instrumento dG(t)/PIB(t-1); estimativas separadas por choque.",
+                  caption = "Soma de dY/PIB(t-1) em soma de dG/PIB(t-1), instrumentos dG(t)/PIB(t-1); regressao conjunta dos dois choques de cada par.",
                   theme = theme(plot.title = element_text(size = 10)))
 ggsave_safe(file.path(PATHS$figuras, "A5_lp_mult_comparacoes.png"), g2, width = 9, height = 10, dpi = 200, bg = "white")
 ggsave_safe(file.path(PATHS$figuras, "A5_lp_mult_comparacoes.pdf"), g2, width = 9, height = 10)
@@ -623,7 +634,7 @@ leitura <- c(
   sprintf("- inf_diss -> fbcf_me, elasticidade acumulada: h = 4 %s; h = 8 %s; h = 12 %s. IRF em h = 0: %s.",
           fz(el("inf_diss", "fbcf_me", 4)), fz(el("inf_diss", "fbcf_me", 8)), fz(el("inf_diss", "fbcf_me", 12)),
           cel(ir("inf_diss", "fbcf_me", 0)$beta, ir("inf_diss", "fbcf_me", 0)$ic90_inf, ir("inf_diss", "fbcf_me", 0)$ic90_sup)),
-  sprintf("- Elasticidade de fbcf_me em h = 12 (regressoes separadas, um choque por vez): uniao_econ_dir %s; uniao_soc_dir %s; uniao_econ_dt_g1 %s; uniao_soc_dt_g1 %s; uniao_transf_soc_g1 %s; estatais_total %s; uniao_gnd4_dir %s.",
+  sprintf("- Elasticidade de fbcf_me em h = 12 (regressoes separadas, um choque por vez; para comparar rubricas valem as regressoes conjuntas abaixo): uniao_econ_dir %s; uniao_soc_dir %s; uniao_econ_dt_g1 %s; uniao_soc_dt_g1 %s; uniao_transf_soc_g1 %s; estatais_total %s; uniao_gnd4_dir %s.",
           fz(el("uniao_econ_dir", "fbcf_me", 12)), fz(el("uniao_soc_dir", "fbcf_me", 12)), fz(el("uniao_econ_dt_g1", "fbcf_me", 12)),
           fz(el("uniao_soc_dt_g1", "fbcf_me", 12)), fz(el("uniao_transf_soc_g1", "fbcf_me", 12)), fz(el("estatais_total", "fbcf_me", 12)),
           fz(el("uniao_gnd4_dir", "fbcf_me", 12))),
@@ -642,7 +653,8 @@ leitura <- c(
            paste(sprintf("h = %d: %s x %s, p de Wald %s (amostra pequena %s)", ze$h, num(ze$est_a, 3), num(ze$est_b, 3), pv(ze$p_wald), pv(ze$p_wald_pa)), collapse = "; "),
            ". M_h da FBCF em R$: ",
            paste(sprintf("h = %d: %s x %s, p de Wald %s (amostra pequena %s)", zm$h, num(zm$est_a, 2), num(zm$est_b, 2), pv(zm$p_wald), pv(zm$p_wald_pa)), collapse = "; "),
-           if (any(zm$baixo_poder)) ". Serie de 2016+ com poucas observacoes (baixo poder): com a correcao de amostra pequena (Newey-West vezes n/(n - k) e F(1, n - k)) o resultado e so sugestivo" else "",
+           if (any(zm$baixo_poder)) sprintf(". Serie de 2016+ com poucas observacoes (baixo poder; n = %s, gl = %s): com a correcao de amostra pequena (Newey-West vezes n/(n - k) e F(1, n - k)), p de %s no M_h em R$ e de %s na elasticidade; resultado so sugestivo",
+             paste(zm$n, collapse = " e "), paste(zm$gl, collapse = " e "), paste(pv(zm$p_wald_pa), collapse = " e "), paste(pv(ze$p_wald_pa), collapse = " e ")) else "",
            ".")
   }, ""),
   sprintf("- Razao media FBCF / G na janela de cada choque (M_h e aproximadamente a elasticidade da FBCF vezes essa razao): %s.",
@@ -685,11 +697,13 @@ md <- c(
   "",
   "## 4. Multiplicadores acumulados em R$ (estimativas separadas)",
   "",
+  "Leitura em R$ so nos agregados (inf_diss, estatais_total, uniao_gnd4_dir; uniao_filtro_diss como conferencia). Nas rubricas (Uniao por tipo e modalidade, estatais por segmento), o M_h separado mede o comovimento da rubrica com a FBCF agregada: a razao FBCF / G e de dezenas a centenas e o M_h cai quando o outro componente entra como controle. Para as rubricas, use os M_h e as elasticidades da regressao conjunta (secao 5).",
+  "",
   md_table(tab_mult),
   "",
   "## 5. Comparacoes: regressao conjunta com os dois choques, Wald da igualdade",
   "",
-  "Colunas a e b vem da regressao conjunta (dois endogenos, dois instrumentos, defasagens de ambos e da resposta); 'separadas' repete as estimativas de uma regressao por choque. F1 = F de Newey-West dos dois instrumentos no primeiro estagio de cada endogeno. p Wald: qui-quadrado com 1 grau e Newey-West sem ajuste; p Wald amostra pequena: Newey-West vezes n/(n - k) e F(1, n - k), com k = numero de regressores. Nas rubricas, a leitura em R$ nao e crivel (M_h separado muito acima do conjunto; FBCF / G de dezenas a centenas): use a elasticidade conjunta (5b) e os M_h conjuntos, nao os separados.",
+  "Colunas a e b vem da regressao conjunta (dois endogenos, dois instrumentos, defasagens de ambos e da resposta); 'separadas' repete as estimativas de uma regressao por choque. F1 = F de Newey-West dos dois instrumentos no primeiro estagio de cada endogeno. p Wald: qui-quadrado com 1 grau e Newey-West sem ajuste; p Wald amostra pequena: Newey-West vezes n/(n - k) e F(1, n - k), com k = numero de regressores. Nas rubricas, a leitura em R$ nao e crivel (FBCF / G de dezenas a centenas; o M_h separado pode ficar muito acima do conjunto, como em uniao_soc_dir): use a elasticidade conjunta (5b) e os M_h conjuntos, nao os separados.",
   "",
   "### 5a. Multiplicador acumulado da FBCF, BNDES e importacao de BK em R$ (M_a x M_b)",
   "",
@@ -724,7 +738,7 @@ md <- c(
   "## Figuras",
   "",
   "- results/figuras/A5_lp_irf_comparacoes.png e .pdf: IRF de fbcf_me aos dois choques de cada comparacao, IC 90%.",
-  "- results/figuras/A5_lp_mult_comparacoes.png e .pdf: multiplicador acumulado da FBCF em R$, h = 0 ao horizonte maximo, IC 90%.",
+  "- results/figuras/A5_lp_mult_comparacoes.png e .pdf: multiplicador acumulado da FBCF em R$, h = 0 ao horizonte maximo, IC 90%, da regressao conjunta dos dois choques de cada par.",
   "",
   "## Arquivos",
   "",
@@ -773,10 +787,17 @@ log_part(ETAPA, "- Em h = 12 a robustez sem_2020_2021 coincide com ate_2019T4 po
 zpe <- cmp %>% filter(medida == "multiplicador", choque_a == "estatais_sempetro", resposta == "fbcf_real_rs_bi")
 zsd <- cmp %>% filter(medida == "elasticidade", choque_a == "uniao_soc_dir", choque_b == "uniao_transf_soc_g1", resposta == "fbcf_cnt_vol")
 zes <- cmp %>% filter(medida == "elasticidade", choque_a == "uniao_econ_dir", choque_b == "uniao_soc_dir", resposta == "fbcf_cnt_vol")
-log_part(ETAPA, sprintf("- Correcoes da revisao adversarial (2026-09-28). (1) Leitura em R$ so nos agregados (inf_diss, estatais_total, uniao_gnd4_dir); nas rubricas, M_h e elasticidades da regressao conjunta. Elasticidade conjunta da FBCF (fbcf_cnt_vol), social direta x transferencia: p de Wald %s em h = 4, 8 e 12 (amostra pequena: %s); economica x social (direta): %s (amostra pequena: %s). (2) Estatais sem petroleo x petroleo (2016-2025, n = %s): p de Wald %s pela qui-quadrado sem ajuste e %s com Newey-West vezes n/(n - k) e F(1, n - k) (gl = %s), em h = 4 e 8; resultado sugestivo, com a marca baixo_poder. (3) Colunas com ajuste de graus de liberdade (ep_aj, ic90_*_aj, p_valor_aj, gl) em A5_lp_irf.csv e A5_lp_cumulativo.csv. (4) estatais_total entrou na robustez, com as dummies d_* da A4 em dummies_A4. (5) Subamostras com o corte da A4: ate 2014T4 e de 2015T1 (por observacoes efetivas).",
-  paste(pv(zsd$p_wald), collapse = ", "), paste(pv(zsd$p_wald_pa), collapse = ", "), paste(pv(zes$p_wald), collapse = ", "),
-  paste(pv(zes$p_wald_pa), collapse = ", "), paste(zpe$n, collapse = " e "), paste(pv(zpe$p_wald), collapse = " e "),
-  paste(pv(zpe$p_wald_pa), collapse = " e "), paste(zpe$gl, collapse = " e ")))
+zpe_e <- cmp %>% filter(medida == "elasticidade", choque_a == "estatais_sempetro", resposta == "fbcf_cnt_vol")
+sig_txt <- function(p) ifelse(p < 0.05, "a 5%", ifelse(p < 0.10, "so a 10%", "sem significancia a 10%"))
+# As frases fixas do registro abaixo so valem se os numeros as sustentam
+stopifnot(all(zes$p_wald_pa > 0.10), all(zpe$p_wald_pa > 0.05), nrow(zpe_e) == 2, all(zpe$gl < 20))
+log_part(ETAPA, sprintf("- Correcoes da revisao adversarial (2026-09-28). (1) Leitura em R$ so nos agregados (inf_diss, estatais_total, uniao_gnd4_dir); nas rubricas, M_h e elasticidades da regressao conjunta. Elasticidade conjunta da FBCF (fbcf_cnt_vol), social direta x transferencia: p de Wald %s em h = 4, 8 e 12 (amostra pequena: %s); com a correcao de amostra pequena a diferenca fica %s em h = 4, %s em h = 8 e %s em h = 12. Economica x social (direta): %s (amostra pequena: %s), sem diferenca. (2) Estatais sem petroleo x petroleo (2016-2025, n = %s, gl = %s): no M_h em R$, p de Wald %s pela qui-quadrado sem ajuste e %s com Newey-West vezes n/(n - k) e F(1, n - k), em h = 4 e 8, acima de 5%% com a correcao; na elasticidade conjunta da FBCF, %s sem ajuste e %s com a correcao. Com 29 a 33 observacoes e 14 regressores o resultado e sugestivo, com a marca baixo_poder, e o M_h em R$ de estatais_sempetro (FBCF / G = %s) nao se le em R$. (3) Colunas com ajuste de graus de liberdade (ep_aj, ic90_*_aj, p_valor_aj, gl) em A5_lp_irf.csv e A5_lp_cumulativo.csv; nota no A5_lp.md. (4) estatais_total entrou na robustez, com as dummies d_* da A4 em dummies_A4. (5) Subamostras com o corte da A4: ate 2014T4 e de 2015T1 (por observacoes efetivas). (6) A figura A5_lp_mult_comparacoes passou a mostrar os M_h da regressao conjunta de cada par (antes, estimativas separadas), e a tabela 4 do A5_lp.md avisa que os M_h separados das rubricas nao se leem em R$.",
+  paste(pv(zsd$p_wald), collapse = ", "), paste(pv(zsd$p_wald_pa), collapse = ", "),
+  sig_txt(zsd$p_wald_pa[zsd$h == 4]), sig_txt(zsd$p_wald_pa[zsd$h == 8]), sig_txt(zsd$p_wald_pa[zsd$h == 12]),
+  paste(pv(zes$p_wald), collapse = ", "), paste(pv(zes$p_wald_pa), collapse = ", "),
+  paste(zpe$n, collapse = " e "), paste(zpe$gl, collapse = " e "), paste(pv(zpe$p_wald), collapse = " e "),
+  paste(pv(zpe$p_wald_pa), collapse = " e "), paste(pv(zpe_e$p_wald), collapse = " e "), paste(pv(zpe_e$p_wald_pa), collapse = " e "),
+  num(razao_yg[["estatais_sempetro"]], 0)))
 log_part(ETAPA, "- Saidas: data/processed/A5_lp_irf.csv, A5_lp_cumulativo.csv, A5_lp_comparacoes.csv; results/A5_lp.md; results/figuras/A5_lp_irf_comparacoes e A5_lp_mult_comparacoes (png e pdf).")
 log_part(ETAPA, sprintf("- Tempo: estimacao %s s (baseline %s s); total %s s.",
   num(as.numeric(difftime(t_fim_est, t_ini, units = "secs")), 0), num(as.numeric(difftime(t_base, t_ini, units = "secs")), 0),

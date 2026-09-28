@@ -742,6 +742,22 @@ for (am in c("2003-2019", "2003-2025")) {
              if (nrow(z)) paste(z$rot, collapse = ", ") else "nenhuma"
            }, ".")
 }
+# Sintese das tres robustezes pedidas pelo autor (Cholesky invertida, p = 2, PIB em taxa), em linha propria (revisao adversarial)
+TRES <- c(chol_inv = "Cholesky invertida", p2 = "p = 2", pib_taxa = "PIB em taxa")
+sint_tres <- vapply(c("2003-2019", "2003-2025"), function(am) {
+  b <- base_row %>% filter(amostra == am)
+  z <- rob %>% filter(amostra == am, tipo_id %in% names(TRES)) %>% mutate(ord = match(tipo_id, names(TRES))) %>% arrange(ord)
+  paste0(am, ": baseline ", el_txt(b), "; ", paste(sprintf("%s %s (IC 90%% %s zero; %s%% do baseline)", TRES[z$tipo_id],
+         vapply(seq_len(nrow(z)), function(i) el_txt(z[i, ]), ""), ifelse(z$ic90_inf <= 0, "inclui", "exclui"),
+         num(100 * z$elasticidade / b$elasticidade, 0)), collapse = "; "))
+}, "")
+# A frase fixa abaixo so vale se os numeros a sustentam
+z19 <- rob %>% filter(amostra == "2003-2019"); b19 <- base_row %>% filter(amostra == "2003-2019")
+stopifnot(z19$ic90_inf[z19$tipo_id == "chol_inv"] <= 0, z19$ic90_inf[z19$tipo_id == "p2"] <= 0,
+          abs(z19$elasticidade[z19$tipo_id == "pib_taxa"] / b19$elasticidade - 0.5) < 0.1)
+log_part(ETAPA, "- Sintese das tres robustezes pedidas no briefing (a robustez principal para a A6, antes de qualquer contagem de variantes). ",
+         paste(sint_tres, collapse = ". "), ". Em 2003-2019 o baseline corrigido nao resiste a ordem de Cholesky invertida nem a p = 2 ",
+         "(IC incluem zero) e perde metade da magnitude com o PIB em taxa; a contagem de variantes com IC acima de zero nao e sintese.")
 resumo_rob <- rob %>% filter(!principal) %>% group_by(amostra) %>%
   summarise(n_esp = n(), min_el = min(elasticidade), max_el = max(elasticidade), med_el = median(elasticidade),
             n_ic_pos = sum(ic90_inf > 0), n_g5 = sum(granger_p_pub_priv < 0.05), .groups = "drop")
@@ -907,6 +923,9 @@ md <- c(
            paste0(am, ": ", if (nrow(z)) paste(z$Especificacao, collapse = "; ") else "nenhuma")
          }, ""), collapse = ". "), "."), "",
   md_table(ptab), "",
+  paste0("Sintese das tres robustezes pedidas no briefing (Cholesky invertida, p = 2, PIB em taxa): ", paste(sint_tres, collapse = ". "), ". ",
+         "Em 2003-2019 o baseline corrigido nao resiste a ordem de Cholesky invertida nem a p = 2 (IC incluem zero) e perde metade da ",
+         "magnitude com o PIB em taxa. Estas tres sao a robustez principal; a contagem das demais variantes (secao 6) nao resume a robustez."), "",
   "## 5. Robustez do VAR em diferenca, todas as especificacoes (1000 replicas)", "",
   md_table(rtab), "",
   "## 6. Resumo das demais variantes (controles, Selic media, variantes de INF da A3, exclusao de 2016T4-2018T1, sem DUM)", "",

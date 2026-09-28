@@ -790,7 +790,7 @@ if (p_chow_2020 < 0.05) {
     lv <- out_a3[[dn]][match(keys_dum, out_a3$trimestre)]
     lv[is.na(lv)] <- 0
     add_dummy(paste0("d_", dn), c(0, diff(lv)), "pulso (+1 e -1 no trimestre seguinte)",
-              "VAR estendido e LP com inf_diss ou estatais", "robustez",
+              "VAR estendido e LP com inf_diss ou estatais_total", "robustez",
               sprintf("AO do X-11 de inf_diss (A3, via estatais_total; picos da OI que a serie ajustada D11 mantem), diferenciado para a equacao em diferenca (impulso no nivel). Chow das equacoes estendidas em 2020T1 e 2020T2 com p minimo %s. E a quebra de dados que mais move o resultado: os tres AO de 2020-2021 levam a elasticidade em h = 40 de %s para %s (com os pulsos da pandemia, todos os outliers do X-11 dao %s). A A3 manteve os AO no baseline (decisao do coordenador); estas dummies sao a robustez equivalente a variante sem AO (%s).",
                       fp(p_chow_2020), fnum(el_ext["el_h40"], 3), fnum(e_out2021$el_h40, 3), fnum(e_outall$el_h40, 3),
                       fnum(tab_var$el_h40[tab_var$experimento == "Sem o efeito dos AO do X-11"], 3)))

@@ -1,6 +1,6 @@
 # A4. Quebras estruturais
 
-Gerado por `R/A4_quebras.R` em 2026-09-28 23:25. Numeros com virgula decimal. Tabelas LaTeX em `results/A_quebras.tex`; resumo por serie e equacao em `results/A4_quebras_resumo.csv`; dummies para a A5 em `data/processed/A4_dummies_quebra.csv` (metadados em `A4_dummies_quebra_metadados.csv`); figura em `results/figuras/A4_recursivo.png`.
+Gerado por `R/A4_quebras.R` em 2026-09-28 23:39. Numeros com virgula decimal. Tabelas LaTeX em `results/A_quebras.tex`; resumo por serie e equacao em `results/A4_quebras_resumo.csv`; dummies para a A5 em `data/processed/A4_dummies_quebra.csv` (metadados em `A4_dummies_quebra_metadados.csv`); figura em `results/figuras/A4_recursivo.png`.
 
 Convencao: toda data de quebra e o primeiro trimestre do novo regime.
 
@@ -343,9 +343,9 @@ VAR da dissertacao (arquivos originais, niveis 2002T1-2019T4, 68 observacoes efe
 | d_ao2018T3 | pulso (+1 e -1 no trimestre seguinte) | 2018T3 2018T4 | VAR estendido e LP com inf_diss ou estatais_total | robustez |
 | d_ls2019T1 | pulso | 2019T1 | VAR estendido e LP com inf_diss ou estatais_total | robustez |
 | d_ls2019T3 | pulso | 2019T3 | VAR estendido e LP com inf_diss ou estatais_total | robustez |
-| d_ao2020T3 | pulso (+1 e -1 no trimestre seguinte) | 2020T3 2020T4 | VAR estendido e LP com inf_diss ou estatais | robustez |
-| d_ao2021T1 | pulso (+1 e -1 no trimestre seguinte) | 2021T1 2021T2 | VAR estendido e LP com inf_diss ou estatais | robustez |
-| d_ao2021T2 | pulso (+1 e -1 no trimestre seguinte) | 2021T2 2021T3 | VAR estendido e LP com inf_diss ou estatais | robustez |
+| d_ao2020T3 | pulso (+1 e -1 no trimestre seguinte) | 2020T3 2020T4 | VAR estendido e LP com inf_diss ou estatais_total | robustez |
+| d_ao2021T1 | pulso (+1 e -1 no trimestre seguinte) | 2021T1 2021T2 | VAR estendido e LP com inf_diss ou estatais_total | robustez |
+| d_ao2021T2 | pulso (+1 e -1 no trimestre seguinte) | 2021T2 2021T3 | VAR estendido e LP com inf_diss ou estatais_total | robustez |
 | degrau_2011T1 | degrau | de 2011T1 em diante | uniao_econ_dt_g1 uniao_gnd4_dir uniao_soc_dir | robustez nas LP com choques da Uniao |
 
 Justificativas em `data/processed/A4_dummies_quebra_metadados.csv`. As colunas de `A4_dummies_quebra.csv` sao regressores da equacao em diferenca e entram como estao, sem diferenciar de novo.

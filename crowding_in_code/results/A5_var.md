@@ -1,6 +1,6 @@
 # A5: VAR e VEC (baseline replicado, corrigido, estendido e robustez)
 
-Gerado por R/A5_var.R em 2026-09-28 23:30. Numeros com virgula decimal. Elasticidade de longo prazo = resposta acumulada de PVD em h = 40 dividida pela de INF, ao mesmo choque ortogonal em INF (INF antes de PVD). IC 90% por bootstrap de residuos (percentil). Tabela completa em data/processed/A5_var_resultados.csv; Johansen em data/processed/A5_johansen.csv.
+Gerado por R/A5_var.R em 2026-09-28 23:44. Numeros com virgula decimal. Elasticidade de longo prazo = resposta acumulada de PVD em h = 40 dividida pela de INF, ao mesmo choque ortogonal em INF (INF antes de PVD). IC 90% por bootstrap de residuos (percentil). Tabela completa em data/processed/A5_var_resultados.csv; Johansen em data/processed/A5_johansen.csv.
 
 ## 1. Baseline replicado e corrigido, correcao a correcao
 
@@ -93,6 +93,8 @@ Estas sao as robustezes pedidas no briefing e a sintese da robustez. IC de 90% i
 | 2003-2025 | dummies_A4: outliers do X-11 de inf_diss de 2018-2021 (A4_dummies_quebra.csv), alem dos pulsos | 88 | 0,344 | [0,12; 0,55] | nao |
 | ate 2014T4 | subamostra: observacoes efetivas 2004T1-2014T4 | 44 | 0,227 | [-0,37; 0,53] | sim |
 | de 2015T1 | subamostra: observacoes efetivas 2015T1-2025T4 (niveis desde 2014T1) | 44 | 0,059 | [-0,17; 0,26] | sim |
+
+Sintese das tres robustezes pedidas no briefing (Cholesky invertida, p = 2, PIB em taxa): 2003-2019: baseline 0,449 [0,10; 0,69]; Cholesky invertida 0,074 [-0,25; 0,30] (IC 90% inclui zero; 17% do baseline); p = 2 0,062 [-0,25; 0,31] (IC 90% inclui zero; 14% do baseline); PIB em taxa 0,227 [0,02; 0,39] (IC 90% exclui zero; 51% do baseline). 2003-2025: baseline 0,173 [-0,03; 0,36]; Cholesky invertida 0,139 [-0,00; 0,27] (IC 90% inclui zero; 80% do baseline); p = 2 0,108 [-0,08; 0,28] (IC 90% inclui zero; 62% do baseline); PIB em taxa 0,099 [-0,06; 0,24] (IC 90% inclui zero; 57% do baseline). Em 2003-2019 o baseline corrigido nao resiste a ordem de Cholesky invertida nem a p = 2 (IC incluem zero) e perde metade da magnitude com o PIB em taxa. Estas tres sao a robustez principal; a contagem das demais variantes (secao 6) nao resume a robustez.
 
 ## 5. Robustez do VAR em diferenca, todas as especificacoes (1000 replicas)
 
