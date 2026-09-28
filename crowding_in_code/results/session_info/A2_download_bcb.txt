@@ -1,4 +1,4 @@
-# A2_download_bcb, executado em 2026-09-28 19:52:18
+# A2_download_bcb, executado em 2026-09-28 19:57:11
 R version 4.6.1 (2026-06-24)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 24.04.4 LTS

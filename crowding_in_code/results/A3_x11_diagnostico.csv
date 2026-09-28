@@ -1,0 +1,27 @@
+serie,inicio,n,transformacao,arima,outliers,m7,q_x11,especificacao,aditivo
+uniao_econ_dir,2003Q1,92,none,(1 1 0)(0 1 1),AO2016.1,0.26,0.59,padrao,FALSE
+uniao_econ_dt,2003Q1,92,log,(1 1 0)(0 1 1),AO2005.1 AO2016.1 AO2021.1,0.251,0.43,padrao,FALSE
+uniao_soc_dir,2003Q1,92,none,(0 1 2)(0 1 1),AO2010.3,0.59,0.6,padrao,FALSE
+uniao_soc_dt,2003Q1,92,log,(3 1 1)(0 1 1),AO2021.1,0.31,0.68,padrao,FALSE
+uniao_transf_econ,2003Q1,92,none,(0 0 0)(0 1 1),AO2003.4 LS2007.4 AO2008.1 AO2008.4 AO2009.1 LS2010.2 AO2010.4 AO2011.4 LS2013.1,0.778,1.43,padrao,TRUE
+uniao_transf_soc,2003Q1,92,log,(1 0 0)(1 1 0),AO2014.4 AO2021.1,0.273,0.65,padrao,FALSE
+uniao_gnd4_dir,2003Q1,92,log,(1 1 0)(0 1 1),LS2014.4 AO2016.1 AO2021.1,0.181,0.46,padrao,FALSE
+uniao_filtro_diss,2003Q1,92,log,(0 1 1)(0 1 1),AO2021.1,0.207,0.45,padrao,FALSE
+uniao_filtro_diss_imprazao,2003Q1,92,log,(1 1 0)(0 1 1),AO2021.1,0.21,0.45,padrao,FALSE
+estatais_total,2003Q1,92,log,(0 1 1)(0 1 1),LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.3 AO2021.2,0.157,0.44,padrao,FALSE
+estatais_petro,2016Q1,40,log,(0 1 1)(0 1 1),,0.566,0.65,padrao,FALSE
+estatais_sempetro,2016Q1,40,log,(0 0 0)(0 1 1),,0.462,1.25,padrao,FALSE
+estatais_econ,2016Q1,40,log,(1 0 0)(0 1 0),,0.41,0.6,padrao,FALSE
+estatais_outras,2016Q1,40,log,(0 0 2)(0 1 1),,0.527,1.68,padrao,FALSE
+estatais_grupopetro,2016Q1,40,log,(0 1 1)(0 1 1),,0.568,0.65,padrao,FALSE
+estatais_semgrupopetro,2016Q1,40,log,(0 0 0)(0 1 1),,0.441,1.3,padrao,FALSE
+estatais_total_e2017,2003Q1,92,log,(0 1 1)(0 1 1),LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.1 AO2020.3 AO2021.2,0.148,0.41,padrao,FALSE
+estatais_total_e2018,2003Q1,92,log,(0 1 1)(0 1 1),LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.1 AO2020.3 AO2021.2,0.148,0.41,padrao,FALSE
+estatais_total_e2019,2003Q1,92,log,(0 1 1)(0 1 1),LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.1 AO2020.3 AO2021.2,0.148,0.41,padrao,FALSE
+estatais_total_e2020,2003Q1,92,log,(0 1 1)(0 1 1),LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.3 AO2021.2,0.157,0.43,padrao,FALSE
+inf_diss,2003Q1,92,log,(0 1 0)(0 1 1),LS2019.1 AO2020.3 AO2021.2,0.164,0.4,padrao,FALSE
+inf_diss_imprazao,2003Q1,92,log,(0 1 0)(0 1 1),LS2019.1 AO2020.3 AO2021.2,0.167,0.4,padrao,FALSE
+inf_diss_e2017,2003Q1,92,log,(0 1 1)(0 1 1),LS2019.1 AO2020.3 AO2021.2,0.163,0.45,padrao,FALSE
+inf_diss_e2018,2003Q1,92,log,(0 1 0)(0 1 1),LS2019.1 AO2020.3 AO2021.2,0.16,0.46,padrao,FALSE
+inf_diss_e2019,2003Q1,92,log,(1 1 0)(1 1 1),AO2005.4 LS2018.2 AO2018.3 LS2019.1 LS2019.3 AO2020.1 AO2020.3 LS2021.1 AO2021.2,0.129,0.38,padrao,FALSE
+inf_diss_e2020,2003Q1,92,log,(0 1 0)(0 1 1),LS2019.1 AO2020.3 AO2021.2,0.165,0.44,padrao,FALSE

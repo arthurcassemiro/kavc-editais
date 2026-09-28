@@ -3,3 +3,6 @@
 .Rproj.user/
 *.Rout
 docs/dissertacao/
+# downloads brutos grandes (> 50 MB) ficam fora do git; o script de download os recria
+data/downloads/2026-09-28_bndes_desembolsos_mensais.csv
+data/downloads/*_bndes_desembolsos_mensais*.csv

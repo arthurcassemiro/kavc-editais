@@ -33,7 +33,7 @@ log_reset(ETAPA)
 if (length(secao_bcb)) log_part(ETAPA, paste(secao_bcb, collapse = "\n"))
 log_part(ETAPA, sprintf("%s (R/A2_download_ibge.R, execucao de %s)", MARCA_IBGE, format(Sys.time(), "%Y-%m-%d %H:%M")))
 
-num_br <- function(x, d = 3) formatC(x, format = "f", digits = d, decimal.mark = ",", big.mark = ".")
+num_br <- function(x, d = 3) formatC(round(x, d) + 0, format = "f", digits = d, decimal.mark = ",", big.mark = ".")
 
 # ---------------------------------------------------------------------------
 # 1. Metadados das tabelas (API de agregados v3) e conferencia
@@ -142,8 +142,8 @@ baixar <- function(p) {
   f <- download_path("ibge_sidra", sprintf("%s_v%s", p$tab, p$var))
   write_csv_safe(as_tibble(d), f)
   per <- names(d)[grepl("^(Trimestre|M.s) \\(C.digo\\)$", names(d))]
-  cls_col <- names(d)[grepl("\\(C.digo\\)$", names(d)) & !names(d) %in% c(per, "Nível Territorial (Código)",
-                        "Unidade de Medida (Código)", "Brasil (Código)", "Variável (Código)")]
+  cls_col <- names(d)[grepl("\\(C.digo\\)$", names(d)) & names(d) != per &
+                        !grepl("^(N.vel Territorial|Unidade de Medida|Brasil|Vari.vel) \\(C.digo\\)$", names(d))]
   out <- tibble(p_cod = as.character(d[[per]]), valor = as.numeric(d$Valor),
                 cat = if (length(cls_col)) as.character(d[[cls_col]]) else NA_character_)
   out$serie <- names(p$cats)[match(out$cat, p$cats)]
@@ -288,15 +288,22 @@ transf <- function(tab, serie) {
   )
 }
 arq <- dados %>% distinct(tab, var, serie, api, arquivo)
-meta_ibge <- conf %>% left_join(arq, by = c("tab", "var", "serie")) %>%
+meta_ibge <- conf %>% left_join(arq, by = c("tab", "var", "serie")) %>% rowwise() %>%
   transmute(serie = paste(serie, suf, sep = "_"), fonte = "IBGE/SIDRA",
             codigo = ifelse(is.na(cat), sprintf("tabela %s, variavel %s", tab, var),
                             sprintf("tabela %s, variavel %s, c%s/%s", tab, var, cls, cat)),
-            titulo_nos_metadados = ifelse(is.na(categoria_nome), sprintf("%s | %s", titulo_tabela, nome_variavel),
-                                          sprintf("%s | %s | %s", titulo_tabela, nome_variavel, categoria_nome)),
-            unidade, periodicidade, periodo = cobertura, url = api, arquivo_download = arquivo,
+            titulo_nos_metadados = paste(c(titulo_tabela, if (nome_variavel != titulo_tabela) nome_variavel,
+                                           if (!is.na(categoria_nome)) categoria_nome), collapse = " | "),
+            unidade, periodicidade,
+            periodo = sprintf("fonte %s; %s", cobertura,
+                              case_when(tab == "1737" ~ "checagem 2000-01 a 2025-12",
+                                        tab == "8887" ~ sprintf("base %s a %s", pim_ini, Q_FIM),
+                                        TRUE ~ sprintf("base %s a %s", Q_INI, Q_FIM))),
+            url = api, arquivo_download = arquivo,
             transformacao = transf(tab, serie)) %>%
-  mutate(transformacao = ifelse(serie %in% vazias, "sem valores na fonte; nao entra na base", transformacao))
+  ungroup() %>%
+  mutate(transformacao = ifelse(serie %in% vazias, "sem valores na fonte; nao entra na base", transformacao),
+         periodo = ifelse(serie %in% vazias, sub(";.*", "; sem valores", periodo), periodo))
 f_meta <- file.path(PATHS$processed, "A2_metadados_bcb_ibge.csv")
 if (file.exists(f_meta)) {
   outros <- read_csv(f_meta, show_col_types = FALSE, col_types = cols(.default = "c")) %>% filter(fonte != "IBGE/SIDRA")

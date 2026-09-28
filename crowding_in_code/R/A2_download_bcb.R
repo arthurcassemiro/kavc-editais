@@ -33,7 +33,7 @@ secao_ibge <- ler_secao(ETAPA, MARCA_IBGE)
 log_reset(ETAPA)
 log_part(ETAPA, sprintf("%s (R/A2_download_bcb.R, execucao de %s)", MARCA_BCB, format(Sys.time(), "%Y-%m-%d %H:%M")))
 
-num_br <- function(x, d = 3) formatC(x, format = "f", digits = d, decimal.mark = ",", big.mark = ".")
+num_br <- function(x, d = 3) formatC(round(x, d) + 0, format = "f", digits = d, decimal.mark = ",", big.mark = ".")
 
 # ---------------------------------------------------------------------------
 # 1. Metadados: pagina da serie no SGS (em portugues) e portal de dados abertos
@@ -285,7 +285,7 @@ log_part(ETAPA, "- JUR de 0124_inexo.txt (2002T1 a 2019T4, 72 trimestres, em fra
          paste(sprintf("%s: %d de 72 iguais, correlacao %s, diferenca media absoluta %s p.p.",
                        rotulo[res_jur$conceito], res_jur$iguais_ate_0_0001, num_br(res_jur$correlacao, 4),
                        num_br(100 * res_jur$dif_media_abs, 3)), collapse = "; "),
-         sprintf(". Conclusao: a dissertacao usou %s%s.", rotulo[melhor$conceito],
+         sprintf(" Conclusao: a dissertacao usou %s%s.", rotulo[melhor$conceito],
                  ifelse(melhor$iguais_ate_0_0001 == 72, ", identica nos 72 trimestres", "")),
          if (nrow(dif_q)) sprintf(" Trimestres que nao batem: %s.", paste(sprintf("%s (JUR %s; BCB %s)", dif_q$periodo,
                                    num_br(dif_q$JUR, 4), num_br(dif_q[[melhor$conceito]], 4)), collapse = ", ")) else "",
