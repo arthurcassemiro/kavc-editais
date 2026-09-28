@@ -18,3 +18,18 @@
 - 2026-09-28, leitura da reconstrucao de INF (A3): a variante que reproduz o INF do arquivo original e a NOMINAL (sem deflacionar), X-11 na soma, janela 2003T1-2019T4: correlacao das diferencas 0,9975 e desvio medio em nivel 0,005 log10. Todas as variantes deflacionadas pelo IPCA ficam cerca de 0,19 log10 abaixo em nivel medio (indices base 2003), o que corresponde a inflacao acumulada. Conclusao provisoria: o INF usado no VAR da dissertacao era nominal com ajuste sazonal, embora a secao 4.4 do texto diga que foi deflacionado; o PVD (Ipea) e real. Isso vira correcao do texto antigo e item da A5 (baseline corrigido com INF real).
 - Na serie real, o X-11 aplicado a soma e instavel (correlacao 0,75 na janela 2003-2019 e 0,92 na janela 2003-2025), enquanto o X-11 em cada componente e depois a soma da 0,995 e 0,980. Decisao do coordenador: inf_diss passa a ser X-11 por componente (federal filtro e estatais) e soma, coerente com as demais series de choque, que sao ajustadas individualmente.
 - 2026-09-28: removido data/raw/x.csv, arquivo de teste de 4 bytes criado pelo coordenador ao testar a primeira versao do guard_path (que falhou) e versionado por engano no primeiro commit. Conferido: todos os demais arquivos de data/raw e data/original sao identicos aos do pacote enviado pelo autor; results/LOG.md tambem.
+- 2026-09-28 ~22h: fluxo A1-A3 interrompido na 3a rodada de verificacao (as correcoes das rodadas 1 e 2 ja estavam aplicadas); a consolidacao da A2 passa para o fluxo enxuto seguinte.
+- INF da dissertacao e NOMINAL: INF = log10(X-11 multiplicativo do Ipub nominal do Apendice A) + constante, com desvio padrao do residuo de 0,002 log10 e media anual do residuo igual a zero em todos os anos de 2002 a 2019. Contra o Ipub deflacionado pelo IPCA, o residuo cresce de -0,239 (2002) a +0,205 (2019), exatamente o log10 da inflacao acumulada. O autor afirma ter deflacionado; a deflacao nao chegou ao arquivo 0224_tri_estmeq.txt usado no VAR. Tratamento: baseline replicado com o arquivo original; baseline corrigido com INF real.
+- Decisoes do coordenador sobre as questoes abertas da A2 e A3 (revisaveis pelo autor):
+  1. Transferencia = grupo 1 do dashboard (leitura literal do briefing); grupos 1 e 2 como robustez. Na social os dois sao identicos.
+  2. Choques com os AO do X-11 mantidos (serie D11, como na dissertacao): os picos de gasto sao a variacao que identifica o efeito. Variante sem AO como robustez.
+  3. OI da SEST: so AO (baseline atual); AO e LS como robustez.
+  4. Selic: meta no fim do trimestre (identica ao JUR da dissertacao); media do trimestre como robustez.
+  5. Commodities: IC-Br em US$ (SGS 29042), para nao duplicar o cambio, que entra separado; Brent como alternativa.
+  6. PIB: safra atual (2026-09-28) nas amostras novas; o baseline replicado usa o arquivo original.
+  7. PIM-PF bens de capital: versao com ajuste do IBGE (8887, variavel 12607).
+  8. M&E do Ipea: serie dessazonalizada publicada hoje (correlacao 0,993 com o PVD nas diferencas).
+  9. BNDES: desembolsos excluindo o subsetor Administracao Publica como proxy de desembolsos privados (mantem estatais como Petrobras e Eletrobras); limitacao registrada. O autor deve confirmar se a base e a mesma do arquivo local dele.
+  10. Componentes nacional e importado de M&E nao sao publicados: importacao de BK (Comex, real) como proxy do importado e PIM-PF BK como proxy da producao nacional.
+  11. Incerteza (FGV IBRE): sem fonte aberta acessivel no conteiner; fica fora dos controles.
+  12. uniao_transf_econ nao passa no criterio de qualidade do X-11 (valores muito pequenos): a comparacao direta x transferencia fica so na infraestrutura social.
