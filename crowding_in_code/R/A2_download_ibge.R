@@ -187,6 +187,13 @@ ordem <- c("periodo",
            "pim_bk_nsa_8887", "pim_bk_sa_8887", "pim_bk_exc_transp_nsa_8887", "pim_bk_exc_transp_sa_8887",
            "pim_bk_transp_nsa_8887", "pim_bk_transp_sa_8887")
 ibge_q <- ibge_q %>% select(all_of(ordem))
+# Series sem nenhum valor na fonte (SIDRA devolve o campo vazio) saem da base.
+vazias <- names(ibge_q)[map_lgl(ibge_q, ~ all(is.na(.x)))]
+ibge_q <- ibge_q %>% select(-all_of(vazias))
+if (length(vazias)) {
+  log_part(ETAPA, sprintf("- Sem valores na fonte (a SIDRA devolve o campo vazio em todos os meses), fora da base: %s. So o total de bens de capital tem versao com ajuste sazonal na 8887.",
+                          paste(vazias, collapse = ", ")))
+}
 nas <- ibge_q %>% summarise(across(-periodo, ~ sum(is.na(.x))))
 print(t(nas))
 write_csv_safe(ibge_q, file.path(PATHS$processed, "A2_ibge_trimestral.csv"))
@@ -244,7 +251,7 @@ log_part(ETAPA, sprintf(paste0("- PIB de 0124_inexo.txt (2002T1 a 2019T4) contra
                         HOJE, num_br(r_qq, 4), num_br(r_dl, 4), num_br(r_yy, 2),
                         num_br(100 * mean(abs(cmp_pib$dif)), 3), num_br(100 * max(abs(cmp_pib$dif)), 3), iguais,
                         num_br(sub_cor("2002Q1", "2010Q4"), 4), num_br(sub_cor("2011Q1", "2019Q4"), 4),
-                        paste(sprintf("%s (dissertacao %s; 1621 %s)", top$periodo, num_br(100 * top$PIB_dissertacao, 1),
+                        paste(sprintf("%s (dissertacao %s%%; 1621 %s%%)", top$periodo, num_br(100 * top$PIB_dissertacao, 1),
                                       num_br(100 * top$pib_var_tri_sa_1621, 2)), collapse = ", "), conclusao_pib))
 
 # ---------------------------------------------------------------------------
@@ -288,7 +295,8 @@ meta_ibge <- conf %>% left_join(arq, by = c("tab", "var", "serie")) %>%
             titulo_nos_metadados = ifelse(is.na(categoria_nome), sprintf("%s | %s", titulo_tabela, nome_variavel),
                                           sprintf("%s | %s | %s", titulo_tabela, nome_variavel, categoria_nome)),
             unidade, periodicidade, periodo = cobertura, url = api, arquivo_download = arquivo,
-            transformacao = transf(tab, serie))
+            transformacao = transf(tab, serie)) %>%
+  mutate(transformacao = ifelse(serie %in% vazias, "sem valores na fonte; nao entra na base", transformacao))
 f_meta <- file.path(PATHS$processed, "A2_metadados_bcb_ibge.csv")
 if (file.exists(f_meta)) {
   outros <- read_csv(f_meta, show_col_types = FALSE, col_types = cols(.default = "c")) %>% filter(fonte != "IBGE/SIDRA")
