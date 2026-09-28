@@ -1,0 +1,66 @@
+% Gerado por R/A1_replica.R. Requer \usepackage{booktabs}.
+\begin{table}[htbp]
+\centering
+\caption{Replica do modelo da disserta\c{c}\~ao: VAR(3) em diferen\c{c}as, 2002T1--2019T4}
+\label{tab:a1_baseline}
+\small
+\begin{tabular}{lcc}
+\toprule
+ & Estimativa & IC 90\% \\
+\midrule
+\multicolumn{3}{l}{\textit{A. Choque ortogonal em INF (Cholesky: INF, PVD)}} \\
+Impacto em PVD ($h = 0$) & 0{,}0118 & [0{,}0036; 0{,}0175] \\
+Resposta acumulada de PVD ($h = 40$) & 0{,}0194 & [0{,}0016; 0{,}0315] \\
+Resposta acumulada de INF ($h = 40$) & 0{,}0465 & [0{,}0263; 0{,}0584] \\
+Elasticidade de longo prazo & 0{,}42 & [0{,}05; 0{,}66] \\
+\midrule
+\multicolumn{3}{l}{\textit{B. Covari\^ancia dos res\'iduos}} \\
+$\mathrm{var}(u_{INF})$ & 0{,}00398 & \\
+$\mathrm{cov}(u_{INF}, u_{PVD})$ & 0{,}00075 & \\
+$\mathrm{var}(u_{PVD})$ & 0{,}00085 & \\
+$\mathrm{corr}(u_{INF}, u_{PVD})$ & 0{,}406 & \\
+\midrule
+\multicolumn{3}{l}{\textit{C. Causalidade de Granger (F; p-valor)}} \\
+INF $\rightarrow$ PVD, VAR em diferen\c{c}as (gl 3 e 114) & 3{,}27 & 0{,}0238 \\
+PVD $\rightarrow$ INF, VAR em diferen\c{c}as (gl 3 e 114) & 1{,}27 & 0{,}2883 \\
+INF $\rightarrow$ PVD, VAR em n\'ivel (gl 3 e 116) & 2{,}92 & 0{,}0372 \\
+PVD $\rightarrow$ INF, VAR em n\'ivel (gl 3 e 116) & 1{,}91 & 0{,}1320 \\
+\midrule
+\multicolumn{3}{l}{\textit{D. Johansen, tra\c{c}o (ecdet = tend\^encia, K = 2, dummy restrita)}} \\
+$r = 0$ (valor cr\'itico 5\%: 25{,}32; 10\%: 22{,}76) & 25{,}01 & \\
+$r \leq 1$ (valor cr\'itico 5\%: 12{,}25) & 2{,}53 & \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.95\linewidth}\footnotesize
+\medskip Notas: VAR(3) em primeiras diferen\c{c}as de INF e PVD (log10), com constante, tend\^encia e as ex\'ogenas diferenciadas (PIB, Selic e dummy); 68 observa\c{c}\~oes efetivas. Respostas em log10. Elasticidade = resposta acumulada de PVD / resposta acumulada de INF em $h = 40$. IC 90\% por bootstrap de res\'iduos com 2000 r\'eplicas (percentis 5\% e 95\%). VAR em n\'ivel: VAR(3) nos log10 com ex\'ogenas em n\'ivel.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Diagn\'osticos dos res\'iduos do VAR(3) em diferen\c{c}as}
+\label{tab:a1_diagnosticos}
+\small
+\begin{tabular}{lccc}
+\toprule
+Teste & Estat\'istica & gl & p-valor \\
+\midrule
+Portmanteau assintotico (lags.pt = 16) & 44{,}79 & 52 & 0{,}7506 \\
+Portmanteau ajustado (lags.pt = 16) & 52{,}34 & 52 & 0{,}4606 \\
+Breusch-Godfrey LM (lags.bg = 5) & 41{,}81 & 20 & 0{,}0029 \\
+Edgerton-Shukur F (lags.bg = 5) & 2{,}10 & 20; 92 & 0{,}0093 \\
+ARCH-LM multivariado (lags.multi = 5) & 42{,}23 & 45 & 0{,}5899 \\
+Jarque-Bera multivariado & 18{,}03 & 4 & 0{,}0012 \\
+Assimetria multivariada & 5{,}44 & 2 & 0{,}0659 \\
+Curtose multivariada & 12{,}59 & 2 & 0{,}0018 \\
+Jarque-Bera univariado, INF & 15{,}10 & 2 & 0{,}0005 \\
+Jarque-Bera univariado, PVD & 3{,}63 & 2 & 0{,}1632 \\
+\midrule
+M\'odulo m\'aximo das ra\'izes & 0{,}7358 & & \\
+VARselect (m\'aximo 8): AIC, HQ, SC, FPE & \multicolumn{3}{c}{3, 3, 2, 3} \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.95\linewidth}\footnotesize
+\medskip Notas: H0 de aus\^encia de autocorrela\c{c}\~ao (Portmanteau, BG, ES), de efeitos ARCH e de normalidade (Jarque-Bera). Testes do pacote vars.
+\end{minipage}
+\end{table}
