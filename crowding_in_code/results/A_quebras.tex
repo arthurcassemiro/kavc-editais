@@ -1,0 +1,405 @@
+% Gerado por R/A4_quebras.R. Requer \usepackage{booktabs}.
+% Execucao de 2026-09-28 23:25. Numeros com virgula decimal.
+\begin{table}[htbp]
+\centering
+\caption{Quebras m\'ultiplas de Bai-Perron (\texttt{strucchange::breakpoints}, at\'e 5 quebras)}
+\label{tab:a4_bp}
+\scriptsize
+\begin{tabular}{llcccl}
+\toprule
+S\'erie ou equa\c{c}\~ao & Amostra & $n$ & $m$ (BIC) & $m$ (LWZ) & Datas pelo BIC [IC 95\%] \\
+\midrule
+\multicolumn{6}{l}{\textit{A. S\'eries: m\'edia da diferen\c{c}a do log10}} \\
+uniao\_econ\_dir & 2003T1--2025T4 & 91 & 0 & 0 & nenhuma (6{,}3\% a.a.) \\
+uniao\_econ\_dt\_g1 & 2003T1--2025T4 & 91 & 0 & 0 & nenhuma (5{,}9\% a.a.) \\
+uniao\_soc\_dir & 2003T1--2025T4 & 91 & 0 & 0 & nenhuma (6{,}1\% a.a.) \\
+uniao\_soc\_dt\_g1 & 2003T1--2025T4 & 91 & 0 & 0 & nenhuma (8{,}1\% a.a.) \\
+uniao\_transf\_soc\_g1 & 2003T1--2025T4 & 91 & 0 & 0 & nenhuma (9{,}4\% a.a.) \\
+uniao\_gnd4\_dir & 2003T1--2025T4 & 91 & 0 & 0 & nenhuma (5{,}1\% a.a.) \\
+uniao\_filtro\_diss & 2003T1--2025T4 & 91 & 0 & 0 & nenhuma (3{,}9\% a.a.) \\
+estatais\_total & 2003T1--2025T4 & 91 & 0 & 0 & nenhuma (1{,}8\% a.a.) \\
+estatais\_petro & 2016T1--2025T4 & 39 & 0 & 0 & nenhuma (-1{,}1\% a.a.) \\
+estatais\_sempetro & 2016T1--2025T4 & 39 & 0 & 0 & nenhuma (-4{,}0\% a.a.) \\
+estatais\_econ & 2016T1--2025T4 & 39 & 0 & 0 & nenhuma (-15{,}8\% a.a.) \\
+estatais\_grupopetro & 2016T1--2025T4 & 39 & 0 & 0 & nenhuma (-1{,}0\% a.a.) \\
+estatais\_semgrupopetro & 2016T1--2025T4 & 39 & 0 & 0 & nenhuma (-4{,}5\% a.a.) \\
+inf\_diss & 2003T1--2025T4 & 91 & 0 & 0 & nenhuma (2{,}1\% a.a.) \\
+fbcf\_me & 2002T1--2025T4 & 95 & 0 & 0 & nenhuma (2{,}4\% a.a.) \\
+fbcf\_constr & 2002T1--2025T4 & 95 & 0 & 0 & nenhuma (1{,}9\% a.a.) \\
+fbcf\_total & 2002T1--2025T4 & 95 & 0 & 0 & nenhuma (2{,}3\% a.a.) \\
+pim\_bk & 2002T1--2025T4 & 95 & 0 & 0 & nenhuma (1{,}4\% a.a.) \\
+imp\_bk\_quantum & 2002T1--2025T4 & 95 & 0 & 0 & nenhuma (6{,}7\% a.a.) \\
+bndes\_priv & 2002T1--2025T4 & 95 & 0 & 0 & nenhuma (1{,}9\% a.a.) \\
+pvd\_diss & 2002T1--2019T4 & 71 & 0 & 0 & nenhuma (3{,}0\% a.a.) \\
+\midrule
+\multicolumn{6}{l}{\textit{B. Equa\c{c}\~oes do VAR: todos os coeficientes}} \\
+Disserta\c{c}\~ao, eq. INF & 2003T1--2019T4 & 68 & 1 & 0 & 2017T2 [2017T1; 2017T3]; LWZ: nenhuma \\
+Disserta\c{c}\~ao, eq. PVD & 2003T1--2019T4 & 68 & 0 & 0 & nenhuma \\
+Disserta\c{c}\~ao, eq. INF, sem pulsos DUM & 2003T1--2019T4 & 65 & 1 & 0 & 2016T3 [2016T2; 2016T4]; LWZ: nenhuma \\
+Disserta\c{c}\~ao, eq. PVD, sem pulsos DUM & 2003T1--2019T4 & 65 & 0 & 0 & nenhuma \\
+Estendido, eq. inf\_diss & 2004T1--2025T4 & 88 & 0 & 0 & nenhuma \\
+Estendido, eq. fbcf\_me & 2004T1--2025T4 & 88 & 0 & 0 & nenhuma \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: Datas = primeiro trimestre do novo regime. S\'eries: regress\~ao da diferen\c{c}a do log10 numa constante, segmento m\'inimo $h = 0{,}15n$; entre par\^enteses, crescimento m\'edio da amostra em \% ao ano. Equa\c{c}\~oes: todos os coeficientes mudam; $h = \max(0{,}15n, k + 1)$, que d\'a 11 observa\c{c}\~oes nas equa\c{c}\~oes da disserta\c{c}\~ao (10 regressores; a dummy diferenciada fica fora porque \'e zero antes de 2018) e 13 nas estendidas (10 regressores). As linhas ``sem pulsos DUM'' excluem 2018T2, 2019T2 e 2019T3, os tr\^es trimestres em que a DUM diferenciada \'e diferente de zero (com 65 observa\c{c}\~oes e $h = 11$, no m\'aximo 4 quebras). LWZ: crit\'erio de Liu, Wu e Zidek (1997), $c_0 = 0{,}299$, $\delta_0 = 0{,}1$. IC das datas pelo m\'etodo de Bai (1997) com erros heteroced\'asticos entre segmentos.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Teste sup-Wald de Andrews (1993) para uma quebra de data desconhecida}
+\label{tab:a4_supf}
+\scriptsize
+\begin{tabular}{lcccc}
+\toprule
+S\'erie ou equa\c{c}\~ao & sup$F$ & $p$ & Data do m\'aximo & $p$ (Newey-West) \\
+\midrule
+\multicolumn{5}{l}{\textit{A. S\'eries}} \\
+uniao\_econ\_dir & 1{,}74 & 0{,}858 & 2011T2 & 0{,}237 \\
+uniao\_econ\_dt\_g1 & 1{,}98 & 0{,}800 & 2011T2 & 0{,}137 \\
+uniao\_soc\_dir & 5{,}13 & 0{,}240 & 2010T4 & 0{,}093 \\
+uniao\_soc\_dt\_g1 & 1{,}36 & 0{,}946 & 2008T4 & 0{,}463 \\
+uniao\_transf\_soc\_g1 & 1{,}06 & 0{,}995 & 2008T4 & 0{,}682 \\
+uniao\_gnd4\_dir & 4{,}19 & 0{,}354 & 2010T3 & 0{,}031 \\
+uniao\_filtro\_diss & 3{,}92 & 0{,}395 & 2010T3 & 0{,}041 \\
+estatais\_total & 0{,}78 & 1{,}000 & 2014T1 & 0{,}567 \\
+estatais\_petro & 0{,}89 & 1{,}000 & 2017T4 & 0{,}610 \\
+estatais\_sempetro & 0{,}89 & 1{,}000 & 2020T2 & 0{,}195 \\
+estatais\_econ & 0{,}99 & 1{,}000 & 2023T3 & 0{,}717 \\
+estatais\_grupopetro & 0{,}90 & 1{,}000 & 2017T4 & 0{,}601 \\
+estatais\_semgrupopetro & 0{,}81 & 1{,}000 & 2020T2 & 0{,}218 \\
+inf\_diss & 1{,}22 & 0{,}973 & 2010T3 & 0{,}465 \\
+fbcf\_me & 2{,}16 & 0{,}750 & 2013T3 & 0{,}451 \\
+fbcf\_constr & 4{,}06 & 0{,}368 & 2012T2 & 0{,}390 \\
+fbcf\_total & 4{,}11 & 0{,}361 & 2013T3 & 0{,}323 \\
+pim\_bk & 2{,}99 & 0{,}560 & 2008T4 & 0{,}273 \\
+imp\_bk\_quantum & 0{,}79 & 1{,}000 & 2010T4 & 0{,}925 \\
+bndes\_priv & 1{,}85 & 0{,}827 & 2010T4 & 0{,}222 \\
+pvd\_diss & 4{,}01 & 0{,}383 & 2013T3 & 0{,}428 \\
+\midrule
+\multicolumn{5}{l}{\textit{B. Equa\c{c}\~oes do VAR}} \\
+Disserta\c{c}\~ao, eq. INF & 103{,}03 & $<$0{,}001 & 2017T2 & \\
+Disserta\c{c}\~ao, eq. PVD & 18{,}67 & 0{,}396 & 2017T2 & \\
+Disserta\c{c}\~ao, eq. INF, sem pulsos DUM & 62{,}81 & $<$0{,}001 & 2016T3 & \\
+Disserta\c{c}\~ao, eq. PVD, sem pulsos DUM & 20{,}14 & 0{,}285 & 2016T1 & \\
+Estendido, eq. inf\_diss & 31{,}25 & 0{,}013 & 2020T2 & \\
+Estendido, eq. fbcf\_me & 38{,}68 & $<$0{,}001 & 2020T2 & \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: \texttt{Fstats} e \texttt{sctest(type = "supF")}, trimming de 15\% (nas equa\c{c}\~oes da disserta\c{c}\~ao, o mesmo $h$ da Tabela \ref{tab:a4_bp}); $p$ assint\'otico de Hansen (1997). Coluna Newey-West: estat\'isticas de Wald com matriz de Newey-West (3 defasagens, sem pr\'e-branqueamento), porque a diferen\c{c}a das s\'eries tem autocorrela\c{c}\~ao.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Teste de Chow nas datas candidatas}
+\label{tab:a4_chow}
+\tiny
+\begin{tabular}{lcccccccc}
+\toprule
+S\'erie ou equa\c{c}\~ao & 2008T4 & 2014T4 & 2015T1 & 2016T4 & 2017T1 & 2020T2 & 2023T3 & 2018T4 \\
+\midrule
+\multicolumn{9}{l}{\textit{A. S\'eries: $p$ do $F$ cl\'assico ($p$ do $t$ de Newey-West)}} \\
+uniao\_econ\_dir & 0{,}37 (0{,}15) & 0{,}39 (0{,}12) & 0{,}59 (0{,}34) & 0{,}75 (0{,}56) & 0{,}70 (0{,}47) & 0{,}87 (0{,}76) & 0{,}78 (0{,}48) & 0{,}70 (0{,}47) \\
+uniao\_econ\_dt\_g1 & 0{,}28 (0{,}07) & 0{,}37 (0{,}11) & 0{,}59 (0{,}36) & 0{,}76 (0{,}59) & 0{,}70 (0{,}49) & 0{,}88 (0{,}79) & 0{,}80 (0{,}52) & 0{,}71 (0{,}49) \\
+uniao\_soc\_dir & 0{,}25 (0{,}21) & 0{,}08 (0{,}02) & 0{,}12 (0{,}04) & 0{,}37 (0{,}23) & 0{,}34 (0{,}21) & 0{,}67 (0{,}55) & 0{,}54 (0{,}24) & 0{,}59 (0{,}45) \\
+uniao\_soc\_dt\_g1 & 0{,}25 (0{,}06) & 0{,}35 (0{,}17) & 0{,}64 (0{,}50) & 0{,}68 (0{,}55) & 0{,}54 (0{,}40) & 0{,}85 (0{,}82) & 0{,}86 (0{,}68) & 0{,}80 (0{,}74) \\
+uniao\_transf\_soc\_g1 & 0{,}31 (0{,}12) & 0{,}45 (0{,}29) & 0{,}86 (0{,}81) & 0{,}76 (0{,}66) & 0{,}63 (0{,}50) & 0{,}82 (0{,}78) & 0{,}81 (0{,}57) & 0{,}84 (0{,}79) \\
+uniao\_gnd4\_dir & 0{,}19 (0{,}04) & 0{,}07 (0{,}01) & 0{,}26 (0{,}10) & 0{,}48 (0{,}29) & 0{,}46 (0{,}27) & 0{,}74 (0{,}60) & 0{,}89 (0{,}71) & 0{,}51 (0{,}32) \\
+uniao\_filtro\_diss & 0{,}21 (0{,}06) & 0{,}11 (0{,}03) & 0{,}31 (0{,}15) & 0{,}63 (0{,}48) & 0{,}68 (0{,}55) & 0{,}78 (0{,}67) & 0{,}81 (0{,}52) & 0{,}56 (0{,}37) \\
+estatais\_total & 0{,}71 (0{,}47) & 0{,}56 (0{,}42) & 0{,}61 (0{,}50) & 0{,}86 (0{,}83) & 0{,}75 (0{,}71) & 0{,}83 (0{,}81) & 0{,}69 (0{,}47) & 0{,}52 (0{,}59) \\
+estatais\_petro &  &  &  &  &  & 0{,}90 (0{,}89) & 0{,}68 (0{,}46) & 0{,}66 (0{,}68) \\
+estatais\_sempetro &  &  &  &  &  & 0{,}35 (0{,}16) & 0{,}79 (0{,}68) & 0{,}97 (0{,}95) \\
+estatais\_econ &  &  &  &  &  & 0{,}52 (0{,}47) & 0{,}33 (0{,}24) & 0{,}87 (0{,}83) \\
+estatais\_grupopetro &  &  &  &  &  & 0{,}90 (0{,}89) & 0{,}67 (0{,}45) & 0{,}66 (0{,}68) \\
+estatais\_semgrupopetro &  &  &  &  &  & 0{,}38 (0{,}16) & 0{,}74 (0{,}59) & 0{,}99 (0{,}98) \\
+inf\_diss & 0{,}57 (0{,}28) & 0{,}39 (0{,}24) & 0{,}51 (0{,}38) & 0{,}94 (0{,}93) & 0{,}83 (0{,}80) & 0{,}80 (0{,}77) & 0{,}75 (0{,}52) & 0{,}47 (0{,}53) \\
+fbcf\_me & 0{,}18 (0{,}06) & 0{,}28 (0{,}21) & 0{,}30 (0{,}22) & 0{,}94 (0{,}93) & 0{,}94 (0{,}93) & 0{,}63 (0{,}62) & 0{,}95 (0{,}89) & 0{,}47 (0{,}45) \\
+fbcf\_constr & 0{,}43 (0{,}45) & 0{,}16 (0{,}15) & 0{,}16 (0{,}15) & 0{,}97 (0{,}97) & 0{,}82 (0{,}81) & 0{,}58 (0{,}54) & 0{,}75 (0{,}58) & 0{,}55 (0{,}50) \\
+fbcf\_total & 0{,}12 (0{,}10) & 0{,}15 (0{,}14) & 0{,}16 (0{,}16) & 0{,}92 (0{,}91) & 0{,}82 (0{,}81) & 0{,}95 (0{,}95) & 0{,}99 (0{,}99) & 0{,}96 (0{,}96) \\
+pim\_bk & 0{,}09 (0{,}03) & 0{,}30 (0{,}30) & 0{,}41 (0{,}39) & 0{,}88 (0{,}88) & 0{,}85 (0{,}85) & 0{,}90 (0{,}91) & 1{,}00 (1{,}00) & 0{,}84 (0{,}85) \\
+imp\_bk\_quantum & 0{,}46 (0{,}29) & 0{,}74 (0{,}63) & 0{,}78 (0{,}68) & 0{,}66 (0{,}50) & 0{,}63 (0{,}46) & 0{,}77 (0{,}73) & 0{,}70 (0{,}42) & 0{,}73 (0{,}68) \\
+bndes\_priv & 0{,}65 (0{,}45) & 0{,}52 (0{,}33) & 0{,}57 (0{,}38) & 0{,}84 (0{,}75) & 0{,}73 (0{,}59) & 0{,}26 (0{,}06) & 0{,}45 (0{,}06) & 0{,}50 (0{,}28) \\
+pvd\_diss & 0{,}10 (0{,}08) & 0{,}15 (0{,}19) & 0{,}16 (0{,}21) & 0{,}61 (0{,}51) & 0{,}62 (0{,}52) &  &  & 0{,}20 (0{,}15) \\
+\midrule
+\multicolumn{9}{l}{\textit{B. Equa\c{c}\~oes do VAR: $p$ do $F$}} \\
+Disserta\c{c}\~ao, eq. INF & 0{,}336 & 0{,}072 & 0{,}103 & 0{,}011 & 0{,}000 &  &  & 0{,}000\textsuperscript{P} \\
+Disserta\c{c}\~ao, eq. PVD & 0{,}371 & 0{,}661 & 0{,}525 & 0{,}366 & 0{,}158 &  &  & 0{,}440\textsuperscript{P} \\
+Disserta\c{c}\~ao, eq. INF, sem pulsos DUM & 0{,}120 & 0{,}023 & 0{,}024 & 0{,}000\textsuperscript{P} & 0{,}000\textsuperscript{P} &  &  & 0{,}000\textsuperscript{P} \\
+Disserta\c{c}\~ao, eq. PVD, sem pulsos DUM & 0{,}403 & 0{,}572 & 0{,}261 & 0{,}077\textsuperscript{P} & 0{,}056\textsuperscript{P} &  &  & 0{,}282\textsuperscript{P} \\
+Estendido, eq. inf\_diss & 0{,}984 & 0{,}336 & 0{,}388 & 0{,}210 & 0{,}171 & 0{,}002 & 0{,}988\textsuperscript{P} & 0{,}020 \\
+Estendido, eq. fbcf\_me & 0{,}841 & 0{,}749 & 0{,}742 & 0{,}325 & 0{,}337 & 0{,}000 & 0{,}987\textsuperscript{P} & 0{,}314 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: A data \'e o primeiro trimestre do novo regime. 2018T4: execu\c{c}\~ao concentrada no T4 do ano eleitoral. S\'eries: quebra na m\'edia da diferen\c{c}a do log10, com pelo menos 4 diferen\c{c}as em cada regime (c\'elulas vazias: data fora da amostra ou regime curto demais); entre par\^enteses, $p$ do degrau com erros de Newey-West (3 defasagens). Equa\c{c}\~oes: todos os coeficientes; P = teste preditivo de Chow, usado quando um dos regimes tem menos observa\c{c}\~oes que regressores.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Quebras nos dados: emenda da SEST, imputa\c{c}\~ao de 2017, T4 eleitoral, composi\c{c}\~ao e Eletrobras}
+\label{tab:a4_dados}
+\tiny
+\begin{tabular}{lllccc}
+\toprule
+S\'erie ou equa\c{c}\~ao & Teste & Data & Estat\'istica & $p$ & $p$ (Newey-West) \\
+\midrule
+\multicolumn{6}{l}{\textit{A. Chow em m\'edia nas datas das quebras de dados}} \\
+estatais\_total & Emenda boletim/OI da SEST & 2016T1 & 0{,}02 & 0{,}875 & 0{,}842 \\
+estatais\_total & Emenda boletim/OI da SEST & 2017T1 & 0{,}10 & 0{,}749 & 0{,}705 \\
+estatais\_total & Emenda boletim/OI da SEST & 2018T1 & 0{,}11 & 0{,}745 & 0{,}715 \\
+estatais\_total & Emenda boletim/OI da SEST & 2019T1 & 0{,}02 & 0{,}894 & 0{,}887 \\
+estatais\_total & Emenda boletim/OI da SEST & 2020T1 & 0{,}02 & 0{,}901 & 0{,}883 \\
+inf\_diss & Emenda boletim/OI da SEST & 2016T1 & 0{,}04 & 0{,}839 & 0{,}798 \\
+inf\_diss & Emenda boletim/OI da SEST & 2017T1 & 0{,}05 & 0{,}829 & 0{,}796 \\
+inf\_diss & Emenda boletim/OI da SEST & 2018T1 & 0{,}03 & 0{,}859 & 0{,}836 \\
+inf\_diss & Emenda boletim/OI da SEST & 2019T1 & 0{,}05 & 0{,}830 & 0{,}811 \\
+inf\_diss & Emenda boletim/OI da SEST & 2020T1 & 0{,}04 & 0{,}837 & 0{,}807 \\
+uniao\_filtro\_diss & Imputacao de 2017 & 2017T1 & 0{,}17 & 0{,}682 & 0{,}546 \\
+uniao\_filtro\_diss & Imputacao de 2017 & 2018T1 & 0{,}32 & 0{,}575 & 0{,}398 \\
+inf\_diss & Imputacao de 2017 & 2017T1 & 0{,}05 & 0{,}829 & 0{,}796 \\
+inf\_diss & Imputacao de 2017 & 2018T1 & 0{,}03 & 0{,}859 & 0{,}836 \\
+uniao\_econ\_dir & Composicao por elemento (2011-2016) & 2011T1 & 1{,}20 & 0{,}276 & 0{,}055 \\
+uniao\_econ\_dir & Composicao por elemento (2011-2016) & 2017T1 & 0{,}15 & 0{,}695 & 0{,}466 \\
+uniao\_econ\_dt\_g1 & Composicao por elemento (2011-2016) & 2011T1 & 1{,}49 & 0{,}225 & 0{,}029 \\
+uniao\_econ\_dt\_g1 & Composicao por elemento (2011-2016) & 2017T1 & 0{,}15 & 0{,}702 & 0{,}489 \\
+uniao\_gnd4\_dir & Composicao por elemento (2011-2016) & 2011T1 & 3{,}61 & 0{,}061 & 0{,}004 \\
+uniao\_gnd4\_dir & Composicao por elemento (2011-2016) & 2017T1 & 0{,}55 & 0{,}461 & 0{,}270 \\
+uniao\_soc\_dir & Composicao por elemento (2011-2016) & 2011T1 & 3{,}39 & 0{,}069 & 0{,}026 \\
+uniao\_soc\_dir & Composicao por elemento (2011-2016) & 2017T1 & 0{,}92 & 0{,}340 & 0{,}208 \\
+estatais\_econ & Saida da Eletrobras (2022T3) & 2022T3 & 0{,}04 & 0{,}841 & 0{,}841 \\
+estatais\_sempetro & Saida da Eletrobras (2022T3) & 2022T3 & 0{,}02 & 0{,}886 & 0{,}769 \\
+estatais\_semgrupopetro & Saida da Eletrobras (2022T3) & 2022T3 & 0{,}01 & 0{,}925 & 0{,}842 \\
+\midrule
+\multicolumn{6}{l}{\textit{B. Dummies na m\'edia da diferen\c{c}a (coeficiente; $p$; $p$ Newey-West)}} \\
+uniao\_econ\_dir & T4 eleitoral 2010-2022 & & -0{,}081 & 0{,}142 & 0{,}032 \\
+uniao\_econ\_dt\_g1 & T4 eleitoral 2010-2022 & & -0{,}079 & 0{,}124 & 0{,}055 \\
+uniao\_soc\_dir & T4 eleitoral 2010-2022 & & -0{,}023 & 0{,}399 & 0{,}354 \\
+uniao\_soc\_dt\_g1 & T4 eleitoral 2010-2022 & & -0{,}074 & 0{,}128 & 0{,}172 \\
+uniao\_transf\_soc\_g1 & T4 eleitoral 2010-2022 & & -0{,}114 & 0{,}091 & 0{,}239 \\
+uniao\_gnd4\_dir & T4 eleitoral 2010-2022 & & -0{,}044 & 0{,}080 & 0{,}076 \\
+uniao\_filtro\_diss & T4 eleitoral 2010-2022 & & -0{,}040 & 0{,}152 & 0{,}108 \\
+estatais\_total & T4 eleitoral 2010-2022 & & 0{,}005 & 0{,}891 & 0{,}882 \\
+estatais\_petro & T4 eleitoral 2010-2022 & & -0{,}004 & 0{,}962 & 0{,}957 \\
+estatais\_sempetro & T4 eleitoral 2010-2022 & & -0{,}041 & 0{,}517 & 0{,}163 \\
+estatais\_econ & T4 eleitoral 2010-2022 & & -0{,}007 & 0{,}891 & 0{,}682 \\
+estatais\_grupopetro & T4 eleitoral 2010-2022 & & -0{,}004 & 0{,}958 & 0{,}953 \\
+estatais\_semgrupopetro & T4 eleitoral 2010-2022 & & -0{,}041 & 0{,}523 & 0{,}194 \\
+inf\_diss & T4 eleitoral 2010-2022 & & -0{,}009 & 0{,}753 & 0{,}710 \\
+fbcf\_me & T4 eleitoral 2010-2022 & & 0{,}004 & 0{,}779 & 0{,}745 \\
+fbcf\_constr & T4 eleitoral 2010-2022 & & 0{,}001 & 0{,}852 & 0{,}625 \\
+fbcf\_total & T4 eleitoral 2010-2022 & & 0{,}002 & 0{,}795 & 0{,}510 \\
+pim\_bk & T4 eleitoral 2010-2022 & & 0{,}002 & 0{,}886 & 0{,}652 \\
+imp\_bk\_quantum & T4 eleitoral 2010-2022 & & -0{,}046 & 0{,}060 & 0{,}203 \\
+bndes\_priv & T4 eleitoral 2010-2022 & & -0{,}032 & 0{,}363 & 0{,}504 \\
+pvd\_diss & T4 eleitoral 2010-2022 & & -0{,}003 & 0{,}826 & 0{,}747 \\
+uniao\_filtro\_diss & Pulsos 2017T1-2018T1 ($F$) & & 0{,}59 & 0{,}707 &  \\
+inf\_diss & Pulsos 2017T1-2018T1 ($F$) & & 0{,}34 & 0{,}885 &  \\
+uniao\_econ\_dir & Janela 2011T1-2016T4 & & -0{,}027 & 0{,}462 & 0{,}195 \\
+uniao\_econ\_dt\_g1 & Janela 2011T1-2016T4 & & -0{,}030 & 0{,}381 & 0{,}128 \\
+uniao\_gnd4\_dir & Janela 2011T1-2016T4 & & -0{,}020 & 0{,}236 & 0{,}155 \\
+uniao\_soc\_dir & Janela 2011T1-2016T4 & & -0{,}016 & 0{,}377 & 0{,}228 \\
+\midrule
+\multicolumn{6}{l}{\textit{C. Dummies nas equa\c{c}\~oes do VAR}} \\
+Disserta\c{c}\~ao, eq. INF & T4 eleitoral & & -0{,}017 & 0{,}565 & 0{,}515 \\
+Disserta\c{c}\~ao, eq. INF & T4 eleitoral com 2006 & & -0{,}041 & 0{,}099 & 0{,}123 \\
+Disserta\c{c}\~ao, eq. INF & Pulsos 2017T1-2018T1 ($F$) & & 0{,}36 & 0{,}871 &  \\
+Disserta\c{c}\~ao, eq. PVD & T4 eleitoral & & -0{,}005 & 0{,}725 & 0{,}588 \\
+Disserta\c{c}\~ao, eq. PVD & T4 eleitoral com 2006 & & -0{,}002 & 0{,}847 & 0{,}789 \\
+Disserta\c{c}\~ao, eq. PVD & Pulsos 2017T1-2018T1 ($F$) & & 0{,}81 & 0{,}550 &  \\
+Estendido, eq. inf\_diss & T4 eleitoral & & -0{,}002 & 0{,}952 & 0{,}946 \\
+Estendido, eq. inf\_diss & T4 eleitoral com 2006 & & -0{,}015 & 0{,}550 & 0{,}478 \\
+Estendido, eq. inf\_diss & Pulsos 2017T1-2018T1 ($F$) & & 0{,}51 & 0{,}768 &  \\
+Estendido, eq. inf\_diss & Pulsos 2020T2 e 2020T3 ($F$) & & 1{,}22 & 0{,}300 &  \\
+Estendido, eq. fbcf\_me & T4 eleitoral & & -0{,}006 & 0{,}706 & 0{,}767 \\
+Estendido, eq. fbcf\_me & T4 eleitoral com 2006 & & -0{,}003 & 0{,}814 & 0{,}836 \\
+Estendido, eq. fbcf\_me & Pulsos 2017T1-2018T1 ($F$) & & 0{,}32 & 0{,}898 &  \\
+Estendido, eq. fbcf\_me & Pulsos 2020T2 e 2020T3 ($F$) & & 7{,}01 & 0{,}002 &  \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: Painel A: $F$ de Chow na m\'edia e $p$ do degrau com Newey-West. Painel B: a dummy do T4 eleitoral \'e um pulso no n\'ivel (+1 no T4 e $-1$ no T1 seguinte na diferen\c{c}a), com 2010, 2014, 2018 e 2022 (a variante com 2006 est\'a em A4\_quebras.md); coeficiente em log10. Pulsos de 2017: cinco pulsos de 2017T1 a 2018T1 (as diferen\c{c}as afetadas pela distribui\c{c}\~ao trimestral imputada de 2017), teste $F$ conjunto. Janela 2011T1-2016T4: mudan\c{c}a de drift no per\'iodo da mudan\c{c}a de composi\c{c}\~ao por elemento. Painel C: as mesmas dummies acrescentadas \`as equa\c{c}\~oes do VAR (na disserta\c{c}\~ao, com a DUM do arquivo).
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Testes de flutua\c{c}\~ao OLS-CUSUM e OLS-MOSUM}
+\label{tab:a4_cusum}
+\scriptsize
+\begin{tabular}{lcccccc}
+\toprule
+S\'erie ou equa\c{c}\~ao & CUSUM & $p$ & CUSUM (VLP) & $p$ & MOSUM & $p$ \\
+\midrule
+\multicolumn{7}{l}{\textit{A. S\'eries}} \\
+uniao\_econ\_dir & 0{,}63 & 0{,}825 & 1{,}10 & 0{,}178 & 0{,}57 & 0{,}539 \\
+uniao\_econ\_dt\_g1 & 0{,}67 & 0{,}763 & 1{,}15 & 0{,}142 & 0{,}57 & 0{,}540 \\
+uniao\_soc\_dir & 1{,}04 & 0{,}228 & 1{,}32 & 0{,}061 & 0{,}72 & 0{,}420 \\
+uniao\_soc\_dt\_g1 & 0{,}53 & 0{,}939 & 0{,}82 & 0{,}504 & 0{,}46 & 0{,}628 \\
+uniao\_transf\_soc\_g1 & 0{,}44 & 0{,}990 & 0{,}68 & 0{,}737 & 0{,}41 & 0{,}673 \\
+uniao\_gnd4\_dir & 0{,}94 & 0{,}343 & 1{,}37 & 0{,}048 & 0{,}65 & 0{,}477 \\
+uniao\_filtro\_diss & 0{,}91 & 0{,}382 & 1{,}33 & 0{,}057 & 0{,}67 & 0{,}462 \\
+estatais\_total & 0{,}44 & 0{,}990 & 0{,}51 & 0{,}960 & 0{,}59 & 0{,}523 \\
+estatais\_petro & 0{,}42 & 0{,}994 & 0{,}52 & 0{,}952 & 0{,}59 & 0{,}526 \\
+estatais\_sempetro & 0{,}46 & 0{,}983 & 1{,}04 & 0{,}229 & 0{,}65 & 0{,}475 \\
+estatais\_econ & 0{,}44 & 0{,}991 & 0{,}46 & 0{,}983 & 0{,}63 & 0{,}494 \\
+estatais\_grupopetro & 0{,}42 & 0{,}994 & 0{,}52 & 0{,}948 & 0{,}59 & 0{,}525 \\
+estatais\_semgrupopetro & 0{,}44 & 0{,}990 & 0{,}99 & 0{,}281 & 0{,}65 & 0{,}478 \\
+inf\_diss & 0{,}53 & 0{,}938 & 0{,}63 & 0{,}821 & 0{,}63 & 0{,}497 \\
+fbcf\_me & 0{,}73 & 0{,}662 & 0{,}74 & 0{,}641 & 0{,}77 & 0{,}384 \\
+fbcf\_constr & 0{,}98 & 0{,}293 & 1{,}02 & 0{,}252 & 1{,}12 & 0{,}105 \\
+fbcf\_total & 1{,}00 & 0{,}274 & 0{,}85 & 0{,}459 & 1{,}11 & 0{,}113 \\
+pim\_bk & 0{,}76 & 0{,}606 & 0{,}71 & 0{,}703 & 0{,}80 & 0{,}360 \\
+imp\_bk\_quantum & 0{,}43 & 0{,}994 & 0{,}69 & 0{,}728 & 0{,}55 & 0{,}555 \\
+bndes\_priv & 0{,}65 & 0{,}794 & 0{,}95 & 0{,}326 & 0{,}69 & 0{,}443 \\
+pvd\_diss & 0{,}94 & 0{,}334 & 0{,}91 & 0{,}376 & 1{,}02 & 0{,}181 \\
+\midrule
+\multicolumn{7}{l}{\textit{B. Equa\c{c}\~oes do VAR}} \\
+Disserta\c{c}\~ao, eq. INF & 0{,}52 & 0{,}946 & 0{,}52 & 0{,}946 & 0{,}80 & 0{,}354 \\
+Disserta\c{c}\~ao, eq. PVD & 0{,}47 & 0{,}981 & 0{,}52 & 0{,}948 & 0{,}76 & 0{,}392 \\
+Disserta\c{c}\~ao, eq. INF, sem pulsos DUM & 0{,}61 & 0{,}851 & 0{,}80 & 0{,}544 & 0{,}78 & 0{,}377 \\
+Disserta\c{c}\~ao, eq. PVD, sem pulsos DUM & 0{,}47 & 0{,}981 & 0{,}54 & 0{,}933 & 0{,}73 & 0{,}412 \\
+Estendido, eq. inf\_diss & 0{,}64 & 0{,}813 & 0{,}63 & 0{,}827 & 0{,}81 & 0{,}347 \\
+Estendido, eq. fbcf\_me & 0{,}48 & 0{,}974 & 0{,}55 & 0{,}923 & 0{,}81 & 0{,}353 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: \texttt{efp} e \texttt{sctest}. CUSUM (VLP): vari\^ancia de longo prazo por kernel (\texttt{lrvar = TRUE}). MOSUM com janela de 15\% da amostra; o $p$ do MOSUM vem de valores cr\'iticos tabelados e fica truncado em 0,01 e 0,10 nas pontas.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Raiz unit\'aria com quebra: Zivot-Andrews, Lumsdaine-Papell e Clemente-Monta\~n\'es-Reyes (log10 em n\'ivel)}
+\label{tab:a4_ur}
+\tiny
+\begin{tabular}{lcccccc}
+\toprule
+S\'erie & $T$ & Lags & ZA (data) & LP (datas) & CMR-IO (datas) & CMR-AO (datas) \\
+\midrule
+uniao\_econ\_dir & 92 & 1/1 & -4{,}61 (2005T2) & -6{,}12 (2011T2, 2021T1) & -3{,}79 (2006T3, 2014T3) & -3{,}85 (2006T3, 2014T2) \\
+uniao\_econ\_dt\_g1 & 92 & 1/1 & -4{,}13 (2005T3) & -6{,}38$^{*}$ (2011T2, 2021T1) & -3{,}88 (2006T3, 2014T3) & -3{,}89 (2006T3, 2014T2) \\
+uniao\_soc\_dir & 92 & 1/1 & -4{,}20 (2009T2) & -6{,}57$^{**}$ (2010T1, 2015T2) & -4{,}76 (2008T4, 2015T1) & -4{,}52 (2008T4, 2014T4) \\
+uniao\_soc\_dt\_g1 & 92 & 1/1 & -5{,}10$^{**}$ (2009T3) & -6{,}45$^{**}$ (2010T1, 2021T1) & -5{,}31$^{**}$ (2007T3, 2016T4) & -5{,}17$^{*}$ (2007T3, 2016T3) \\
+uniao\_transf\_soc\_g1 & 92 & 1/1 & -5{,}62$^{***}$ (2008T2) & -6{,}64$^{**}$ (2013T1, 2022T3) & -6{,}05$^{***}$ (2007T3, 2016T4) & -5{,}97$^{**}$ (2007T4, 2016T3) \\
+uniao\_gnd4\_dir & 92 & 1/1 & -3{,}82 (2014T4) & -5{,}28 (2011T2, 2014T4) & -3{,}87 (2008T3, 2014T3) & -3{,}86 (2008T1, 2014T2) \\
+uniao\_filtro\_diss & 92 & 1/1 & -3{,}85 (2014T4) & -5{,}88 (2011T2, 2014T4) & -4{,}13 (2008T3, 2014T3) & -4{,}11 (2008T1, 2014T2) \\
+estatais\_total & 92 & 0/0 & -4{,}49 (2014T3) & -5{,}81 (2014T3, 2021T3) & -5{,}07$^{*}$ (2008T1, 2015T1) & -5{,}15$^{*}$ (2008T1, 2015T1) \\
+estatais\_petro & 40 & 0/0 & -5{,}46$^{**}$ (2021T3) & -6{,}44$^{*}$ (2019T1, 2021T3) & -4{,}89 (2020T3, 2024T2) & -5{,}02 (2020T3, 2024T2) \\
+estatais\_sempetro & 40 & 0/0 & -8{,}02$^{***}$ (2020T3) & -8{,}90$^{***}$ (2020T1, 2021T4) & -7{,}48$^{***}$ (2019T1, 2020T3) & -7{,}79$^{***}$ (2019T1, 2020T3) \\
+estatais\_econ & 40 & 0/0 & -5{,}26$^{**}$ (2022T3) & -6{,}31 (2020T4, 2022T3) & -5{,}15$^{*}$ (2018T3, 2022T2) & -5{,}25$^{*}$ (2018T3, 2022T2) \\
+estatais\_grupopetro & 40 & 0/0 & -5{,}47$^{**}$ (2021T3) & -6{,}43$^{*}$ (2019T1, 2021T3) & -4{,}89 (2020T3, 2024T2) & -5{,}01 (2020T3, 2024T2) \\
+estatais\_semgrupopetro & 40 & 0/0 & -8{,}48$^{***}$ (2020T3) & -9{,}11$^{***}$ (2018T3, 2020T3) & -7{,}86$^{***}$ (2019T1, 2020T3) & -8{,}20$^{***}$ (2019T1, 2020T3) \\
+inf\_diss & 92 & 0/0 & -4{,}54 (2014T4) & -5{,}71 (2014T4, 2021T3) & -4{,}86 (2008T1, 2015T1) & -4{,}94 (2008T1, 2015T1) \\
+fbcf\_me & 96 & 0/0 & -4{,}56 (2014T2) & -5{,}71 (2013T1, 2017T2) & -4{,}15 (2006T3, 2014T4) & -4{,}21 (2006T3, 2014T4) \\
+fbcf\_constr & 96 & 0/0 & -3{,}63 (2015T1) & -4{,}51 (2012T1, 2020T3) & -3{,}37 (2006T3, 2020T2) & -3{,}35 (2006T3, 2020T2) \\
+fbcf\_total & 96 & 0/0 & -4{,}19 (2015T1) & -5{,}46 (2009T3, 2015T2) & -3{,}40 (2006T3, 2020T2) & -3{,}40 (2006T3, 2020T2) \\
+pim\_bk & 96 & 0/0 & -4{,}07 (2014T4) & -5{,}12 (2009T1, 2014T4) & -4{,}04 (2006T3, 2014T3) & -4{,}10 (2006T3, 2014T3) \\
+imp\_bk\_quantum & 96 & 1/1 & -3{,}45 (2014T1) & -5{,}30 (2012T2, 2016T3) & -3{,}16 (2006T1, 2020T3) & -3{,}04 (2005T4, 2021T4) \\
+bndes\_priv & 96 & 1/1 & -3{,}33 (2015T3) & -5{,}24 (2012T3, 2019T2) & -4{,}15 (2007T2, 2015T2) & -4{,}15 (2007T3, 2015T1) \\
+pvd\_diss & 72 & 0/0 & -3{,}39 (2009T4) & -4{,}86 (2009T4, 2015T2) & -3{,}41 (2006T3, 2014T4) & -3{,}45 (2006T3, 2014T4) \\
+\midrule
+\multicolumn{7}{l}{\textit{Valores cr\'iticos simulados (1\% / 5\% / 10\%), 1000 r\'eplicas}} \\
+\multicolumn{7}{l}{$T = 40$: LP -7{,}42 / -6{,}68 / -6{,}34; CMR-IO -6{,}35 / -5{,}51 / -5{,}13; CMR-AO -6{,}45 / -5{,}57 / -5{,}16} \\
+\multicolumn{7}{l}{$T = 72$: LP -7{,}00 / -6{,}45 / -6{,}12; CMR-IO -5{,}99 / -5{,}43 / -5{,}07; CMR-AO -6{,}08 / -5{,}44 / -5{,}11} \\
+\multicolumn{7}{l}{$T = 92$: LP -6{,}97 / -6{,}37 / -6{,}12; CMR-IO -5{,}97 / -5{,}28 / -5{,}05; CMR-AO -5{,}91 / -5{,}31 / -5{,}09} \\
+\multicolumn{7}{l}{$T = 96$: LP -6{,}83 / -6{,}40 / -6{,}15; CMR-IO -5{,}89 / -5{,}30 / -4{,}97; CMR-AO -5{,}93 / -5{,}36 / -5{,}01} \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: H0: raiz unit\'aria. Estat\'istica $t$ do coeficiente de $y_{t-1}$; datas = primeiro trimestre do novo regime. ZA: \texttt{urca::ur.za}, modelo com quebra em intercepto e tend\^encia, valores cr\'iticos assint\'oticos de Zivot e Andrews (1992: $-5{,}57$, $-5{,}08$, $-4{,}82$); a busca do \texttt{ur.za} n\'ao tem trimming. LP: Lumsdaine e Papell (1997), duas quebras em intercepto e tend\^encia (modelo CC). CMR: Clemente, Monta\~n\'es e Reyes (1998), duas quebras na m\'edia, outlier inovativo (IO) e aditivo (AO, em dois passos, com pulsos defasados de 0 a $p$). LP e CMR implementados no script, busca em grade com cada quebra entre $0{,}15T$ e $0{,}85T$ e dist\^ancia m\'inima de $0{,}15T$ entre elas. Lags: $p$ de 0 a 4 pelo BIC da regress\~ao ADF sem quebra (constante e tend\^encia para ZA e LP; constante para CMR), na amostra comum; a coluna mostra $p$ de ZA e LP / $p$ de CMR. Valores cr\'iticos e $p$ de LP e CMR SIMULADOS por Monte Carlo sob a nula (passeio aleat\'orio com erros normais, mesmo $T$ da s\'erie e mesma regra de lags, 1000 r\'eplicas, \texttt{set.seed(42)}). $^{***}$, $^{**}$, $^{*}$: rejeita a 1\%, 5\%, 10\%.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Elasticidade do investimento privado ao investimento p\'ublico: amostras, janelas e dummies de quebra}
+\label{tab:a4_elast}
+\tiny
+\begin{tabular}{lcccl}
+\toprule
+Especifica\c{c}\~ao & El. $h = 12$ & El. $h = 40$ & Resp. acum. priv. $h = 40$ & Efeito \\
+\midrule
+\multicolumn{5}{l}{\textit{A. Amostra completa e subamostras (VAR estendido)}} \\
+Disserta\c{c}\~ao, n\'iveis 2002T1--2019T4 (68 obs. efetivas, arquivo original) & 0{,}409 & 0{,}416 & 0{,}0194 & refer\^encia \\
+Disserta\c{c}\~ao, obs. efetivas at\'e 2014T4 (48 obs.) & 0{,}024 & 0{,}028 & 0{,}0015 &  \\
+Estendido, sem dummies: amostra completa (88 obs. efetivas) & 0{,}154 & 0{,}154 & 0{,}0087 & refer\^encia (sem dummies) \\
+Estendido, sem dummies: at\'e 2014T4 (44 obs. efetivas) & 0{,}219 & 0{,}227 & 0{,}0111 & muda mais de 25\% \\
+Estendido, sem dummies: de 2015T1 (44 obs. efetivas) & 0{,}060 & 0{,}059 & 0{,}0036 & muda mais de 25\% \\
+Estendido, sem dummies: at\'e 2019T4 (64 obs. efetivas) & 0{,}412 & 0{,}451 & 0{,}0209 & muda mais de 25\% \\
+Estendido, amostra completa, com os pulsos de 2020T2 e 2020T3 (base da A5) & 0{,}173 & 0{,}173 & 0{,}0098 & n\~ao muda \\
+\midrule
+\multicolumn{5}{l}{\textit{B. Estimativas recursivas e em janela m\'ovel de 40 trimestres (fim da janela)}} \\
+Recursiva, fim em 2014T4 & 0{,}219 & 0{,}227 & 0{,}0111 &  \\
+Recursiva, fim em 2019T4 & 0{,}412 & 0{,}451 & 0{,}0209 &  \\
+Recursiva, fim em 2021T4 & 0{,}154 & 0{,}154 & 0{,}0084 &  \\
+Recursiva, m\'inimo e m\'aximo ($h = 40$; 49 de 49 janelas est\'aveis) & & 0{,}116 a 0{,}547 & & \\
+Janela m\'ovel, m\'inimo e m\'aximo ($h = 40$; 48 de 49 janelas est\'aveis) & & -0{,}014 a 0{,}814 & & \\
+Janela m\'ovel, 2016T1--2025T4 & 0{,}049 & 0{,}048 & 0{,}0031 &  \\
+\midrule
+\multicolumn{5}{l}{\textit{C. Dummies no VAR estendido (ex\'ogenas adicionais na equa\c{c}\~ao em diferen\c{c}a)}} \\
+Degrau em 2008T4 & 0{,}141 & 0{,}141 & 0{,}0079 & n\~ao muda \\
+Pulso em 2008T4 & 0{,}170 & 0{,}171 & 0{,}0094 & n\~ao muda \\
+Degrau em 2014T4 & 0{,}135 & 0{,}135 & 0{,}0069 & n\~ao muda \\
+Pulso em 2014T4 & 0{,}152 & 0{,}152 & 0{,}0084 & n\~ao muda \\
+Degrau em 2015T1 & 0{,}141 & 0{,}141 & 0{,}0075 & n\~ao muda \\
+Pulso em 2015T1 & 0{,}148 & 0{,}148 & 0{,}0084 & n\~ao muda \\
+Degrau em 2016T4 & 0{,}135 & 0{,}135 & 0{,}0075 & n\~ao muda \\
+Pulso em 2016T4 & 0{,}166 & 0{,}166 & 0{,}0091 & n\~ao muda \\
+Degrau em 2017T1 & 0{,}122 & 0{,}122 & 0{,}0066 & n\~ao muda \\
+Pulso em 2017T1 & 0{,}155 & 0{,}155 & 0{,}0087 & n\~ao muda \\
+Degrau em 2020T2 & 0{,}156 & 0{,}156 & 0{,}0088 & n\~ao muda \\
+Pulso em 2020T2 & 0{,}186 & 0{,}186 & 0{,}0109 & n\~ao muda \\
+Degrau em 2023T3 & 0{,}140 & 0{,}140 & 0{,}0074 & n\~ao muda \\
+Pulso em 2023T3 & 0{,}158 & 0{,}158 & 0{,}0090 & n\~ao muda \\
+Pulsos em 2020T2 e 2020T3 & 0{,}173 & 0{,}173 & 0{,}0098 & n\~ao muda \\
+T4 eleitoral (2010, 2014, 2018, 2022) & 0{,}158 & 0{,}158 & 0{,}0090 & n\~ao muda \\
+T4 eleitoral com 2006 & 0{,}155 & 0{,}155 & 0{,}0089 & n\~ao muda \\
+Degrau em 2020T1 (emenda da SEST) & 0{,}134 & 0{,}134 & 0{,}0071 & n\~ao muda \\
+T4 eleitoral de 2018 so & 0{,}227 & 0{,}227 & 0{,}0126 & muda mais de 25\% \\
+Pulsos de 2017T1 a 2018T1 (imputacao) & 0{,}180 & 0{,}180 & 0{,}0103 & n\~ao muda \\
+DUM da dissertacao (2018T2-2019T1, 2019T3-2019T4) & 0{,}141 & 0{,}141 & 0{,}0083 & n\~ao muda \\
+Outliers do X-11 de inf\_diss (ls2018T2, ao2018T3, ls2019T1, ls2019T3, ao2020T3, ao2021T1, ao2021T2) & 0{,}381 & 0{,}381 & 0{,}0211 & muda mais de 25\% \\
+Outliers do X-11 de 2018-2019 & 0{,}139 & 0{,}140 & 0{,}0098 & n\~ao muda \\
+Outliers do X-11 de 2020-2021 & 0{,}358 & 0{,}364 & 0{,}0172 & muda mais de 25\% \\
+Outliers do X-11 e pulsos em 2020T2 e 2020T3 & 0{,}343 & 0{,}344 & 0{,}0195 & muda mais de 25\% \\
+\midrule
+\multicolumn{5}{l}{\textit{D. Dummies no VAR da disserta\c{c}\~ao}} \\
+Degrau em 2008T4 & 0{,}432 & 0{,}440 & 0{,}0206 & n\~ao muda \\
+Pulso em 2008T4 & 0{,}485 & 0{,}490 & 0{,}0228 & n\~ao muda \\
+Degrau em 2014T4 & 0{,}460 & 0{,}466 & 0{,}0188 & n\~ao muda \\
+Pulso em 2014T4 & 0{,}429 & 0{,}439 & 0{,}0199 & n\~ao muda \\
+Degrau em 2015T1 & 0{,}428 & 0{,}434 & 0{,}0187 & n\~ao muda \\
+Pulso em 2015T1 & 0{,}395 & 0{,}402 & 0{,}0188 & n\~ao muda \\
+Degrau em 2016T4 & 0{,}349 & 0{,}356 & 0{,}0163 & n\~ao muda \\
+Pulso em 2016T4 & 0{,}426 & 0{,}433 & 0{,}0198 & n\~ao muda \\
+Degrau em 2017T1 & 0{,}342 & 0{,}349 & 0{,}0153 & n\~ao muda \\
+Pulso em 2017T1 & 0{,}410 & 0{,}418 & 0{,}0195 & n\~ao muda \\
+T4 eleitoral (2010, 2014, 2018) & 0{,}409 & 0{,}418 & 0{,}0199 & n\~ao muda \\
+\midrule
+\multicolumn{5}{l}{\textit{E. Variantes de inf\_diss da A3 (VAR estendido)}} \\
+Imputacao de 2017 pela razao do trimestre & 0{,}152 & 0{,}152 & 0{,}0085 & n\~ao muda \\
+Imputacao de 2017 pelo Apendice A & 0{,}150 & 0{,}150 & 0{,}0084 & n\~ao muda \\
+Emenda da SEST em 2017T1 & 0{,}173 & 0{,}173 & 0{,}0102 & n\~ao muda \\
+Emenda da SEST em 2018T1 & 0{,}173 & 0{,}173 & 0{,}0102 & n\~ao muda \\
+Emenda da SEST em 2019T1 & 0{,}171 & 0{,}171 & 0{,}0101 & n\~ao muda \\
+Emenda em 2020T1, razao de 2019 & 0{,}154 & 0{,}154 & 0{,}0089 & n\~ao muda \\
+Emenda em 2020T1, razao de 2016-2018 & 0{,}154 & 0{,}154 & 0{,}0086 & n\~ao muda \\
+X-11 depois de somar & 0{,}154 & 0{,}154 & 0{,}0089 & n\~ao muda \\
+Sem o efeito dos AO do X-11 & 0{,}275 & 0{,}277 & 0{,}0126 & muda mais de 25\% \\
+\midrule
+\multicolumn{5}{l}{\textit{F. Proje\c{c}\~ao local simples (sem tend\^encia e sem pulsos; n\~ao \'e a LP da A5): resposta acumulada de fbcf\_me em $h = 8$ (EP Newey-West)}} \\
+Amostra completa & \multicolumn{2}{c}{-0{,}086 (0{,}163)} & &  \\
+At\'e 2014T4 & \multicolumn{2}{c}{0{,}094 (0{,}312)} & & muda o sinal \\
+De 2015T1 & \multicolumn{2}{c}{-0{,}270 (0{,}116)} & &  \\
+At\'e 2019T4 & \multicolumn{2}{c}{0{,}190 (0{,}276)} & & muda o sinal \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: VAR(3) em diferen\c{c}a com constante e tend\^encia; estendido: inf\_diss e fbcf\_me (log10), ex\'ogenas diff do PIB e diff da Selic, dados 2003T1--2025T4. Elasticidade = resposta acumulada do investimento privado / resposta acumulada do investimento p\'ublico ao choque ortogonal no p\'ublico (Cholesky com o p\'ublico primeiro). Efeito: ``muda o sinal'' ou ``muda mais de 25\%'' da elasticidade da amostra completa do mesmo modelo (0{,}154 no estendido; 0{,}416 na disserta\c{c}\~ao) em $h = 12$ ou $h = 40$. Degrau na diferen\c{c}a = mudan\c{c}a de drift; pulso = salto de n\'ivel. As dummies em n\'ivel (DUM e outliers do X-11 da A3) entram diferenciadas, como as ex\'ogenas. Proje\c{c}\~ao local simples (diagn\'ostico, sem tend\^encia e sem os pulsos de 2020; por isso difere da IRF da A5): $y_{t+8} - y_{t-1}$ sobre $\Delta$inf\_diss$_t$, tr\^es defasagens das duas diferen\c{c}as, diff do PIB e da Selic e constante; nas subamostras, $t$ e $t + 8$ dentro da subamostra.
+\end{minipage}
+\end{table}
+

@@ -1,0 +1,166 @@
+item,descricao,meu,deles,confere
+a,h = 0: n,88,88,TRUE
+a,h = 0: primeiro t,2004T1,2004T1,TRUE
+a,h = 0: ultimo t (= 2025T4 - h),2025T4,2025T4,TRUE
+a,h = 0: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 1: n,87,87,TRUE
+a,h = 1: primeiro t,2004T1,2004T1,TRUE
+a,h = 1: ultimo t (= 2025T4 - h),2025T3,2025T3,TRUE
+a,h = 1: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 2: n,86,86,TRUE
+a,h = 2: primeiro t,2004T1,2004T1,TRUE
+a,h = 2: ultimo t (= 2025T4 - h),2025T2,2025T2,TRUE
+a,h = 2: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 3: n,85,85,TRUE
+a,h = 3: primeiro t,2004T1,2004T1,TRUE
+a,h = 3: ultimo t (= 2025T4 - h),2025T1,2025T1,TRUE
+a,h = 3: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 4: n,84,84,TRUE
+a,h = 4: primeiro t,2004T1,2004T1,TRUE
+a,h = 4: ultimo t (= 2025T4 - h),2024T4,2024T4,TRUE
+a,h = 4: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 5: n,83,83,TRUE
+a,h = 5: primeiro t,2004T1,2004T1,TRUE
+a,h = 5: ultimo t (= 2025T4 - h),2024T3,2024T3,TRUE
+a,h = 5: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 6: n,82,82,TRUE
+a,h = 6: primeiro t,2004T1,2004T1,TRUE
+a,h = 6: ultimo t (= 2025T4 - h),2024T2,2024T2,TRUE
+a,h = 6: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 7: n,81,81,TRUE
+a,h = 7: primeiro t,2004T1,2004T1,TRUE
+a,h = 7: ultimo t (= 2025T4 - h),2024T1,2024T1,TRUE
+a,h = 7: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 8: n,80,80,TRUE
+a,h = 8: primeiro t,2004T1,2004T1,TRUE
+a,h = 8: ultimo t (= 2025T4 - h),2023T4,2023T4,TRUE
+a,h = 8: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 9: n,79,79,TRUE
+a,h = 9: primeiro t,2004T1,2004T1,TRUE
+a,h = 9: ultimo t (= 2025T4 - h),2023T3,2023T3,TRUE
+a,h = 9: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 10: n,78,78,TRUE
+a,h = 10: primeiro t,2004T1,2004T1,TRUE
+a,h = 10: ultimo t (= 2025T4 - h),2023T2,2023T2,TRUE
+a,h = 10: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 11: n,77,77,TRUE
+a,h = 11: primeiro t,2004T1,2004T1,TRUE
+a,h = 11: ultimo t (= 2025T4 - h),2023T1,2023T1,TRUE
+a,h = 11: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+a,h = 12: n,76,76,TRUE
+a,h = 12: primeiro t,2004T1,2004T1,TRUE
+a,h = 12: ultimo t (= 2025T4 - h),2022T4,2022T4,TRUE
+a,h = 12: ultimo t + h = 2025T4,2025T4,2025T4,TRUE
+b,h = 4: beta_h,0.1751912161,0.1751912161,TRUE
+b,"h = 4: EP NW (lag 5, sem prewhite, sem ajuste)",0.0736451779,0.0736451779,TRUE
+b,h = 4: IC 90% inferior,0.0540556781,0.0540556781,TRUE
+b,h = 4: elasticidade acumulada (MQ2E),0.0861118148,0.0861118148,TRUE
+b,h = 4: EP NW da elasticidade,0.0986800093,0.0986800093,TRUE
+b,h = 8: beta_h,-0.1531961099,-0.1531961099,TRUE
+b,"h = 8: EP NW (lag 9, sem prewhite, sem ajuste)",0.1392189855,0.1392189855,TRUE
+b,h = 8: IC 90% inferior,-0.3821909632,-0.3821909632,TRUE
+b,h = 8: elasticidade acumulada (MQ2E),0.0750173239,0.0750173239,TRUE
+b,h = 8: EP NW da elasticidade,0.0985200031,0.0985200031,TRUE
+c,M_8 uniao_econ_dir (separado),13.26033517,13.26033517,TRUE
+c,EP de M_8 uniao_econ_dir,5.5297204,5.5297204,TRUE
+c,n de M_8 uniao_econ_dir,80,80,TRUE
+c,M_8 uniao_soc_dir (separado),47.87404287,47.87404287,TRUE
+c,EP de M_8 uniao_soc_dir,10.87653786,10.87653786,TRUE
+c,n de M_8 uniao_soc_dir,80,80,TRUE
+c,Conjunta h = 8: M_a (econ direta),9.93073814,9.93073814,TRUE
+c,Conjunta h = 8: M_b (social direta),22.45241188,22.45241188,TRUE
+c,Conjunta h = 8: p de Wald (M_a = M_b),0.61007351,0.61007351,TRUE
+d,Baseline corrigido (c) 2003-2019: n,64,64,TRUE
+d,Baseline corrigido (c): impacto,0.0120084086,0.0120084086,TRUE
+d,Baseline corrigido (c): elasticidade h = 40,0.4493240192,0.4493240192,TRUE
+d,Estendida com pulsos e imp2017: elasticidade h = 40 (como no CSV),0.19516162,0.19516162,TRUE
+d,Johansen 2003-2019 trend: traco r = 0,28.79186343,28.79186343,TRUE
+d,Johansen 2003-2019 trend: traco r <= 1,7.80655189,7.80655189,TRUE
+d,Johansen 2003-2019 trend: traco Reinsel-Ahn r = 0,26.13415296,26.13415296,TRUE
+e,A5_lp.md: elasticidade h = 12 de inf_diss,TRUE,TRUE,TRUE
+e,A5_lp.md: M_12 FBCF de inf_diss,TRUE,TRUE,TRUE
+e,A5_lp.md: elasticidade h = 12 de uniao_econ_dir,TRUE,TRUE,TRUE
+e,A5_lp.md: M_12 FBCF de uniao_econ_dir,TRUE,TRUE,TRUE
+e,A5_lp.md: elasticidade h = 12 de uniao_soc_dir,TRUE,TRUE,TRUE
+e,A5_lp.md: M_12 FBCF de uniao_soc_dir,TRUE,TRUE,TRUE
+e,A5_lp.md: elasticidade h = 12 de uniao_transf_soc_g1,TRUE,TRUE,TRUE
+e,A5_lp.md: M_12 FBCF de uniao_transf_soc_g1,TRUE,TRUE,TRUE
+e,A5_lp.md: elasticidade h = 12 de estatais_total,TRUE,TRUE,TRUE
+e,A5_lp.md: M_12 FBCF de estatais_total,TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dir x uniao_soc_dir, fbcf_real_rs_bi, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dir x uniao_soc_dir, fbcf_real_rs_bi, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dir x uniao_soc_dir, fbcf_real_rs_bi, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dir x uniao_soc_dir, bndes_priv, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dir x uniao_soc_dir, bndes_priv, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dir x uniao_soc_dir, bndes_priv, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dir x uniao_soc_dir, imp_bk_real, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dir x uniao_soc_dir, imp_bk_real, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dir x uniao_soc_dir, imp_bk_real, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dt_g1 x uniao_soc_dt_g1, fbcf_real_rs_bi, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dt_g1 x uniao_soc_dt_g1, fbcf_real_rs_bi, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dt_g1 x uniao_soc_dt_g1, fbcf_real_rs_bi, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dt_g1 x uniao_soc_dt_g1, bndes_priv, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dt_g1 x uniao_soc_dt_g1, bndes_priv, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dt_g1 x uniao_soc_dt_g1, bndes_priv, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dt_g1 x uniao_soc_dt_g1, imp_bk_real, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dt_g1 x uniao_soc_dt_g1, imp_bk_real, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_econ_dt_g1 x uniao_soc_dt_g1, imp_bk_real, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_soc_dir x uniao_transf_soc_g1, fbcf_real_rs_bi, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_soc_dir x uniao_transf_soc_g1, fbcf_real_rs_bi, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_soc_dir x uniao_transf_soc_g1, fbcf_real_rs_bi, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_soc_dir x uniao_transf_soc_g1, bndes_priv, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_soc_dir x uniao_transf_soc_g1, bndes_priv, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_soc_dir x uniao_transf_soc_g1, bndes_priv, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_soc_dir x uniao_transf_soc_g1, imp_bk_real, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_soc_dir x uniao_transf_soc_g1, imp_bk_real, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao uniao_soc_dir x uniao_transf_soc_g1, imp_bk_real, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_sempetro x estatais_petro, fbcf_real_rs_bi, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_sempetro x estatais_petro, fbcf_real_rs_bi, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_sempetro x estatais_petro, bndes_priv, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_sempetro x estatais_petro, bndes_priv, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_sempetro x estatais_petro, imp_bk_real, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_sempetro x estatais_petro, imp_bk_real, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_total x uniao_gnd4_dir, fbcf_real_rs_bi, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_total x uniao_gnd4_dir, fbcf_real_rs_bi, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_total x uniao_gnd4_dir, fbcf_real_rs_bi, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_total x uniao_gnd4_dir, bndes_priv, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_total x uniao_gnd4_dir, bndes_priv, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_total x uniao_gnd4_dir, bndes_priv, h = 12",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_total x uniao_gnd4_dir, imp_bk_real, h = 4",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_total x uniao_gnd4_dir, imp_bk_real, h = 8",TRUE,TRUE,TRUE
+e,"A5_lp.md: comparacao estatais_total x uniao_gnd4_dir, imp_bk_real, h = 12",TRUE,TRUE,TRUE
+e,A5_var.md: linha replicado,TRUE,TRUE,TRUE
+e,A5_var.md: linha corr_a0,TRUE,TRUE,TRUE
+e,A5_var.md: linha corr_a,TRUE,TRUE,TRUE
+e,A5_var.md: linha corr_b,TRUE,TRUE,TRUE
+e,A5_var.md: linha corr_c0,TRUE,TRUE,TRUE
+e,A5_var.md: linha corr_c,TRUE,TRUE,TRUE
+e,A5_var.md: linha ext,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2002-2019 original trend r = 0,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2002-2019 original trend r <= 1,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2002-2019 original const r = 0,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2002-2019 original const r <= 1,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2003-2019 trend r = 0,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2003-2019 trend r <= 1,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2003-2019 const r = 0,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2003-2019 const r <= 1,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2003-2025 trend r = 0,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2003-2025 trend r <= 1,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2003-2025 const r = 0,TRUE,TRUE,TRUE
+e,A5_var.md: Johansen 2003-2025 const r <= 1,TRUE,TRUE,TRUE
+e,"A_quebras.tex: VAR estendido sem dummies, elasticidade h = 40 = 0,154 (recalculada)",TRUE,TRUE,TRUE
+f,LP inf_diss -> fbcf_me h = 8 com as 7 dummies do X-11 da A4 (dummies_A4),0.2831006423,0.2831006423,TRUE
+f,LP uniao_soc_dir -> fbcf_me h = 8 com degrau_2011T1 (dummies_A4),-0.0137138533,-0.0137138533,TRUE
+f,VAR estendido do A5 inclui imp2017 (A4: imputacao de 2017 nao entra),TRUE,FALSE,FALSE
+g,Arquivos de log e .md com travessao,0,0,TRUE
+g,session_info de A4_quebras,TRUE,TRUE,TRUE
+g,session_info de A5_var,TRUE,TRUE,TRUE
+g,session_info de A5_lp,TRUE,TRUE,TRUE
+g,session_info de A5_estimacao,TRUE,TRUE,TRUE
+A4,"Chow em 2020T2, equacao estendida de inf_diss: p (log diz 0,002)",0.002,0.002,TRUE
+A4,"Chow em 2020T2, equacao estendida de fbcf_me: p < 0,001",TRUE,TRUE,TRUE
+A4,"supF da equacao estendida de inf_diss (log: 31,25, max em 2020T2)",31.25 2020Q2,31.25 2020Q2,TRUE
+A4,"supF da equacao estendida de fbcf_me (log: 38,68, max em 2020T2)",38.68 2020Q2,38.68 2020Q2,TRUE
+A4,Elasticidade recursiva do VAR estendido com fim em 2019T4,0.451,0.451,TRUE
+A4,Elasticidade recursiva do VAR estendido com fim em 2020T4,0.287,0.287,TRUE
+A4,Elasticidade recursiva do VAR estendido com fim em 2021T4,0.154,0.154,TRUE
