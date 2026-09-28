@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="380.123719pt" height="254.058pt" viewBox="0 0 380.123719 254.058" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T17:25:15.516338</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 254.058 
+L 380.123719 254.058 
+L 380.123719 0 
+L -0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 106.632 210.678 
+L 284.04 210.678 
+L 284.04 33.27 
+L 106.632 33.27 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p11c237a46e)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAPcAAAD3CAYAAADBjMJTAAADYElEQVR4nO3VzS2EYQCFUWSQiJ1oRBtqUIsuVDBbCyu2wpIyJGT8RBBLFiZRwDfyxpNzKribJ3f9+OLka+2f25ptjp6wEqdX16MnTPbw+DZ6AksbowcAf0PcECVuiBI3RIkbosQNUeKGKHFDlLghStwQJW6IEjdEiRuixA1R4oYocUOUuCFK3BAlbogSN0SJG6LEDVHihihxQ5S4IUrcECVuiBI3RIkbosQNUeKGKHFDlLghStwQJW6IEjdEiRuixA1R4oYocUOUuCFK3BAlbogSN0SJG6LEDVHihihxQ5S4IWp2dHA4egNLd8+L0RMmO7u8GT2BJc8NUeKGKHFDlLghStwQJW6IEjdEiRuixA1R4oYocUOUuCFK3BAlbogSN0SJG6LEDVHihihxQ5S4IUrcECVuiBI3RIkbosQNUeKGKHFDlLghStwQJW6IEjdEiRuixA1R4oYocUOUuCFK3BAlbogSN0SJG6LEDVHihihxQ5S4IUrcECVuiBI3RIkboma72zujNwB/wHNDlLghStwQJW6IEjdEiRuixA1R4oYocUOUuCFK3BAlbogSN0SJG6LEDVHihihxQ5S4IUrcECVuiBI3RIkbosQNUeKGKHFDlLghStwQJW6IEjdEiRuixA1R4oYocUOUuCFK3BAlbogSN0SJG6LEDVHihihxQ5S4IUrcECVuiBI3RIkbosQNUeKGqNnoAfx6/fwYPWGy/b3d0RMmWzy9j56wEp4bosQNUeKGKHFDlLghStwQJW6IEjdEiRuixA1R4oYocUOUuCFK3BAlbogSN0SJG6LEDVHihihxQ5S4IUrcECVuiBI3RIkbosQNUeKGKHFDlLghStwQJW6IEjdEiRuixA1R4oYocUOUuCFK3BAlbogSN0SJG6LEDVHihihxQ5S4IUrcECVuiBI3RK3fvy6+Ro/gx+LjZfSEyea356MnTDa/uBw9YSU8N0SJG6LEDVHihihxQ5S4IUrcECVuiBI3RIkbosQNUeKGKHFDlLghStwQJW6IEjdEiRuixA1R4oYocUOUuCFK3BAlbogSN0SJG6LEDVHihihxQ5S4IUrcECVuiBI3RIkbosQNUeKGKHFDlLghStwQJW6IEjdEiRuixA1R4oYocUOUuCFK3BAlbogSN0R9A8cQIHEGOPg2AAAAAElFTkSuQmCC" id="image46b477bfd2" transform="scale(1 -1) translate(0 -177.84)" x="106.56" y="-33.018" width="177.84" height="177.84"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m5d193e88bb" d="M 0 0 
+L 0 3.5 
+" style="stroke: #3a3a3a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m5d193e88bb" x="124.3728" y="210.678" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(119.925706 224.002)">Q1</text>
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(114.454894 232.842)">menor</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m5d193e88bb" x="159.8544" y="210.678" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="159.8544" y="222.982" transform="rotate(-0 159.8544 222.982)">Q2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m5d193e88bb" x="195.336" y="210.678" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="195.336" y="222.982" transform="rotate(-0 195.336 222.982)">Q3</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m5d193e88bb" x="230.8176" y="210.678" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="230.8176" y="222.982" transform="rotate(-0 230.8176 222.982)">Q4</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m5d193e88bb" x="266.2992" y="210.678" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(261.852106 224.002)">Q5</text>
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(257.513388 232.842)">maior</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 7.5px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="195.336" y="245.208" transform="rotate(-0 195.336 245.208)">Quintil de PCM</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="m3727434459" d="M 0 0 
+L -3.5 0 
+" style="stroke: #3a3a3a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m3727434459" x="106.632" y="51.0108" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #3a3a3a" x="99.632" y="53.6628" transform="rotate(-0 99.632 53.6628)">Q1 menor</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m3727434459" x="106.632" y="86.4924" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #3a3a3a" x="99.632" y="89.1444" transform="rotate(-0 99.632 89.1444)">Q2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m3727434459" x="106.632" y="121.974" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #3a3a3a" x="99.632" y="124.626" transform="rotate(-0 99.632 124.626)">Q3</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m3727434459" x="106.632" y="157.4556" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #3a3a3a" x="99.632" y="160.1076" transform="rotate(-0 99.632 160.1076)">Q4</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m3727434459" x="106.632" y="192.9372" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: end; fill: #3a3a3a" x="99.632" y="195.5892" transform="rotate(-0 99.632 195.5892)">Q5 maior</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 7.5px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="63.647625" y="121.974" transform="rotate(-90 63.647625 121.974)">Quintil de população 0–4 anos</text>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="124.3728" y="52.9148" transform="rotate(-0 124.3728 52.9148)">0%</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="159.8544" y="52.9148" transform="rotate(-0 159.8544 52.9148)">0%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="195.336" y="52.9148" transform="rotate(-0 195.336 52.9148)">12%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="230.8176" y="52.9148" transform="rotate(-0 230.8176 52.9148)">56%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="266.2992" y="52.9148" transform="rotate(-0 266.2992 52.9148)">100%</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="124.3728" y="88.3964" transform="rotate(-0 124.3728 88.3964)">0%</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="159.8544" y="88.3964" transform="rotate(-0 159.8544 88.3964)">0%</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="195.336" y="88.3964" transform="rotate(-0 195.336 88.3964)">68%</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="230.8176" y="88.3964" transform="rotate(-0 230.8176 88.3964)">89%</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="266.2992" y="88.3964" transform="rotate(-0 266.2992 88.3964)">100%</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="124.3728" y="123.878" transform="rotate(-0 124.3728 123.878)">0%</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="159.8544" y="123.878" transform="rotate(-0 159.8544 123.878)">0%</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="195.336" y="123.878" transform="rotate(-0 195.336 123.878)">62%</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="230.8176" y="123.878" transform="rotate(-0 230.8176 123.878)">100%</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="266.2992" y="123.878" transform="rotate(-0 266.2992 123.878)">100%</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="124.3728" y="159.3596" transform="rotate(-0 124.3728 159.3596)">7%</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="159.8544" y="159.3596" transform="rotate(-0 159.8544 159.3596)">7%</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="195.336" y="159.3596" transform="rotate(-0 195.336 159.3596)">62%</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="230.8176" y="159.3596" transform="rotate(-0 230.8176 159.3596)">100%</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="266.2992" y="159.3596" transform="rotate(-0 266.2992 159.3596)">100%</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="124.3728" y="194.8412" transform="rotate(-0 124.3728 194.8412)">53%</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="159.8544" y="194.8412" transform="rotate(-0 159.8544 194.8412)">50%</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="195.336" y="194.8412" transform="rotate(-0 195.336 194.8412)">88%</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="230.8176" y="194.8412" transform="rotate(-0 230.8176 194.8412)">100%</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 6.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #ffffff" x="266.2992" y="194.8412" transform="rotate(-0 266.2992 194.8412)">100%</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(106.632 15.57)">Gráfico 3. Proporção de municípios contemplados na consolidada,</text>
+    <text style="font-size: 9px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(106.632 27.27)">por quintis de PCM e de população-alvo</text>
+   </g>
+  </g>
+  <g id="text_39">
+   <text style="font-size: 6.3px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #8a8a8a" x="7.2" y="242.934" transform="rotate(-0 7.2 242.934)">Fonte: Elaboração própria. Quintis com cerca de 80 municípios cada.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p11c237a46e">
+   <rect x="106.632" y="33.27" width="177.408" height="177.408"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,10 @@
+Fator (peso no PCM),Indicador,Fonte e ano,Peso no fator; sentido
+Educacional (peso 2),Matrículas em creche / população 0–4 anos,Censo Escolar 2023; Censo 2022,"2, inverso"
+Educacional (peso 2),Matrículas em pré-escola e fundamental / população 5–14 anos,Censo Escolar 2023; Censo 2022,"1, inverso"
+Educacional (peso 2),Oferta de instituições privadas / oferta total,Censo Escolar 2023,"1, inverso"
+Demográfico (peso 1),Mortalidade infantil (óbitos até 1 ano por mil nascidos vivos),Datasus 2020,1
+Demográfico (peso 1),População 0–4 anos / população total,Censo 2022,1
+Demográfico (peso 1),Taxa de natalidade (por mil habitantes),Ipardes 2022,1
+Socioeconômico (peso 2),"Desnutrição infantil (baixo peso para a idade, 0–4 anos)",Ministério da Saúde 2023,1
+Socioeconômico (peso 2),Crianças a acompanhar no CadÚnico / população 0–9 anos,Ministério da Saúde 2023,1
+Socioeconômico (peso 2),"IPDM renda, emprego e produção agropecuária",Ipardes 2021,"1, inverso"

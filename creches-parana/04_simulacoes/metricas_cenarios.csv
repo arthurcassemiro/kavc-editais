@@ -1,0 +1,11 @@
+cenario,total,municipios_contemplados,cobertura_mun_%,share_top10_mun_%,hhi,gini_creches_por_mun,gini_creches_por_crianca,share_quintil_maior_PCM_%,cob_quintil_maior_PCM_%,share_top40_PCM_%,share_quintil_maior_FS_%,pcm_medio_ponderado,fs_medio_ponderado,pop04_coberta_%,creches_10mil_criancas_mun_contemplados,creche_max_mun,municipio_max,creches_G2,creches_G1,creches_M2,creches_M1,creches_P4,creches_P3,creches_P2,creches_P1,share_grandes(G2-P4)_%,share_P3_%,share_P2_%,share_P1_%
+S1 População total,300,141,35.34,41.33,364.0,0.81,0.72,9.67,31.25,3.67,3.33,0.43,24.85,84.59,5.08,47,Curitiba,47,15,53,50,20,66,49,0,61.67,22.0,16.33,0.0
+S2 População 0-4,300,147,36.84,37.67,267.56,0.8,0.71,12.67,38.75,5.0,5.0,0.44,26.35,85.49,5.03,37,Curitiba,37,13,52,54,20,69,55,0,58.67,23.0,18.33,0.0
+S3 Vulnerabilidade (ranking FS),300,300,75.19,3.33,33.33,0.25,0.57,26.67,100.0,13.33,26.67,0.51,47.61,34.59,12.42,1,Abatiá,0,0,1,2,0,38,165,94,1.0,12.67,55.0,31.33
+S3b Vulnerabilidade ponderada (pop 0-4 × FS),300,190,47.62,23.33,102.44,0.68,0.66,22.67,66.25,10.67,13.67,0.5,36.85,76.75,5.6,12,Londrina,0,12,40,53,17,77,101,0,40.67,25.67,33.67,0.0
+S4 PCM sem faixas (pop 0-4 × PCM),300,155,38.85,33.67,184.0,0.77,0.7,17.33,50.0,7.67,8.67,0.46,29.77,86.22,4.98,24,Curitiba,24,13,52,57,19,72,63,0,55.0,24.0,21.0,0.0
+S4b PCM sem faixas (ranking PCM),300,300,75.19,3.33,33.33,0.25,0.58,26.67,100.0,13.33,26.0,0.52,45.67,63.26,6.79,1,Abatiá,0,1,4,9,5,44,166,71,6.33,14.67,55.33,23.67
+"S5 PCM com faixas (regra consolidada, 300)",300,213,53.38,22.33,88.0,0.61,0.7,28.0,100.0,14.0,23.0,0.51,39.1,80.69,5.33,10,Curitiba,10,8,41,42,16,31,117,35,39.0,10.33,39.0,11.67
+"Técnica (observada, 251)",251,209,52.38,17.53,83.65,0.56,0.71,31.47,96.25,16.33,21.51,0.51,38.11,89.26,4.03,14,Curitiba,14,5,21,24,8,60,102,17,28.69,23.9,40.64,6.77
+"Consolidada (observada, 300)",300,224,56.14,21.0,80.0,0.57,0.68,28.0,100.0,14.0,23.0,0.51,39.52,82.05,5.24,10,Curitiba,10,8,37,37,14,32,129,33,35.33,10.67,43.0,11.0
+"Publicada (observada, 303)",303,261,65.41,11.22,47.16,0.43,0.63,27.72,100.0,13.86,23.1,0.51,40.6,89.37,4.86,6,Curitiba,6,4,18,29,13,50,145,38,23.1,16.5,47.85,12.54

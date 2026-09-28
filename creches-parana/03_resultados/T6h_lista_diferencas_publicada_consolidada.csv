@@ -1,0 +1,58 @@
+mun,porte_dc,pop,pcm_padrao,rank_pcm,tec_ic,cons_total300,pub_res219,dif_pub_cons,tipologia3
+Ponta Grossa,M2,358371.0,0.4775196647702301,202,4,7,2,-5,Nas três etapas
+Curitiba,G2,1773718.0,0.2858486526732639,395,14,10,6,-4,Nas três etapas
+São José dos Pinhais,M2,329628.0,0.4452065242587527,245,4,7,3,-4,Nas três etapas
+Londrina,G1,555965.0,0.439634857636832,252,5,8,4,-4,Nas três etapas
+Foz do Iguaçu,M2,285415.0,0.4692332878943105,211,3,6,3,-3,Nas três etapas
+Colombo,M2,232212.0,0.5149637004162879,134,3,5,2,-3,Nas três etapas
+Guarapuava,M1,182093.0,0.4690702044533409,213,2,4,2,-2,Nas três etapas
+Maringá,M2,409657.0,0.3096484696413065,385,3,6,4,-2,Nas três etapas
+Cascavel,M2,348051.0,0.3898265575103224,321,4,6,4,-2,Nas três etapas
+Campo Largo,M1,136327.0,0.4469551428768322,242,2,3,2,-1,Nas três etapas
+Castro,P4,73075.0,0.5347758723918938,110,1,2,1,-1,Nas três etapas
+Telêmaco Borba,P4,75042.0,0.4392493525701876,253,1,2,1,-1,Nas três etapas
+Paranaguá,M1,145829.0,0.4853354520695656,184,2,3,2,-1,Nas três etapas
+Pinhais,M1,127019.0,0.3657469488860423,348,1,2,1,-1,Nas três etapas
+Fazenda Rio Grande,M1,148873.0,0.5383994565576257,104,2,4,3,-1,Nas três etapas
+Araucária,M1,151666.0,0.3592773239169494,354,2,3,2,-1,Nas três etapas
+Piraquara,M1,118730.0,0.6116781877167754,46,2,3,2,-1,Nas três etapas
+Cornélio Procópio,P3,45206.0,0.3931379047559525,317,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Cruzeiro do Oeste,P3,23831.0,0.3897831998167445,322,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Cianorte,P4,79527.0,0.3734346825992544,339,1,1,2,1,Nas três etapas
+Cafelândia,P2,18997.0,0.3181338817555698,377,0,0,1,1,Somente na lista publicada
+Ibiporã,P3,51603.0,0.4288151560392754,269,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Goioerê,P3,28437.0,0.4135357426581554,289,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Dois Vizinhos,P3,44869.0,0.3475634421766798,362,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Jacarezinho,P3,40375.0,0.417061335058671,286,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Ivaiporã,P3,32720.0,0.422997097780785,280,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Corbélia,P2,17470.0,0.4083354026455668,298,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Cambira,P2,9460.0,0.4111749465995025,292,0,0,1,1,Somente na lista publicada
+Capanema,P3,20481.0,0.3492021113814818,361,0,0,1,1,Somente na lista publicada
+Campina Grande do Sul,P3,47825.0,0.4978633835272096,162,1,1,2,1,Nas três etapas
+Brasilândia do Sul,P1,3708.0,0.4995826054509432,158,0,0,1,1,Somente na lista publicada
+Assis Chateaubriand,P3,36808.0,0.3822390015801749,330,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Missal,P2,11064.0,0.4309782834666023,266,0,0,1,1,Somente na lista publicada
+Medianeira,P3,54369.0,0.3217966255938181,376,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Matelândia,P2,18450.0,0.3009442610518487,389,0,0,1,1,Somente na lista publicada
+Marechal Cândido Rondon,P3,55836.0,0.3366620725401946,367,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Jandaia do Sul,P3,21408.0,0.3742864958880881,337,0,0,1,1,Somente na lista publicada
+Japurá,P2,9144.0,0.4610695465537604,224,0,0,1,1,Somente na lista publicada
+Palotina,P3,35011.0,0.287651172395699,392,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Nova Londrina,P2,12923.0,0.3670859572757614,344,0,0,1,1,Somente na lista publicada
+Pérola,P2,11878.0,0.3968799835695498,312,0,0,1,1,Somente na lista publicada
+Planalto,P2,14374.0,0.4401951386069297,251,0,0,1,1,Somente na lista publicada
+Porto Rico,P1,3182.0,0.3953316010410174,314,0,0,1,1,Somente na lista publicada
+Pranchita,P2,5737.0,0.4092142682026612,296,0,0,1,1,Somente na lista publicada
+Rio Branco do Sul,P3,37558.0,0.5694824941007011,75,1,1,2,1,Nas três etapas
+Santa Cruz de Monte Castelo,P2,8613.0,0.4260226173781604,275,0,0,1,1,Somente na lista publicada
+Piên,P2,13655.0,0.4213601950838068,283,0,0,1,1,Somente na lista publicada
+Nova Aurora,P2,13765.0,0.4580948685694012,228,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+São Jorge d'Oeste,P2,9378.0,0.367082788533851,345,0,0,1,1,Somente na lista publicada
+Santo Antônio do Caiuá,P1,2493.0,0.3774343947739521,335,0,0,1,1,Somente na lista publicada
+Siqueira Campos,P3,22811.0,0.4363365742378519,257,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+São Pedro do Paraná,P1,2661.0,0.3643889452496882,349,0,0,1,1,Somente na lista publicada
+Tamboara,P1,4880.0,0.4248615951644854,277,0,0,1,1,Somente na lista publicada
+Terra Boa,P2,17568.0,0.383327298831956,327,0,0,1,1,Somente na lista publicada
+Terra Rica,P2,14842.0,0.4343510161699527,259,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+Ubiratã,P3,24749.0,0.3615996824451477,351,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"
+União da Vitória,P3,55033.0,0.4481922646364959,239,1,0,1,1,"Técnica, excluído na consolidada, reincluído na publicada"

@@ -1,0 +1,11 @@
+Cenário,Municípios contemplados,10 maiores receptores (%),HHI,Portes G2–P4 (%),P3 (%),P2 e P1 (%),Quintil de maior PCM (%),Pop. 0–4 coberta (%)
+S1 Proporcional à população total,141,41.3,364,61.7,22.0,16.3,9.7,84.6
+S2 Proporcional à população 0–4,147,37.7,268,58.7,23.0,18.3,12.7,85.5
+S3 Ranking do fator socioeconômico,300,3.3,33,1.0,12.7,86.3,26.7,34.6
+S3b Proporcional a pop. 0–4 × FS,190,23.3,102,40.7,25.7,33.7,22.7,76.8
+S4 PCM sem faixas (pop. 0–4 × PCM),155,33.7,184,55.0,24.0,21.0,17.3,86.2
+S4b PCM sem faixas (ranking),300,3.3,33,6.3,14.7,79.0,26.7,63.3
+S5 PCM com faixas (regra consolidada),213,22.3,88,39.0,10.3,50.7,28.0,80.7
+Observada: técnica (251),209,17.5,84,28.7,23.9,47.4,31.5,89.3
+Observada: consolidada (300),224,21.0,80,35.3,10.7,54.0,28.0,82.0
+Observada: lista publicada (303),261,11.2,47,23.1,16.5,60.3,27.7,89.4

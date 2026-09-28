@@ -1,0 +1,85 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          cons_total300   R-squared:                       0.448
+Model:                            OLS   Adj. R-squared:                  0.445
+Method:                 Least Squares   F-statistic:                     106.7
+Date:                Mon, 28 Sep 2026   Prob (F-statistic):           8.51e-38
+Time:                        17:02:17   Log-Likelihood:                -490.34
+No. Observations:                 399   AIC:                             986.7
+Df Residuals:                     396   BIC:                             998.6
+Df Model:                           2                                         
+Covariance Type:                  HC1                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -4.4763      0.489     -9.159      0.000      -5.434      -3.518
+pcm_padrao     2.4854      0.433      5.742      0.000       1.637       3.334
+lpop04         0.6174      0.096      6.433      0.000       0.429       0.806
+==============================================================================
+Omnibus:                      294.107   Durbin-Watson:                   2.062
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             5733.779
+Skew:                           2.897   Prob(JB):                         0.00
+Kurtosis:                      20.644   Cond. No.                         75.8
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          cons_total300   R-squared:                       0.456
+Model:                            OLS   Adj. R-squared:                  0.440
+Method:                 Least Squares   F-statistic:                     20.43
+Date:                Mon, 28 Sep 2026   Prob (F-statistic):           1.53e-32
+Time:                        17:02:17   Log-Likelihood:                -487.64
+No. Observations:                 399   AIC:                             999.3
+Df Residuals:                     387   BIC:                             1047.
+Df Model:                          11                                         
+Covariance Type:                  HC1                                         
+================================================================================================================
+                                                   coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------------
+Intercept                                       -4.5526      0.577     -7.884      0.000      -5.684      -3.421
+C(mesorregiao)[T.Centro Oriental Paranaense]    -0.1652      0.352     -0.470      0.639      -0.855       0.524
+C(mesorregiao)[T.Centro-Sul Paranaense]         -0.0384      0.159     -0.242      0.809      -0.350       0.273
+C(mesorregiao)[T.Metropolitana de Curitiba]      0.1738      0.252      0.691      0.490      -0.319       0.667
+C(mesorregiao)[T.Noroeste Paranaense]            0.0570      0.124      0.460      0.646      -0.186       0.300
+C(mesorregiao)[T.Norte Central Paranaense]       0.0453      0.144      0.314      0.754      -0.238       0.328
+C(mesorregiao)[T.Norte Pioneiro Paranaense]     -0.0016      0.133     -0.012      0.991      -0.262       0.259
+C(mesorregiao)[T.Oeste Paranaense]              -0.0080      0.164     -0.049      0.961      -0.329       0.312
+C(mesorregiao)[T.Sudeste Paranaense]            -0.2994      0.165     -1.812      0.070      -0.623       0.024
+C(mesorregiao)[T.Sudoeste Paranaense]           -0.0129      0.143     -0.090      0.928      -0.293       0.267
+pcm_padrao                                       2.6415      0.576      4.582      0.000       1.512       3.771
+lpop04                                           0.6166      0.097      6.360      0.000       0.427       0.807
+==============================================================================
+Omnibus:                      291.332   Durbin-Watson:                   2.067
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             5500.983
+Skew:                           2.870   Prob(JB):                         0.00
+Kurtosis:                      20.261   Cond. No.                         96.7
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:       contemplado_cons   No. Observations:                  399
+Model:                          Logit   Df Residuals:                      396
+Method:                           MLE   Df Model:                            2
+Date:                Mon, 28 Sep 2026   Pseudo R-squ.:                  0.7051
+Time:                        17:02:17   Log-Likelihood:                -80.674
+converged:                       True   LL-Null:                       -273.55
+Covariance Type:            nonrobust   LLR p-value:                 1.719e-84
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept    -44.7066      5.774     -7.743      0.000     -56.023     -33.390
+pcm_padrao    61.5984      7.880      7.817      0.000      46.154      77.043
+lpop04         2.4900      0.356      6.997      0.000       1.793       3.188
+==============================================================================
+
+Possibly complete quasi-separation: A fraction 0.22 of observations can be
+perfectly predicted. This might indicate that there is complete
+quasi-separation. In this case some parameters will not be identified.
+
+Teste F conjunto das dummies de mesorregião (m2): F=0.845, p=0.5745

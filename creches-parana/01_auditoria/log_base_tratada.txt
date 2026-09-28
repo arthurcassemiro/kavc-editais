@@ -1,0 +1,6 @@
+Junção com IBGE (API localidades) pelo código de 7 dígitos: 399 de 399 casados.
+Nomes divergentes entre planilha e IBGE (mantido o código): []
+Malha IBGE 2022: 399 polígonos; casados com a base: 399; CRS EPSG:4674
+PCM padrão = (2·FE + FD + 2·FS)/5/100 reproduzido para 399 municípios (IC e DC exceto P3). Na aba Dados da planilha de 27/03/2024, as 62 linhas do porte P3 usam (1·FE + FD + 3·FS)/5/100.
+Colunas mantidas: cod7, mun, nome_ibge, mesorregiao, microrregiao, regiao_intermediaria, regiao_imediata, pop, pop04, pop514, porte_ic, porte_dc, mat_creche, prop_creche, mat_pre_fund, prop_pre_fund, oferta_priv, oferta_tot, prop_priv, creche_norm, mat_norm, priv_norm, fe, mort_inf, prop04, natalidade, mi_norm, prop04_norm, nat_norm, fd, desnut_prop, cadunico, cad_prop, ipdm_r, desnut_norm, cad_norm, ipdm_norm, fs, pcm_padrao, pcm_p3, pcm_dc, aprox_ic, floor_ic, frac_ic, rank_ic, tec_ic, prop, aprox, total_dc, cons_prev43, cons_pcm257, cons_total300, dif_cons_tec, contemplado_tec, contemplado_cons, tipologia, rank_pop, rank_pop04, rank_pcm, rank_fs, creches_por_10mil_04_cons, creches_por_10mil_04_tec
+Tipologia: {'Técnica e consolidada': 172, 'Não contemplado': 138, 'Somente consolidada': 52, 'Somente técnica': 37}

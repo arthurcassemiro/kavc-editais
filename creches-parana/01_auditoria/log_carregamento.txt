@@ -1,0 +1,34 @@
+IC!CI linhas com município: 399
+DC!Dados linhas com município: 399
+DC!Resultados linhas: 399; somas: 43, 257, 300
+IC!Educacional: linhas sem município (rodapé min/max): 1 -> [nan]
+IC!Demográfico: linhas sem município (rodapé min/max): 5 -> [nan, nan, nan, nan, nan]
+IC!Socioeconômico: linhas sem município (rodapé min/max): 3 -> [nan, 6.872785094939785, 71.30225470734463]
+Componente Educacional: 401 (IC) x 401 (DC) municípios; 401 comuns; células numéricas divergentes: 0
+Componente Demográfico: 399 (IC) x 399 (DC) municípios; 399 comuns; células numéricas divergentes: 0
+Componente Socioeconômico: 399 (IC) x 399 (DC) municípios; 399 comuns; células numéricas divergentes: 0
+Recalculo FE: max |dif| = 0.00e+00
+Recalculo FD: max |dif| = 0.00e+00
+Recalculo FS: max |dif| = 0.00e+00
+creche_norm vs minmax(prop): maxdif 100.000; corr -1.0000
+mat_norm vs minmax: maxdif 100.000; corr -0.5666
+priv_norm vs minmax: maxdif 100.000; corr -0.9453
+mi_norm vs minmax: maxdif 0.000; corr 1.0000
+prop04_norm vs minmax: maxdif 60.571; corr 1.0000
+nat_norm vs minmax: maxdif 19.078; corr 1.0000
+desnut_norm vs minmax: maxdif 0.000; corr 1.0000
+cad_norm vs minmax: maxdif 0.000; corr 1.0000
+ipdm_norm vs minmax(-ipdm): maxdif 0.000; corr -1.0000
+merge Dados x Resultados: {'both': 399, 'left_only': 0, 'right_only': 0}
+merge x IC!CI: {'both': 399, 'left_only': 0, 'right_only': 0}
+PCM IC vs DC: maxdif 1.04e-01
+m_ed: {'both': 399, 'left_only': 0, 'right_only': 0}
+m_de: {'both': 399, 'left_only': 0, 'right_only': 0}
+m_so: {'both': 399, 'left_only': 0, 'right_only': 0}
+PCM recalculado (2FE+FD+2FS)/5/100: maxdif 1.04e-01
+pop (Dados) vs pop_total (Demográfico): divergências 0
+porte DC recalculado ≠ planilha: 0 -> []
+porte IC recalculado ≠ planilha: 0 -> []
+Contagem por porte DC: {'P2': 205, 'P1': 102, 'P3': 62, 'M1': 14, 'P4': 8, 'M2': 6, 'G2': 1, 'G1': 1}
+Contagem por porte IC: {'P1': 307, 'P2': 45, 'P3': 17, 'M1': 14, 'P4': 8, 'M2': 6, 'G2': 1, 'G1': 1}
+cod7 nulos: 0; duplicados: 0; cod6*10 vs cod7: 0 inconsistências

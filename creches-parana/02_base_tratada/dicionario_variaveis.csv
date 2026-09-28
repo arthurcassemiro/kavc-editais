@@ -1,0 +1,20 @@
+variavel,descricao
+cod7,"Código IBGE (7 dígitos), aba Educacional"
+mun,Nome do município (planilhas)
+pop,"População total 2022 (Censo), aba Dados/Demográfico"
+pop04,População 0 a 4 anos (Censo 2022) = população-alvo
+porte_ic,Porte na planilha Indicador_Criterio_VF (P1 ≤20 mil; P2 20–40 mil; P3 40–70 mil; P4 70–100 mil; M1 100–200 mil; M2 200–500 mil; G1 500 mil–1 mi; G2 >1 mi)
+porte_dc,Porte na planilha 20240327 (P1 ≤5 mil; P2 5–20 mil; P3 20–70 mil; demais iguais)
+fe,"Fator Educação (0–100, min-max sobre média ponderada 2·creche_norm + mat_norm + priv_norm)/4)"
+fd,Fator Demográfico (0–100)
+fs,Fator Socioeconômico (0–100)
+pcm_padrao,PCM = (2·FE + FD + 2·FS)/500
+pcm_p3,Variante (1·FE + FD + 3·FS)/500 usada na faixa P3 da consolidada
+pcm_dc,PCM efetivamente usado na consolidada
+tec_ic,"Creches na distribuição técnica inicial (coluna TOTAL CRECHES, Indicador_Criterio_VF; soma 251)"
+cons_prev43,Creches da etapa prévia (coluna 'IPARDES (43 creches)')
+cons_pcm257,Creches da etapa PCM consolidada (257)
+cons_total300,Creches na distribuição consolidada (300)
+aprox,Valor contínuo J·(1+PCM) − prévia (coluna APROX. CRECHES da aba Dados)
+total_dc,Coluna TOTAL CRECHES da aba Dados (cálculo proporcional sem tetos; não é o resultado final)
+tipologia,Não contemplado / Somente técnica / Somente consolidada / Técnica e consolidada

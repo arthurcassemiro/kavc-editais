@@ -1,0 +1,11 @@
+,jaccard,contemplados_comuns,so_cenario,so_consolidada,L1_creches
+S1 População total,0.352,95.0,46.0,129.0,258.0
+S2 População 0-4,0.384,103.0,44.0,121.0,242.0
+S3 Vulnerabilidade (ranking FS),0.541,184.0,116.0,40.0,232.0
+S3b Vulnerabilidade ponderada (pop 0-4 × FS),0.522,142.0,48.0,82.0,200.0
+S4 PCM sem faixas (pop 0-4 × PCM),0.43,114.0,41.0,110.0,220.0
+S4b PCM sem faixas (ranking PCM),0.674,211.0,89.0,13.0,178.0
+"S5 PCM com faixas (regra consolidada, 300)",0.925,210.0,3.0,14.0,28.0
+"Técnica (observada, 251)",0.659,172.0,37.0,52.0,131.0
+"Consolidada (observada, 300)",1.0,224.0,0.0,0.0,0.0
+"Publicada (observada, 303)",0.858,224.0,37.0,0.0,77.0
