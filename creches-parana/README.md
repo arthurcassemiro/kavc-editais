@@ -11,10 +11,10 @@ Material completo do estudo empírico preparado para o dossiê "Consequências E
 | `02_base_tratada/` | `base_municipal.csv/.xlsx` (399 municípios, 70 variáveis), `base_municipal_geo.gpkg` (com geometria IBGE 2022), `dicionario_variaveis.csv`, Anexo I da Res. 219/2024 em CSV |
 | `03_resultados/` | Tabelas T1 a T9 (porte, descritivas, correlações, beneficiados x não, quintis, mobilidade nos rankings, ajustes entre etapas, tipologia, regional, regressões exploratórias) e gráficos |
 | `04_simulacoes/` | Alocação de 300 creches sob sete regras alternativas, métricas de cobertura/concentração/focalização e sobreposição com as distribuições observadas |
-| `05_mapas/` | Mapas 1 a 12 em SVG editável, PDF vetorial e PNG 300 dpi; `dados_dos_mapas.xlsx`; subpasta `sem_rotulo/` com as versões usadas no manuscrito |
-| `06_diagramas/` | Diagramas da arquitetura do PCM, da regra de conversão em creches e da passagem da etapa técnica à execução (SVG, PDF, PNG) |
+| `05_mapas/` | Mapa 1 (PCM e fatores, 2 × 2), Mapa 2 (tipologia) e mapas suplementares S1 a S4 em SVG editável, PDF vetorial e PNG 300 dpi; `dados_dos_mapas.xlsx`; subpasta `sem_rotulo/` com as versões do manuscrito (PNG e JPEG) |
+| `06_diagramas/` | Figuras 1 e 2 (arquitetura do PCM e regra de conversão) e Figura S1 (etapas até a execução) em SVG, PDF e PNG |
 | `07_log/` | `log_metodologico.md` e `levantamento_noticias.md` (linha do tempo, atos oficiais, ~80 fontes com URL, título, veículo e data) |
-| `08_artigo/` | `artigo.md` (fonte do manuscrito), `artigo_creches_parana_anonimizado.docx` (22 páginas, Arial 12, espaçamento 1,5, ABNT, sem metadados de autoria), PDF de conferência e tabelas do artigo |
+| `08_artigo/` | `artigo.md` (fonte do manuscrito), `artigo_creches_parana_anonimizado.docx` (22 páginas, Arial 12, espaçamento 1,5, ABNT, nota de rodapé, sem metadados de autoria), PDF de conferência, tabelas do artigo e `suplementares/` (XLSX com gráficos nativos e tabelas, SVG/PDF dos diagramas, JPEG 300 dpi dos mapas) |
 | `scripts/` | Pipeline reprodutível (01 a 10) em Python; `09_politico_eleitoral.py` preparado para os arquivos do TSE |
 
 ## Reprodução

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="230.613144pt" height="197.099143pt" viewBox="0 0 230.613144 197.099143" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-28T20:23:27.831041</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M -0 197.099143 
+L 230.613144 197.099143 
+L 230.613144 0 
+L -0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 64.058281 164.352756 
+L 221.211037 164.352756 
+L 221.211037 7.2 
+L 64.058281 7.2 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p1362f909bf)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAANoAAADbCAYAAAALQY9+AAAC9klEQVR4nO3VPUpDYRRFUZVoIzgDZ+BYBOdmk0kIFvY2WgiWgmXATgjE4E9hoVPIa/ZHHmuN4BR3cw+X1w9/B3tkcXw0esLOHm9eR0+Y5GO1GT1htvbnamGPCQ0CQoOA0CAgNAgIDQJCg4DQICA0CAgNAkKDgNAgIDQICA0CQoOA0CAgNAgIDQJCg4DQICA0CAgNAkKDgNAgIDQICA0CQoOA0CAgNAgIDQJCg4DQICA0CAgNAkKDgNAgIDQICA0CQoOA0CAgNAgIDQJCg8Di8upi9IbZWr9/jZ4wydNqM3rCbPloEBAaBIQGAaFBQGgQEBoEhAYBoUFAaBAQGgSEBgGhQUBoEBAaBIQGAaFBQGgQEBoEhAYBoUFAaBAQGgSEBgGhQUBoEBAaBIQGAaFBQGgQEBoEhAYBoUFAaBAQGgSEBgGhQUBoEBAaBIQGAaFBQGgQEBoEhAaBxenpyegNMHs+GgSEBgGhQUBoEBAaBIQGAaFBQGgQEBoEhAYBoUFAaBAQGgSEBgGhQUBoEBAaBIQGAaFBQGgQEBoEhAYBoUFAaBAQGgSEBgGhQUBoEBAaBIQGAaFBQGgQEBoEhAYBoUFAaBAQGgSEBgGhQUBoEBAaBIQGgcXoAXP2/fk7esIkZ+dnoydMsn3bjp6wMx8NAkKDgNAgIDQICA0CQoOA0CAgNAgIDQJCg4DQICA0CAgNAkKDgNAgIDQICA0CQoOA0CAgNAgIDQJCg4DQICA0CAgNAkKDgNAgIDQICA0CQoOA0CAgNAgIDQJCg4DQICA0CAgNAkKDgNAgIDQICA0CQoOA0CBwuN38/I0eMVfr9ffoCZPc3b6MnjDJ/fJ59ISd+WgQEBoEhAYBoUFAaBAQGgSEBgGhQUBoEBAaBIQGAaFBQGgQEBoEhAYBoUFAaBAQGgSEBgGhQUBoEBAaBIQGAaFBQGgQEBoEhAYBoUFAaBAQGgSEBgGhQUBoEBAaBIQGAaFBQGgQEBoEhAYBoUFAaBAQGgSEBoF/vrEg/2gFHogAAAAASUVORK5CYII=" id="image9d7a1a0b71" transform="scale(1 -1) translate(0 -157.68)" x="64.08" y="-7.019143" width="156.96" height="157.68"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m407357e40c" d="M 0 0 
+L 0 3.5 
+" style="stroke: #3a3a3a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m407357e40c" x="79.773557" y="164.352756" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="79.773557" y="176.812961" transform="rotate(-0 79.773557 176.812961)">Q1 (menor)</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m407357e40c" x="111.204108" y="164.352756" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="111.204108" y="176.812961" transform="rotate(-0 111.204108 176.812961)">Q2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m407357e40c" x="142.634659" y="164.352756" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="142.634659" y="176.812961" transform="rotate(-0 142.634659 176.812961)">Q3</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m407357e40c" x="174.06521" y="164.352756" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="174.06521" y="176.812961" transform="rotate(-0 174.06521 176.812961)">Q4</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m407357e40c" x="205.495762" y="164.352756" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="205.495762" y="176.812961" transform="rotate(-0 205.495762 176.812961)">Q5 (maior)</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 8px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="142.634659" y="188.215549" transform="rotate(-0 142.634659 188.215549)">Quintil de PCM</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="md6cf982a6b" d="M 0 0 
+L -3.5 0 
+" style="stroke: #3a3a3a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#md6cf982a6b" x="64.058281" y="22.915276" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: end; fill: #3a3a3a" x="57.058281" y="25.645378" transform="rotate(-0 57.058281 25.645378)">Q1 (menor)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#md6cf982a6b" x="64.058281" y="54.345827" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: end; fill: #3a3a3a" x="57.058281" y="57.075929" transform="rotate(-0 57.058281 57.075929)">Q2</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#md6cf982a6b" x="64.058281" y="85.776378" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: end; fill: #3a3a3a" x="57.058281" y="88.50648" transform="rotate(-0 57.058281 88.50648)">Q3</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#md6cf982a6b" x="64.058281" y="117.206929" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: end; fill: #3a3a3a" x="57.058281" y="119.937032" transform="rotate(-0 57.058281 119.937032)">Q4</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#md6cf982a6b" x="64.058281" y="148.63748" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: end; fill: #3a3a3a" x="57.058281" y="151.367583" transform="rotate(-0 57.058281 151.367583)">Q5 (maior)</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 8px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="13.024219" y="85.776378" transform="rotate(-90 13.024219 85.776378)">Quintil de população de 0 a 4 anos</text>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="79.773557" y="24.856194" transform="rotate(-0 79.773557 24.856194)">0%</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="111.204108" y="24.856194" transform="rotate(-0 111.204108 24.856194)">0%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="142.634659" y="24.856194" transform="rotate(-0 142.634659 24.856194)">12%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="174.06521" y="24.856194" transform="rotate(-0 174.06521 24.856194)">56%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="205.495762" y="24.856194" transform="rotate(-0 205.495762 24.856194)">100%</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="79.773557" y="56.286745" transform="rotate(-0 79.773557 56.286745)">0%</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="111.204108" y="56.286745" transform="rotate(-0 111.204108 56.286745)">0%</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="142.634659" y="56.286745" transform="rotate(-0 142.634659 56.286745)">68%</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="174.06521" y="56.286745" transform="rotate(-0 174.06521 56.286745)">89%</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="205.495762" y="56.286745" transform="rotate(-0 205.495762 56.286745)">100%</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="79.773557" y="87.717296" transform="rotate(-0 79.773557 87.717296)">0%</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="111.204108" y="87.717296" transform="rotate(-0 111.204108 87.717296)">0%</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="142.634659" y="87.717296" transform="rotate(-0 142.634659 87.717296)">62%</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="174.06521" y="87.717296" transform="rotate(-0 174.06521 87.717296)">100%</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="205.495762" y="87.717296" transform="rotate(-0 205.495762 87.717296)">100%</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="79.773557" y="119.147847" transform="rotate(-0 79.773557 119.147847)">7%</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="111.204108" y="119.147847" transform="rotate(-0 111.204108 119.147847)">7%</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="142.634659" y="119.147847" transform="rotate(-0 142.634659 119.147847)">62%</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="174.06521" y="119.147847" transform="rotate(-0 174.06521 119.147847)">100%</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="205.495762" y="119.147847" transform="rotate(-0 205.495762 119.147847)">100%</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="79.773557" y="150.578398" transform="rotate(-0 79.773557 150.578398)">53%</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="111.204108" y="150.578398" transform="rotate(-0 111.204108 150.578398)">50%</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="142.634659" y="150.578398" transform="rotate(-0 142.634659 150.578398)">88%</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="174.06521" y="150.578398" transform="rotate(-0 174.06521 150.578398)">100%</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="205.495762" y="150.578398" transform="rotate(-0 205.495762 150.578398)">100%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1362f909bf">
+   <rect x="64.058281" y="7.2" width="157.152756" height="157.152756"/>
+  </clipPath>
+ </defs>
+</svg>

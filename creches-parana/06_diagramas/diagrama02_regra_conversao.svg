@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="691.337953pt" height="387.486pt" viewBox="0 0 691.337953 387.486" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="447.773851pt" height="332.848992pt" viewBox="0 0 447.773851 332.848992" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-28T17:26:07.099942</dc:date>
+    <dc:date>2026-09-28T20:25:07.041358</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,337 +21,377 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 387.486 
-L 691.337953 387.486 
-L 691.337953 0 
+   <path d="M 0 332.848992 
+L 447.773851 332.848992 
+L 447.773851 0 
 L 0 0 
 z
 " style="fill: #ffffff"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 82.092472 52.730646 
-L 467.859402 52.730646 
-Q 470.495622 52.730646 470.495622 50.111433 
-L 470.495622 32.431748 
-Q 470.495622 29.812535 467.859402 29.812535 
-L 82.092472 29.812535 
-Q 79.456252 29.812535 79.456252 32.431748 
-L 79.456252 50.111433 
-Q 79.456252 52.730646 82.092472 52.730646 
+    <path d="M 66.089764 46.877085 
+L 413.192126 46.877085 
+Q 415.388976 46.877085 415.388976 44.559329 
+L 415.388976 24.58317 
+Q 415.388976 22.265414 413.192126 22.265414 
+L 66.089764 22.265414 
+Q 63.892913 22.265414 63.892913 24.58317 
+L 63.892913 44.559329 
+Q 63.892913 46.877085 66.089764 46.877085 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #f4f6f7; stroke: #c9d3d6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #f2f2f2; stroke: #bfbfbf; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 178.75389 88.744819 
-L 371.197984 88.744819 
-Q 373.834205 88.744819 373.834205 86.125606 
-L 373.834205 68.445921 
-Q 373.834205 65.826709 371.197984 65.826709 
-L 178.75389 65.826709 
-Q 176.117669 65.826709 176.117669 68.445921 
-L 176.117669 86.125606 
-Q 176.117669 88.744819 178.75389 88.744819 
+    <path d="M 239.640945 46.877085 
+Q 239.640945 50.353719 239.640945 53.159533 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 241.040945 50.359533 
+L 239.640945 53.159533 
+L 238.240945 50.359533 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #1f5c6a; stroke: #1f5c6a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_4">
-    <path d="M 274.975937 52.730646 
-Q 274.975937 59.278677 274.975937 64.820478 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
-    <path d="M 276.775937 61.220478 
-L 274.975937 64.820478 
-L 273.175937 61.220478 
+    <path d="M 142.979528 79.464734 
+L 336.302362 79.464734 
+Q 338.499213 79.464734 338.499213 77.146978 
+L 338.499213 56.148109 
+Q 338.499213 53.830353 336.302362 53.830353 
+L 142.979528 53.830353 
+Q 140.782677 53.830353 140.782677 56.148109 
+L 140.782677 77.146978 
+Q 140.782677 79.464734 142.979528 79.464734 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #595959; stroke: #595959; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
-    <path d="M 211.267276 88.744819 
-Q 187.894205 94.818047 172.397737 112.006915 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
-    <path d="M 176.14519 110.53838 
-L 172.397737 112.006915 
-L 173.471381 108.127832 
+    <path d="M 206.688189 79.464734 
+Q 177.579921 84.100246 149.134126 88.630259 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 152.119459 89.572484 
+L 149.134126 88.630259 
+L 151.679106 86.807328 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_6">
-    <path d="M 338.684598 88.744819 
-Q 362.057669 94.818047 377.554137 112.006915 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
-    <path d="M 376.480493 108.127832 
-L 377.554137 112.006915 
-L 373.806684 110.53838 
+    <path d="M 272.593701 79.464734 
+Q 301.701969 84.100246 330.147764 88.630259 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 327.602784 86.807328 
+L 330.147764 88.630259 
+L 327.162431 89.572484 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_7">
-    <path d="M 82.092472 148.768441 
-L 261.355465 148.768441 
-Q 263.991685 148.768441 263.991685 146.149228 
-L 263.991685 119.738835 
-Q 263.991685 117.119622 261.355465 117.119622 
-L 82.092472 117.119622 
-Q 79.456252 117.119622 79.456252 119.738835 
-L 79.456252 146.149228 
-Q 79.456252 148.768441 82.092472 148.768441 
+    <path d="M 66.089764 113.34743 
+L 230.853543 113.34743 
+Q 233.050394 113.34743 233.050394 111.029674 
+L 233.050394 91.053514 
+Q 233.050394 88.735758 230.853543 88.735758 
+L 66.089764 88.735758 
+Q 63.892913 88.735758 63.892913 91.053514 
+L 63.892913 111.029674 
+Q 63.892913 113.34743 66.089764 113.34743 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #ffffff; stroke: #1f5c6a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #969696; stroke: #969696; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
-    <path d="M 171.723969 148.768441 
-Q 171.723969 151.496787 171.723969 153.44251 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 173.523969 149.84251 
-L 171.723969 153.44251 
-L 169.923969 149.84251 
+    <path d="M 248.428346 113.34743 
+L 413.192126 113.34743 
+Q 415.388976 113.34743 415.388976 111.029674 
+L 415.388976 91.053514 
+Q 415.388976 88.735758 413.192126 88.735758 
+L 248.428346 88.735758 
+Q 246.231496 88.735758 246.231496 91.053514 
+L 246.231496 111.029674 
+Q 246.231496 113.34743 248.428346 113.34743 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #969696; stroke: #969696; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_9">
-    <path d="M 82.092472 185.873953 
-L 261.355465 185.873953 
-Q 263.991685 185.873953 263.991685 183.25474 
-L 263.991685 156.844346 
-Q 263.991685 154.225134 261.355465 154.225134 
-L 82.092472 154.225134 
-Q 79.456252 154.225134 79.456252 156.844346 
-L 79.456252 183.25474 
-Q 79.456252 185.873953 82.092472 185.873953 
+    <path d="M 148.471654 113.34743 
+Q 148.471654 116.824064 148.471654 119.629877 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 149.871654 116.829877 
+L 148.471654 119.629877 
+L 147.071654 116.829877 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #ffffff; stroke: #1f5c6a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_10">
-    <path d="M 171.723969 185.873953 
-Q 171.723969 188.602299 171.723969 190.548022 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 173.523969 186.948022 
-L 171.723969 190.548022 
-L 169.923969 186.948022 
+    <path d="M 330.810236 113.34743 
+Q 330.810236 116.824064 330.810236 119.629877 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 332.210236 116.829877 
+L 330.810236 119.629877 
+L 329.410236 116.829877 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_11">
-    <path d="M 82.092472 222.979465 
-L 261.355465 222.979465 
-Q 263.991685 222.979465 263.991685 220.360252 
-L 263.991685 193.949858 
-Q 263.991685 191.330646 261.355465 191.330646 
-L 82.092472 191.330646 
-Q 79.456252 191.330646 79.456252 193.949858 
-L 79.456252 220.360252 
-Q 79.456252 222.979465 82.092472 222.979465 
+    <path d="M 66.089764 143.889659 
+L 230.853543 143.889659 
+Q 233.050394 143.889659 233.050394 141.571903 
+L 233.050394 122.618454 
+Q 233.050394 120.300698 230.853543 120.300698 
+L 66.089764 120.300698 
+Q 63.892913 120.300698 63.892913 122.618454 
+L 63.892913 141.571903 
+Q 63.892913 143.889659 66.089764 143.889659 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #ffffff; stroke: #1f5c6a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #ffffff; stroke: #595959; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_12">
-    <path d="M 171.723969 222.979465 
-Q 171.723969 225.707811 171.723969 227.653534 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 173.523969 224.053534 
-L 171.723969 227.653534 
-L 169.923969 224.053534 
+    <path d="M 248.428346 143.889659 
+L 413.192126 143.889659 
+Q 415.388976 143.889659 415.388976 141.571903 
+L 415.388976 122.618454 
+Q 415.388976 120.300698 413.192126 120.300698 
+L 248.428346 120.300698 
+Q 246.231496 120.300698 246.231496 122.618454 
+L 246.231496 141.571903 
+Q 246.231496 143.889659 248.428346 143.889659 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #ffffff; stroke: #595959; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_13">
-    <path d="M 82.092472 260.084976 
-L 261.355465 260.084976 
-Q 263.991685 260.084976 263.991685 257.465764 
-L 263.991685 231.05537 
-Q 263.991685 228.436157 261.355465 228.436157 
-L 82.092472 228.436157 
-Q 79.456252 228.436157 79.456252 231.05537 
-L 79.456252 257.465764 
-Q 79.456252 260.084976 82.092472 260.084976 
+    <path d="M 148.471654 143.889659 
+Q 148.471654 147.366293 148.471654 150.172107 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 149.871654 147.372107 
+L 148.471654 150.172107 
+L 147.071654 147.372107 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #ffffff; stroke: #1f5c6a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_14">
-    <path d="M 288.596409 148.768441 
-L 467.859402 148.768441 
-Q 470.495622 148.768441 470.495622 146.149228 
-L 470.495622 119.738835 
-Q 470.495622 117.119622 467.859402 117.119622 
-L 288.596409 117.119622 
-Q 285.960189 117.119622 285.960189 119.738835 
-L 285.960189 146.149228 
-Q 285.960189 148.768441 288.596409 148.768441 
+    <path d="M 330.810236 143.889659 
+Q 330.810236 147.366293 330.810236 150.172107 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 332.210236 147.372107 
+L 330.810236 150.172107 
+L 329.410236 147.372107 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #ffffff; stroke: #1b6b52; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_15">
-    <path d="M 378.227906 148.768441 
-Q 378.227906 151.496787 378.227906 153.44251 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 380.027906 149.84251 
-L 378.227906 153.44251 
-L 376.427906 149.84251 
+    <path d="M 66.089764 174.431889 
+L 230.853543 174.431889 
+Q 233.050394 174.431889 233.050394 172.114133 
+L 233.050394 153.160683 
+Q 233.050394 150.842927 230.853543 150.842927 
+L 66.089764 150.842927 
+Q 63.892913 150.842927 63.892913 153.160683 
+L 63.892913 172.114133 
+Q 63.892913 174.431889 66.089764 174.431889 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #ffffff; stroke: #595959; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_16">
-    <path d="M 288.596409 185.873953 
-L 467.859402 185.873953 
-Q 470.495622 185.873953 470.495622 183.25474 
-L 470.495622 156.844346 
-Q 470.495622 154.225134 467.859402 154.225134 
-L 288.596409 154.225134 
-Q 285.960189 154.225134 285.960189 156.844346 
-L 285.960189 183.25474 
-Q 285.960189 185.873953 288.596409 185.873953 
+    <path d="M 248.428346 181.590857 
+L 413.192126 181.590857 
+Q 415.388976 181.590857 415.388976 179.273101 
+L 415.388976 153.160683 
+Q 415.388976 150.842927 413.192126 150.842927 
+L 248.428346 150.842927 
+Q 246.231496 150.842927 246.231496 153.160683 
+L 246.231496 179.273101 
+Q 246.231496 181.590857 248.428346 181.590857 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #ffffff; stroke: #1b6b52; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #ffffff; stroke: #595959; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_17">
-    <path d="M 378.227906 185.873953 
-Q 378.227906 188.602299 378.227906 190.548022 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 380.027906 186.948022 
-L 378.227906 190.548022 
-L 376.427906 186.948022 
+    <path d="M 148.471654 174.431889 
+Q 148.471654 177.908523 148.471654 180.714336 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 149.871654 177.914336 
+L 148.471654 180.714336 
+L 147.071654 177.914336 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_18">
-    <path d="M 288.596409 222.979465 
-L 467.859402 222.979465 
-Q 470.495622 222.979465 470.495622 220.360252 
-L 470.495622 193.949858 
-Q 470.495622 191.330646 467.859402 191.330646 
-L 288.596409 191.330646 
-Q 285.960189 191.330646 285.960189 193.949858 
-L 285.960189 220.360252 
-Q 285.960189 222.979465 288.596409 222.979465 
+    <path d="M 330.810236 181.590857 
+Q 330.810236 185.067491 330.810236 187.873305 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 332.210236 185.073305 
+L 330.810236 187.873305 
+L 329.410236 185.073305 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #ffffff; stroke: #1b6b52; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_19">
-    <path d="M 378.227906 222.979465 
-Q 378.227906 225.707811 378.227906 227.653534 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 380.027906 224.053534 
-L 378.227906 227.653534 
-L 376.427906 224.053534 
+    <path d="M 66.089764 204.974118 
+L 230.853543 204.974118 
+Q 233.050394 204.974118 233.050394 202.656362 
+L 233.050394 183.702913 
+Q 233.050394 181.385157 230.853543 181.385157 
+L 66.089764 181.385157 
+Q 63.892913 181.385157 63.892913 183.702913 
+L 63.892913 202.656362 
+Q 63.892913 204.974118 66.089764 204.974118 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #ffffff; stroke: #595959; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_20">
-    <path d="M 288.596409 260.084976 
-L 467.859402 260.084976 
-Q 470.495622 260.084976 470.495622 257.465764 
-L 470.495622 231.05537 
-Q 470.495622 228.436157 467.859402 228.436157 
-L 288.596409 228.436157 
-Q 285.960189 228.436157 285.960189 231.05537 
-L 285.960189 257.465764 
-Q 285.960189 260.084976 288.596409 260.084976 
+    <path d="M 248.428346 212.133087 
+L 413.192126 212.133087 
+Q 415.388976 212.133087 415.388976 209.815331 
+L 415.388976 190.861881 
+Q 415.388976 188.544125 413.192126 188.544125 
+L 248.428346 188.544125 
+Q 246.231496 188.544125 246.231496 190.861881 
+L 246.231496 209.815331 
+Q 246.231496 212.133087 248.428346 212.133087 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #ffffff; stroke: #1b6b52; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #ffffff; stroke: #595959; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_21">
-    <path d="M 82.092472 298.281827 
-L 467.859402 298.281827 
-Q 470.495622 298.281827 470.495622 295.662614 
-L 470.495622 273.617575 
-Q 470.495622 270.998362 467.859402 270.998362 
-L 82.092472 270.998362 
-Q 79.456252 270.998362 79.456252 273.617575 
-L 79.456252 295.662614 
-Q 79.456252 298.281827 82.092472 298.281827 
+    <path d="M 148.471654 204.974118 
+Q 148.471654 208.450752 148.471654 211.256566 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 149.871654 208.456566 
+L 148.471654 211.256566 
+L 147.071654 208.456566 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #1b6b52; stroke: #1b6b52; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_22">
-    <path d="M 171.723969 260.084976 
-Q 171.723969 265.541669 171.723969 269.992132 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
-    <path d="M 173.523969 266.392132 
-L 171.723969 269.992132 
-L 169.923969 266.392132 
+    <path d="M 330.810236 212.133087 
+Q 330.810236 215.609721 330.810236 218.415534 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 332.210236 215.615534 
+L 330.810236 218.415534 
+L 329.410236 215.615534 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_23">
-    <path d="M 378.227906 260.084976 
-Q 378.227906 265.541669 378.227906 269.992132 
-" clip-path="url(#pf4a70dadb7)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
-    <path d="M 380.027906 266.392132 
-L 378.227906 269.992132 
-L 376.427906 266.392132 
+    <path d="M 66.089764 235.516348 
+L 230.853543 235.516348 
+Q 233.050394 235.516348 233.050394 233.198592 
+L 233.050394 214.245142 
+Q 233.050394 211.927386 230.853543 211.927386 
+L 66.089764 211.927386 
+Q 63.892913 211.927386 63.892913 214.245142 
+L 63.892913 233.198592 
+Q 63.892913 235.516348 66.089764 235.516348 
 z
-" clip-path="url(#pf4a70dadb7)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
+" clip-path="url(#pd0d186627c)" style="fill: #ffffff; stroke: #595959; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 248.428346 242.675316 
+L 413.192126 242.675316 
+Q 415.388976 242.675316 415.388976 240.35756 
+L 415.388976 221.404111 
+Q 415.388976 219.086355 413.192126 219.086355 
+L 248.428346 219.086355 
+Q 246.231496 219.086355 246.231496 221.404111 
+L 246.231496 240.35756 
+Q 246.231496 242.675316 248.428346 242.675316 
+z
+" clip-path="url(#pd0d186627c)" style="fill: #ffffff; stroke: #595959; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 148.471654 235.516348 
+Q 148.471654 243.151905 148.471654 250.116642 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 149.871654 247.316642 
+L 148.471654 250.116642 
+L 147.071654 247.316642 
+z
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 330.810236 242.675316 
+Q 330.810236 246.731389 330.810236 250.116642 
+" clip-path="url(#pd0d186627c)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 332.210236 247.316642 
+L 330.810236 250.116642 
+L 329.410236 247.316642 
+z
+" clip-path="url(#pd0d186627c)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 66.089764 275.399134 
+L 413.192126 275.399134 
+Q 415.388976 275.399134 415.388976 273.081378 
+L 415.388976 253.105218 
+Q 415.388976 250.787462 413.192126 250.787462 
+L 66.089764 250.787462 
+Q 63.892913 250.787462 63.892913 253.105218 
+L 63.892913 273.081378 
+Q 63.892913 275.399134 66.089764 275.399134 
+z
+" clip-path="url(#pd0d186627c)" style="fill: #1f1f1f; stroke: #1f1f1f; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 500; font-size: 10px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #3a3a3a" x="72.865701" y="22.333795" transform="rotate(-0 72.865701 22.333795)">Figura 2. Regra de conversão do PCM em creches na distribuição consolidada (300 unidades)</text>
+    <text style="font-size: 9px; font-family: 'Arial, Liberation Sans'; text-anchor: start; fill: #3a3a3a" x="63.892913" y="14.911124" transform="rotate(-0 63.892913 14.911124)">Figura 2. Regra de conversão do PCM em creches na distribuição consolidada (300 unidades)</text>
    </g>
    <g id="text_2">
-    <text style="font-size: 7.2px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(105.26575 38.830903)">Entradas por município: população total 2022 (define o porte), população-alvo 0–4 anos, PCM, creches já</text>
-    <text style="font-size: 7.2px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(209.901437 47.856216)">atribuídas na etapa prévia (43 unidades)</text>
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(77.264187 32.491062)">Entradas por município: população total de 2022 (define o porte), população-alvo, PCM e creches</text>
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(168.349343 40.601828)">já atribuídas na etapa prévia (43 unidades)</text>
    </g>
    <g id="text_3">
-    <text style="font-weight: 600; font-size: 7.2px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(199.611625 70.262389)">Classificação em oito portes (G2, G1, M2, M1,</text>
-    <text style="font-weight: 600; font-size: 7.2px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(250.126937 79.507076)">P4, P3, P2, P1)</text>
-    <text style="font-weight: 600; font-size: 7.2px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(225.441625 88.211764)">e definição de cotas por bloco</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(157.622195 64.399302)">Classificação em oito portes e definição de</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(209.862195 73.033286)">cotas por bloco</text>
    </g>
    <g id="text_4">
-    <text style="font-weight: 600; font-size: 7.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="171.723969" y="107.297575" transform="rotate(-0 171.723969 107.297575)">Portes G2 a P4 (30 municípios, 100 creches)</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(86.36638 98.966679)">Portes G2 a P4: 30 municípios, 100</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(134.294896 107.769438)">creches</text>
    </g>
    <g id="text_5">
-    <text style="font-weight: 600; font-size: 7.8px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="378.227906" y="107.297575" transform="rotate(-0 378.227906 107.297575)">Portes P3, P2 e P1 (369 municípios, 157 creches)</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(260.364728 98.966679)">Portes P3, P2 e P1: 369 municípios, 157</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(316.633478 107.769438)">creches</text>
    </g>
    <g id="text_6">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(141.393875 122.351031)">1. Cota populacional</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(99.23225 130.729938)">J = (pop. 0–4 do município / pop. 0–4 do porte) ×</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(97.106328 138.893828)">ponderação do porte (parcela da população-alvo ×</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(150.300781 147.167031)">total ajustado)</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(76.584388 130.168982)">1. Cota populacional: J = parcela do município</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(81.636966 137.66739)">na população-alvo do porte × cota do porte</text>
    </g>
    <g id="text_7">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(139.925375 167.68334)">2. Correção pelo PCM</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(107.73439 176.08545)">K = J × (1 + PCM) − creches da etapa prévia</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(262.721564 130.168982)">1. Exclusão: municípios já contemplados na</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(275.556721 137.723718)">etapa prévia não entram no ranking</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(142.862375 201.307352)">3. Arredondamento</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(98.025172 209.065961)">parte inteira de K; unidades restantes distribuídas</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(124.051344 217.292758)">às maiores frações (maior resto)</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(82.824779 160.654883)">2. Correção pelo PCM: K = J × (1 + PCM),</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(85.630247 168.265948)">descontadas as creches da etapa prévia</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(145.509078 237.653864)">4. Tetos por porte</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(100.605359 246.042567)">G2: 10 · G1: 8 · M2: 7 · M1: 4 · P4: 2 creches por</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(97.992687 254.421473)">município; excedente redistribuído até fechar 100</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(252.795783 160.457)">2. Ordenação pelo PCM dentro do porte: P3 usa a</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(253.587111 168.028689)">variante (1·FE + FD + 3·FS)/5/100; P2 e P1 usam</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(308.244533 175.581785)">o PCM padrão</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(361.364906 127.096328)">1. Exclusão</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(307.056702 134.854938)">municípios já contemplados na etapa prévia não</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(351.247827 142.936328)">entram no ranking</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(73.95556 191.212425)">3. Arredondamento: parte inteira de K; unidades</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(82.73181 198.792865)">restantes às maiores frações (maior resto)</text>
    </g>
    <g id="text_11">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(343.653702 163.55834)">2. Ordenação pelo PCM</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(299.937984 172.05945)">P3 usa a variante (1·FE + FD + 3·FS)/5; P2 e P1 usam</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(357.695718 180.081543)">o PCM padrão</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(262.331096 198.41241)">3. Cotas por porte: P3, 27 de 62 municípios;</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(253.180783 205.927771)">P2, 100 de 205; P1, 30 de 102 (uma creche cada)</text>
    </g>
    <g id="text_12">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(351.673218 200.588055)">3. Cotas por porte</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(300.053999 209.065961)">P3: 27 de 62 municípios · P2: 100 de 205 · P1: 30 de</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(344.112609 217.460852)">102 (uma creche cada)</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(73.837435 221.795671)">4. Tetos por município: G2 10, G1 8, M2 7, M1 4</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(76.679544 229.628766)">e P4 2; excedente redistribuído até fechar 100</text>
    </g>
    <g id="text_13">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(359.651999 238.412864)">4. Resultado</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(297.768234 246.171473)">157 municípios com uma creche; os demais ficam fora</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(360.849796 254.025473)">nesta etapa</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(253.193361 228.954639)">4. Resultado: 157 municípios com uma creche; os</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(283.927736 236.46836)">demais ficam fora nesta etapa</text>
    </g>
    <g id="text_14">
-    <text style="font-weight: 600; font-size: 7.2px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(121.333 282.274782)">Distribuição consolidada: 43 (etapa prévia) + 100 (portes grandes) + 157 (ranking nos portes</text>
-    <text style="font-weight: 600; font-size: 7.2px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(200.686 291.318094)">pequenos) = 300 creches em 224 municípios</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(87.938796 261.001977)">Distribuição consolidada: 43 (etapa prévia) + 100 (portes grandes) + 157 (ranking nos</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(147.840359 269.112744)">portes pequenos) = 300 creches em 224 municípios</text>
    </g>
   </g>
   <g id="text_15">
-   <text style="font-size: 6.3px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #8a8a8a" x="7.2" y="378.9" transform="rotate(-0 7.2 378.9)">Fonte: Elaboração própria a partir das abas Metodologia, Dados e Resultados da planilha 20240327_Distribuicao_Creches. O passo 4 do bloco grande reproduz 28 dos 30 valores observados; a regra do bloco pequeno reproduz os 157 casos.</text>
+   <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; text-anchor: start; fill: #5f5f5f" x="7.2" y="324.165867" transform="rotate(-0 7.2 324.165867)">Fonte: Elaboração própria a partir da planilha de 27/03/2024 (abas Metodologia, Dados e Resultados).</text>
   </g>
  </g>
  <defs>
-  <clipPath id="pf4a70dadb7">
-   <rect x="68.472" y="7.2" width="412.92" height="327.096"/>
+  <clipPath id="pd0d186627c">
+   <rect x="63.892913" y="7.2" width="351.496063" height="272.834646"/>
   </clipPath>
  </defs>
 </svg>

@@ -18,12 +18,12 @@ def hamilton_cap(w,total,cap):
 def topn(score,n):
     a=np.zeros(len(score)); idx=np.argsort(-np.asarray(score),kind="stable")[:n]; a[idx]=1; return a
 S={}
-S["S1 População total"]=hamilton(b["pop"],N)
-S["S2 População 0-4"]=hamilton(b.pop04,N)
-S["S3 Vulnerabilidade (ranking FS)"]=topn(b.fs,N)
-S["S3b Vulnerabilidade ponderada (pop 0-4 × FS)"]=hamilton(b.pop04*b.fs,N)
-S["S4 PCM sem faixas (pop 0-4 × PCM)"]=hamilton(b.pop04*b.pcm_padrao,N)
-S["S4b PCM sem faixas (ranking PCM)"]=topn(b.pcm_padrao,N)
+S["S1 Proporcional à população total"]=hamilton(b["pop"],N)
+S["S2 Proporcional à população 0-4"]=hamilton(b.pop04,N)
+S["S5 Ranking do fator socioeconômico"]=topn(b.fs,N)
+S["S3 Proporcional a população 0-4 × FS"]=hamilton(b.pop04*b.fs,N)
+S["S4 Proporcional a população 0-4 × PCM (sem faixas)"]=hamilton(b.pop04*b.pcm_padrao,N)
+S["S6 Ranking do PCM (sem faixas)"]=topn(b.pcm_padrao,N)
 # S5: PCM com faixas -> regra consolidada com 300 creches: cotas por porte proporcionais às cotas efetivas (100/27/100/30 escaladas)
 caps={"G2":10,"G1":8,"M2":7,"M1":4,"P4":2}
 big=b.porte_dc.isin(list(caps)); 
@@ -37,7 +37,8 @@ s5[big.values]=hamilton_cap(w[big.values],quotas["grandes"],b.loc[big,"porte_dc"
 for pt in ["P3","P2","P1"]:
     m=(b.porte_dc==pt).values; sc=np.where(pt=="P3",b.pcm_p3,b.pcm_padrao)
     s5[m]=topn(sc[m],quotas[pt])
-S["S5 PCM com faixas (regra consolidada, 300)"]=s5
+S["S7 PCM com faixas (regra consolidada, 300)"]=s5
+S=dict(sorted(S.items()))
 S["Técnica (observada, 251)"]=b.tec_ic.values.astype(float)
 S["Consolidada (observada, 300)"]=b.cons_total300.values.astype(float)
 S["Publicada (observada, 303)"]=b.pub_res219.values.astype(float)

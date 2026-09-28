@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="602.532562pt" height="330.786pt" viewBox="0 0 602.532562 330.786" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="422.588976pt" height="300.420646pt" viewBox="0 0 422.588976 300.420646" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-28T17:26:06.229485</dc:date>
+    <dc:date>2026-09-28T20:25:06.209827</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,475 +21,398 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 330.786 
-L 602.532562 330.786 
-L 602.532562 0 
+   <path d="M 0 300.420646 
+L 422.588976 300.420646 
+L 422.588976 0 
 L 0 0 
 z
 " style="fill: #ffffff"/>
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 82.092472 66.132283 
-L 202.040504 66.132283 
-Q 204.676724 66.132283 204.676724 63.513071 
-L 204.676724 45.833386 
-Q 204.676724 43.214173 202.040504 43.214173 
-L 82.092472 43.214173 
-Q 79.456252 43.214173 79.456252 45.833386 
-L 79.456252 63.513071 
-Q 79.456252 66.132283 82.092472 66.132283 
+    <path d="M 66.089764 43.553907 
+L 171.538583 43.553907 
+Q 173.735433 43.553907 173.735433 41.483639 
+L 173.735433 22.727011 
+Q 173.735433 20.656743 171.538583 20.656743 
+L 66.089764 20.656743 
+Q 63.892913 20.656743 63.892913 22.727011 
+L 63.892913 41.483639 
+Q 63.892913 43.553907 66.089764 43.553907 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #f4f6f7; stroke: #c9d3d6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #c24c12; stroke: #c24c12; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 82.092472 95.598425 
-L 202.040504 95.598425 
-Q 204.676724 95.598425 204.676724 92.979213 
-L 204.676724 75.299528 
-Q 204.676724 72.680315 202.040504 72.680315 
-L 82.092472 72.680315 
-Q 79.456252 72.680315 79.456252 75.299528 
-L 79.456252 92.979213 
-Q 79.456252 95.598425 82.092472 95.598425 
+    <path d="M 66.089764 79.897464 
+L 171.538583 79.897464 
+Q 173.735433 79.897464 173.735433 77.827195 
+L 173.735433 48.108497 
+Q 173.735433 46.038229 171.538583 46.038229 
+L 66.089764 46.038229 
+Q 63.892913 46.038229 63.892913 48.108497 
+L 63.892913 77.827195 
+Q 63.892913 79.897464 66.089764 79.897464 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #f4f6f7; stroke: #c9d3d6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #feead2; stroke: #feead2; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 82.092472 125.064567 
-L 202.040504 125.064567 
-Q 204.676724 125.064567 204.676724 122.445354 
-L 204.676724 104.765669 
-Q 204.676724 102.146457 202.040504 102.146457 
-L 82.092472 102.146457 
-Q 79.456252 102.146457 79.456252 104.765669 
-L 79.456252 122.445354 
-Q 79.456252 125.064567 82.092472 125.064567 
+    <path d="M 66.089764 122.63556 
+L 171.538583 122.63556 
+Q 173.735433 122.63556 173.735433 120.565292 
+L 173.735433 84.452053 
+Q 173.735433 82.381785 171.538583 82.381785 
+L 66.089764 82.381785 
+Q 63.892913 82.381785 63.892913 84.452053 
+L 63.892913 120.565292 
+Q 63.892913 122.63556 66.089764 122.63556 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #f4f6f7; stroke: #c9d3d6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #feead2; stroke: #feead2; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
-    <path d="M 82.092472 153.43937 
-L 202.040504 153.43937 
-Q 204.676724 153.43937 204.676724 150.820157 
-L 204.676724 139.688504 
-Q 204.676724 137.069291 202.040504 137.069291 
-L 82.092472 137.069291 
-Q 79.456252 137.069291 79.456252 139.688504 
-L 79.456252 150.820157 
-Q 79.456252 153.43937 82.092472 153.43937 
+    <path d="M 66.089764 152.584576 
+L 171.538583 152.584576 
+Q 173.735433 152.584576 173.735433 150.514308 
+L 173.735433 127.19015 
+Q 173.735433 125.119882 171.538583 125.119882 
+L 66.089764 125.119882 
+Q 63.892913 125.119882 63.892913 127.19015 
+L 63.892913 150.514308 
+Q 63.892913 152.584576 66.089764 152.584576 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #ffffff; stroke: #8a8a8a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #feead2; stroke: #feead2; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
-    <path d="M 142.066488 66.132283 
-Q 142.066488 69.406299 142.066488 71.897691 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 143.866488 68.297691 
-L 142.066488 71.897691 
-L 140.266488 68.297691 
+    <path d="M 186.916535 36.245861 
+L 292.365354 36.245861 
+Q 294.562205 36.245861 294.562205 34.175593 
+L 294.562205 22.727011 
+Q 294.562205 20.656743 292.365354 20.656743 
+L 186.916535 20.656743 
+Q 184.719685 20.656743 184.719685 22.727011 
+L 184.719685 34.175593 
+Q 184.719685 36.245861 186.916535 36.245861 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #0171c1; stroke: #0171c1; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
-    <path d="M 142.066488 95.598425 
-Q 142.066488 98.872441 142.066488 101.363833 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 143.866488 97.763833 
-L 142.066488 101.363833 
-L 140.266488 97.763833 
+    <path d="M 186.916535 66.194877 
+L 292.365354 66.194877 
+Q 294.562205 66.194877 294.562205 64.124609 
+L 294.562205 40.800451 
+Q 294.562205 38.730183 292.365354 38.730183 
+L 186.916535 38.730183 
+Q 184.719685 38.730183 184.719685 40.800451 
+L 184.719685 64.124609 
+Q 184.719685 66.194877 186.916535 66.194877 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #e3edf7; stroke: #e3edf7; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
-    <path d="M 142.066488 125.064567 
-Q 142.066488 131.066929 142.066488 136.286668 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 143.866488 132.686668 
-L 142.066488 136.286668 
-L 140.266488 132.686668 
+    <path d="M 186.916535 96.143892 
+L 292.365354 96.143892 
+Q 294.562205 96.143892 294.562205 94.073624 
+L 294.562205 70.749466 
+Q 294.562205 68.679198 292.365354 68.679198 
+L 186.916535 68.679198 
+Q 184.719685 68.679198 184.719685 70.749466 
+L 184.719685 94.073624 
+Q 184.719685 96.143892 186.916535 96.143892 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #e3edf7; stroke: #e3edf7; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_9">
-    <path d="M 82.092472 191.63622 
-L 202.040504 191.63622 
-Q 204.676724 191.63622 204.676724 189.017008 
-L 204.676724 169.154646 
-Q 204.676724 166.535433 202.040504 166.535433 
-L 82.092472 166.535433 
-Q 79.456252 166.535433 79.456252 169.154646 
-L 79.456252 189.017008 
-Q 79.456252 191.63622 82.092472 191.63622 
+    <path d="M 186.916535 126.092908 
+L 292.365354 126.092908 
+Q 294.562205 126.092908 294.562205 124.02264 
+L 294.562205 100.698482 
+Q 294.562205 98.628214 292.365354 98.628214 
+L 186.916535 98.628214 
+Q 184.719685 98.628214 184.719685 100.698482 
+L 184.719685 124.02264 
+Q 184.719685 126.092908 186.916535 126.092908 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #1f5c6a; stroke: #1f5c6a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #e3edf7; stroke: #e3edf7; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_10">
-    <path d="M 142.066488 153.43937 
-Q 142.066488 159.987402 142.066488 165.752809 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 143.866488 162.152809 
-L 142.066488 165.752809 
-L 140.266488 162.152809 
+    <path d="M 307.743307 36.245861 
+L 413.192126 36.245861 
+Q 415.388976 36.245861 415.388976 34.175593 
+L 415.388976 22.727011 
+Q 415.388976 20.656743 413.192126 20.656743 
+L 307.743307 20.656743 
+Q 305.546457 20.656743 305.546457 22.727011 
+L 305.546457 34.175593 
+Q 305.546457 36.245861 307.743307 36.245861 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #307e3e; stroke: #307e3e; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_11">
-    <path d="M 217.198772 66.132283 
-L 337.146803 66.132283 
-Q 339.783024 66.132283 339.783024 63.513071 
-L 339.783024 45.833386 
-Q 339.783024 43.214173 337.146803 43.214173 
-L 217.198772 43.214173 
-Q 214.562551 43.214173 214.562551 45.833386 
-L 214.562551 63.513071 
-Q 214.562551 66.132283 217.198772 66.132283 
+    <path d="M 307.743307 72.589417 
+L 413.192126 72.589417 
+Q 415.388976 72.589417 415.388976 70.519149 
+L 415.388976 40.800451 
+Q 415.388976 38.730183 413.192126 38.730183 
+L 307.743307 38.730183 
+Q 305.546457 38.730183 305.546457 40.800451 
+L 305.546457 70.519149 
+Q 305.546457 72.589417 307.743307 72.589417 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #f4f6f7; stroke: #c9d3d6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #e8f7e4; stroke: #e8f7e4; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_12">
-    <path d="M 217.198772 95.598425 
-L 337.146803 95.598425 
-Q 339.783024 95.598425 339.783024 92.979213 
-L 339.783024 75.299528 
-Q 339.783024 72.680315 337.146803 72.680315 
-L 217.198772 72.680315 
-Q 214.562551 72.680315 214.562551 75.299528 
-L 214.562551 92.979213 
-Q 214.562551 95.598425 217.198772 95.598425 
+    <path d="M 307.743307 108.932973 
+L 413.192126 108.932973 
+Q 415.388976 108.932973 415.388976 106.862705 
+L 415.388976 77.144007 
+Q 415.388976 75.073739 413.192126 75.073739 
+L 307.743307 75.073739 
+Q 305.546457 75.073739 305.546457 77.144007 
+L 305.546457 106.862705 
+Q 305.546457 108.932973 307.743307 108.932973 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #f4f6f7; stroke: #c9d3d6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #e8f7e4; stroke: #e8f7e4; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_13">
-    <path d="M 217.198772 125.064567 
-L 337.146803 125.064567 
-Q 339.783024 125.064567 339.783024 122.445354 
-L 339.783024 104.765669 
-Q 339.783024 102.146457 337.146803 102.146457 
-L 217.198772 102.146457 
-Q 214.562551 102.146457 214.562551 104.765669 
-L 214.562551 122.445354 
-Q 214.562551 125.064567 217.198772 125.064567 
+    <path d="M 307.743307 145.276529 
+L 413.192126 145.276529 
+Q 415.388976 145.276529 415.388976 143.206261 
+L 415.388976 113.487563 
+Q 415.388976 111.417295 413.192126 111.417295 
+L 307.743307 111.417295 
+Q 305.546457 111.417295 305.546457 113.487563 
+L 305.546457 143.206261 
+Q 305.546457 145.276529 307.743307 145.276529 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #f4f6f7; stroke: #c9d3d6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #e8f7e4; stroke: #e8f7e4; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_14">
-    <path d="M 217.198772 153.43937 
-L 337.146803 153.43937 
-Q 339.783024 153.43937 339.783024 150.820157 
-L 339.783024 139.688504 
-Q 339.783024 137.069291 337.146803 137.069291 
-L 217.198772 137.069291 
-Q 214.562551 137.069291 214.562551 139.688504 
-L 214.562551 150.820157 
-Q 214.562551 153.43937 217.198772 153.43937 
+    <path d="M 66.089764 173.927746 
+L 413.192126 173.927746 
+Q 415.388976 173.927746 415.388976 171.857478 
+L 415.388976 160.865648 
+Q 415.388976 158.79538 413.192126 158.79538 
+L 66.089764 158.79538 
+Q 63.892913 158.79538 63.892913 160.865648 
+L 63.892913 171.857478 
+Q 63.892913 173.927746 66.089764 173.927746 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #ffffff; stroke: #8a8a8a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #f2f2f2; stroke: #bfbfbf; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_15">
-    <path d="M 277.172787 66.132283 
-Q 277.172787 69.406299 277.172787 71.897691 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 278.972787 68.297691 
-L 277.172787 71.897691 
-L 275.372787 68.297691 
+    <path d="M 118.814173 173.927746 
+Q 118.814173 177.550715 118.814173 180.502864 
+" clip-path="url(#pd204dfcc28)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 120.214173 177.702864 
+L 118.814173 180.502864 
+L 117.414173 177.702864 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_16">
-    <path d="M 277.172787 95.598425 
-Q 277.172787 98.872441 277.172787 101.363833 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 278.972787 97.763833 
-L 277.172787 101.363833 
-L 275.372787 97.763833 
+    <path d="M 66.089764 210.008637 
+L 171.538583 210.008637 
+Q 173.735433 210.008637 173.735433 207.938369 
+L 173.735433 183.243952 
+Q 173.735433 181.173684 171.538583 181.173684 
+L 66.089764 181.173684 
+Q 63.892913 181.173684 63.892913 183.243952 
+L 63.892913 207.938369 
+Q 63.892913 210.008637 66.089764 210.008637 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #c24c12; stroke: #c24c12; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_17">
-    <path d="M 277.172787 125.064567 
-Q 277.172787 131.066929 277.172787 136.286668 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 278.972787 132.686668 
-L 277.172787 136.286668 
-L 275.372787 132.686668 
+    <path d="M 239.640945 173.927746 
+Q 239.640945 177.550715 239.640945 180.502864 
+" clip-path="url(#pd204dfcc28)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 241.040945 177.702864 
+L 239.640945 180.502864 
+L 238.240945 177.702864 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_18">
-    <path d="M 217.198772 191.63622 
-L 337.146803 191.63622 
-Q 339.783024 191.63622 339.783024 189.017008 
-L 339.783024 169.154646 
-Q 339.783024 166.535433 337.146803 166.535433 
-L 217.198772 166.535433 
-Q 214.562551 166.535433 214.562551 169.154646 
-L 214.562551 189.017008 
-Q 214.562551 191.63622 217.198772 191.63622 
+    <path d="M 186.916535 210.008637 
+L 292.365354 210.008637 
+Q 294.562205 210.008637 294.562205 207.938369 
+L 294.562205 183.243952 
+Q 294.562205 181.173684 292.365354 181.173684 
+L 186.916535 181.173684 
+Q 184.719685 181.173684 184.719685 183.243952 
+L 184.719685 207.938369 
+Q 184.719685 210.008637 186.916535 210.008637 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #1f5c6a; stroke: #1f5c6a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #0171c1; stroke: #0171c1; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_19">
-    <path d="M 277.172787 153.43937 
-Q 277.172787 159.987402 277.172787 165.752809 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 278.972787 162.152809 
-L 277.172787 165.752809 
-L 275.372787 162.152809 
+    <path d="M 360.467717 173.927746 
+Q 360.467717 177.550715 360.467717 180.502864 
+" clip-path="url(#pd204dfcc28)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 361.867717 177.702864 
+L 360.467717 180.502864 
+L 359.067717 177.702864 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_20">
-    <path d="M 352.305071 66.132283 
-L 472.253102 66.132283 
-Q 474.889323 66.132283 474.889323 63.513071 
-L 474.889323 45.833386 
-Q 474.889323 43.214173 472.253102 43.214173 
-L 352.305071 43.214173 
-Q 349.66885 43.214173 349.66885 45.833386 
-L 349.66885 63.513071 
-Q 349.66885 66.132283 352.305071 66.132283 
+    <path d="M 307.743307 210.008637 
+L 413.192126 210.008637 
+Q 415.388976 210.008637 415.388976 207.938369 
+L 415.388976 183.243952 
+Q 415.388976 181.173684 413.192126 181.173684 
+L 307.743307 181.173684 
+Q 305.546457 181.173684 305.546457 183.243952 
+L 305.546457 207.938369 
+Q 305.546457 210.008637 307.743307 210.008637 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #f4f6f7; stroke: #c9d3d6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #307e3e; stroke: #307e3e; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
    <g id="patch_21">
-    <path d="M 352.305071 95.598425 
-L 472.253102 95.598425 
-Q 474.889323 95.598425 474.889323 92.979213 
-L 474.889323 75.299528 
-Q 474.889323 72.680315 472.253102 72.680315 
-L 352.305071 72.680315 
-Q 349.66885 72.680315 349.66885 75.299528 
-L 349.66885 92.979213 
-Q 349.66885 95.598425 352.305071 95.598425 
+    <path d="M 239.640945 219.324843 
+Q 239.640945 222.430245 239.640945 224.864827 
+" clip-path="url(#pd204dfcc28)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 241.040945 222.064827 
+L 239.640945 224.864827 
+L 238.240945 222.064827 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #f4f6f7; stroke: #c9d3d6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
    </g>
    <g id="patch_22">
-    <path d="M 352.305071 125.064567 
-L 472.253102 125.064567 
-Q 474.889323 125.064567 474.889323 122.445354 
-L 474.889323 104.765669 
-Q 474.889323 102.146457 472.253102 102.146457 
-L 352.305071 102.146457 
-Q 349.66885 102.146457 349.66885 104.765669 
-L 349.66885 122.445354 
-Q 349.66885 125.064567 352.305071 125.064567 
+    <path d="M 99.04252 247.519306 
+L 380.23937 247.519306 
+Q 382.43622 247.519306 382.43622 245.449038 
+L 382.43622 227.605915 
+Q 382.43622 225.535647 380.23937 225.535647 
+L 99.04252 225.535647 
+Q 96.845669 225.535647 96.845669 227.605915 
+L 96.845669 245.449038 
+Q 96.845669 247.519306 99.04252 247.519306 
 z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #f4f6f7; stroke: #c9d3d6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pd204dfcc28)" style="fill: #54278f; stroke: #54278f; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
-   <g id="patch_23">
-    <path d="M 352.305071 153.43937 
-L 472.253102 153.43937 
-Q 474.889323 153.43937 474.889323 150.820157 
-L 474.889323 139.688504 
-Q 474.889323 137.069291 472.253102 137.069291 
-L 352.305071 137.069291 
-Q 349.66885 137.069291 349.66885 139.688504 
-L 349.66885 150.820157 
-Q 349.66885 153.43937 352.305071 153.43937 
-z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #ffffff; stroke: #8a8a8a; stroke-width: 0.9; stroke-linejoin: miter"/>
+   <g id="line2d_1">
+    <path d="M 118.814173 219.324843 
+L 360.467717 219.324843 
+" clip-path="url(#pd204dfcc28)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: square"/>
    </g>
-   <g id="patch_24">
-    <path d="M 412.279087 66.132283 
-Q 412.279087 69.406299 412.279087 71.897691 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 414.079087 68.297691 
-L 412.279087 71.897691 
-L 410.479087 68.297691 
-z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+   <g id="line2d_2">
+    <path d="M 118.814173 217.254575 
+L 118.814173 219.324843 
+" clip-path="url(#pd204dfcc28)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: square"/>
    </g>
-   <g id="patch_25">
-    <path d="M 412.279087 95.598425 
-Q 412.279087 98.872441 412.279087 101.363833 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 414.079087 97.763833 
-L 412.279087 101.363833 
-L 410.479087 97.763833 
-z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
+   <g id="line2d_3">
+    <path d="M 239.640945 217.254575 
+L 239.640945 219.324843 
+" clip-path="url(#pd204dfcc28)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: square"/>
    </g>
-   <g id="patch_26">
-    <path d="M 412.279087 125.064567 
-Q 412.279087 131.066929 412.279087 136.286668 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 414.079087 132.686668 
-L 412.279087 136.286668 
-L 410.479087 132.686668 
-z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-   </g>
-   <g id="patch_27">
-    <path d="M 352.305071 191.63622 
-L 472.253102 191.63622 
-Q 474.889323 191.63622 474.889323 189.017008 
-L 474.889323 169.154646 
-Q 474.889323 166.535433 472.253102 166.535433 
-L 352.305071 166.535433 
-Q 349.66885 166.535433 349.66885 169.154646 
-L 349.66885 189.017008 
-Q 349.66885 191.63622 352.305071 191.63622 
-z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #1f5c6a; stroke: #1f5c6a; stroke-width: 0.9; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_28">
-    <path d="M 412.279087 153.43937 
-Q 412.279087 159.987402 412.279087 165.752809 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-    <path d="M 414.079087 162.152809 
-L 412.279087 165.752809 
-L 410.479087 162.152809 
-z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #8a8a8a; stroke: #8a8a8a; stroke-width: 0.7; stroke-linecap: round"/>
-   </g>
-   <g id="patch_29">
-    <path d="M 115.045228 276.76063 
-L 439.300346 276.76063 
-Q 441.936567 276.76063 441.936567 274.141417 
-L 441.936567 249.913701 
-Q 441.936567 247.294488 439.300346 247.294488 
-L 115.045228 247.294488 
-Q 112.409008 247.294488 112.409008 249.913701 
-L 112.409008 274.141417 
-Q 112.409008 276.76063 115.045228 276.76063 
-z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #1b6b52; stroke: #1b6b52; stroke-width: 0.9; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_30">
-    <path d="M 142.066488 191.63622 
-Q 171.174756 219.465354 199.55571 246.599136 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
-    <path d="M 198.197478 242.810309 
-L 199.55571 246.599136 
-L 195.70971 245.412425 
-z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
-   </g>
-   <g id="patch_31">
-    <path d="M 277.172787 191.63622 
-Q 277.172787 219.465354 277.172787 246.288258 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
-    <path d="M 278.972787 242.688258 
-L 277.172787 246.288258 
-L 275.372787 242.688258 
-z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
-   </g>
-   <g id="patch_32">
-    <path d="M 412.279087 191.63622 
-Q 383.170819 219.465354 354.789865 246.599136 
-" clip-path="url(#p88ae9d7eb7)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
-    <path d="M 358.635865 245.412425 
-L 354.789865 246.599136 
-L 356.148096 242.810309 
-z
-" clip-path="url(#p88ae9d7eb7)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.9; stroke-linecap: round"/>
+   <g id="line2d_4">
+    <path d="M 360.467717 217.254575 
+L 360.467717 219.324843 
+" clip-path="url(#pd204dfcc28)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: square"/>
    </g>
    <g id="text_1">
-    <text style="font-weight: 500; font-size: 10px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #3a3a3a" x="72.865701" y="22.78937" transform="rotate(-0 72.865701 22.78937)">Figura 1. Arquitetura do Potencial de Creche por Município (PCM)</text>
+    <text style="font-size: 9px; font-family: 'Arial, Liberation Sans'; text-anchor: start; fill: #3a3a3a" x="63.892913" y="14.86279" transform="rotate(-0 63.892913 14.86279)">Figura 1. Arquitetura do Potencial de Creche por Município (PCM)</text>
    </g>
    <g id="text_2">
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(88.172488 48.526228)">Matrículas em creche / pop. 0–4 anos</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(81.305488 56.401228)">Censo Escolar 2023; Censo 2022 · peso 2,</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(120.184488 65.002728)">sentido inverso</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(82.145423 29.857083)">Situação do ensino</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(106.143548 39.316692)">básico</text>
    </g>
    <g id="text_3">
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(80.330988 73.99237)">Matrículas pré-escola e fundamental / pop.</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(134.424988 82.33437)">5–14</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(81.305488 89.86737)">Censo Escolar 2023; Censo 2022 · peso 1,</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(120.184488 98.46887)">sentido inverso</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(75.632923 53.486914)">Matrículas em creche / pop.</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(72.900189 61.692431)">de 0 a 4 anos. Censo Escolar</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(76.396908 68.741308)">2023; Censo 2022. Peso 2,</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(95.274486 76.801904)">sentido inverso</text>
    </g>
    <g id="text_4">
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(102.926988 111.333512)">Oferta privada / oferta total</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(77.704988 119.333512)">Censo Escolar 2023 · peso 1, sentido inverso</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(76.606908 89.250372)">Matrículas em pré-escola e</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(74.256439 96.764093)">fundamental / pop. de 5 a 14</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(76.791204 104.597188)">anos. Censo Escolar 2023;</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(73.869251 112.151925)">Censo 2022. Peso 1, sentido</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(107.532142 120.120099)">inverso</text>
    </g>
    <g id="text_5">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(89.774379 143.017034)">Normalização mín–máx (0–100) de</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(120.355582 151.781628)">cada indicador</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(84.772298 133.107649)">Oferta privada / oferta</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(77.765189 141.354182)">total. Censo Escolar 2023.</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(82.433861 148.495481)">Peso 1, sentido inverso</text>
    </g>
    <g id="text_6">
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(105.834926 172.512936)">Fator educacional (FE)</text>
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(87.43641 181.203327)">média ponderada (2·a + b + c) / 4,</text>
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(112.97766 190.383717)">reescalada 0–100</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="239.640945" y="30.537552" transform="rotate(-0 239.640945 30.537552)">Perfil demográfico</text>
    </g>
    <g id="text_7">
-    <text style="font-weight: 500; font-size: 7.5px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="142.066488" y="36.639715" transform="rotate(-0 142.066488 36.639715)">Situação do ensino básico</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(198.788836 46.760606)">Mortalidade infantil (óbitos</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(198.787195 54.313702)">até 1 ano por mil nascidos</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(194.119617 61.829063)">vivos). Datasus 2020. Peso 1</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(216.229287 48.526228)">Mortalidade infantil (óbitos &lt; 1 ano por mil</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(263.399787 56.666728)">nascidos)</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(244.923787 64.305228)">Datasus 2020 · peso 1</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(198.973679 76.651653)">População de 0 a 4 anos /</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(194.11032 84.206389)">população total. Censo 2022.</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(228.745007 92.339719)">Peso 1</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(222.927287 81.84487)">População 0–4 anos / população total</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(247.634287 89.77137)">Censo 2022 · peso 1</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(198.785554 106.615981)">Taxa de natalidade por mil</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(200.142898 114.170717)">habitantes. Ipardes 2022.</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(228.745007 122.288735)">Peso 1</text>
    </g>
    <g id="text_10">
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(230.311287 111.397512)">Taxa de natalidade (por mil hab.)</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(245.374287 119.333512)">Ipardes 2022 · peso 1</text>
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #ffffff" x="360.467717" y="30.650677" transform="rotate(-0 360.467717 30.650677)">Quadro socioeconômico</text>
    </g>
    <g id="text_11">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(224.880678 143.017034)">Normalização mín–máx (0–100) de</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(255.461881 151.781628)">cada indicador</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(320.19967 46.122539)">Desnutrição infantil (baixo</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(322.71967 53.692588)">peso para a idade, 0 a 4</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(318.83631 61.289981)">anos). Ministério da Saúde</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(339.841779 69.401436)">2023. Peso 1</text>
    </g>
    <g id="text_12">
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(240.002787 172.411217)">Fator demográfico (FD)</text>
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(225.867709 181.203327)">média ponderada (a + b + c) / 3,</text>
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(248.083959 190.383717)">reescalada 0–100</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(318.446935 82.466095)">Crianças a acompanhar no</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(321.75006 90.534894)">CadÚnico / pop. de 0 a 9</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(320.001701 98.323693)">anos. Ministério da Saúde</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(339.841779 105.744992)">2023. Peso 1</text>
    </g>
    <g id="text_13">
-    <text style="font-weight: 500; font-size: 7.5px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="277.172787" y="36.639715" transform="rotate(-0 277.172787 36.639715)">Perfil demográfico</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(323.118888 118.824964)">IPDM renda, emprego e</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(323.500607 126.405403)">produção agropecuária.</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(313.966388 133.934437)">Ipardes 2021. Peso 1, sentido</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(349.185685 142.18097)">inverso</text>
    </g>
    <g id="text_14">
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(350.227587 48.442728)">Desnutrição infantil (baixo peso para idade,</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(397.853587 56.666728)">0–4 anos)</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(363.393587 64.526228)">Ministério da Saúde 2023 · peso 1</text>
+    <text style="font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="239.640945" y="168.328555" transform="rotate(-0 239.640945 168.328555)">Normalização mínimo–máximo de cada indicador, de 0 a 100</text>
    </g>
    <g id="text_15">
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(344.363087 78.51387)">Crianças a acompanhar no CadÚnico / pop. 0–9</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(405.402087 85.79037)">anos</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(363.393587 93.99237)">Ministério da Saúde 2023 · peso 1</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(77.1464 189.436253)">Fator educacional (FE):</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(93.805189 197.530613)">(2·a + b + c)/4,</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(80.250111 206.366185)">reescalado de 0 a 100</text>
    </g>
    <g id="text_16">
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(344.425587 111.420012)">IPDM renda, emprego e produção agropecuária</text>
-    <text style="font-size: 6.4px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(356.973087 119.333512)">Ipardes 2021 · peso 1, sentido inverso</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="118.814173" y="215.960696" transform="rotate(-0 118.814173 215.960696)">peso 2 no PCM</text>
    </g>
    <g id="text_17">
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(359.986977 143.017034)">Normalização mín–máx (0–100) de</text>
-    <text style="font-size: 6.6px; font-family: 'IBM Plex Sans'; fill: #3a3a3a" transform="translate(390.56818 151.781628)">cada indicador</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(196.936062 189.452659)">Fator demográfico (FD):</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(197.329812 197.530613)">(a + b + c)/3, reescalado</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(221.713015 206.366185)">de 0 a 100</text>
    </g>
    <g id="text_18">
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(369.647446 172.603717)">Fator socioeconômico (FS)</text>
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(360.974008 181.203327)">média ponderada (a + b + c) / 3,</text>
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(383.190258 190.383717)">reescalada 0–100</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="239.640945" y="215.960696" transform="rotate(-0 239.640945 215.960696)">peso 1 no PCM</text>
    </g>
    <g id="text_19">
-    <text style="font-weight: 500; font-size: 7.5px; font-family: 'IBM Plex Sans'; text-anchor: middle; fill: #3a3a3a" x="412.279087" y="36.583465" transform="rotate(-0 412.279087 36.583465)">Quadro socioeconômico</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(320.464006 190.259495)">Fator socioeconômico</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(329.213224 197.530613)">(FS): (a + b + c)/3,</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(321.903654 206.366185)">reescalado de 0 a 100</text>
    </g>
    <g id="text_20">
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(153.581225 255.409278)">PCM = (2·FE + FD + 2·FS) / 5 / 100, valor entre 0 e 1 (observado: 0,24 a 0,79)</text>
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(142.462709 263.949278)">Variante usada apenas na faixa P3 da distribuição consolidada: (1·FE + FD + 3·FS) /</text>
-    <text style="font-weight: 600; font-size: 7px; font-family: 'IBM Plex Sans'; fill: #ffffff" transform="translate(265.591616 272.839278)">5 / 100</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="360.467717" y="215.960696" transform="rotate(-0 360.467717 215.960696)">peso 2 no PCM</text>
    </g>
    <g id="text_21">
-    <text style="font-size: 6.5px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #8a8a8a" x="79.456252" y="198.620787" transform="rotate(-0 79.456252 198.620787)">peso 2</text>
-   </g>
-   <g id="text_22">
-    <text style="font-size: 6.5px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #8a8a8a" x="214.562551" y="198.620787" transform="rotate(-0 214.562551 198.620787)">peso 1</text>
-   </g>
-   <g id="text_23">
-    <text style="font-size: 6.5px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #8a8a8a" x="349.66885" y="198.620787" transform="rotate(-0 349.66885 198.620787)">peso 2</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(115.951882 234.41975)">PCM = (2·FE + FD + 2·FS)/5/100, entre 0 e 1 (observado: 0,240 a 0,789)</text>
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(113.772195 242.546923)">Variante usada só na faixa P3 da consolidada: (1·FE + FD + 3·FS)/5/100</text>
    </g>
   </g>
-  <g id="text_24">
-   <text style="font-size: 6.3px; font-family: 'IBM Plex Sans'; text-anchor: start; fill: #8a8a8a" x="7.2" y="322.2" transform="rotate(-0 7.2 322.2)">Fonte: Elaboração própria a partir das planilhas Indicador_Criterio_VF e 20240327_Distribuicao_Creches e da apresentação do programa. Sentido inverso: quanto maior a cobertura ou a renda, menor o escore.</text>
+  <g id="text_22">
+   <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; text-anchor: start; fill: #5f5f5f" x="7.2" y="291.737521" transform="rotate(-0 7.2 291.737521)">Fonte: Elaboração própria a partir das planilhas do PCM, da apresentação do programa e da Resolução SEDEF 219/2024.</text>
   </g>
  </g>
  <defs>
-  <clipPath id="p88ae9d7eb7">
-   <rect x="68.472" y="7.2" width="412.92" height="277.2"/>
+  <clipPath id="pd204dfcc28">
+   <rect x="63.892913" y="7.2" width="351.496063" height="244.459843"/>
   </clipPath>
  </defs>
 </svg>

@@ -1,0 +1,11 @@
+cenario,cobertura_mun_%,share_quintil_maior_PCM_%
+S1 População total,35.3,9.7
+S2 População 0–4,36.8,12.7
+S3 Pop. 0–4 × FS,47.6,22.7
+S4 Pop. 0–4 × PCM,38.8,17.3
+S5 Ranking FS,75.2,26.7
+S6 Ranking PCM,75.2,26.7
+S7 PCM com faixas,53.4,28.0
+Técnica (observada),52.4,31.5
+Consolidada (observada),56.1,28.0
+Lista publicada (observada),65.4,27.7

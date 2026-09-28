@@ -39,3 +39,16 @@ Gerado por `scripts/10_docx.py` a partir de `08_artigo/artigo.md`: A4, margens d
 ## Ajuste de enquadramento solicitado durante o trabalho
 
 O artigo trata a metodologia como instrumento de alocação sob escassez e registra explicitamente que o estudo serviu de base à decisão sem que o resultado final coincida integralmente com a seleção do modelo: a lista publicada acrescentou 37 municípios logo abaixo da linha de corte, sem retirar nenhum selecionado, o que é descrito como a margem entre a seleção do modelo e a decisão, na qual entram necessidades e negociação político-institucional que o índice não capta.
+
+## Revisão editorial da parte visual (28/09/2026, segunda versão)
+
+Aplicada a crítica de visualização editorial recebida após a primeira versão:
+- Tabelas reconstruídas com estilo próprio (Arial 9, recuo zero nas células, cabeçalho em dois níveis com células mescladas, cabeçalho repetido, linhas indivisíveis, casas decimais fixas por coluna, unidades no rótulo das linhas da Tabela 2, traço para zero, fio no total). A antiga Tabela 3 (ajustes) foi fundida na Tabela 1 como colunas de variação; a Tabela 4 (regional) ganhou a linha do Paraná.
+- Elementos reduzidos de 15 para 10: Figuras 1 e 2, Mapa 1 (PCM e três fatores em grade 2 × 2), Mapa 2 (tipologia), Gráfico 1 (cenários), Tabelas 1 a 4 e Quadro 1 (etapas até a execução, no lugar da antiga Figura 3). Mapas das faixas de porte, das três etapas, das diferenças e da intensidade por criança e o gráfico de pontos por porte passaram ao material suplementar (`05_mapas/mapaS1..S4`, `03_resultados/figuras/graficoS1, graficoS2`, `06_diagramas/diagramaS1`).
+- Figuras regeradas no tamanho final (16 cm, ou 14 cm no Mapa 1), com corpo mínimo de 7 pt, Arial (Liberation Sans), vírgula decimal, classes sem repetição de limites, contorno estadual pela malha de UF do IBGE 2022, limites municipais cinza 0,3 pt, escala e norte uma vez por figura, caixas de diagrama com altura automática e setas terminando na borda.
+- Sistema de cores com um sentido por cor: laranja (FE), azul (FD) e verde (FS) tomados da apresentação do programa; roxo para o PCM; cinzas em ordem de luminosidade para as três etapas; acento único (#B2182B) para a margem decisória (37 municípios acrescidos na lista publicada); hachura para exclusões e reduções.
+- Cenários renumerados S1 a S7 (proporcionais, rankings, regra com faixas); eixo do Gráfico 1 em "% das unidades distribuídas"; rótulos com linhas de chamada e legenda de forma.
+- Divergências corrigidas: creches por 10 mil crianças no porte P1 (17,5); legenda do antigo Mapa 4 ("+3 a +16") substituída por classes corretas (máximo +3); referências das fontes das ilustrações (malha IBGE, Censo Escolar, Datasus, Ministério da Saúde, IPDM, taxa de natalidade) e das Resoluções SEDEF 285/2024, 029/2025 e 075/2025 incluídas; frase sobre os dados eleitorais reescrita como limitação de dados.
+- Nota de rodapé na primeira menção ao material suplementar, com link omitido para avaliação cega (implementada no DOCX via parte footnotes.xml).
+- Arquivos editáveis para a submissão em `08_artigo/suplementares/` (XLSX com gráficos nativos e tabelas, SVG/PDF dos diagramas, JPEG 300 dpi dos mapas).
+- Paginação verificada no LibreOffice: 22 páginas; DOCX de 0,8 MB sem metadados de autoria.

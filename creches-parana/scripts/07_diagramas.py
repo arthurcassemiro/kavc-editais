@@ -1,102 +1,92 @@
+"""Diagramas (revisão editorial): 16 cm, corpo >= 7 pt, caixas com altura automática e margem interna,
+setas terminando na borda, cores dos pilares (FE laranja, FD azul, FS verde), PCM roxo, etapas em cinzas."""
 import sys; sys.path.insert(0,"scripts")
 from estilo import *
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt, textwrap
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
-import textwrap
 OUT="06_diagramas/"
-def box(ax,x,y,w,h,texto,fc="white",ec=GRAFITE,fs=7.5,bold=False,lw=0.9,wrap=None,tc=GRAFITE,align="center"):
-    p=FancyBboxPatch((x,y),w,h,boxstyle="round,pad=0,rounding_size=0.12",fc=fc,ec=ec,lw=lw); ax.add_patch(p)
-    if wrap is None: wrap=max(12,int((w-0.6)/(fs*(0.0245 if bold else 0.0225))))
-    texto=texto.replace("$","\\$")
-    t="\n".join(textwrap.fill(l,wrap) for l in texto.split("\n"))
-    if align=="center": ax.text(x+w/2,y+h/2,t,ha="center",va="center",fontsize=fs,fontweight="semibold" if bold else "normal",color=tc,linespacing=1.25)
-    else: ax.text(x+0.25,y+h/2,t,ha="left",va="center",fontsize=fs,fontweight="semibold" if bold else "normal",color=tc,linespacing=1.25)
-def arrow(ax,x0,y0,x1,y1,color=GRAFITE,lw=0.9,style="-|>",cs="arc3,rad=0"):
-    ax.add_patch(FancyArrowPatch((x0,y0),(x1,y1),arrowstyle=style,mutation_scale=9,color=color,lw=lw,connectionstyle=cs,shrinkA=0,shrinkB=0))
-def canvas(w,h):
-    fig,ax=plt.subplots(figsize=(w,h)); ax.set_xlim(0,w*2.54); ax.set_ylim(0,h*2.54); ax.set_axis_off(); return fig,ax   # unidades em cm
-# ---------------- D1: arquitetura do PCM ----------------
-fig,ax=canvas(7.4,5.0)   # 18.8 x 12.7 cm
-W,H=18.8,12.7
-ax.text(0.2,H-0.35,"Figura 1. Arquitetura do Potencial de Creche por Município (PCM)",fontsize=10,fontweight="medium",color=GRAFITE,va="top")
-cols=[("Fator educacional (FE)","Situação do ensino básico",[("Matrículas em creche / pop. 0–4 anos","Censo Escolar 2023; Censo 2022","peso 2, sentido inverso"),("Matrículas pré-escola e fundamental / pop. 5–14","Censo Escolar 2023; Censo 2022","peso 1, sentido inverso"),("Oferta privada / oferta total","Censo Escolar 2023","peso 1, sentido inverso")],"(2·a + b + c) / 4",PETROLEO),
-      ("Fator demográfico (FD)","Perfil demográfico",[("Mortalidade infantil (óbitos < 1 ano por mil nascidos)","Datasus 2020","peso 1"),("População 0–4 anos / população total","Censo 2022","peso 1"),("Taxa de natalidade (por mil hab.)","Ipardes 2022","peso 1")],"(a + b + c) / 3",PETROLEO),
-      ("Fator socioeconômico (FS)","Quadro socioeconômico",[("Desnutrição infantil (baixo peso para idade, 0–4 anos)","Ministério da Saúde 2023","peso 1"),("Crianças a acompanhar no CadÚnico / pop. 0–9 anos","Ministério da Saúde 2023","peso 1"),("IPDM renda, emprego e produção agropecuária","Ipardes 2021","peso 1, sentido inverso")],"(a + b + c) / 3",PETROLEO)]
-cw=5.7; gap=0.45; x0=0.5; ytop=H-1.1
-for i,(nome,sub,inds,formula,cor) in enumerate(cols):
-    x=x0+i*(cw+gap)
-    for j,(ind,fonte,peso) in enumerate(inds):
-        y=ytop-0.55-j*1.35
-        box(ax,x,y-1.05,cw,1.05,f"{ind}\n{fonte} · {peso}",fc="#f4f6f7",ec="#c9d3d6",fs=6.4,wrap=44)
-    # normalização
-    yn=ytop-0.55-3*1.35-0.25
-    box(ax,x,yn-0.75,cw,0.75,"Normalização mín–máx (0–100) de cada indicador",fc="white",ec=GRAFITE_CLARO,fs=6.6)
-    for j in range(3):
-        arrow(ax,x+cw/2,ytop-0.55-j*1.35-1.05,x+cw/2,yn if j==2 else ytop-0.55-(j+1)*1.35, color=GRAFITE_CLARO,lw=0.7)
-    yf=yn-0.75-0.6
-    box(ax,x,yf-1.15,cw,1.15,f"{nome}\nmédia ponderada {formula}, reescalada 0–100",fc=cor,ec=cor,fs=7,bold=True,tc="white",wrap=40)
-    arrow(ax,x+cw/2,yn-0.75,x+cw/2,yf,color=GRAFITE_CLARO,lw=0.7)
-    ax.text(x+cw/2,ytop-0.15,sub,ha="center",va="center",fontsize=7.5,color=GRAFITE,fontweight="medium")
-# PCM
-yp=0.35; 
-box(ax,x0+1.5,yp,3*cw+2*gap-3.0,1.35,"PCM = (2·FE + FD + 2·FS) / 5 / 100, valor entre 0 e 1 (observado: 0,24 a 0,79)\nVariante usada apenas na faixa P3 da distribuição consolidada: (1·FE + FD + 3·FS) / 5 / 100",fc=VERDE,ec=VERDE,fs=7,bold=True,tc="white")
-for i in range(3):
-    x=x0+i*(cw+gap)+cw/2
-    arrow(ax,x,yf-1.15,x0+cw+gap+cw/2+(i-1)*3.5,yp+1.35,color=GRAFITE,lw=0.9)
-ax.text(x0,yf-1.15-0.32,"peso 2",fontsize=6.5,color=GRAFITE_CLARO); ax.text(x0+cw+gap,yf-1.15-0.32,"peso 1",fontsize=6.5,color=GRAFITE_CLARO); ax.text(x0+2*(cw+gap),yf-1.15-0.32,"peso 2",fontsize=6.5,color=GRAFITE_CLARO)
-fig.text(0.01,0.005,"Fonte: Elaboração própria a partir das planilhas Indicador_Criterio_VF e 20240327_Distribuicao_Creches e da apresentação do programa. Sentido inverso: quanto maior a cobertura ou a renda, menor o escore.",fontsize=6.3,color=GRAFITE_CLARO)
+LH=0.0353*1.25   # altura de linha em cm por pt
+def canvas(wcm,hcm):
+    fig,ax=plt.subplots(figsize=(wcm*CM,hcm*CM)); ax.set_xlim(0,wcm); ax.set_ylim(0,hcm); ax.set_axis_off(); return fig,ax
+def quebrar(texto,w,fs,bold,pad):
+    cpp=fs*(0.0235 if bold else 0.0215)
+    wrap=max(10,int((w-2*pad)/cpp)); return "\n".join(textwrap.fill(l,wrap) for l in texto.split("\n"))
+def box(ax,x,ytop,w,texto,fc="white",ec=TINTA,fs=7,bold=False,tc=TINTA,lw=0.6,pad=0.25,hmin=0.0):
+    """Desenha caixa com o topo em ytop e altura automática; devolve o y da base."""
+    t=quebrar(texto,w,fs,bold,pad); n=t.count("\n")+1
+    h=max(hmin,n*fs*LH+2*pad*0.8)
+    ax.add_patch(FancyBboxPatch((x,ytop-h),w,h,boxstyle="round,pad=0,rounding_size=0.1",fc=fc,ec=ec,lw=lw))
+    ax.text(x+w/2,ytop-h/2,t,ha="center",va="center",fontsize=fs,fontweight="bold" if bold else "normal",color=tc,linespacing=1.15)
+    return ytop-h
+def seta(ax,x0,y0,x1,y1,color=TINTA,lw=0.6):
+    ax.add_patch(FancyArrowPatch((x0,y0),(x1,y1),arrowstyle="-|>",mutation_scale=7,color=color,lw=lw,shrinkA=0,shrinkB=0))
+# ---------------- Figura 1 ----------------
+W,H=16,11.2; fig,ax=canvas(W,H)
+ax.text(0,H-0.05,"Figura 1. Arquitetura do Potencial de Creche por Município (PCM)",fontsize=9,color=TINTA,va="top")
+cw=5.0; gap=0.5
+pil=[("Situação do ensino básico",FE_ESC,FE_RAMPA[0],["Matrículas em creche / pop. de 0 a 4 anos. Censo Escolar 2023; Censo 2022. Peso 2, sentido inverso","Matrículas em pré-escola e fundamental / pop. de 5 a 14 anos. Censo Escolar 2023; Censo 2022. Peso 1, sentido inverso","Oferta privada / oferta total. Censo Escolar 2023. Peso 1, sentido inverso"],"Fator educacional (FE): (2·a + b + c)/4, reescalado de 0 a 100","peso 2 no PCM"),
+     ("Perfil demográfico",FD_ESC,FD_RAMPA[0],["Mortalidade infantil (óbitos até 1 ano por mil nascidos vivos). Datasus 2020. Peso 1","População de 0 a 4 anos / população total. Censo 2022. Peso 1","Taxa de natalidade por mil habitantes. Ipardes 2022. Peso 1"],"Fator demográfico (FD): (a + b + c)/3, reescalado de 0 a 100","peso 1 no PCM"),
+     ("Quadro socioeconômico",FS_ESC,FS_RAMPA[0],["Desnutrição infantil (baixo peso para a idade, 0 a 4 anos). Ministério da Saúde 2023. Peso 1","Crianças a acompanhar no CadÚnico / pop. de 0 a 9 anos. Ministério da Saúde 2023. Peso 1","IPDM renda, emprego e produção agropecuária. Ipardes 2021. Peso 1, sentido inverso"],"Fator socioeconômico (FS): (a + b + c)/3, reescalado de 0 a 100","peso 2 no PCM")]
+ytop=H-0.65; ybase=[]
+for i,(tit,esc,claro,inds,fator,peso) in enumerate(pil):
+    x=i*(cw+gap); y=box(ax,x,ytop,cw,tit,fc=esc,ec=esc,fs=8,bold=True,tc="white")
+    for ind in inds: y=box(ax,x,y-0.12,cw,ind,fc=claro,ec=claro,fs=7,hmin=1.05)
+    ybase.append(y)
+y=min(ybase)-0.3
+ynorm=box(ax,0,y,W,"Normalização mínimo–máximo de cada indicador, de 0 a 100",fc="#F2F2F2",ec=BORDA,fs=7.5)
+yf=ynorm-0.35; ybf=[]
+for i,(tit,esc,claro,inds,fator,peso) in enumerate(pil):
+    x=i*(cw+gap); seta(ax,x+cw/2,ynorm,x+cw/2,yf)
+    yb=box(ax,x,yf,cw,fator,fc=esc,ec=esc,fs=7.5,bold=True,tc="white",hmin=0.9); ybf.append(yb)
+    ax.text(x+cw/2,yb-0.2,peso,ha="center",va="center",fontsize=7,color=TINTA)
+ybar=min(ybf)-0.45
+ax.plot([cw/2,2*(cw+gap)+cw/2],[ybar,ybar],color=TINTA,lw=0.6)
+for i in range(3): ax.plot([i*(cw+gap)+cw/2]*2,[min(ybf)-0.35,ybar],color=TINTA,lw=0.6)
+ypcm=ybar-0.3; seta(ax,W/2,ybar,W/2,ypcm)
+yend=box(ax,1.5,ypcm,W-3,"PCM = (2·FE + FD + 2·FS)/5/100, entre 0 e 1 (observado: 0,240 a 0,789)\nVariante usada só na faixa P3 da consolidada: (1·FE + FD + 3·FS)/5/100",fc=PCM_ESC,ec=PCM_ESC,fs=7.5,bold=True,tc="white")
+ax.set_ylim(yend-0.2,H)
+fig.text(0,0,"Fonte: Elaboração própria a partir das planilhas do PCM, da apresentação do programa e da Resolução SEDEF 219/2024.",fontsize=7,color=TINTA2,va="top")
 salvar(fig,OUT+"diagrama01_arquitetura_pcm"); plt.close(fig)
-# ---------------- D2: regra de conversão ----------------
-fig,ax=canvas(7.4,5.9); W,H=18.8,15.0
-ax.text(0.2,H-0.35,"Figura 2. Regra de conversão do PCM em creches na distribuição consolidada (300 unidades)",fontsize=10,fontweight="medium",color=GRAFITE,va="top")
-box(ax,0.5,H-2.1,17.8,1.05,"Entradas por município: população total 2022 (define o porte), população-alvo 0–4 anos, PCM, creches já atribuídas na etapa prévia (43 unidades)",fc="#f4f6f7",ec="#c9d3d6",fs=7.2)
-box(ax,4.9,H-3.75,9.0,1.05,"Classificação em oito portes (G2, G1, M2, M1, P4, P3, P2, P1)\ne definição de cotas por bloco",fc=PETROLEO,ec=PETROLEO,fs=7.2,bold=True,tc="white")
-arrow(ax,9.4,H-2.1,9.4,H-2.7)
-# ramo grandes
-xl=0.5; wl=8.4; xr=9.9; wr=8.4; yb=H-4.5
-ax.text(xl+wl/2,yb-0.1,"Portes G2 a P4 (30 municípios, 100 creches)",ha="center",fontsize=7.8,fontweight="semibold",color=GRAFITE)
-ax.text(xr+wr/2,yb-0.1,"Portes P3, P2 e P1 (369 municípios, 157 creches)",ha="center",fontsize=7.8,fontweight="semibold",color=GRAFITE)
-arrow(ax,6.5,H-3.75,xl+wl/2,yb-0.35,cs="arc3,rad=0.15"); arrow(ax,12.3,H-3.75,xr+wr/2,yb-0.35,cs="arc3,rad=-0.15")
-stepsL=[("1. Cota populacional",  "J = (pop. 0–4 do município / pop. 0–4 do porte) × ponderação do porte (parcela da população-alvo × total ajustado)"),
-        ("2. Correção pelo PCM",  "K = J × (1 + PCM) − creches da etapa prévia"),
-        ("3. Arredondamento",     "parte inteira de K; unidades restantes distribuídas às maiores frações (maior resto)"),
-        ("4. Tetos por porte",    "G2: 10 · G1: 8 · M2: 7 · M1: 4 · P4: 2 creches por município; excedente redistribuído até fechar 100")]
-stepsR=[("1. Exclusão",           "municípios já contemplados na etapa prévia não entram no ranking"),
-        ("2. Ordenação pelo PCM", "P3 usa a variante (1·FE + FD + 3·FS)/5; P2 e P1 usam o PCM padrão"),
-        ("3. Cotas por porte",    "P3: 27 de 62 municípios · P2: 100 de 205 · P1: 30 de 102 (uma creche cada)"),
-        ("4. Resultado",          "157 municípios com uma creche; os demais ficam fora nesta etapa")]
-for i,(t,d) in enumerate(stepsL):
-    y=yb-0.55-i*1.7
-    box(ax,xl,y-1.45,wl,1.45,f"{t}\n{d}",fc="white",ec=PETROLEO,fs=6.6)
-    if i<3: arrow(ax,xl+wl/2,y-1.45,xl+wl/2,y-1.7,color=GRAFITE_CLARO,lw=0.7)
-for i,(t,d) in enumerate(stepsR):
-    y=yb-0.55-i*1.7
-    box(ax,xr,y-1.45,wr,1.45,f"{t}\n{d}",fc="white",ec=VERDE,fs=6.6)
-    if i<3: arrow(ax,xr+wr/2,y-1.45,xr+wr/2,y-1.7,color=GRAFITE_CLARO,lw=0.7)
-yend=yb-0.55-3*1.7-1.45-0.5
-box(ax,0.5,yend-1.25,17.8,1.25,"Distribuição consolidada: 43 (etapa prévia) + 100 (portes grandes) + 157 (ranking nos portes pequenos) = 300 creches em 224 municípios",fc=VERDE,ec=VERDE,fs=7.2,bold=True,tc="white")
-arrow(ax,xl+wl/2,yb-0.55-3*1.7-1.45,xl+wl/2,yend); arrow(ax,xr+wr/2,yb-0.55-3*1.7-1.45,xr+wr/2,yend)
-fig.text(0.01,0.005,"Fonte: Elaboração própria a partir das abas Metodologia, Dados e Resultados da planilha 20240327_Distribuicao_Creches. O passo 4 do bloco grande reproduz 28 dos 30 valores observados; a regra do bloco pequeno reproduz os 157 casos.",fontsize=6.3,color=GRAFITE_CLARO)
+# ---------------- Figura 2 ----------------
+W,H=16,12.5; fig,ax=canvas(W,H)
+ax.text(0,H-0.05,"Figura 2. Regra de conversão do PCM em creches na distribuição consolidada (300 unidades)",fontsize=9,color=TINTA,va="top")
+y=box(ax,0,H-0.65,W,"Entradas por município: população total de 2022 (define o porte), população-alvo, PCM e creches já atribuídas na etapa prévia (43 unidades)",fc="#F2F2F2",ec=BORDA,fs=7.5)
+seta(ax,W/2,y,W/2,y-0.3); y=box(ax,3.5,y-0.3,9,"Classificação em oito portes e definição de cotas por bloco",fc=CINZAS[1],ec=CINZAS[1],fs=8,bold=True,tc="white")
+wl=7.7; xr=W-wl; ytop=y-0.4
+seta(ax,6.5,y,wl/2,ytop); seta(ax,9.5,y,xr+wl/2,ytop)
+yl=box(ax,0,ytop,wl,"Portes G2 a P4: 30 municípios, 100 creches",fc=CINZAS[0],ec=CINZAS[0],fs=7.5,bold=True,tc="white")
+yr=box(ax,xr,ytop,wl,"Portes P3, P2 e P1: 369 municípios, 157 creches",fc=CINZAS[0],ec=CINZAS[0],fs=7.5,bold=True,tc="white")
+esq=["1. Cota populacional: J = parcela do município na população-alvo do porte × cota do porte",
+     "2. Correção pelo PCM: K = J × (1 + PCM), descontadas as creches da etapa prévia",
+     "3. Arredondamento: parte inteira de K; unidades restantes às maiores frações (maior resto)",
+     "4. Tetos por município: G2 10, G1 8, M2 7, M1 4 e P4 2; excedente redistribuído até fechar 100"]
+dir_=["1. Exclusão: municípios já contemplados na etapa prévia não entram no ranking",
+      "2. Ordenação pelo PCM dentro do porte: P3 usa a variante (1·FE + FD + 3·FS)/5/100; P2 e P1 usam o PCM padrão",
+      "3. Cotas por porte: P3, 27 de 62 municípios; P2, 100 de 205; P1, 30 de 102 (uma creche cada)",
+      "4. Resultado: 157 municípios com uma creche; os demais ficam fora nesta etapa"]
+for i in range(4):
+    seta(ax,wl/2,yl,wl/2,yl-0.3); seta(ax,xr+wl/2,yr,xr+wl/2,yr-0.3)
+    yl=box(ax,0,yl-0.3,wl,esq[i],fc="white",ec=CINZAS[1],fs=7,hmin=0.95); yr=box(ax,xr,yr-0.3,wl,dir_[i],fc="white",ec=CINZAS[1],fs=7,hmin=0.95)
+yb=min(yl,yr); seta(ax,wl/2,yl,wl/2,yb-0.35); seta(ax,xr+wl/2,yr,xr+wl/2,yb-0.35)
+yend=box(ax,0,yb-0.35,W,"Distribuição consolidada: 43 (etapa prévia) + 100 (portes grandes) + 157 (ranking nos portes pequenos) = 300 creches em 224 municípios",fc=CINZAS[2],ec=CINZAS[2],fs=7.5,bold=True,tc="white")
+ax.set_ylim(yend-0.2,H)
+fig.text(0,0,"Fonte: Elaboração própria a partir da planilha de 27/03/2024 (abas Metodologia, Dados e Resultados).",fontsize=7,color=TINTA2,va="top")
 salvar(fig,OUT+"diagrama02_regra_conversao"); plt.close(fig)
-print("D1, D2 ok")
-# ---------------- D3: da etapa técnica à execução ----------------
-fig,ax=canvas(7.4,6.2); W,H=18.8,15.7
-ax.text(0.2,H-0.35,"Figura 3. Da distribuição técnica à execução: etapas, decisões e marcos",fontsize=10,fontweight="medium",color=GRAFITE,va="top")
-etapas=[
- ("Base de dados e PCM","Nove indicadores (Censo 2022, Censo Escolar 2023, Datasus, CadÚnico, IPDM); três fatores; PCM = (2·FE + FD + 2·FS)/5/100 para 399 municípios","#f4f6f7","#c9d3d6",GRAFITE),
- ("Distribuição técnica inicial","Oito portes (P1 até 20 mil hab.); fórmula L = [J·(1+PCM) + 3·(PCM + K)]/4 e maior resto; 251 creches em 209 municípios; piso quase uniforme por município",PETROLEO,PETROLEO,"white"),
- ("Distribuição consolidada (planilha de 27/03/2024)","Etapa prévia de 43 unidades (índice de prioridade do Ipardes) + 100 para os 30 municípios grandes (cota populacional × (1+PCM), tetos) + 157 por ranking do PCM em P3, P2 e P1 (portes reclassificados); 300 creches em 224 municípios",VERDE,VERDE,"white"),
- ("Lista publicada (Deliberação CEDCA 25/2024, de 24/05; Resolução SEDEF 219/2024, de 04/06/2024)","Anexo I com 303 creches em 261 municípios: 17 municípios grandes cedem 37 unidades; 37 municípios entram com uma unidade, todos logo abaixo da linha de corte do ranking em seu porte; nenhum município selecionado é retirado",LARANJA,LARANJA,"white"),
- ("Habilitação (jun/2024 a 2025)","Adesão no sistema fundo a fundo até 19/06/2024; terreno de 1.200 m², projeto padrão de 456,86 m², conselho e fundo municipais ativos; 11 vagas remanescentes reofertadas em 24/06/2024; prazos prorrogados três vezes em 2024; segunda etapa em 2025 (108 unidades, 100 municípios)","white",GRAFITE,GRAFITE),
- ("Licitação e obras (2025 a 2026)","Teto por unidade de R$ 1,30 milhão (2024) a R$ 1,99 milhão (2025); Paranacidade analisa projetos e autoriza licitação; 52 licitações autorizadas em ago/2025, 107 em out/2025; 48 obras em fev/2026 e 110 obras em 106 municípios em mai/2026","white",GRAFITE,GRAFITE),
- ("Entregas","Nenhuma unidade concluída localizada em fonte oficial até set/2026; obra mais adiantada com 54% em mai/2026","#f4f6f7","#c9d3d6",GRAFITE)]
-y=H-1.2; hbox=[1.25,1.55,1.85,1.85,1.85,1.7,1.1]
-for i,(t,d,fc,ec,tc) in enumerate(etapas):
-    hb=hbox[i]
-    box(ax,0.6,y-hb,17.6,hb,f"{t}\n{d}",fc=fc,ec=ec,fs=6.8,tc=tc,bold=False)
-    ax.text(0.6+0.25,y-0.28,t,fontsize=7.2,fontweight="semibold",color=tc,va="center",ha="left") if False else None
-    if i<len(etapas)-1: arrow(ax,9.4,y-hb,9.4,y-hb-0.3,color=GRAFITE,lw=0.9)
-    y=y-hb-0.3
-fig.text(0.01,0.005,"Fonte: Elaboração própria a partir das planilhas do PCM, da Deliberação CEDCA 25/2024, das Resoluções SEDEF 212, 219 e 285/2024, 029, 075 e 479/2025 e de notícias da Agência Estadual de Notícias (2024 a 2026).",fontsize=6.3,color=GRAFITE_CLARO)
-salvar(fig,OUT+"diagrama03_etapas_execucao"); plt.close(fig)
-print("D3 ok")
+# ---------------- Figura S1 (suplementar) ----------------
+W,H=16,13; fig,ax=canvas(W,H)
+ax.text(0,H-0.05,"Figura S1. Da distribuição técnica à execução: etapas, decisões e marcos",fontsize=9,color=TINTA,va="top")
+etapas=[("Base de dados e PCM: nove indicadores, três fatores, PCM para 399 municípios","#F2F2F2",BORDA,TINTA),
+ ("Distribuição técnica inicial: fórmula com piso quase uniforme por município e maior resto; 251 creches em 209 municípios",CINZAS[0],CINZAS[0],"white"),
+ ("Distribuição consolidada (planilha de 27/03/2024): etapa prévia de 43 + 100 aos portes grandes com tetos + 157 por ranking nos portes pequenos; 300 creches em 224 municípios",CINZAS[1],CINZAS[1],"white"),
+ ("Lista publicada (Deliberação CEDCA 25/2024; Resolução SEDEF 219/2024): 303 creches em 261 municípios; 17 municípios grandes cedem 37 unidades e 37 municípios entram logo abaixo da linha de corte",ACENTO,ACENTO,"white"),
+ ("Habilitação (jun/2024 a 2025): adesão até 19/06/2024; terreno de 1.200 m², projeto padrão de 456,86 m²; vagas remanescentes reofertadas; prazos prorrogados; segunda etapa com 108 unidades em 2025","white",TINTA,TINTA),
+ ("Licitação e obras (2025 a 2026): teto de R$ 1,30 milhão a R$ 1,99 milhão por unidade; Paranacidade autoriza licitação; 52 licitações em ago/2025, 107 em out/2025; 48 obras em fev/2026 e 110 em mai/2026","white",TINTA,TINTA),
+ ("Entregas: nenhuma unidade concluída localizada em fonte oficial até set/2026; obra mais adiantada com 54% em mai/2026","#F2F2F2",BORDA,TINTA)]
+y=H-0.65
+for k,(t,fc,ec,tc) in enumerate(etapas):
+    y=box(ax,0,y,W,t,fc=fc,ec=ec,fs=7.5,tc=tc,hmin=0.8)
+    if k<len(etapas)-1: seta(ax,W/2,y,W/2,y-0.3); y=y-0.3
+ax.set_ylim(y-0.2,H)
+fig.text(0,0,"Fonte: Elaboração própria a partir das planilhas do PCM, da Deliberação CEDCA 25/2024, das Resoluções SEDEF 212, 219 e 285/2024, 029, 075 e 479/2025 e de notícias da Agência Estadual de Notícias (2024 a 2026).",fontsize=7,color=TINTA2,va="top")
+salvar(fig,OUT+"diagramaS1_etapas_execucao"); plt.close(fig)
+print("diagramas ok")

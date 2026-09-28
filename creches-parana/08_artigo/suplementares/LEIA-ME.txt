@@ -1,0 +1,6 @@
+Arquivos suplementares editáveis para a submissão (Revista Paranaense de Desenvolvimento)
+- graficos_e_tabelas_editaveis.xlsx: dados e gráficos nativos do Excel (Gráfico 1 e Gráfico S2) e as Tabelas 1 a 4 e o Quadro 1 do manuscrito.
+- figura01_arquitetura_pcm.svg/.pdf e figura02_regra_conversao.svg/.pdf: diagramas vetoriais editáveis (abrem no CorelDRAW/Inkscape).
+- mapa01_pcm_fatores.jpg e mapa02_tipologia.jpg: mapas em JPEG a 300 dpi no tamanho final (16 cm; 1.890 px de largura); versões PNG e SVG editável ao lado.
+- grafico01_cenarios.svg/.png: gráfico vetorial e imagem.
+Fonte tipográfica das figuras: Arial (renderizada com Liberation Sans, metricamente equivalente).
