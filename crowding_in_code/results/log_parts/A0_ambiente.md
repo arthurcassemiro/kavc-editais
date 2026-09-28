@@ -7,3 +7,4 @@
 - Mapeamento de modalidade do painel (funcao modGroup do JS): 90 e 91 = direta; 67 e 99 = outra; todas as demais = transferencia (inclui 50, 60, 70 e 80, alem de estados, municipios e consorcios).
 - Desembolsos do BNDES no painel (BN2_GZ, tabela disb) sao anuais por UF, nao mensais. Extraidos para data/downloads/2026-09-28_painel_bndes_desembolsos_anual_uf.csv.
 - data/original e data/raw ficaram somente leitura no conteiner; R/00_setup.R bloqueia escrita nelas.
+- 2026-09-28: o autor aprovou a classificacao dos segmentos da SEST: petroleo = "Oil, gas & derivatives"; economica = Electricity, Transport, Port administration, Airport administration; outras = Financial, Commerce & services, Industry, Research, development & planning, Food supply.
