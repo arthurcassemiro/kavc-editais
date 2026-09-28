@@ -1,4 +1,4 @@
-# A1_replica, executado em 2026-09-28 19:48:53
+# A1_replica, executado em 2026-09-28 19:50:08
 R version 4.6.1 (2026-06-24)
 Platform: x86_64-pc-linux-gnu
 Running under: Ubuntu 24.04.4 LTS
@@ -8,7 +8,8 @@ BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0
 LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0  LAPACK version 3.12.0
 
 locale:
-[1] C
+ [1] LC_CTYPE=C.UTF-8    LC_NUMERIC=C        LC_TIME=C           LC_COLLATE=C        LC_MONETARY=C       LC_MESSAGES=C       LC_PAPER=C         
+ [8] LC_NAME=C           LC_ADDRESS=C        LC_TELEPHONE=C      LC_MEASUREMENT=C    LC_IDENTIFICATION=C
 
 time zone: Etc/UTC
 tzcode source: system (glibc)

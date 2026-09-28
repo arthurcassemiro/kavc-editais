@@ -11,6 +11,9 @@ suppressPackageStartupMessages({
   library(patchwork)
 })
 
+# Rscript roda em locale C neste conteiner; UTF-8 e necessario para os acentos da figura
+invisible(Sys.setlocale("LC_CTYPE", "C.UTF-8"))
+
 ETAPA <- "A1"
 log_reset(ETAPA)
 t_ini <- Sys.time()
@@ -22,7 +25,8 @@ num <- function(x, d = 4) {
   if (length(d) > 1) return(unname(mapply(num, x, d)))
   formatC(x, format = "f", digits = d, decimal.mark = ",")
 }
-sig <- function(x, d = 6) formatC(signif(x, d), format = "fg", digits = d, decimal.mark = ",")
+sig <- function(x, d = 6) trimws(formatC(signif(x, d), format = "fg", digits = d, decimal.mark = ","))
+sci <- function(x, d = 1) formatC(x, format = "e", digits = d, decimal.mark = ",")
 tnum <- function(x, d = 4) gsub(",", "{,}", num(x, d), fixed = TRUE)
 pval <- function(p) ifelse(p < 0.0001, "< 0,0001", num(p, 4))
 tpval <- function(p) ifelse(p < 0.0001, "$<$ 0{,}0001", tnum(p, 4))
@@ -69,7 +73,7 @@ dif_selic <- max(abs(ap$selic - exo[, "JUR"]))
 dif_pib <- max(abs(ap$cpib_pct / 100 - exo[, "PIB"]))
 cor_pvd <- cor(diff(log10(ap$imeq_indice)), diff(infmeq[, "PVD"]))
 log_part(ETAPA, "- Alinhamento das datas conferido com data/dados_dissertacao_apendiceA.csv (coluna trimestre 2002Q1 a 2019Q4): ",
-         "diferenca maxima Selic x JUR = ", sig(dif_selic, 3), "; PIB x cpib_pct/100 = ", sig(dif_pib, 3),
+         "diferenca maxima Selic x JUR = ", sci(dif_selic), "; PIB x cpib_pct/100 = ", sci(dif_pib),
          "; correlacao entre diff(log10(imeq_indice)) e diff(PVD) = ", num(cor_pvd, 4), ".")
 
 # Datas da dummy no arquivo
@@ -185,6 +189,8 @@ norm_t <- normality.test(modelo, multivariate.only = FALSE)
 raizes <- roots(modelo, modulus = TRUE)
 vsel <- VARselect(dinfmeq, lag.max = 8, type = "both", exogen = dexo)
 
+bg_lags <- tibble(lags.bg = 1:8, p = vapply(1:8, function(l) serial.test(modelo, lags.bg = l, type = "BG")$serial$p.value, 0))
+
 diag_row <- function(nome, ht, obs) {
   tibble(teste = nome, estatistica = unname(ht$statistic)[1],
          gl = paste(num(unname(ht$parameter), 0), collapse = "; "),
@@ -205,6 +211,9 @@ diag <- bind_rows(
 
 log_part(ETAPA, "- Diagnosticos (H0 de cada teste: ausencia de autocorrelacao, de ARCH, normalidade): ",
          paste(sprintf("%s: estat. %s, p = %s", diag$teste, num(diag$estatistica, 2), pval(diag$p)), collapse = "; "), ".")
+log_part(ETAPA, "- Leitura: Portmanteau (16 defasagens) nao rejeita ausencia de autocorrelacao; BG e ES com 5 defasagens rejeitam a 1%. ",
+         "p-valor do BG por numero de defasagens: ", paste(sprintf("%d: %s", bg_lags$lags.bg, num(bg_lags$p, 3)), collapse = "; "),
+         ". ARCH nao rejeitado. Normalidade rejeitada, pela curtose e pela equacao de INF; a de PVD nao rejeita.")
 log_part(ETAPA, "- No Rmd, serial.test(type = \"BG\"/\"ES\") foi chamado com lags.pt = 16, que esses testes ignoram; ",
          "o lag efetivo era o padrao lags.bg = 5, o mesmo usado aqui. ARCH multivariado com lags.multi = ", LAGS_ARCH,
          " (padrao do vars, o mesmo do Rmd).")
@@ -221,7 +230,7 @@ modelo_nivel <- vars::VAR(infmeq, p = 3, type = "both", exogen = exo)
 gr <- function(mod, causa, rotulo) {
   g <- causality(mod, cause = causa)$Granger
   efeito <- setdiff(colnames(mod$y), causa)
-  tibble(modelo = rotulo, hipotese = paste0(causa, " -> ", efeito), F = unname(g$statistic)[1],
+  tibble(modelo = rotulo, hipotese = paste0(causa, " -> ", efeito), causa = causa, efeito = efeito, F = unname(g$statistic)[1],
          gl1 = unname(g$parameter)[1], gl2 = unname(g$parameter)[2], p = unname(g$p.value)[1])
 }
 granger <- bind_rows(
@@ -385,7 +394,7 @@ md <- c(
   "",
   "- Dados: `data/original/0224_tri_estmeq.txt` (INF e PVD em log10) e `data/original/0124_inexo.txt` (PIB em variacao trimestral, JUR = Selic, DUM), 72 trimestres de 2002Q1 a 2019Q4.",
   "- Modelo: `vars::VAR(diff(infmeq), p = 3, type = \"both\", exogen = diff(exo))`, 68 observacoes efetivas (2003Q1 a 2019Q4). Choque ortogonal por Cholesky com INF antes de PVD.",
-  sprintf("- Datas conferidas com `data/dados_dissertacao_apendiceA.csv` (que tem a coluna de trimestre): Selic identica ao JUR (diferenca maxima %s), PIB identico a cpib_pct/100, correlacao de diff(log10(imeq_indice)) com diff(PVD) = %s.", sig(dif_selic, 3), num(cor_pvd, 4)),
+  sprintf("- Datas conferidas com `data/dados_dissertacao_apendiceA.csv` (que tem a coluna de trimestre): Selic identica ao JUR (diferenca maxima %s), PIB identico a cpib_pct/100 (diferenca maxima %s), correlacao de diff(log10(imeq_indice)) com diff(PVD) = %s.", sci(dif_selic), sci(dif_pib), num(cor_pvd, 4)),
   sprintf("- Dummy: DUM = 1 em %s. Confere com o esperado. Em diferenca vira pulsos (%s).", txt_dum, pulsos),
   "",
   "## Comparacao com os alvos",
@@ -433,6 +442,9 @@ md <- c(
   "## Diagnosticos dos residuos",
   "",
   md_table(diag %>% transmute(Teste = teste, Estatistica = num(estatistica, 2), gl = gl, `p-valor` = pval(p), Distribuicao = obs)),
+  "Leitura: o Portmanteau com 16 defasagens nao rejeita ausencia de autocorrelacao, mas BG e ES com 5 defasagens rejeitam a 1%. ARCH nao e rejeitado. Normalidade e rejeitada, pela curtose e pela equacao de INF; a equacao de PVD nao rejeita.",
+  "",
+  md_table(tibble(`lags.bg` = as.character(bg_lags$lags.bg), `p-valor BG` = num(bg_lags$p, 4))),
   sprintf("ARCH multivariado com lags.multi = %d (padrao do vars, o mesmo usado no Rmd). No Rmd, BG e ES foram chamados com lags.pt = 16, que esses testes ignoram; o lag efetivo e lags.bg = 5.", LAGS_ARCH),
   "",
   sprintf("Raizes (modulos do polinomio caracteristico): %s. Todas menores que 1: %s.", paste(num(raizes, 4), collapse = ", "), ifelse(all(raizes < 1), "sim", "nao")),
@@ -444,7 +456,7 @@ md <- c(
   "",
   "## Causalidade de Granger (vars::causality, teste F)",
   "",
-  md_table(granger %>% transmute(Modelo = modelo, Hipotese = paste("H0:", hipotese, "nao causa"), F = num(F, 2),
+  md_table(granger %>% transmute(Modelo = modelo, Hipotese = paste0("H0: ", causa, " nao Granger-causa ", efeito), F = num(F, 2),
                                  gl = paste0(gl1, " e ", gl2), `p-valor` = num(p, 4))),
   "VAR em nivel: `VAR(infmeq, p = 3, type = \"both\", exogen = exo)`, a chamada do Rmd (`var.est`). Os graus de liberdade 3 e 116 coincidem com os da Tabela 12 da dissertacao.",
   "",

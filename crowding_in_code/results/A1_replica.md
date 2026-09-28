@@ -1,12 +1,12 @@
 # A1. Replica em R do modelo final da dissertacao
 
-Gerado por `R/A1_replica.R` em 2026-09-28 19:48. Numeros com virgula decimal. Respostas em log10 (os dados estao em log10).
+Gerado por `R/A1_replica.R` em 2026-09-28 19:50. Numeros com virgula decimal. Respostas em log10 (os dados estao em log10).
 
 ## Especificacao
 
 - Dados: `data/original/0224_tri_estmeq.txt` (INF e PVD em log10) e `data/original/0124_inexo.txt` (PIB em variacao trimestral, JUR = Selic, DUM), 72 trimestres de 2002Q1 a 2019Q4.
 - Modelo: `vars::VAR(diff(infmeq), p = 3, type = "both", exogen = diff(exo))`, 68 observacoes efetivas (2003Q1 a 2019Q4). Choque ortogonal por Cholesky com INF antes de PVD.
-- Datas conferidas com `data/dados_dissertacao_apendiceA.csv` (que tem a coluna de trimestre): Selic identica ao JUR (diferenca maxima 0), PIB identico a cpib_pct/100, correlacao de diff(log10(imeq_indice)) com diff(PVD) = 1,0000.
+- Datas conferidas com `data/dados_dissertacao_apendiceA.csv` (que tem a coluna de trimestre): Selic identica ao JUR (diferenca maxima 0,0e+00), PIB identico a cpib_pct/100 (diferenca maxima 3,5e-18), correlacao de diff(log10(imeq_indice)) com diff(PVD) = 1,0000.
 - Dummy: DUM = 1 em 2018Q2-2019Q1 e 2019Q3-2019Q4. Confere com o esperado. Em diferenca vira pulsos (2018Q2: +1; 2019Q2: -1; 2019Q3: +1).
 
 ## Comparacao com os alvos
@@ -23,12 +23,12 @@ Gerado por `R/A1_replica.R` em 2026-09-28 19:48. Numeros com virgula decimal. Re
 | corr(u_INF, u_PVD) | 0,405 | 0,4056 | 0,405648 | sim, por truncamento (arredondado: 0,406) |
 | Granger INF -> PVD, VAR em diferenca, F | 3,27 | 3,2710 | 3,27095 | sim |
 | Granger INF -> PVD, VAR em diferenca, p | 0,024 | 0,0238 | 0,0238242 | sim |
-| Granger PVD -> INF, VAR em diferenca, F | 1,91 | 1,2694 |  1,2694 | nao |
+| Granger PVD -> INF, VAR em diferenca, F | 1,91 | 1,2694 | 1,2694 | nao |
 | Granger PVD -> INF, VAR em diferenca, p | 0,13 | 0,2883 | 0,288303 | nao |
 | Granger PVD -> INF, VAR em nivel, F | 1,91 | 1,9088 | 1,90879 | sim |
 | Granger PVD -> INF, VAR em nivel, p | 0,13 | 0,1320 | 0,13201 | sim |
-| Johansen, traco r = 0 (config. do Rmd) | 25,01 | 25,0060 |  25,006 | sim |
-| Johansen, valor critico 5% r = 0 | 25,32 | 25,3200 |   25,32 | sim |
+| Johansen, traco r = 0 (config. do Rmd) | 25,01 | 25,0060 | 25,006 | sim |
+| Johansen, valor critico 5% r = 0 | 25,32 | 25,3200 | 25,32 | sim |
 
 Notas:
 
@@ -92,6 +92,19 @@ Correlacao dos residuos: 0,4056.
 | Jarque-Bera univariado, INF | 15,10 | 2 | 0,0005 | qui-quadrado |
 | Jarque-Bera univariado, PVD | 3,63 | 2 | 0,1632 | qui-quadrado |
 
+Leitura: o Portmanteau com 16 defasagens nao rejeita ausencia de autocorrelacao, mas BG e ES com 5 defasagens rejeitam a 1%. ARCH nao e rejeitado. Normalidade e rejeitada, pela curtose e pela equacao de INF; a equacao de PVD nao rejeita.
+
+| lags.bg | p-valor BG |
+|---|---|
+| 1 | 0,0032 |
+| 2 | 0,0018 |
+| 3 | 0,0080 |
+| 4 | 0,0015 |
+| 5 | 0,0029 |
+| 6 | 0,0006 |
+| 7 | 0,0017 |
+| 8 | 0,0026 |
+
 ARCH multivariado com lags.multi = 5 (padrao do vars, o mesmo usado no Rmd). No Rmd, BG e ES foram chamados com lags.pt = 16, que esses testes ignoram; o lag efetivo e lags.bg = 5.
 
 Raizes (modulos do polinomio caracteristico): 0,7358, 0,7358, 0,6939, 0,6939, 0,6697, 0,5632. Todas menores que 1: sim.
@@ -115,10 +128,10 @@ Selecao: AIC = 3, HQ = 3, SC = 2, FPE = 3.
 
 | Modelo | Hipotese | F | gl | p-valor |
 |---|---|---|---|---|
-| VAR em diferenca (baseline) | H0: INF -> PVD nao causa | 3,27 | 3 e 114 | 0,0238 |
-| VAR em diferenca (baseline) | H0: PVD -> INF nao causa | 1,27 | 3 e 114 | 0,2883 |
-| VAR em nivel, exo em nivel | H0: INF -> PVD nao causa | 2,92 | 3 e 116 | 0,0372 |
-| VAR em nivel, exo em nivel | H0: PVD -> INF nao causa | 1,91 | 3 e 116 | 0,1320 |
+| VAR em diferenca (baseline) | H0: INF nao Granger-causa PVD | 3,27 | 3 e 114 | 0,0238 |
+| VAR em diferenca (baseline) | H0: PVD nao Granger-causa INF | 1,27 | 3 e 114 | 0,2883 |
+| VAR em nivel, exo em nivel | H0: INF nao Granger-causa PVD | 2,92 | 3 e 116 | 0,0372 |
+| VAR em nivel, exo em nivel | H0: PVD nao Granger-causa INF | 1,91 | 3 e 116 | 0,1320 |
 
 VAR em nivel: `VAR(infmeq, p = 3, type = "both", exogen = exo)`, a chamada do Rmd (`var.est`). Os graus de liberdade 3 e 116 coincidem com os da Tabela 12 da dissertacao.
 
