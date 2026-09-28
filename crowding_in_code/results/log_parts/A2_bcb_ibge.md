@@ -1,5 +1,5 @@
-### A2_bcb_ibge (execucao de 2026-09-28 19:48)
-#### BCB/SGS (R/A2_download_bcb.R, execucao de 2026-09-28 19:48)
+### A2_bcb_ibge (execucao de 2026-09-28 19:51)
+#### BCB/SGS (R/A2_download_bcb.R, execucao de 2026-09-28 19:51)
 - Metadados conferidos na pagina de cada serie no SGS (www3.bcb.gov.br/sgspub, em portugues) e no portal dadosabertos.bcb.gov.br (package_search por codigo_sgs). O portal so tem ficha para parte das series; o SGS tem todas.
   - SGS 432 (selic_meta): "Taxa de juros - Meta Selic definida pelo Copom"; unidade % a.a.; periodicidade Diária; inicio 05/03/1999; ultimo valor 04/11/2026; confere com a descricao pedida; ficha no portal: "Taxa de juros - Meta Selic definida pelo Copom".
   - SGS 4189 (selic_efetiva_mes): "Taxa de juros - Selic acumulada no mês anualizada base 252"; unidade % a.a.; periodicidade Mensal; inicio 31/07/1986; ultimo valor set/2026; confere com a descricao pedida; ficha no portal: "Taxa de juros - Selic acumulada no mês anualizada base 252".

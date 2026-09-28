@@ -113,9 +113,16 @@ sgs_baixar <- function(codigo, ini = INI, fim = FIM) {
   map_dfr(seq_len(nrow(jan)), function(k) {
     url <- sprintf("https://api.bcb.gov.br/dados/serie/bcdata.sgs.%s/dados?formato=json&dataInicial=%s&dataFinal=%s",
                    codigo, format(jan$de[k], "%d/%m/%Y"), format(jan$ate[k], "%d/%m/%Y"))
-    r <- RETRY("GET", url, accept_json(), times = 5, pause_base = 2, timeout(120))
-    stop_for_status(r)
-    js <- fromJSON(content(r, as = "text", encoding = "UTF-8"))
+    # A API as vezes devolve uma pagina HTML de "Requisicao invalida" com status 200:
+    # repete ate vir JSON.
+    for (tent in 1:10) {
+      r <- RETRY("GET", url, accept_json(), times = 5, pause_base = 2, timeout(120))
+      txt <- content(r, as = "text", encoding = "UTF-8")
+      if (status_code(r) == 200 && startsWith(trimws(txt), "[")) break
+      Sys.sleep(2 * tent)
+    }
+    if (!startsWith(trimws(txt), "[")) stop("SGS ", codigo, ": resposta invalida em ", url)
+    js <- fromJSON(txt)
     tibble(codigo = codigo, data = as.Date(js$data, "%d/%m/%Y"), valor = as.numeric(js$valor))
   }) %>% distinct() %>% arrange(data)
 }
