@@ -1,2 +1,10 @@
 ### A2_bcb_ibge (execucao de 2026-09-28 19:55)
 #### BCB/SGS (R/A2_download_bcb.R, execucao de 2026-09-28 19:55)
+- Metadados conferidos na pagina de cada serie no SGS (www3.bcb.gov.br/sgspub, em portugues) e no portal dadosabertos.bcb.gov.br (package_search por codigo_sgs). O portal so tem ficha para parte das series; o SGS tem todas.
+  - SGS 432 (selic_meta): "Taxa de juros - Meta Selic definida pelo Copom"; unidade % a.a.; periodicidade Diária; inicio 05/03/1999; ultimo valor 04/11/2026; confere com a descricao pedida; ficha no portal: "Taxa de juros - Meta Selic definida pelo Copom".
+  - SGS 4189 (selic_efetiva_mes): "Taxa de juros - Selic acumulada no mês anualizada base 252"; unidade % a.a.; periodicidade Mensal; inicio 31/07/1986; ultimo valor set/2026; confere com a descricao pedida; ficha no portal: "Taxa de juros - Selic acumulada no mês anualizada base 252".
+  - SGS 433 (ipca_var): "Índice nacional de preços ao consumidor-amplo (IPCA)"; unidade Var. % mensal; periodicidade Mensal; inicio 01/01/1980; ultimo valor ago/2026; confere com a descricao pedida; ficha no portal: nao ha.
+  - SGS 11752 (cambio_real_efetivo): "Índice da taxa de câmbio real efetiva (IPCA) - Jun/1994=100"; unidade Índice; periodicidade Mensal; inicio 01/01/1988; ultimo valor jun/2026; confere com a descricao pedida; ficha no portal: nao ha.
+  - SGS 27574 (icbr): "Índice de Commodities - Brasil"; unidade Índice; periodicidade Mensal; inicio 01/01/1998; ultimo valor ago/2026; confere com a descricao pedida; ficha no portal: nao ha.
+  - SGS 29042 (icbr_usd): "Índice de Commodities - Brasil (em US Dólares)"; unidade Índice; periodicidade Mensal; inicio 01/01/1998; ultimo valor ago/2026; confere com a descricao pedida; ficha no portal: nao ha.
+  - SGS 3698 (ptax_venda_media): "Taxa de câmbio - Livre - Dólar americano (venda) - Média de período - mensal"; unidade u.m.c./US$; periodicidade Mensal; inicio 31/01/1953; ultimo valor ago/2026; confere com a descricao pedida; ficha no portal: nao ha.
