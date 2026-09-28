@@ -1,0 +1,1050 @@
+---
+title: "Modelo Trimestral"
+author: "Arthur"
+date: "22/05/2023"
+output: html_document
+---
+
+Modelo 1 - VAR Investimento Público x Máquinas e Equipamentos
+
+
+```{r setup, include=FALSE}
+# Carregar Pacotes
+library(MASS)
+library(urca)
+library(MTS)
+library(vars)
+library(lmtest)
+library(tseries)
+library(stargazer)
+library(ggplot2)
+library(reshape2)
+library(dplyr)
+library(strucchange)
+library(tsDyn)
+
+# Importando Dados
+#Investimentos
+ipmeq<-read.table("0523_tri_ipfmeq.txt", header=TRUE, sep = "")
+
+#Exogeno
+exo<-read.table("0523_inexo.txt", header=TRUE, sep = "")
+
+# Trabalhar com os Dados
+attach(ipmeq)
+View(ipmeq)
+ipmeq=ts(ipmeq)
+ipmeq <- ts(ipmeq,  start = c(2002, 1), end = c(2019, 4), frequency = 4)
+exo <- ts(exo,  start = c(2002, 1), end = c(2019, 4), frequency = 4)
+
+#Vizualizando os dados
+plot(ipmeq, nc = 2, xlab = "")
+summary(ipmeq)
+
+
+## Definir variáveis
+  IPF <- ipmeq[,1] 
+  PVD <- ipmeq[,2]
+  PIB <- exo[,1]
+  JUROS <- exo[,2]
+  COM <- exo[,3]
+  UCI <- exo[,4]
+
+############
+# Gráficos #
+############
+#Gráfico das Séries
+layout(matrix(1:4,nrow=2,ncol=2))
+plot.ts(IPF,main='Investimento Público',ylab='Variação Real',xlab='Anos')
+plot.ts(PVD,main='Investimento Privado',ylab='Variação Real',xlab='Anos')
+plot.ts(PIB,main='Crescimento Econômico',ylab='Variação Real',xlab='Anos')
+
+## FAC e FACP
+par(mfrow=c(2,1))
+acf(IPF,lag.max=36,main='FAC',xlab='defasagem',ylab='autocorrelações')
+pacf(IPF,lag.max=36,main='FACP',xlab='defasagem',ylab='autocorrelações')
+
+acf(PVD,lag.max=36,main='FAC',xlab='defasagem',ylab='autocorrelações')
+pacf(PVD,lag.max=36,main='FACP',xlab='defasagem',ylab='autocorrelações')
+
+acf(PIBexo,lag.max=36,main='FAC',xlab='defasagem',ylab='autocorrelações')
+pacf(PIBexo,lag.max=36,main='FACP',xlab='defasagem',ylab='autocorrelações')
+
+###########################
+# Testes de Raiz Unitária #
+###########################
+
+#### Investimento Público #### 
+# Dickey-Fuller Ampliado
+summary(ur.df(IPF,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(IPF,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(IPF,type=c("none"),lags=8,selectlags='BIC'))
+
+# Dickey-Fuller com diferenciação (Se apresentar tendência)
+summary(ur.df(diff(IPF),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(IPF),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(IPF),type=c("none"),lags=8,selectlags='BIC'))
+
+# Kwiatkowski–Phillips–Schmidt–Shin (KPSS) 
+kpss.IPF <- kpss.test(IPF, null = c("Level"), lshort = TRUE)
+kpss.IPF
+kpss.IPF <- kpss.test(diff(IPF), null = c("Level"), lshort = TRUE)
+kpss.IPF
+
+
+# Zivot Andrews
+summary(ur.za(IPF,model = c("both"),lag=NULL))
+summary(ur.za(diff(IPF),model = c("both"),lag=NULL))
+
+# Philips-Perron
+summary(pp.test(IPF, type = c("Z_rho")))
+
+#### Investimento Privado ####
+# Dickey-Fuller Ampliado
+summary(ur.df(PVD,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(PVD,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(PVD,type=c("none"),lags=8,selectlags='BIC'))
+
+
+# Dickey-Fuller com diferenciação (Se apresentar tendência)
+summary(ur.df(diff(PVD),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PVD),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PVD),type=c("none"),lags=8,selectlags='BIC'))
+
+# Kwiatkowski–Phillips–Schmidt–Shin (KPSS) 
+kpss.PVD <- kpss.test(PVD, null = c("Trend"), lshort = TRUE)
+kpss.PVD
+
+kpss.diffPVD <- kpss.test(diff(PVD), null = c("Trend"), lshort = TRUE)
+kpss.diffPVD
+
+# Zivot Andrews
+summary(ur.za(PVD,model = c("both"),lag=NULL))
+
+summary(ur.za(diff(PVD),model = c("both"),lag=NULL))
+
+
+#### Capacidade Instalada Industria ####
+summary(ur.df(UCI,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(UCI,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(UCI,type=c("none"),lags=8,selectlags='BIC'))
+
+summary(ur.df(diff(UCI),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(UCI),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(UCI),type=c("none"),lags=8,selectlags='BIC'))
+
+
+# Kwiatkowski–Phillips–Schmidt–Shin (KPSS) 
+kpss.UCI <- kpss.test(UCI, null = c("Level"), lshort = TRUE)
+kpss.UCI
+kpss.UCI <- kpss.test(diff(UCI), null = c("Level"), lshort = TRUE)
+kpss.UCI
+
+
+# Zivot Andrews
+summary(ur.za(UCI,model = c("both"),lag=NULL))
+summary(ur.za(diff(UCI),model = c("both"),lag=NULL))
+
+
+#### Crescimento Econômico ####
+summary(ur.df(PIB,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(PIB,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(PIBexo,type=c("none"),lags=8,selectlags='BIC'))
+
+summary(ur.df(diff(PIB),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PIB),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PIBex),type=c("none"),lags=8,selectlags='BIC'))
+
+
+# Kwiatkowski–Phillips–Schmidt–Shin (KPSS) 
+kpss.PIB <- kpss.test(PIB, null = c("Trend"), lshort = TRUE)
+kpss.PIB
+kpss.PIB <- kpss.test(diff(PIB), null = c("Trend"), lshort = TRUE)
+kpss.PIB
+
+
+# Zivot Andrews
+summary(ur.za(PIB,model = c("both"),lag=NULL))
+summary(ur.za(diff(PIB),model = c("both"),lag=NULL))
+
+#### Taxa de Juros ####
+summary(ur.df(JUROS,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(JUROS,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(JUROS,type=c("none"),lags=8,selectlags='BIC'))
+
+summary(ur.df(diff(JUROS),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(JUROS),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(JUROS),type=c("none"),lags=8,selectlags='BIC'))
+
+
+# Kwiatkowski–Phillips–Schmidt–Shin (KPSS) 
+kpss.JUROS <- kpss.test(JUROS, null = c("Level"), lshort = TRUE)
+kpss.JUROS
+kpss.JUROS <- kpss.test(diff(JUROS), null = c("Level"), lshort = TRUE)
+kpss.JUROS
+
+
+# Zivot Andrews
+summary(ur.za(JUROS,model = c("both"),lag=NULL))
+summary(ur.za(diff(JUROS),model = c("both"),lag=NULL))
+
+
+
+
+###########################
+# Teste de Cointegração Johansen #
+###########################
+
+CA <- ca.jo(diff(ipmeq), type = c("trace"), ecdet = c("const"), K = 2, spec=c("longrun"), season = NULL, dumvar = NULL)
+summary(CA)
+
+
+#############################
+# Seleção da ordem p do VAR #
+#############################
+
+#Se o modelo apresenta raiz unitária, usar a diferenciação dos dados
+dados <- diff(ipmeq)
+dados2 <- diff(exo)
+
+#Ordem de Seleção do VAR
+m1=VARselect(dados,lag.max=10,type='both', exogen = dados2[,1:2]); m1
+m2=VARorder(dados,maxp=8); m2
+
+
+#######################
+# Estimação do modelo #
+#######################
+modelo=VAR(dados,p=6,type=c('both'), lag.max = NULL, ic = 'AIC', exogen = dados2[,1:2])
+modelo
+
+#Resumo de cada equação
+
+summary(modelo,equation='IPF')
+
+summary(modelo,equation='PVD')
+
+#Análise das raízes - tem que ser menor que 1 para ver se o modelo é estável
+roots(modelo)
+
+
+
+#########################
+# Diagnóstico do Modelo #
+
+###########################
+# Teste de Quebra Estrutural 
+
+# Estabilidade do Modelo
+reccusum = stability(modelo, type = 'OLS-CUSUM')
+plot(reccusum)
+
+# Teste Chow do Modelo
+sctest(IPF ~ PVD, type = "Chow", point = 36)
+
+
+#########################
+# Função de Autocorrelação Parcial 
+layout(matrix(1:4,nrow=2,ncol=2))
+acf(residuals(modelo)[,1],main='IPF')
+acf(residuals(modelo)[,2],main='PIBexo')
+
+#Teste ARCH-LM Multivariado          Teste ARCH| H0: os residuos nao possuem efeitos auto-regressivos de heteroscedasticidade condicional - teste de heterodcedasticidade condicional dos residuos indica que que nao poe-se rejeitar Ho: residuos sao homocedasticos - nao permite rejeitar
+
+#Teste para Variância
+modelo.arch=arch.test(modelo)
+modelo.arch
+
+#Teste de Normalidade                Teste de Jarque-Bera| H0: normalidade dos residuos
+model.norm=normality.test(modelo,multivariate.only = FALSE)
+model.norm
+plot(model.norm)
+
+#Teste de Correlação Serial          Teste de Autocorrelação| H0: os residuos sao iid
+##Teste de Portmanteau - grandes amostras 
+model.pt.asy=serial.test(modelo,lags.pt=16, type='PT.asymptotic')
+model.pt.asy
+plot(model.pt.asy)
+
+##Teste de Portmanteau - pequenas amostras - Ho nao há autocorrelação serial dos residuios - pvalor menor que 10 nao se pode rejeitar ho
+model.pt.adj=serial.test(modelo,lags.pt=16, type='PT.adjusted')
+model.pt.adj
+plot(model.pt.adj)
+
+#Teste LM - Proposto por Breusch-Godfrey
+model.BG=serial.test(modelo,lags.pt=16,type='BG')
+model.BG
+
+#Teste F - Proposto por Edgerton - Shukur
+model.ES=serial.test(modelo,lags.pt=16,type='ES')
+model.ES
+
+
+
+########################
+# Teste de Causalidade #
+########################
+
+var.Grangertest.dGC1 <- grangertest(IPF ~ PVD, order = 3, data = dados)
+var.Grangertest.dGC1
+
+var.est <- vars::VAR(dados, p = 6, type = "both", season = NULL, 
+              exog = dados2)
+#Fazendo o teste de causalidade de Granger
+## H0: PIBexo nÃ£o Granger-causa desemprego
+granger.PIBexo <- vars::causality(var.est, cause = "IPF")$Granger
+granger.PIBexo
+
+
+
+#Analisando a matriz de variancia-covariancia:
+sum.model <- summary(modelo)
+sum.model$covres
+
+
+#Como os elementos fora da diagonal da matriz nao sao zero, podemos supor que há correlacao contemporanea entre as variaveis no modelo VAR.
+
+#Confirmado pela matriz de correlacao:
+sum.model$corres
+
+#Dada a matriz de variancia-covariancia P estimada, a decomposicao pode ser obtida por
+t(chol(sum.model$covres))
+
+
+##############################
+# Função Resposta ao Impulso #
+##############################
+# Plotar gráficos individualmente
+irf.adm_PIB=irf(modelo,impulse='IPF',response='FBCF', ci = 0.95, cumulative = TRUE)
+plot(irf.adm_PIB)
+
+irf.adm_cons=irf(modelo,impulse='IPF', response='IPF')
+plot(irf.adm_cons)
+
+irf.adm_total=irf(modelo,impulse='PIBexo',response='IPF')
+plot(irf.adm_total)
+
+irf.adm_adm=irf(modelo,impulse='PIBexo',response='PIBexo')
+plot(irf.adm_adm)
+
+# Alternativamente...
+plot(irf(modelo, ci = 0.90, n.ahead = 10))
+
+#################################################
+# Decomposição da Variância do Erro de Previsão #
+#################################################
+modelo.rw=fevd(modelo,n.ahead=10)
+modelo.rw$IPF
+modelo.rw$FBCF
+
+###################################
+# Estimação do modelo com exogeno #
+###################################
+
+
+pibedif = diff(PIBexo)
+modelo2=VARX(dados, 6, xt = dados2[,3], m = 0, include.mean = T, fixed = NULL, output = T)
+impulsox=VARXirf(modelo2, lag = 12, orth = TRUE)
+
+
+
+
+```
+
+Modelo 2 - VAR Investimento Social x FBCF
+```{r}
+# Carregar Pacotes
+library(MASS)
+library(urca)
+library(MTS)
+library(vars)
+library(lmtest)
+library(tseries)
+library(stargazer)
+library(ggplot2)
+library(reshape2)
+library(dplyr)
+library(strucchange)
+
+# Importando Dados
+#Investimentos
+socpvd<-read.table("0523_tri_socpvd.txt", header=TRUE, sep = "")
+
+#Exogeno
+exo<-read.table("0523_inexo.txt", header=TRUE, sep = "")
+
+
+# Trabalhar com os Dados
+attach(socpvd)
+View(socpvd)
+socpvd=ts(socpvd)
+socpvd <- ts(socpvd,  start = c(2002, 1),  end = c(2019, 4), frequency = 4)
+exo <- ts(exo,  start = c(2002, 1),  end = c(2019, 4),frequency = 4)
+
+#Vizualizando os dados
+plot(socpvd, nc = 2, xlab = "")
+summary(socpvd)
+
+
+## Definir variáveis
+  SOC <- socpvd[,1] 
+  PVD <- socpvd[,2]
+  PIB <- exo[,1]
+  JUROS <- exo[,2]
+  COM <- exo[,3]
+  UCI <- exo[,4]
+
+############
+# Gráficos #
+############
+#Gráfico das Séries
+layout(matrix(1:4,nrow=2,ncol=2))
+plot.ts(SOC,main='Investimento Público',ylab='Variação Real',xlab='Anos')
+plot.ts(PVD,main='Investimento Privado',ylab='Variação Real',xlab='Anos')
+plot.ts(PIB,main='Crescimento Econômico',ylab='Variação Real',xlab='Anos')
+
+## FAC e FACP
+par(mfrow=c(2,1))
+acf(SOC,lag.max=36,main='FAC',xlab='defasagem',ylab='autocorrelações')
+pacf(SOC,lag.max=36,main='FACP',xlab='defasagem',ylab='autocorrelações')
+
+acf(PVD,lag.max=36,main='FAC',xlab='defasagem',ylab='autocorrelações')
+pacf(PVD,lag.max=36,main='FACP',xlab='defasagem',ylab='autocorrelações')
+
+acf(PIB,lag.max=36,main='FAC',xlab='defasagem',ylab='autocorrelações')
+pacf(PIB,lag.max=36,main='FACP',xlab='defasagem',ylab='autocorrelações')
+
+###########################
+# Testes de Raiz Unitária #
+###########################
+
+#### Investimento Público #### 
+# Dickey-Fuller Ampliado
+summary(ur.df(SOC,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(SOC,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(SOC,type=c("none"),lags=8,selectlags='BIC'))
+
+# Dickey-Fuller com diferenciação (Se apresentar tendência)
+summary(ur.df(diff(SOC),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(SOC),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(SOC),type=c("none"),lags=8,selectlags='BIC'))
+
+# Kwiatkowski–Phillips–Schmidt–Shin (KPSS) 
+kpss.SOC <- kpss.test(SOC, null = c("Trend"), lshort = TRUE)
+kpss.SOC
+
+
+kpss.SOCdiff <- kpss.test(diff(SOC), null = c("Trend"), lshort = TRUE)
+kpss.SOCdiff  
+
+# Zivot Andrews
+summary(ur.za(SOC,model = c("intercept"),lag=NULL))
+summary(ur.za(diff(SOC),model = c("intercept"),lag=NULL))
+
+
+#### Investimento Privado ####
+# Dickey-Fuller Ampliado
+summary(ur.df(PVD,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(PVD,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(PVD,type=c("none"),lags=8,selectlags='BIC'))
+
+
+# Dickey-Fuller com diferenciação (Se apresentar tendência)
+summary(ur.df(diff(PVD),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PVD),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PVD),type=c("none"),lags=8,selectlags='BIC'))
+
+# Kwiatkowski–Phillips–Schmidt–Shin (KPSS) 
+kpss.SOC <- kpss.test(SOC, null = c("Trend"), lshort = TRUE)
+kpss.SOC
+
+# Zivot Andrews
+summary(ur.za(SOC,model = c("intercept"),lag=NULL))
+
+# Philips-Perron
+summary(pp.test(SOC, type = c("Z_rho")))
+
+#### Crescimento Econômico ####
+summary(ur.df(PIB,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(PIB,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(PIB,type=c("none"),lags=8,selectlags='BIC'))
+
+summary(ur.df(diff(PIBex),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PIBex),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PIBex),type=c("none"),lags=8,selectlags='BIC'))
+
+###########################
+# Teste de Cointegração Johansen #
+###########################
+dados <- diff(socpvd)
+dados2 <- diff(exo)
+CA <- ca.jo(socpvd, type = c("trace"), ecdet = c("const"), K = 2, spec=c("longrun"), season = NULL, dumvar = NULL)
+summary(CA)
+
+###########################
+# Teste de Quebra Estrutural #
+###########################
+
+# Estabilidade do Modelo
+reccusum = stability(modelo, type = 'OLS-CUSUM')
+plot(reccusum)
+
+# Teste Chow do Modelo
+sctest(SOC ~ PVD, type = "Chow", point = 10)
+
+#############################
+# Seleção da ordem p do VAR #
+#############################
+
+#Se o modelo apresenta raiz unitária, usar a diferenciação dos dados
+dados <- diff(socpvd)
+dados2 <- diff(exo)
+
+#Ordem de Seleção do VAR
+m1=VARselect(dados,lag.max=8,type='both', exo = dados2); m1
+m2=VARorder(dados,maxp=8); m2
+
+
+#######################
+# Estimação do modelo #
+#######################
+modelo=VAR(dados,p=9,type=c('both'), lag.max = NULL, exo = dados2, ic = c("AIC"))
+modelo
+
+#Resumo de cada equação
+
+summary(modelo,equation='SOC')
+
+summary(modelo,equation='PVD')
+
+#Análise das raízes - tem que ser menor que 1 para ver se o modelo é estável
+roots(modelo)
+
+#########################
+# Diagnóstico do Modelo #
+#########################
+
+# Função de Autocorrelação Parcial 
+layout(matrix(1:4,nrow=2,ncol=2))
+resi<- acf(residuals(modelo)[,1:2],main='SOC')
+resi
+acf(residuals(modelo)[,2],main='PIB')
+
+#Teste ARCH-LM Multivariado          Teste ARCH| H0: os residuos nao possuem efeitos auto-regressivos de heteroscedasticidade condicional - teste de heterodcedasticidade condicional dos residuos indica que que nao poe-se rejeitar Ho: residuos sao homocedasticos - nao permite rejeitar
+
+#Teste para Variância
+modelo.arch=arch.test(modelo)
+modelo.arch
+
+#Teste de Normalidade                Teste de Jarque-Bera| H0: normalidade dos residuos
+model.norm=normality.test(modelo,multivariate.only = FALSE)
+model.norm
+plot(model.norm)
+
+#Teste de Correlação Serial          Teste de Autocorrelação| H0: os residuos sao iid
+##Teste de Portmanteau - grandes amostras 
+model.pt.asy=serial.test(modelo,lags.pt=16, type='PT.asymptotic')
+model.pt.asy
+plot(model.pt.asy)
+
+##Teste de Portmanteau - pequenas amostras - Ho nao há autocorrelação serial dos residuios - pvalor menor que 10 nao se pode rejeitar ho
+model.pt.adj=serial.test(modelo,lags.pt=16, type='PT.adjusted')
+model.pt.adj
+plot(model.pt.adj)
+
+#Teste LM - Proposto por Breusch-Godfrey
+model.BG=serial.test(modelo,lags.pt=16,type='BG')
+model.BG
+
+#Teste F - Proposto por Edgerton - Shukur
+model.ES=serial.test(modelo,lags.pt=16,type='ES')
+model.ES
+
+
+
+########################
+# Teste de Causalidade #
+########################
+
+var.Grangertest.dGC1 <- grangertest(SOC ~ PVD, order = 5, data = socpvd)
+var.Grangertest.dGC1
+
+var.est <- vars::VAR(dados[,1:2], p = 7, type = "both", season = NULL, 
+              exog = dados2[,1:2])
+#Fazendo o teste de causalidade de Granger
+## H0: PIB nÃ£o Granger-causa desemprego
+granger.pib <- vars::causality(var.est, cause = "PVD")$Granger
+granger.pib
+
+
+
+#Analisando a matriz de variancia-covariancia:
+sum.model <- summary(modelo)
+sum.model$covres
+
+
+#Como os elementos fora da diagonal da matriz nao sao zero, podemos supor que há correlacao contemporanea entre as variaveis no modelo VAR.
+
+#Confirmado pela matriz de correlacao:
+sum.model$corres
+
+#Dada a matriz de variancia-covariancia P estimada, a decomposicao pode ser obtida por
+t(chol(sum.model$covres))
+
+
+##############################
+# Função Resposta ao Impulso #
+##############################
+# Plotar gráficos individualmente
+irf.adm_PIB=irf(modelo,impulse='SOC',response='PVD', cumulative = TRUE, n.ahead = 30, ic = '0.90')
+plot(irf.adm_PIB)
+
+irf.adm_cons=irf(modelo,impulse='SOC', response='SOC', cumulative = TRUE)
+plot(irf.adm_cons)
+
+irf.adm_total=irf(modelo,impulse='PVD',response='PVD', cumulative = TRUE)
+plot(irf.adm_total)
+
+irf.adm_adm=irf(modelo,impulse='PIB',response='PVD')
+plot(irf.adm_adm)
+
+# Alternativamente...
+plot(irf(modelo, n.ahead = 10))
+
+#################################################
+# Decomposição da Variância do Erro de Previsão #
+#################################################
+modelo.rw=fevd(modelo,n.ahead=10)
+modelo.rw$SOC
+modelo.rw$PVD
+
+###################################
+# Estimação do modelo com exogeno #
+###################################
+
+pibedif = diff(PIBexo)
+modelo2=VARX(dados[,1:2], 8, xt = dados2[,1], m = 1, include.mean = T, fixed = NULL, output = T)
+impulsox=VARXirf(modelo2, lag = 12, orth = TRUE)
+
+summary(impulsox)
+
+```
+
+
+Modelo 3 - VAR Investimento Infraestrutura x FBCF
+
+```{r}
+
+# Carregar Pacotes
+library(MASS)
+library(urca)
+library(MTS)
+library(vars)
+library(lmtest)
+library(tseries)
+library(stargazer)
+library(ggplot2)
+library(reshape2)
+library(dplyr)
+library(strucchange)
+library(forecast)
+
+
+# Importando Dados
+#Investimentos
+infmeq<-read.table("0224_tri_estmeq.txt", header=TRUE, sep = "")
+
+#Exogenos
+exo<-read.table("0124_inexo.txt", header=TRUE, sep = "")
+
+#Dummy
+DUMMY<-read.table("DUMMY.txt", header=TRUE, sep = "")
+
+
+# Trabalhar com os Dados
+attach(infmeq)
+View(infmeq)
+infmeq=ts(infmeq)
+infmeq <- ts(infmeq,  start = c(2002, 1), end = c(2019, 4), frequency = 4)
+exo <- ts(exo,  start = c(2002, 1), end = c(2019, 4), frequency = 4)
+
+
+#Vizualizando os dados
+plot(infmeq, nc = 2, xlab = "")
+summary(infmeq)
+
+
+## Definir variáveis
+  INF <- infmeq[,1] 
+  PVD <- infmeq[,2]
+  PIB <- exo[,1]
+  JUROS <- exo[,2]
+  QUEB <- exo[,3]
+  
+  CAM <- exo[,3]
+  DUM1 <- dum
+############
+# Gráficos #
+############
+#Gráfico das Séries
+layout(matrix(1:4,nrow=2,ncol=2))
+plot.ts(INF,main='Investimento Público',ylab='Variação Real',xlab='Anos')
+plot.ts(PVD,main='Investimento Privado',ylab='Variação Real',xlab='Anos')
+plot.ts(PIB,main='Crescimento Econômico',ylab='Variação Real',xlab='Anos')
+
+## FAC e FACP
+par(mfrow=c(2,1))
+acf(INF,lag.max=36,main='FAC',xlab='defasagem',ylab='autocorrelações')
+pacf(INF,lag.max=36,main='FACP',xlab='defasagem',ylab='autocorrelações')
+
+acf(PVD,lag.max=36,main='FAC',xlab='defasagem',ylab='autocorrelações')
+pacf(PVD,lag.max=36,main='FACP',xlab='defasagem',ylab='autocorrelações')
+
+acf(PIBexo,lag.max=36,main='FAC',xlab='defasagem',ylab='autocorrelações')
+pacf(PIBexo,lag.max=36,main='FACP',xlab='defasagem',ylab='autocorrelações')
+
+###########################
+# Testes de Raiz Unitária #
+###########################
+
+#### Investimento Público #### 
+# Dickey-Fuller Ampliado
+summary(ur.df(INF,type=c("trend"),lags=8,selectlags='AIC'))
+summary(ur.df(INF,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(INF,type=c("none"),lags=8,selectlags='BIC'))
+
+# Dickey-Fuller com diferenciação (Se apresentar tendência)
+summary(ur.df(diff(INF),type=c("trend"),lags=8,selectlags='AIC'))
+summary(ur.df(diff(INF),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(INF),type=c("none"),lags=8,selectlags='BIC'))
+
+# Kwiatkowski–Phillips–Schmidt–Shin (KPSS) 
+kpss.INF <- kpss.test(INF, null = c("Level"), lshort = TRUE)
+kpss.INF
+
+kpss.INF <- kpss.test(diff(INF), null = c("Level"), lshort = TRUE)
+kpss.INF
+
+# Zivot Andrews
+summary(ur.za(INF,model = c("intercept"),lag=NULL))
+
+
+summary(ur.za(diff(INF),model = c("intercept"),lag=NULL))
+
+
+
+
+# Philips-Perron
+summary(pp.test(INF, type = c("Z_rho")))
+
+#### Investimento Privado ####
+# Dickey-Fuller Ampliado
+summary(ur.df(PVD,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(PVD,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(PVD,type=c("none"),lags=8,selectlags='BIC'))
+
+
+# Dickey-Fuller com diferenciação (Se apresentar tendência)
+summary(ur.df(diff(PVD),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PVD),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PVD),type=c("none"),lags=8,selectlags='BIC'))
+
+# Kwiatkowski–Phillips–Schmidt–Shin (KPSS) 
+kpss.PVD <- kpss.test(JUROS, null = c("Trend"), lshort = TRUE)
+kpss.PVD
+
+kpss.dPVD <- kpss.test(diff(JUROS), null = c("Trend"), lshort = TRUE)
+kpss.dPVD
+
+# Zivot Andrews
+summary(ur.za(JUROS,model = c("intercept"),lag=NULL))
+summary(ur.za(diff(JUROS),model = c("intercept"),lag=NULL))
+kpss.PVD <- kpss.test(diff(PVD), null = c("Level"), lshort = TRUE)
+kpss.PVD
+
+
+
+# Philips-Perron
+summary(pp.test(INF, type = c("Z_rho")))
+
+#### Crescimento Econômico ####
+summary(ur.df(PIB,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(PIB,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(PIB,type=c("none"),lags=8,selectlags='BIC'))
+
+summary(ur.df(diff(PIB),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PIB),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(PIBex),type=c("none"),lags=8,selectlags='BIC'))
+
+
+#### Commodities ####
+summary(ur.df(JUR,type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(JUROS,type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(JUROS,type=c("none"),lags=8,selectlags='BIC'))
+
+summary(ur.df(diff(PIBex),type=c("trend"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(COM),type=c("drift"),lags=8,selectlags='BIC'))
+summary(ur.df(diff(JUROS),type=c("none"),lags=8,selectlags='BIC'))
+
+# Kwiatkowski–Phillips–Schmidt–Shin (KPSS) 
+kpss.COM <- kpss.test(COM, null = c("Level"), lshort = TRUE)
+kpss.COM
+kpss.COM <- kpss.test(diff(COM), null = c("Level"), lshort = TRUE)
+kpss.COM
+
+
+# Zivot Andrews
+summary(ur.za(COM,model = c("both"),lag=NULL))
+summary(ur.za(diff(COM),model = c("both"),lag=NULL))
+
+
+
+###########################
+# Teste de Cointegração Johansen  e Tentativa VECM#
+###########################
+
+dados <- diff(infmeq)
+dados2 <- diff(exo)
+
+m1=VARselect(dados,lag.max=8,type='both', exogen = dados2[,1:2]); m1
+
+modelo=VAR(dados,p=4,type=c('both'),exogen = dados2, lag.max = NULL)
+modelo
+summary(modelo)
+
+
+CA <- ca.jo(infmeq, type = c("trace"), ecdet = c("trend"), K = 2,  spec=c("longrun"), dumvar = exo[,3])
+summary(CA)
+
+vectent <- VECM(infmeq, lag = 1, r = 1, include = c("both"), beta = NULL, estim = c("2OLS", 
+    "ML"), exogen = exo)
+summary(vectent)
+
+vecvar <- vec2var(CA, r = 1)
+serial.test(vecvar, lags.pt = 15)
+
+
+
+
+# Avaliação do Modelo
+
+#Análise das raízes - tem que ser menor que 1 para ver se o modelo é estável
+roots(vecvar)
+
+
+# Impulso Resposta
+
+impulse_INF <- irf(vecvar, impulse = "INF", response='PVD', n.ahead = 40, ci = 0.90,  cumulative = TRUE)
+plot(impulse_INF)
+
+
+
+vectent
+
+
+###########################
+# Teste de Quebra Estrutural #
+###########################
+
+# Estabilidade do Modelo
+reccusum = stability(modelo, type = 'OLS-CUSUM')
+plot(reccusum)
+
+snsupwald(dados[,1], dados, tau = 0.15)
+
+# Teste Chow do Modelo
+sctest(dados[,1] ~ dados[,2], type = "Chow", point = 64)
+plot(quebra)
+
+
+sctest(dados[,1] ~ dados[,2] + dados2[,1] + dados2[,2] + dados2[,3] + dados2[,4],  type = "Chow", point = 52)
+
+
+
+#############################
+# Seleção da ordem p do VAR #
+#############################
+
+#Se o modelo apresenta raiz unitária, usar a diferenciação dos dados
+dados <- diff(infmeq)
+dados2 <- diff(exo)
+dados3 <- diff(DUMMY)
+
+dummy2 <- seasonaldummy(dados, h = 67)
+dummy2
+
+#Ordem de Seleção do VAR
+m1=VARselect(dados,lag.max=8,type='both', exogen = dados2); m1
+m2=VARorder(infmeq,maxp=8); m2
+
+
+#######################
+# Estimação do modelo #
+#######################
+dados2 <- UCI[,1]
+
+modelo=VAR(dados,p=3,type=c('both'),exogen = dados2, lag.max = NULL)
+modelo
+
+modelo3=SVAR(modelo,estmethod = c("direct"),p=4,type=c('both'),exogen = dados3,  Amat = NULL, Bmat = NULL)
+
+
+#Resumo de cada equação
+
+summary(modelo,equation='INF')
+
+summary(modelo,equation='PVD')
+
+#Análise das raízes - tem que ser menor que 1 para ver se o modelo é estável
+roots(modelo)
+
+#########################
+# Diagnóstico do Modelo #
+#########################
+
+# Função de Autocorrelação Parcial 
+layout(matrix(1:4,nrow=2,ncol=2))
+acf(residuals(modelo)[,1],main='INF')
+acf(residuals(modelo)[,2],main='PIBexo')
+
+#Teste ARCH-LM Multivariado          Teste ARCH| H0: os residuos nao possuem efeitos auto-regressivos de heteroscedasticidade condicional - teste de heterodcedasticidade condicional dos residuos indica que que nao poe-se rejeitar Ho: residuos sao homocedasticos - nao permite rejeitar
+
+#Teste para Variância
+modelo.arch=arch.test(modelo)
+modelo.arch
+
+#Teste de Normalidade                Teste de Jarque-Bera| H0: normalidade dos residuos
+model.norm=normality.test(modelo,multivariate.only = FALSE)
+model.norm
+plot(model.norm)
+
+#Teste de Correlação Serial          Teste de Autocorrelação| H0: os residuos sao iid
+##Teste de Portmanteau - grandes amostras 
+model.pt.asy=serial.test(modelo,lags.pt=16, type='PT.asymptotic')
+model.pt.asy
+plot(model.pt.asy)
+
+##Teste de Portmanteau - pequenas amostras - Ho nao há autocorrelação serial dos residuios - pvalor menor que 10 nao se pode rejeitar ho
+model.pt.adj=serial.test(modelo,lags.pt=16, type='PT.adjusted')
+model.pt.adj
+plot(model.pt.adj)
+
+#Teste LM - Proposto por Breusch-Godfrey
+model.BG=serial.test(modelo,lags.pt=16,type='BG')
+model.BG
+
+#Teste F - Proposto por Edgerton - Shukur
+model.ES=serial.test(modelo,lags.pt=16,type='ES')
+model.ES
+
+dummy2 <- seasonaldummy(dados, h = NULL)
+
+########################
+# Teste de Causalidade #
+########################
+
+var.Grangertest.dGC1 <- grangertest(INF ~ PVD, order = 4, data = infmeq[,1:2])
+var.Grangertest.dGC1
+
+var.est <- vars::VAR(infmeq, p = 3, type = "both", exogen = exo)
+#Fazendo o teste de causalidade de Granger
+## H0: PIBexo nÃ£o Granger-causa desemprego
+granger.PIBexo <- vars::causality(var.est, cause = "PVD")$Granger
+granger.PIBexo
+
+
+
+#Analisando a matriz de variancia-covariancia:
+sum.model <- summary(modelo)
+sum.model$covres
+
+
+#Como os elementos fora da diagonal da matriz nao sao zero, podemos supor que há correlacao contemporanea entre as variaveis no modelo VAR.
+
+#Confirmado pela matriz de correlacao:
+sum.model$corres
+
+#Dada a matriz de variancia-covariancia P estimada, a decomposicao pode ser obtida por
+t(chol(sum.model$covres))
+
+
+##############################
+# Função Resposta ao Impulso #
+##############################
+# Plotar gráficos individualmente - Por Período
+
+irf.INF_PVD=irf(modelo,impulse='INF',response='PVD', n.ahead = 30, ci = 0.95)
+plot(irf.INF_PVD)
+
+irf.INF_INF=irf(modelo,impulse='INF',response='INF', n.ahead = 30, ci = 0.95)
+plot(irf.INF_INF)
+
+irf.PVD_INF=irf(modelo,impulse='PVD',response='INF', n.ahead = 30, ci = 0.95)
+plot(irf.PVD_INF)
+
+irf.PVD_PVD=irf(modelo,impulse='PVD',response='PVD', n.ahead = 30, ci = 0.95)
+plot(irf.PVD_PVD)
+
+# Plotar gráficos Cumulativo - Por Período
+
+irf.CUM.INF_PVD=irf(modelo,impulse='INF',response='PVD', n.ahead = 40, ci = 0.95,  cumulative = TRUE)
+plot(irf.CUM.INF_PVD)
+
+irf.CUM.INF_INF=irf(modelo,impulse='INF',response='INF', n.ahead = 40, ci = 0.95,  cumulative = TRUE)
+plot(irf.CUM.INF_INF)
+
+irf.CUM.PVD_INF=irf(modelo,impulse='PVD',response='INF', n.ahead = 30, ci = 0.95,  cumulative = TRUE)
+plot(irf.CUM.PVD_INF)
+
+irf.CUM.PVD_PVD=irf(modelo,impulse='PVD',response='PVD', n.ahead = 30, ci = 0.95,  cumulative = TRUE)
+plot(irf.CUM.PVD_PVD)
+
+
+irf.adm_PeIB=irf(vectent,impulse='INF',response='PVD', n.ahead = 30, ci = 0.95,  cumulative = TRUE)
+plot(irf.adm_PeIB)
+
+vec2var
+
+irf.adm_cons=irf(modelo,impulse='INF',response='PVD', n.ahead = 30, ci = 0.90,  cumulative = TRUE)
+plot(irf.adm_cons)
+
+irf.adm_total=irf(modelo,impulse='PIBexo',response='INF')
+plot(irf.adm_total)
+
+irf.adm_adm=irf(modelo,impulse='PIBexo',response='PIBexo')
+plot(irf.adm_adm)
+
+# Alternativamente...
+plot(irf(modelo, ci = 0.95, cumulative = TRUE, n.ahead = 30))
+
+#################################################
+# Decomposição da Variância do Erro de Previsão #
+#################################################
+modelo.rw=fevd(modelo,n.ahead=30)
+modelo.rw$INF
+modelo.rw$PVD
+
+###################################
+# Estimação do modelo com exogeno #
+###################################
+
+
+pibedif = diff(infmeq)
+
+UCIdif = diff(infmeq[,3])
+
+
+
+det <- diff(UCI)
+
+modelo2=VARX(dados, 3, xt = dados2[,2], m = 1, include.mean = T, fixed = NULL, output = T)
+impulsox=VARXirf(modelo2, lag = 12, orth = TRUE)
+
+
+
+
+#Investimentos
+DSfmeq<-read.table("RAIZTRANS.txt", header=TRUE, sep = "")
+
+```
+

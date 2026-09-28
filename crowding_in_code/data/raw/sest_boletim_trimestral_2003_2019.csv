@@ -1,0 +1,453 @@
+ano,trimestre,regiao,valor_nominal_bi,valor_real_bi_2025
+2003,1,Brazil (total),3.7892,12.7214
+2003,2,Brazil (total),4.3144,14.4846
+2003,3,Brazil (total),3.9739,13.3414
+2003,4,Brazil (total),6.6862,22.4473
+2004,1,Brazil (total),3.2009,10.0811
+2004,1,Center-West,0.0061,0.0192
+2004,1,National (not regionalized),1.3517,4.2571
+2004,1,North,0.1704,0.5367
+2004,1,Northeast,0.3682,1.1596
+2004,1,South,0.196,0.6173
+2004,1,Southeast,1.1085,3.4913
+2004,2,Brazil (total),4.5125,14.2119
+2004,2,Center-West,0.0134,0.0422
+2004,2,National (not regionalized),1.9009,5.9869
+2004,2,North,0.2043,0.6434
+2004,2,Northeast,0.3697,1.1644
+2004,2,South,0.3375,1.0629
+2004,2,Southeast,1.6867,5.3122
+2004,3,Brazil (total),4.9106,15.4658
+2004,3,Center-West,0.0205,0.0646
+2004,3,National (not regionalized),2.0557,6.4743
+2004,3,North,0.1929,0.6075
+2004,3,Northeast,0.528,1.6629
+2004,3,South,0.2865,0.9023
+2004,3,Southeast,1.827,5.7541
+2004,4,Brazil (total),6.8309,21.5137
+2004,4,Center-West,0.0471,0.1483
+2004,4,National (not regionalized),3.4122,10.7466
+2004,4,North,0.4211,1.3263
+2004,4,Northeast,0.5803,1.8277
+2004,4,South,0.5664,1.7838
+2004,4,Southeast,1.8037,5.6807
+2005,1,Brazil (total),3.7089,10.9301
+2005,1,Center-West,0.0182,0.0537
+2005,1,National (not regionalized),1.6901,4.9807
+2005,1,North,0.1232,0.3631
+2005,1,Northeast,0.4066,1.1983
+2005,1,South,0.2382,0.7019
+2005,1,Southeast,1.2324,3.6319
+2005,2,Brazil (total),4.3106,12.7033
+2005,2,Center-West,0.0217,0.0639
+2005,2,National (not regionalized),1.6688,4.918
+2005,2,North,0.2259,0.6657
+2005,2,Northeast,0.4816,1.4193
+2005,2,South,0.2461,0.7253
+2005,2,Southeast,1.6665,4.9111
+2005,3,Brazil (total),4.7941,14.1282
+2005,3,Center-West,0.0276,0.0813
+2005,3,National (not regionalized),1.7732,5.2256
+2005,3,North,0.2458,0.7244
+2005,3,Northeast,0.6438,1.8973
+2005,3,South,0.2752,0.811
+2005,3,Southeast,1.8286,5.3889
+2005,4,Brazil (total),8.8261,26.0105
+2005,4,Center-West,0.0862,0.2541
+2005,4,National (not regionalized),3.7062,10.9222
+2005,4,North,0.5199,1.5322
+2005,4,Northeast,0.7532,2.2197
+2005,4,South,0.4547,1.34
+2005,4,Southeast,3.306,9.7428
+2006,1,Brazil (total),4.7475,13.429
+2006,1,Center-West,0.026,0.0736
+2006,1,National (not regionalized),1.9109,5.4052
+2006,1,North,0.1532,0.4333
+2006,1,Northeast,0.5063,1.4322
+2006,1,South,0.2155,0.6096
+2006,1,Southeast,1.9356,5.4751
+2006,2,Brazil (total),5.0459,14.2732
+2006,2,Center-West,0.0477,0.1349
+2006,2,National (not regionalized),2.0893,5.91
+2006,2,North,0.1919,0.5428
+2006,2,Northeast,0.5649,1.5979
+2006,2,South,0.2119,0.5994
+2006,2,Southeast,1.9402,5.4881
+2006,3,Brazil (total),6.1011,17.258
+2006,3,Center-West,0.0871,0.2464
+2006,3,National (not regionalized),2.6091,7.3803
+2006,3,North,0.2639,0.7464
+2006,3,Northeast,0.7973,2.2553
+2006,3,South,0.1965,0.5559
+2006,3,Southeast,2.1471,6.0735
+2006,4,Brazil (total),7.6022,21.5041
+2006,4,Center-West,0.083,0.2348
+2006,4,National (not regionalized),3.6306,10.2698
+2006,4,North,0.3283,0.9287
+2006,4,Northeast,0.6815,1.9277
+2006,4,South,0.4462,1.2622
+2006,4,Southeast,2.4328,6.8815
+2007,1,Brazil (total),5.6549,15.4338
+2007,1,Center-West,0.0537,0.1466
+2007,1,National (not regionalized),2.0954,5.719
+2007,1,North,0.1108,0.3023
+2007,1,Northeast,0.6109,1.6673
+2007,1,South,0.2357,0.6433
+2007,1,Southeast,2.5486,6.9558
+2007,2,Brazil (total),6.3514,17.3347
+2007,2,Center-West,0.0423,0.1155
+2007,2,National (not regionalized),2.5576,6.9805
+2007,2,North,0.195,0.5322
+2007,2,Northeast,0.6946,1.8958
+2007,2,South,0.3041,0.83
+2007,2,Southeast,2.5578,6.981
+2007,3,Brazil (total),7.576,20.677
+2007,3,Center-West,0.0319,0.0871
+2007,3,National (not regionalized),3.1271,8.5347
+2007,3,North,0.3144,0.8582
+2007,3,Northeast,0.7479,2.0412
+2007,3,South,0.294,0.8025
+2007,3,Southeast,3.0608,8.3537
+2007,4,Brazil (total),10.1422,27.6809
+2007,4,Center-West,0.0754,0.2058
+2007,4,National (not regionalized),4.6976,12.821
+2007,4,North,0.3456,0.9433
+2007,4,Northeast,0.985,2.6883
+2007,4,South,0.4087,1.1155
+2007,4,Southeast,3.6298,9.9068
+2008,1,Brazil (total),7.1062,18.3526
+2008,1,Center-West,0.015,0.0387
+2008,1,National (not regionalized),2.8084,7.2531
+2008,1,North,0.1636,0.4225
+2008,1,Northeast,0.7463,1.9275
+2008,1,South,0.2962,0.765
+2008,1,Southeast,3.0766,7.9457
+2008,2,Brazil (total),8.4859,21.9159
+2008,2,Center-West,0.0735,0.1898
+2008,2,National (not regionalized),3.3719,8.7084
+2008,2,North,0.159,0.4107
+2008,2,Northeast,0.8796,2.2718
+2008,2,South,0.4591,1.1856
+2008,2,Southeast,3.5428,9.1497
+2008,3,Brazil (total),10.2054,26.3568
+2008,3,Center-West,0.0131,0.0339
+2008,3,National (not regionalized),3.8886,10.0429
+2008,3,North,0.2143,0.5535
+2008,3,Northeast,1.1337,2.928
+2008,3,South,0.6442,1.6637
+2008,3,Southeast,4.3115,11.1349
+2008,4,Brazil (total),17.0539,44.0438
+2008,4,Center-West,0.0612,0.158
+2008,4,National (not regionalized),6.0105,15.5228
+2008,4,North,0.3237,0.836
+2008,4,Northeast,2.053,5.3022
+2008,4,South,0.6932,1.7903
+2008,4,Southeast,7.9122,20.4343
+2009,1,Brazil (total),10.9311,26.9153
+2009,1,Center-West,0.0187,0.046
+2009,1,National (not regionalized),3.5411,8.7191
+2009,1,North,0.172,0.4235
+2009,1,Northeast,1.2215,3.0077
+2009,1,South,0.5793,1.4264
+2009,1,Southeast,5.3983,13.2921
+2009,2,Brazil (total),13.1455,32.3678
+2009,2,Center-West,0.0353,0.0869
+2009,2,National (not regionalized),4.6074,11.3447
+2009,2,North,0.2558,0.6298
+2009,2,Northeast,1.6835,4.1453
+2009,2,South,0.8209,2.0213
+2009,2,Southeast,5.7426,14.1399
+2009,3,Brazil (total),15.3761,37.8601
+2009,3,Center-West,0.0581,0.1431
+2009,3,National (not regionalized),4.7843,11.7803
+2009,3,North,0.3467,0.8537
+2009,3,Northeast,2.0662,5.0875
+2009,3,South,0.7876,1.9394
+2009,3,Southeast,7.3332,18.0563
+2009,4,Brazil (total),21.2132,52.2326
+2009,4,Center-West,0.0863,0.2125
+2009,4,National (not regionalized),5.5173,13.5851
+2009,4,North,0.7343,1.808
+2009,4,Northeast,3.5174,8.6608
+2009,4,South,1.3343,3.2854
+2009,4,Southeast,10.0237,24.681
+2010,1,Brazil (total),15.0879,35.3682
+2010,1,Center-West,0.0416,0.0975
+2010,1,National (not regionalized),3.6639,8.5888
+2010,1,North,0.2396,0.5616
+2010,1,Northeast,2.3489,5.5061
+2010,1,South,1.0438,2.4468
+2010,1,Southeast,7.7499,18.1669
+2010,2,Brazil (total),16.1633,37.8891
+2010,2,Center-West,0.0731,0.1714
+2010,2,National (not regionalized),4.5591,10.6871
+2010,2,North,0.318,0.7454
+2010,2,Northeast,2.6936,6.3142
+2010,2,South,1.3138,3.0797
+2010,2,Southeast,7.2057,16.8912
+2010,3,Brazil (total),17.7249,41.5497
+2010,3,Center-West,0.1183,0.2773
+2010,3,National (not regionalized),5.0162,11.7587
+2010,3,North,0.4689,1.0991
+2010,3,Northeast,3.2579,7.6369
+2010,3,South,1.6015,3.7542
+2010,3,Southeast,7.2621,17.0233
+2010,4,Brazil (total),23.8117,55.8181
+2010,4,Center-West,0.1987,0.4658
+2010,4,National (not regionalized),6.2856,14.7344
+2010,4,North,0.9041,2.1194
+2010,4,Northeast,3.9693,9.3047
+2010,4,South,1.4361,3.3665
+2010,4,Southeast,11.0179,25.8275
+2011,1,Brazil (total),14.6568,32.2194
+2011,1,Center-West,0.0756,0.1662
+2011,1,National (not regionalized),4.0102,8.8154
+2011,1,North,0.4179,0.9186
+2011,1,Northeast,3.0467,6.6975
+2011,1,South,1.1863,2.6078
+2011,1,Southeast,5.9203,13.0144
+2011,2,Brazil (total),15.4415,33.9445
+2011,2,Center-West,0.1333,0.2931
+2011,2,National (not regionalized),4.4462,9.7739
+2011,2,North,0.4776,1.0499
+2011,2,Northeast,3.4473,7.578
+2011,2,South,1.4934,3.2828
+2011,2,Southeast,5.4435,11.9663
+2011,3,Brazil (total),17.266,37.9552
+2011,3,Center-West,0.1086,0.2387
+2011,3,National (not regionalized),5.7169,12.5672
+2011,3,North,0.4299,0.945
+2011,3,Northeast,4.2272,9.2925
+2011,3,South,1.0378,2.2813
+2011,3,Southeast,5.7457,12.6305
+2011,4,Brazil (total),23.7829,52.281
+2011,4,Center-West,0.1894,0.4164
+2011,4,National (not regionalized),7.9897,17.5635
+2011,4,North,1.358,2.9853
+2011,4,Northeast,5.1806,11.3883
+2011,4,South,1.3201,2.9019
+2011,4,Southeast,7.7453,17.0262
+2012,1,Brazil (total),17.3941,36.2765
+2012,1,Center-West,0.0484,0.1009
+2012,1,National (not regionalized),6.649,13.8669
+2012,1,North,0.3889,0.811
+2012,1,Northeast,4.3474,9.0668
+2012,1,South,0.5931,1.2369
+2012,1,Southeast,5.3674,11.1941
+2012,2,Brazil (total),19.8805,41.462
+2012,2,Center-West,0.0982,0.2047
+2012,2,National (not regionalized),8.1682,17.0353
+2012,2,North,0.4883,1.0184
+2012,2,Northeast,4.5552,9.5001
+2012,2,South,0.9637,2.0099
+2012,2,Southeast,5.6067,11.6931
+2012,3,Brazil (total),19.8647,41.4291
+2012,3,Center-West,0.1025,0.2138
+2012,3,National (not regionalized),8.4906,17.7077
+2012,3,North,0.5154,1.075
+2012,3,Northeast,3.9415,8.2202
+2012,3,South,0.8881,1.8522
+2012,3,Southeast,5.9269,12.361
+2012,4,Brazil (total),29.8694,62.2945
+2012,4,Center-West,0.3635,0.758
+2012,4,National (not regionalized),10.6464,22.2038
+2012,4,North,1.0121,2.1108
+2012,4,Northeast,5.7477,11.9873
+2012,4,South,5.1616,10.7648
+2012,4,Southeast,6.9382,14.47
+2013,1,Brazil (total),19.1073,37.5216
+2013,1,Center-West,0.0321,0.063
+2013,1,National (not regionalized),6.962,13.6715
+2013,1,North,0.5174,1.016
+2013,1,Northeast,4.1875,8.2231
+2013,1,South,0.5133,1.008
+2013,1,Southeast,6.8952,13.5403
+2013,2,Brazil (total),22.8244,44.8209
+2013,2,Center-West,0.0583,0.1145
+2013,2,National (not regionalized),8.9944,17.6626
+2013,2,North,0.6318,1.2407
+2013,2,Northeast,4.1976,8.243
+2013,2,South,0.4488,0.8813
+2013,2,Southeast,8.4935,16.6789
+2013,3,Brazil (total),24.7317,48.5664
+2013,3,Center-West,0.0973,0.191
+2013,3,National (not regionalized),10.4219,20.4657
+2013,3,North,0.5415,1.0634
+2013,3,Northeast,4.1004,8.052
+2013,3,South,0.6954,1.3656
+2013,3,Southeast,8.8751,17.4283
+2013,4,Brazil (total),35.6476,70.0022
+2013,4,Center-West,0.1135,0.2229
+2013,4,National (not regionalized),17.7494,34.8551
+2013,4,North,0.9266,1.8196
+2013,4,Northeast,5.1269,10.0678
+2013,4,South,1.621,3.1832
+2013,4,Southeast,10.1103,19.8539
+2014,1,Brazil (total),20.0714,37.0686
+2014,1,Center-West,0.0801,0.1479
+2014,1,National (not regionalized),10.6213,19.6158
+2014,1,North,0.3788,0.6996
+2014,1,Northeast,1.9058,3.5197
+2014,1,South,0.8651,1.5977
+2014,1,Southeast,6.2202,11.4876
+2014,2,Brazil (total),21.3581,39.445
+2014,2,Center-West,0.1117,0.2063
+2014,2,National (not regionalized),11.232,20.7437
+2014,2,North,0.417,0.7701
+2014,2,Northeast,2.8614,5.2846
+2014,2,South,0.4901,0.9052
+2014,2,Southeast,6.2459,11.5352
+2014,3,Brazil (total),21.0314,38.8417
+2014,3,Center-West,0.1114,0.2057
+2014,3,National (not regionalized),10.4377,19.2767
+2014,3,North,0.4173,0.7706
+2014,3,Northeast,2.6372,4.8706
+2014,3,South,0.4804,0.8872
+2014,3,Southeast,6.9473,12.8306
+2014,4,Brazil (total),26.025,48.064
+2014,4,Center-West,0.1059,0.1956
+2014,4,National (not regionalized),14.2992,26.4084
+2014,4,North,0.556,1.0268
+2014,4,Northeast,2.7177,5.0191
+2014,4,South,0.4461,0.8239
+2014,4,Southeast,7.9,14.59
+2015,1,Brazil (total),17.2394,29.2015
+2015,1,Center-West,0.0383,0.0649
+2015,1,National (not regionalized),11.0179,18.663
+2015,1,North,0.1813,0.3071
+2015,1,Northeast,1.5459,2.6186
+2015,1,South,0.1237,0.2095
+2015,1,Southeast,4.3325,7.3387
+2015,2,Brazil (total),16.315,27.6357
+2015,2,Center-West,0.0861,0.1459
+2015,2,National (not regionalized),10.2912,17.4321
+2015,2,North,0.2436,0.4126
+2015,2,Northeast,1.2691,2.1496
+2015,2,South,0.1873,0.3172
+2015,2,Southeast,4.2377,7.1781
+2015,3,Brazil (total),17.7696,30.0996
+2015,3,Center-West,0.0306,0.0519
+2015,3,National (not regionalized),11.5164,19.5074
+2015,3,North,0.3004,0.5088
+2015,3,Northeast,1.3116,2.2217
+2015,3,South,0.1026,0.1738
+2015,3,Southeast,4.508,7.636
+2015,4,Brazil (total),19.9557,33.8025
+2015,4,Center-West,0.1305,0.221
+2015,4,National (not regionalized),12.7632,21.6194
+2015,4,North,0.6813,1.154
+2015,4,Northeast,1.5555,2.6349
+2015,4,South,0.1641,0.2779
+2015,4,Southeast,4.6609,7.895
+2016,1,Brazil (total),13.0272,20.293
+2016,1,Center-West,0.1159,0.1805
+2016,1,National (not regionalized),8.676,13.515
+2016,1,North,0.2271,0.3538
+2016,1,Northeast,0.8122,1.2651
+2016,1,South,0.0535,0.0834
+2016,1,Southeast,3.1425,4.8952
+2016,2,Brazil (total),12.0678,18.7986
+2016,2,Center-West,0.1028,0.1602
+2016,2,National (not regionalized),8.2466,12.8461
+2016,2,North,0.3435,0.5351
+2016,2,Northeast,0.7353,1.1453
+2016,2,South,0.0535,0.0833
+2016,2,Southeast,2.5859,4.0281
+2016,3,Brazil (total),11.5622,18.0108
+2016,3,Center-West,0.1355,0.211
+2016,3,National (not regionalized),8.155,12.7034
+2016,3,North,0.3022,0.4708
+2016,3,Northeast,0.5916,0.9216
+2016,3,South,0.0938,0.1461
+2016,3,Southeast,2.2843,3.5583
+2016,4,Brazil (total),13.2845,20.6938
+2016,4,Center-West,0.1696,0.2641
+2016,4,National (not regionalized),9.0101,14.0354
+2016,4,North,0.3497,0.5448
+2016,4,Northeast,0.5689,0.8862
+2016,4,South,0.0452,0.0705
+2016,4,Southeast,3.1408,4.8925
+2017,1,Brazil (total),9.8902,14.893
+2017,1,Center-West,0.0788,0.1187
+2017,1,National (not regionalized),6.9358,10.4443
+2017,1,North,0.1144,0.1723
+2017,1,Northeast,0.4966,0.7478
+2017,1,South,0.0106,0.016
+2017,1,Southeast,2.2541,3.3943
+2017,2,Brazil (total),11.3263,17.0557
+2017,2,Center-West,0.019,0.0286
+2017,2,National (not regionalized),8.0106,12.0627
+2017,2,North,0.1644,0.2475
+2017,2,Northeast,0.571,0.8598
+2017,2,South,0.0233,0.0352
+2017,2,Southeast,2.538,3.8219
+2017,3,Brazil (total),9.518,14.3327
+2017,3,Center-West,0.0213,0.0321
+2017,3,National (not regionalized),6.3806,9.6082
+2017,3,North,0.3123,0.4703
+2017,3,Northeast,0.8022,1.208
+2017,3,South,0.0428,0.0645
+2017,3,Southeast,1.9588,2.9496
+2017,4,Brazil (total),14.1474,21.3037
+2017,4,Center-West,0.0282,0.0425
+2017,4,National (not regionalized),10.5949,15.9543
+2017,4,North,0.3788,0.5704
+2017,4,Northeast,0.9309,1.4018
+2017,4,South,0.0416,0.0627
+2017,4,Southeast,2.1731,3.2724
+2018,1,Brazil (total),8.7636,12.7301
+2018,1,Center-West,0.0049,0.0071
+2018,1,National (not regionalized),6.5264,9.4803
+2018,1,North,0.1606,0.2333
+2018,1,Northeast,0.5433,0.7892
+2018,1,South,0.0239,0.0347
+2018,1,Southeast,1.5046,2.1856
+2018,2,Brazil (total),16.1077,23.3982
+2018,2,Center-West,0.1814,0.2635
+2018,2,National (not regionalized),13.1474,19.098
+2018,2,North,0.2347,0.341
+2018,2,Northeast,0.6975,1.0132
+2018,2,South,0.0893,0.1296
+2018,2,Southeast,1.7575,2.5529
+2018,3,Brazil (total),28.3026,41.1127
+2018,3,Center-West,0.0145,0.0211
+2018,3,National (not regionalized),25.3631,36.8427
+2018,3,North,0.2451,0.356
+2018,3,Northeast,0.6633,0.9635
+2018,3,South,0.0326,0.0474
+2018,3,Southeast,1.9842,2.8822
+2018,4,Brazil (total),24.194,35.1445
+2018,4,Center-West,0.0145,0.021
+2018,4,National (not regionalized),20.013,29.0711
+2018,4,North,0.3007,0.4367
+2018,4,Northeast,0.9254,1.3443
+2018,4,South,0.1504,0.2185
+2018,4,Southeast,2.79,4.0527
+2019,1,Brazil (total),6.8353,9.5718
+2019,1,Center-West,0.0015,0.0021
+2019,1,National (not regionalized),4.9012,6.8633
+2019,1,North,0.0534,0.0747
+2019,1,Northeast,0.5325,0.7457
+2019,1,South,0.1501,0.2102
+2019,1,Southeast,1.1967,1.6758
+2019,2,Brazil (total),8.5267,11.9403
+2019,2,Center-West,0.003,0.0042
+2019,2,National (not regionalized),6.2645,8.7724
+2019,2,North,0.0756,0.1059
+2019,2,Northeast,0.6951,0.9733
+2019,2,South,0.0661,0.0926
+2019,2,Southeast,1.4225,1.992
+2019,3,Brazil (total),15.3492,21.4941
+2019,3,Center-West,0.0022,0.0031
+2019,3,National (not regionalized),10.6721,14.9445
+2019,3,North,0.062,0.0868
+2019,3,Northeast,0.7727,1.082
+2019,3,South,0.0635,0.089
+2019,3,Southeast,3.7765,5.2884
+2019,4,Brazil (total),25.3676,35.5232
+2019,4,Center-West,0.0035,0.0049
+2019,4,National (not regionalized),17.2106,24.1006
+2019,4,North,0.0873,0.1223
+2019,4,Northeast,1.1813,1.6543
+2019,4,South,0.0652,0.0912
+2019,4,Southeast,6.8199,9.5502
