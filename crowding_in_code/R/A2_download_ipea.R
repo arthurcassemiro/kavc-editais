@@ -19,6 +19,7 @@ MARCA <- "#### Ipeadata"
 log_secao_inicio(MARCA, "A2_download_ipea")
 
 sem_acento <- function(x) iconv(x, "UTF-8", "ASCII//TRANSLIT")
+num_sci <- function(x) sub(".", ",", sprintf("%.1e", x), fixed = TRUE)
 
 # ---------------------------------------------------------------------------
 # 1. Catalogo do Ipeadata: busca das series candidatas
@@ -178,10 +179,10 @@ conf <- map_dfr(names(pares), function(p) {
 print(conf)
 lp(sprintf("- Planilha da Carta contra o Ipeadata, meses comuns: %s. As duas fontes publicam a mesma serie; usa-se a planilha, que tem as quatro componentes.",
            paste(sprintf("%s: %d meses, diferenca relativa maxima %s, correlacao das variacoes do log %s", conf$serie, conf$n,
-                         format(conf$dif_rel_max, digits = 2), num_br(conf$cor_dlog, 4)), collapse = "; ")))
+                         num_sci(conf$dif_rel_max), num_br(conf$cor_dlog, 4)), collapse = "; ")))
 
 # Fonte nao aberta: Indicador de Incerteza da Economia (FGV IBRE).
-lp(sprintf("- Indicador de Incerteza da Economia (IIE-Br, FGV IBRE): %s no catalogo do Ipeadata (as series com \"incerteza\" no nome sao %s). Tambem nao ha no portal de dados abertos do BCB (package_search?q=incerteza: 0 conjuntos). O portal do IBRE (portalibre.fgv.br) recusa a conexao neste conteiner e a serie historica fica no FGV Dados/IBRE Data, que exige cadastro. Registrado como sem fonte aberta acessivel; o autor pode baixar a planilha manualmente se quiser o controle.",
+lp(sprintf("- Indicador de Incerteza da Economia (IIE-Br, FGV IBRE): %s no catalogo do Ipeadata (series com \"incerteza\" no nome: %s). Tambem nao ha no portal de dados abertos do BCB (package_search?q=incerteza: 0 conjuntos). O portal do IBRE (portalibre.fgv.br) recusa a conexao neste conteiner e a serie historica fica no FGV Dados/IBRE Data, que exige cadastro. Registrado como sem fonte aberta acessivel; o autor pode baixar a planilha manualmente se quiser o controle.",
            ifelse(nrow(incerteza) == 0, "nao ha serie", "nao ha a serie do IBRE"),
            ifelse(nrow(incerteza) == 0, "nenhuma", paste(sprintf("%s (\"%s\", fonte %s)", incerteza$code, incerteza$name, incerteza$source), collapse = ", "))))
 
@@ -218,7 +219,7 @@ stopifnot(identical(apA$trimestre, TRI))
 pvd <- tibble(trimestre = TRI, pvd = est$PVD, imeq = apA$imeq_indice)
 rz_ap <- 10^pvd$pvd / pvd$imeq
 lp(sprintf("- PVD (0224_tri_estmeq.txt, log10) e imeq_indice do Apendice A: 10^PVD / imeq_indice = %s em todos os 72 trimestres (desvio padrao %s); as duas sao a mesma serie em escalas diferentes.",
-           num_br(mean(rz_ap), 4), format(sd(rz_ap), digits = 2)))
+           num_br(mean(rz_ap), 4), num_sci(sd(rz_ap))))
 
 q_ser <- ipea_q %>% select(trimestre, fbcf_me_sa, fbcf_me_nsa, ca_bk_sa, ca_bk_nsa, fbcf_total_sa)
 q_ser <- q_ser %>% filter(!is.na(fbcf_me_nsa))
@@ -267,8 +268,11 @@ lp(sprintf("- Comparacao com o PVD, %s a %s (%d variacoes trimestrais): correlac
            TRI[2], TRI[72], me_sa$n_dif,
            paste(sprintf("%s %s", cmp$candidata, num_br(cmp$cor_dif_pvd, 4)), collapse = "; "),
            paste(sprintf("%s media %s e coeficiente de variacao %s", cmp$candidata, num_br(cmp$razao_media, 3), num_br(cmp$razao_cv, 3)), collapse = "; ")))
-lp(sprintf("- Conclusao: %s. Melhor candidata: %s (correlacao %s; raiz do erro quadratico medio das diferencas %s).",
-           veredito, melhor$candidata, num_br(melhor$cor_dif_pvd, 4), num_br(melhor$rmse_dif, 4)))
+rz_imeq <- base$imeq / base$fbcf_me_sa
+lp(sprintf("- Conclusao: %s. Melhor candidata: %s (correlacao %s; raiz do erro quadratico medio das diferencas %s). imeq_indice / media trimestral do M&E dessazonalizado de hoje: media %s, minimo %s, maximo %s; ou seja, imeq_indice e o proprio indice Ipea de M&E dessazonalizado (1995 = 100) na versao baixada para a dissertacao, e PVD = log10(0,9426 x imeq_indice). O X-11 proprio foi aplicado as medias trimestrais de %s a %s.",
+           veredito, melhor$candidata, num_br(melhor$cor_dif_pvd, 4), num_br(melhor$rmse_dif, 4),
+           num_br(mean(rz_imeq), 4), num_br(min(rz_imeq), 4), num_br(max(rz_imeq), 4),
+           min(q_ser$trimestre), max(q_ser$trimestre)))
 
 # ---------------------------------------------------------------------------
 # 6. Metadados

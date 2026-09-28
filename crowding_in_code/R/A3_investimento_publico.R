@@ -248,33 +248,33 @@ L("Encadeamento baseline: boletim ate 2019T4 e OI x ", fmt(R_BASE, 4), " a parti
 # ---------------------------------------------------------------------------
 # 5. Ajuste sazonal (X-11) e indices
 # ---------------------------------------------------------------------------
+# Serie positiva: X-11 multiplicativo (transform.function = "log"), coerente com o uso em log10.
+# Serie com zero ou negativo: X-11 aditivo ("none"). transf = "auto" deixa o X-13 escolher (so nas variantes de INF).
 SA_INFO <- list()
-roda_x11 <- function(x, nome = NULL) {
-  aditivo <- any(x <= 0)
+roda_x11 <- function(x, nome = NULL, transf = NULL) {
+  if (is.null(transf)) transf <- if (any(x <= 0)) "none" else "log"
   y <- NULL
   k <- 0
   while (is.null(y) && k < 3) {
     k <- k + 1
-    y <- tryCatch({
-      if (aditivo) {
-        switch(k, x11_sa(x, transform.function = "none"),
-               x11_sa(x, transform.function = "none", outlier = NULL),
-               x11_sa(x, transform.function = "none", regression.aictest = NULL, outlier = NULL))
-      } else {
-        switch(k, x11_sa(x), x11_sa(x, outlier = NULL), x11_sa(x, regression.aictest = NULL, outlier = NULL))
-      }
-    }, error = function(e) NULL)
+    y <- tryCatch(switch(k,
+                         x11_sa(x, transform.function = transf),
+                         x11_sa(x, transform.function = transf, outlier = NULL),
+                         x11_sa(x, transform.function = transf, regression.aictest = NULL, outlier = NULL)),
+                  error = function(e) NULL)
   }
   if (is.null(y)) stop("X-11 falhou em ", nome)
   if (!is.null(nome)) {
     m <- attr(y, "seas_model")
     u <- function(k) tryCatch(as.character(seasonal::udg(m, k)), error = function(e) NA_character_)
+    auto <- if (all(x > 0)) {
+      tryCatch(seasonal::transformfunction(attr(x11_sa(x), "seas_model")), error = function(e) NA_character_)
+    } else NA_character_
     SA_INFO[[nome]] <<- tibble(
       serie = nome, inicio = format(zoo::as.yearqtr(time(x)[1]), "%YQ%q"), n = length(x),
-      transformacao = seasonal::transformfunction(m), arima = u("arimamdl"),
+      transformacao = seasonal::transformfunction(m), transformacao_auto = auto, arima = u("arimamdl"),
       outliers = paste(grep("^(AO|LS|TC)", names(coef(m)), value = TRUE), collapse = " "),
-      m7 = u("f3.m07"), q_x11 = u("f3.q"), especificacao = c("padrao", "sem outliers", "sem outliers e sem td/pascoa")[k],
-      aditivo = aditivo)
+      m7 = u("f3.m07"), q_x11 = u("f3.q"), especificacao = c("padrao", "sem outliers", "sem outliers e sem td/pascoa")[k])
   }
   as.numeric(y)
 }
