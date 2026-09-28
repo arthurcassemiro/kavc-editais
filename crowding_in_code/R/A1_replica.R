@@ -18,7 +18,10 @@ t_ini <- Sys.time()
 # ------------------------------------------------------------------------------------------------
 # Helpers de formatacao (virgula decimal)
 # ------------------------------------------------------------------------------------------------
-num <- function(x, d = 4) formatC(x, format = "f", digits = d, decimal.mark = ",")
+num <- function(x, d = 4) {
+  if (length(d) > 1) return(unname(mapply(num, x, d)))
+  formatC(x, format = "f", digits = d, decimal.mark = ",")
+}
 sig <- function(x, d = 6) formatC(signif(x, d), format = "fg", digits = d, decimal.mark = ",")
 tnum <- function(x, d = 4) gsub(",", "{,}", num(x, d), fixed = TRUE)
 pval <- function(p) ifelse(p < 0.0001, "< 0,0001", num(p, 4))

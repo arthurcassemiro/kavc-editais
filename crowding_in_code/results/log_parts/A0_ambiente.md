@@ -8,3 +8,4 @@
 - Desembolsos do BNDES no painel (BN2_GZ, tabela disb) sao anuais por UF, nao mensais. Extraidos para data/downloads/2026-09-28_painel_bndes_desembolsos_anual_uf.csv.
 - data/original e data/raw ficaram somente leitura no conteiner; R/00_setup.R bloqueia escrita nelas.
 - 2026-09-28: o autor aprovou a classificacao dos segmentos da SEST: petroleo = "Oil, gas & derivatives"; economica = Electricity, Transport, Port administration, Airport administration; outras = Financial, Commerce & services, Industry, Research, development & planning, Food supply.
+- 2026-09-28: o autor pediu tambem uma saida em formato de resumo estendido (extended abstract) para Halle. Entra na A6 como results/A_extended_abstract.tex (e PDF), em ingles por ser workshop internacional, seguindo as diretrizes de estilo do autor; A_numeros_halle.md continua so com numeros. LaTeX (texlive) instalado no conteiner para compilar.
