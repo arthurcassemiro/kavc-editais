@@ -1,0 +1,206 @@
+% Gerado por R/A6_saidas.R em 2026-09-29 00:30. Requer \usepackage{booktabs} e \usepackage{adjustbox}. Numeros com virgula decimal.
+% Nenhum numero digitado a mao: tudo vem de data/processed/A5_*.csv, A3_*.csv, A1_alvos_dissertacao.csv e results/A4_quebras_resumo.csv.
+\begin{table}[htbp]
+\centering
+\caption{VAR em diferen\c{c}a: baseline replicado, corrigido corre\c{c}\~ao a corre\c{c}\~ao e amostra estendida}
+\label{tab:a6_var_base}
+\scriptsize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{p{4.3cm}lccccccc}
+\toprule
+Especifica\c{c}\~ao & Amostra & $n$ & Impacto & Acum. PVD, $h=40$ [IC 90\%] & Acum. INF & Elasticidade [IC 90\%] & $p$ INF$\to$PVD & $p$ PVD$\to$INF \\
+\midrule
+\multicolumn{9}{l}{\textit{A. Replicado}} \\
+Replicado: arquivos originais & 2002-2019 original & 68 & 0{,}0118 & 0{,}0194 [0{,}0016; 0{,}0315] & 0{,}0465 & 0{,}42 [0{,}05; 0{,}66] & 0{,}024 & 0{,}288 \\
+\multicolumn{9}{l}{\textit{B. Corrigido, uma corre\c{c}\~ao por vez}} \\
+(a0) Arquivos originais, amostra nova & 2003-2019 & 64 & 0{,}0125 & 0{,}0217 [0{,}0033; 0{,}0353] & 0{,}0445 & 0{,}49 [0{,}11; 0{,}76] & 0{,}016 & 0{,}395 \\
+(a) INF nominal reconstru\'ido (inf\_diss\_nominal\_2019) & 2003-2019 & 64 & 0{,}0127 & 0{,}0216 [0{,}0033; 0{,}0352] & 0{,}0452 & 0{,}48 [0{,}11; 0{,}75] & 0{,}019 & 0{,}463 \\
+(b) INF real (inf\_diss, X-11 por componente) & 2003-2019 & 64 & 0{,}0132 & 0{,}0230 [0{,}0044; 0{,}0363] & 0{,}0482 & 0{,}48 [0{,}14; 0{,}72] & 0{,}027 & 0{,}336 \\
+(c0) (b) + PVD atual (M\&E do Ipea) & 2003-2019 & 64 & 0{,}0122 & 0{,}0220 [0{,}0037; 0{,}0360] & 0{,}0482 & 0{,}46 [0{,}11; 0{,}70] & 0{,}020 & 0{,}295 \\
+(c) (c0) + PIB e Selic atuais: baseline corrigido & 2003-2019 & 64 & 0{,}0120 & 0{,}0217 [0{,}0034; 0{,}0357] & 0{,}0483 & 0{,}45 [0{,}10; 0{,}69] & 0{,}017 & 0{,}297 \\
+\multicolumn{9}{l}{\textit{C. Amostra estendida}} \\
+Estendida: (c) sem DUM, com os pulsos da pandemia (A4) & 2003-2025 & 88 & 0{,}0023 & 0{,}0098 [$-$0{,}0015; 0{,}0201] & 0{,}0567 & 0{,}17 [$-$0{,}03; 0{,}36] & 0{,}404 & 0{,}180 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: VAR(3) em diferen\c{c}a do log10, constante e tend\^encia, Cholesky com INF antes de PVD. Elasticidade de longo prazo = resposta acumulada de PVD / resposta acumulada de INF em $h = 40$. IC de 90\% por bootstrap de res\'iduos (2000 r\'eplicas; percentil). $n$ = observa\c{c}\~oes efetivas. $p$ = Granger no VAR em diferen\c{c}a (\texttt{vars::causality}). Amostra 2002-2019 original: n\'iveis de 2002T1 a 2019T4; 2003-2019: n\'iveis de 2003T1 a 2019T4; 2003-2025: n\'iveis de 2003T1 a 2025T4. A DUM entra diferenciada, como no arquivo original, em A e B. Fonte: \texttt{data/processed/A5\_var\_resultados.csv}.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Decis\~ao VAR x VEC: tra\c{c}o de Johansen, $K = 3$, com as tr\^es leituras lado a lado}
+\label{tab:a6_johansen}
+\scriptsize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcccccccccccl}
+\toprule
+& & \multicolumn{4}{c}{$H_0$: $r = 0$} & \multicolumn{2}{c}{$H_0$: $r \le 1$} & \multicolumn{3}{c}{Rejeita $r=0$ a 5\%} & \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-8}\cmidrule(lr){9-11}
+Amostra & $T$ & Tra\c{c}o & Reinsel-Ahn & VC 5\% & $p$ boot. & Tra\c{c}o & $p$ boot. & Assint. & RA & Boot. & Escolha \\
+\midrule
+\multicolumn{12}{l}{\textit{A. Tend\^encia restrita ao vetor (ecdet = trend): regra de decis\~ao}} \\
+2002-2019 original & 69 & 24{,}19 & 22{,}09 & 25{,}32 & 0{,}170 & 4{,}15 & 0{,}840 & n\~ao & n\~ao & n\~ao & VAR (VEC ao lado) \\
+2003-2019 & 65 & 28{,}79 & 26{,}13 & 25{,}32 & 0{,}086 & 7{,}81 & 0{,}469 & sim & sim & n\~ao & VAR (VEC ao lado) \\
+2003-2025 & 89 & 26{,}29 & 24{,}52 & 25{,}32 & 0{,}124 & 6{,}20 & 0{,}494 & sim & n\~ao & n\~ao & VAR (VEC ao lado) \\
+\multicolumn{12}{l}{\textit{B. Constante restrita (ecdet = const): confer\^encia}} \\
+2002-2019 original & 69 & 23{,}49 & 21{,}45 & 19{,}96 & 0{,}036 & 4{,}12 & 0{,}483 & sim & sim & sim & confer\^encia \\
+2003-2019 & 65 & 19{,}51 & 17{,}71 & 19{,}96 & 0{,}175 & 3{,}47 & 0{,}629 & n\~ao & n\~ao & n\~ao & confer\^encia \\
+2003-2025 & 89 & 16{,}31 & 15{,}21 & 19{,}96 & 0{,}241 & 4{,}39 & 0{,}295 & n\~ao & n\~ao & n\~ao & confer\^encia \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: Reinsel-Ahn: tra\c{c}o vezes $(T - pK)/T$ (fator de 0{,}908 a 0{,}933). Bootstrap selvagem de Cavaliere, Rahbek e Taylor (2012), 999 r\'eplicas, dados gerados sob $H_0$; a corre\c{c}\~ao de Reinsel-Ahn \'e um fator comum e n\~ao muda o $p$ do bootstrap. Regra fixada antes da estima\c{c}\~ao (A0): quando as leituras discordam prevalece o bootstrap a 5\%. Evid\^encia classificada como lim\'itrofe nas tr\^es amostras (2002-2019 original: assintotico rejeita a 10\%; bootstrap com ecdet const rejeita a 5\%; 2003-2019: leituras a 5\% discordam; bootstrap rejeita a 10\%; 2003-2025: leituras a 5\% discordam). Dummies s\'o determin\'isticas: DUM nas amostras at\'e 2019; pulsos de 2020T2 e 2020T3 em 2003-2025. Fonte: \texttt{data/processed/A5\_johansen.csv}.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Elasticidade de longo prazo: VAR em diferen\c{c}a ao lado do VEC ($r = 1$) e do VAR em n\'ivel}
+\label{tab:a6_var_vec}
+\scriptsize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lccc}
+\toprule
+Modelo & 2002-2019 original & 2003-2019 & 2003-2025 \\
+\midrule
+VAR em diferen\c{c}a (baseline pela regra) & 0{,}42 [0{,}05; 0{,}66] & 0{,}45 [0{,}10; 0{,}69] & 0{,}17 [$-$0{,}03; 0{,}36] \\
+VEC, ecdet trend, ex\'ogenas do VAR (vetor normalizado em PVD) & 0{,}58 [0{,}42; 0{,}82] & 0{,}55 [0{,}40; 0{,}76] & 0{,}51 [0{,}36; 0{,}66] \\
+VEC, ecdet trend, s\'o dummies determin\'isticas & 0{,}56 [0{,}37; 0{,}93] & 0{,}56 [0{,}38; 0{,}81] & 0{,}52 [0{,}35; 0{,}74] \\
+VEC, ecdet const & 0{,}52 [0{,}39; 0{,}68] & 0{,}58 [0{,}38; 0{,}82] & 0{,}47 [0{,}24; 0{,}71] \\
+VAR em n\'ivel (raz\~ao das respostas em $h = 40$) & 0{,}54 [0{,}44; 0{,}69] & 0{,}56 [0{,}46; 0{,}68] & 0{,}50 [0{,}38; 0{,}71] \\
+VEC: $\alpha$ de PVD ($t$) & $-$0{,}032 ($-$0{,}32) & $-$0{,}131 ($-$1{,}14) & $-$0{,}256 ($-$2{,}72) \\
+VEC: $\alpha$ de INF ($t$) & 0{,}719 (3{,}81) & 0{,}727 (3{,}36) & 0{,}618 (3{,}36) \\
+$n$ (VAR em diferen\c{c}a / VEC) & 68 / 69 & 64 / 65 & 88 / 89 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: IC de 90\% por bootstrap. Pela regra (Tabela \ref{tab:a6_johansen}) o baseline \'e o VAR em diferen\c{c}a nas tr\^es amostras; como a evid\^encia \'e lim\'itrofe, o VEC vai ao lado. A coluna 2002-2019 original usa os arquivos da disserta\c{c}\~ao; 2003-2019 e 2003-2025 usam o baseline corrigido e o estendido. Fonte: \texttt{data/processed/A5\_var\_resultados.csv}.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Robustez do VAR em diferen\c{c}a: elasticidade de longo prazo ($h = 40$) por variante}
+\label{tab:a6_var_rob}
+\scriptsize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{p{4.6cm}cccccccc}
+\toprule
+& \multicolumn{4}{c}{2003-2019 (baseline corrigido)} & \multicolumn{4}{c}{2003-2025 (estendido)} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+Variante & $n$ & Elasticidade [IC 90\%] & IC inclui 0 & \% do baseline & $n$ & Elasticidade [IC 90\%] & IC inclui 0 & \% do baseline \\
+\midrule
+Baseline & 64 & 0{,}45 [0{,}10; 0{,}69] & n\~ao & 100\% & 88 & 0{,}17 [$-$0{,}03; 0{,}36] & sim & 100\% \\
+\multicolumn{9}{l}{\textit{Robustez principal (cada variante em linha pr\'opria)}} \\
+PIB em taxa de crescimento (sem diferenciar) & 64 & 0{,}23 [0{,}02; 0{,}39] & n\~ao & 51\% & 88 & 0{,}10 [$-$0{,}06; 0{,}24] & sim & 57\% \\
+Ordem de Cholesky invertida (PVD antes de INF) & 64 & 0{,}07 [$-$0{,}25; 0{,}30] & sim & 17\% & 88 & 0{,}14 [$-$0{,}00; 0{,}27] & sim & 80\% \\
+Duas defasagens ($p = 2$) & 65 & 0{,}06 [$-$0{,}25; 0{,}31] & sim & 14\% & 89 & 0{,}11 [$-$0{,}08; 0{,}28] & sim & 62\% \\
+Quatro defasagens ($p = 4$) & 63 & 0{,}43 [0{,}12; 0{,}64] & n\~ao & 96\% & 87 & 0{,}28 [0{,}05; 0{,}44] & n\~ao & 161\% \\
+Com a indicadora da imputa\c{c}\~ao de 2017 & 64 & 0{,}45 [0{,}16; 0{,}67] & n\~ao & 101\% & 88 & 0{,}20 [$-$0{,}01; 0{,}37] & sim & 113\% \\
+INF sem o efeito dos AO do X-11 & 64 & 0{,}44 [0{,}03; 0{,}73] & n\~ao & 98\% & 88 & 0{,}30 [0{,}09; 0{,}49] & n\~ao & 171\% \\
+Outliers do X-11 de inf\_diss de 2018-2021 (A4) &  &  &  &  & 88 & 0{,}34 [0{,}12; 0{,}55] & n\~ao & 199\% \\
+Subamostra: observa\c{c}\~oes efetivas at\'e 2014T4 & & & & & 44 & 0{,}23 [$-$0{,}37; 0{,}53] & sim & 131\% \\
+Subamostra: observa\c{c}\~oes efetivas de 2015T1 em diante & & & & & 44 & 0{,}06 [$-$0{,}17; 0{,}26] & sim & 34\% \\
+\multicolumn{9}{l}{\textit{Demais variantes (controles, Selic m\'edia, variantes de INF da A3, exclus\~ao de 2016T4-2018T1, sem DUM)}} \\
+N\'umero de especifica\c{c}\~oes & \multicolumn{4}{c}{20} & \multicolumn{4}{c}{19} \\
+Elasticidade: m\'inimo / mediana / m\'aximo & \multicolumn{4}{c}{0{,}42 / 0{,}45 / 0{,}48} & \multicolumn{4}{c}{0{,}16 / 0{,}19 / 0{,}20} \\
+IC de 90\% acima de zero & \multicolumn{4}{c}{20 de 20} & \multicolumn{4}{c}{10 de 19} \\
+Granger INF$\to$PVD a 5\% & \multicolumn{4}{c}{20 de 20} & \multicolumn{4}{c}{0 de 19} \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: IC de 90\% por bootstrap (percentil). ``IC inclui 0'' = sim quando o intervalo cont\'em zero: essas variantes perdem signific\^ancia e n\~ao entram em faixa agregada. As subamostras partem da especifica\c{c}\~ao estendida (corte da A4 entre 2014T4 e 2015T1); a subamostra de 2015T1 em diante da amostra 2003-2019 n\~ao foi estimada (poucas observa\c{c}\~oes). Fonte: \texttt{data/processed/A5\_var\_resultados.csv}.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Robustez das proje\c{c}\~oes locais, agregados: elasticidade acumulada de fbcf\_me e multiplicador da FBCF em R\$, $h = 12$}
+\label{tab:a6_lp_rob_agr}
+\scriptsize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lccccc}
+\toprule
+Especifica\c{c}\~ao & $n$ & Elast. inf\_diss & Elast. estatais\_total & $M_{12}$ inf\_diss & $M_{12}$ estatais\_total \\
+\midrule
+baseline & 76 & 0{,}10 [$-$0{,}05; 0{,}25] & 0{,}03 [$-$0{,}10; 0{,}16] & 1{,}83 [0{,}19; 3{,}47]$^{*}$ & 1{,}83 [$-$0{,}12; 3{,}79] \\
+pib\_cresc & 76 & 0{,}12 [0{,}03; 0{,}22]$^{*}$ & 0{,}09 [$-$0{,}01; 0{,}18] & 1{,}94 [0{,}48; 3{,}41]$^{*}$ & 2{,}21 [0{,}47; 3{,}94]$^{*}$ \\
+ordem\_invertida\_dy\_t & 76 & 0{,}06 [$-$0{,}08; 0{,}21] & 0{,}01 [$-$0{,}12; 0{,}13] & 1{,}09 [$-$0{,}55; 2{,}73] & 1{,}01 [$-$0{,}93; 2{,}96] \\
+p2 & 77 & 0{,}10 [$-$0{,}05; 0{,}24] & 0{,}03 [$-$0{,}09; 0{,}14] & 1{,}83 [0{,}02; 3{,}65]$^{*}$ & 1{,}68 [$-$0{,}55; 3{,}92] \\
+p4 & 75 & 0{,}13 [$-$0{,}05; 0{,}30] & 0{,}02 [$-$0{,}18; 0{,}23] & 2{,}40 [1{,}05; 3{,}74]$^{*}$ & 2{,}73 [0{,}94; 4{,}52]$^{*}$ \\
+exogenas\_so\_defasadas & 76 & 0{,}20 [0{,}12; 0{,}29]$^{*}$ & 0{,}14 [0{,}06; 0{,}21]$^{*}$ & 2{,}56 [1{,}43; 3{,}68]$^{*}$ & 2{,}71 [1{,}28; 4{,}14]$^{*}$ \\
+selic\_media & 76 & 0{,}13 [$-$0{,}02; 0{,}27] & 0{,}06 [$-$0{,}06; 0{,}17] & 1{,}90 [0{,}42; 3{,}38]$^{*}$ & 1{,}93 [0{,}17; 3{,}70]$^{*}$ \\
+sub\_ate\_2014T4 & 32 & 0{,}11 [$-$0{,}16; 0{,}37] & 0{,}04 [$-$0{,}23; 0{,}31] & 1{,}65 [0{,}66; 2{,}63]$^{*}$ & 1{,}13 [$-$0{,}39; 2{,}66] \\
+sub\_de\_2015T1 & 32 & 0{,}01 [$-$0{,}30; 0{,}32] & $-$0{,}02 [$-$0{,}30; 0{,}25] & 0{,}36 [$-$1{,}97; 2{,}69] & 0{,}27 [$-$2{,}49; 3{,}04] \\
+ate\_2019T4 & 52 & $-$0{,}15 [$-$0{,}80; 0{,}50] & $-$0{,}31 [$-$1{,}27; 0{,}64] & 2{,}32 [0{,}87; 3{,}77]$^{*}$ & 2{,}64 [0{,}82; 4{,}45]$^{*}$ \\
+sem\_2020\_2021 & 52 & $-$0{,}15 [$-$0{,}94; 0{,}64] & $-$0{,}31 [$-$1{,}47; 0{,}84] & 2{,}32 [0{,}57; 4{,}07]$^{*}$ & 2{,}64 [0{,}44; 4{,}83]$^{*}$ \\
+sem\_2016T4\_2018T1 & 54 & $-$0{,}05 [$-$0{,}30; 0{,}21] & $-$0{,}10 [$-$0{,}28; 0{,}08] & $-$0{,}15 [$-$4{,}32; 4{,}02] & $-$1{,}24 [$-$6{,}70; 4{,}23] \\
+choques\_sem\_AO & 76 & 0{,}23 [0{,}10; 0{,}36]$^{*}$ & 0{,}15 [0{,}03; 0{,}27]$^{*}$ & 3{,}08 [2{,}10; 4{,}05]$^{*}$ & 3{,}54 [2{,}08; 4{,}99]$^{*}$ \\
+dummies\_A4 & 76 & 0{,}24 [0{,}08; 0{,}39]$^{*}$ & 0{,}18 [0{,}04; 0{,}33]$^{*}$ & 3{,}10 [1{,}98; 4{,}21]$^{*}$ & 3{,}68 [2{,}04; 5{,}32]$^{*}$ \\
+G\_deflator\_fbcf & 76 &  &  & 1{,}86 [0{,}25; 3{,}48]$^{*}$ & 1{,}85 [$-$0{,}07; 3{,}76] \\
+ctrl\_cambio\_real & 76 & 0{,}17 [0{,}02; 0{,}32]$^{*}$ & 0{,}13 [$-$0{,}01; 0{,}27] & 2{,}29 [0{,}88; 3{,}71]$^{*}$ & 2{,}78 [1{,}09; 4{,}47]$^{*}$ \\
+ctrl\_icbr\_usd & 76 & 0{,}16 [0{,}04; 0{,}29]$^{*}$ & 0{,}10 [$-$0{,}01; 0{,}22] & 2{,}38 [0{,}94; 3{,}81]$^{*}$ & 2{,}64 [0{,}88; 4{,}41]$^{*}$ \\
+ctrl\_brent\_usd & 76 & 0{,}16 [0{,}04; 0{,}28]$^{*}$ & 0{,}08 [$-$0{,}02; 0{,}18] & 2{,}11 [0{,}60; 3{,}61]$^{*}$ & 2{,}14 [0{,}28; 4{,}00]$^{*}$ \\
+ctrl\_bndes\_priv & 76 & 0{,}10 [$-$0{,}05; 0{,}25] & 0{,}03 [$-$0{,}10; 0{,}15] & 1{,}83 [0{,}21; 3{,}46]$^{*}$ & 1{,}81 [$-$0{,}11; 3{,}73] \\
+ctrl\_cambio\_real+icbr\_usd & 76 & 0{,}19 [0{,}05; 0{,}32]$^{*}$ & 0{,}14 [0{,}01; 0{,}27]$^{*}$ & 2{,}47 [1{,}15; 3{,}79]$^{*}$ & 2{,}95 [1{,}35; 4{,}55]$^{*}$ \\
+ctrl\_cambio\_real+brent\_usd & 76 & 0{,}18 [0{,}06; 0{,}31]$^{*}$ & 0{,}13 [0{,}02; 0{,}24]$^{*}$ & 2{,}32 [0{,}98; 3{,}66]$^{*}$ & 2{,}73 [1{,}04; 4{,}41]$^{*}$ \\
+ctrl\_cambio\_real+bndes\_priv & 76 & 0{,}17 [0{,}02; 0{,}32]$^{*}$ & 0{,}13 [$-$0{,}01; 0{,}27] & 2{,}29 [0{,}86; 3{,}73]$^{*}$ & 2{,}77 [1{,}06; 4{,}48]$^{*}$ \\
+ctrl\_icbr\_usd+brent\_usd & 76 & 0{,}17 [0{,}05; 0{,}29]$^{*}$ & 0{,}10 [$-$0{,}00; 0{,}20] & 2{,}36 [0{,}90; 3{,}82]$^{*}$ & 2{,}58 [0{,}74; 4{,}41]$^{*}$ \\
+ctrl\_icbr\_usd+bndes\_priv & 76 & 0{,}17 [0{,}04; 0{,}29]$^{*}$ & 0{,}10 [$-$0{,}01; 0{,}21] & 2{,}38 [0{,}97; 3{,}80]$^{*}$ & 2{,}63 [0{,}91; 4{,}36]$^{*}$ \\
+ctrl\_brent\_usd+bndes\_priv & 76 & 0{,}16 [0{,}04; 0{,}27]$^{*}$ & 0{,}08 [$-$0{,}01; 0{,}18] & 2{,}11 [0{,}61; 3{,}60]$^{*}$ & 2{,}12 [0{,}30; 3{,}95]$^{*}$ \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: Estimativa [IC de 90\%] com Newey-West vezes $n/(n-k)$ e $t$ com $n - k$ graus de liberdade (colunas \texttt{ic90\_*\_aj}); $^{*}$ = IC exclui zero. $n$ = observa\c{c}\~oes em $h = 12$. Em $h = 12$, sem\_2020\_2021 coincide com ate\_2019T4 por constru\c{c}\~ao (A5). transferencia\_grupos\_1e2 n\~ao se aplica aos agregados (fica fora); G\_deflator\_fbcf s\'o muda o multiplicador. Fonte: \texttt{data/processed/A5\_lp\_cumulativo.csv}.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Robustez das proje\c{c}\~oes locais, Uni\~ao por tipo e modalidade: elasticidade acumulada de fbcf\_me, $h = 12$}
+\label{tab:a6_lp_rob_uniao}
+\scriptsize
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lcccccc}
+\toprule
+Especifica\c{c}\~ao & $n$ & uniao\_econ\_dir & uniao\_soc\_dir & uniao\_econ\_dt\_g1 & uniao\_soc\_dt\_g1 & uniao\_transf\_soc\_g1 \\
+\midrule
+baseline & 76 & 0{,}18 [$-$0{,}07; 0{,}42] & 0{,}16 [$-$0{,}01; 0{,}33] & 0{,}19 [$-$0{,}05; 0{,}43] & 0{,}16 [$-$0{,}09; 0{,}40] & 0{,}09 [$-$0{,}10; 0{,}28] \\
+pib\_cresc & 76 & 0{,}12 [$-$0{,}08; 0{,}31] & 0{,}16 [$-$0{,}00; 0{,}32] & 0{,}12 [$-$0{,}08; 0{,}31] & 0{,}07 [$-$0{,}14; 0{,}28] & 0{,}03 [$-$0{,}12; 0{,}18] \\
+ordem\_invertida\_dy\_t & 76 & 0{,}17 [0{,}02; 0{,}31]$^{*}$ & 0{,}23 [0{,}08; 0{,}39]$^{*}$ & 0{,}17 [0{,}02; 0{,}31]$^{*}$ & 0{,}17 [$-$0{,}02; 0{,}36] & 0{,}10 [$-$0{,}06; 0{,}25] \\
+p2 & 77 & 0{,}13 [$-$0{,}08; 0{,}34] & 0{,}15 [$-$0{,}03; 0{,}32] & 0{,}14 [$-$0{,}07; 0{,}35] & 0{,}14 [$-$0{,}11; 0{,}39] & 0{,}08 [$-$0{,}11; 0{,}27] \\
+p4 & 75 & 0{,}20 [$-$0{,}01; 0{,}41] & 0{,}23 [0{,}10; 0{,}35]$^{*}$ & 0{,}21 [0{,}01; 0{,}41]$^{*}$ & 0{,}23 [$-$0{,}04; 0{,}49] & 0{,}15 [$-$0{,}10; 0{,}40] \\
+exogenas\_so\_defasadas & 76 & 0{,}16 [$-$0{,}03; 0{,}34] & 0{,}18 [$-$0{,}01; 0{,}36] & 0{,}16 [$-$0{,}03; 0{,}35] & 0{,}12 [$-$0{,}10; 0{,}34] & 0{,}06 [$-$0{,}11; 0{,}22] \\
+selic\_media & 76 & 0{,}18 [$-$0{,}03; 0{,}38] & 0{,}14 [$-$0{,}04; 0{,}33] & 0{,}18 [$-$0{,}03; 0{,}39] & 0{,}11 [$-$0{,}12; 0{,}34] & 0{,}05 [$-$0{,}13; 0{,}23] \\
+sub\_ate\_2014T4 & 32 & 0{,}04 [$-$0{,}26; 0{,}33] & 0{,}00 [$-$0{,}75; 0{,}75] & $-$0{,}05 [$-$0{,}41; 0{,}32] & $-$0{,}00 [$-$0{,}18; 0{,}18] & $-$0{,}05 [$-$0{,}17; 0{,}08] \\
+sub\_de\_2015T1 & 32 & 0{,}44 [$-$0{,}21; 1{,}09] & 0{,}51 [0{,}38; 0{,}64]$^{*}$ & 0{,}45 [$-$0{,}23; 1{,}13] & 0{,}16 [$-$0{,}30; 0{,}62] & 0{,}06 [$-$0{,}33; 0{,}44] \\
+ate\_2019T4 & 52 & 0{,}07 [$-$0{,}31; 0{,}45] & 0{,}05 [$-$0{,}60; 0{,}69] & 0{,}08 [$-$0{,}37; 0{,}52] & 0{,}16 [$-$0{,}18; 0{,}49] & 0{,}06 [$-$0{,}14; 0{,}25] \\
+sem\_2020\_2021 & 52 & 0{,}07 [$-$0{,}39; 0{,}53] & 0{,}05 [$-$0{,}74; 0{,}83] & 0{,}08 [$-$0{,}46; 0{,}61] & 0{,}16 [$-$0{,}25; 0{,}56] & 0{,}06 [$-$0{,}18; 0{,}29] \\
+sem\_2016T4\_2018T1 & 54 & 0{,}12 [$-$0{,}07; 0{,}31] & 0{,}07 [$-$0{,}25; 0{,}39] & 0{,}13 [$-$0{,}07; 0{,}33] & 0{,}08 [$-$0{,}15; 0{,}31] & 0{,}02 [$-$0{,}14; 0{,}19] \\
+choques\_sem\_AO & 76 & 0{,}25 [0{,}09; 0{,}42]$^{*}$ & 0{,}16 [$-$0{,}01; 0{,}33] & 0{,}26 [0{,}10; 0{,}43]$^{*}$ & 0{,}18 [$-$0{,}08; 0{,}43] & 0{,}05 [$-$0{,}12; 0{,}23] \\
+transferencia\_grupos\_1e2 & 76 &  &  & 0{,}20 [$-$0{,}05; 0{,}44] & 0{,}16 [$-$0{,}09; 0{,}40] & 0{,}09 [$-$0{,}10; 0{,}28] \\
+dummies\_A4 & 76 & 0{,}07 [$-$0{,}22; 0{,}36] & 0{,}05 [$-$0{,}13; 0{,}23] & 0{,}08 [$-$0{,}24; 0{,}40] & 0{,}12 [$-$0{,}12; 0{,}35] & 0{,}08 [$-$0{,}09; 0{,}25] \\
+ctrl\_cambio\_real & 76 & 0{,}11 [$-$0{,}15; 0{,}37] & 0{,}10 [$-$0{,}05; 0{,}26] & 0{,}13 [$-$0{,}12; 0{,}37] & 0{,}12 [$-$0{,}08; 0{,}31] & 0{,}06 [$-$0{,}09; 0{,}21] \\
+ctrl\_icbr\_usd & 76 & 0{,}15 [$-$0{,}08; 0{,}38] & 0{,}17 [$-$0{,}01; 0{,}35] & 0{,}16 [$-$0{,}08; 0{,}39] & 0{,}08 [$-$0{,}17; 0{,}34] & 0{,}02 [$-$0{,}17; 0{,}21] \\
+ctrl\_brent\_usd & 76 & 0{,}17 [$-$0{,}06; 0{,}41] & 0{,}16 [$-$0{,}01; 0{,}34] & 0{,}18 [$-$0{,}06; 0{,}41] & 0{,}08 [$-$0{,}14; 0{,}29] & 0{,}02 [$-$0{,}13; 0{,}17] \\
+ctrl\_bndes\_priv & 76 & 0{,}19 [$-$0{,}03; 0{,}40] & 0{,}15 [$-$0{,}02; 0{,}33] & 0{,}20 [$-$0{,}02; 0{,}42] & 0{,}15 [$-$0{,}09; 0{,}40] & 0{,}08 [$-$0{,}11; 0{,}27] \\
+ctrl\_cambio\_real+icbr\_usd & 76 & 0{,}11 [$-$0{,}15; 0{,}37] & 0{,}12 [$-$0{,}05; 0{,}28] & 0{,}13 [$-$0{,}12; 0{,}37] & 0{,}09 [$-$0{,}12; 0{,}30] & 0{,}04 [$-$0{,}13; 0{,}20] \\
+ctrl\_cambio\_real+brent\_usd & 76 & 0{,}14 [$-$0{,}13; 0{,}41] & 0{,}12 [$-$0{,}05; 0{,}29] & 0{,}15 [$-$0{,}11; 0{,}40] & 0{,}07 [$-$0{,}12; 0{,}27] & 0{,}02 [$-$0{,}12; 0{,}17] \\
+ctrl\_cambio\_real+bndes\_priv & 76 & 0{,}12 [$-$0{,}11; 0{,}35] & 0{,}09 [$-$0{,}06; 0{,}25] & 0{,}14 [$-$0{,}08; 0{,}36] & 0{,}11 [$-$0{,}09; 0{,}31] & 0{,}06 [$-$0{,}09; 0{,}21] \\
+ctrl\_icbr\_usd+brent\_usd & 76 & 0{,}17 [$-$0{,}07; 0{,}40] & 0{,}17 [$-$0{,}01; 0{,}34] & 0{,}17 [$-$0{,}07; 0{,}41] & 0{,}06 [$-$0{,}17; 0{,}30] & 0{,}00 [$-$0{,}16; 0{,}17] \\
+ctrl\_icbr\_usd+bndes\_priv & 76 & 0{,}16 [$-$0{,}04; 0{,}37] & 0{,}16 [$-$0{,}02; 0{,}35] & 0{,}17 [$-$0{,}04; 0{,}37] & 0{,}07 [$-$0{,}18; 0{,}32] & 0{,}01 [$-$0{,}17; 0{,}20] \\
+ctrl\_brent\_usd+bndes\_priv & 76 & 0{,}19 [$-$0{,}02; 0{,}39] & 0{,}15 [$-$0{,}03; 0{,}33] & 0{,}19 [$-$0{,}01; 0{,}40] & 0{,}07 [$-$0{,}15; 0{,}28] & 0{,}01 [$-$0{,}14; 0{,}16] \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\begin{minipage}{0.97\linewidth}\footnotesize
+\medskip Notas: Como na Tabela \ref{tab:a6_lp_rob_agr}. Regress\~oes separadas, um choque por vez; para comparar rubricas valem as regress\~oes conjuntas (Tabela \ref{tab:a6_lp_cmp} em \texttt{A\_lp.tex}). transferencia\_grupos\_1e2 s\'o nos choques \_g1. Fonte: \texttt{data/processed/A5\_lp\_cumulativo.csv}.
+\end{minipage}
+\end{table}
+

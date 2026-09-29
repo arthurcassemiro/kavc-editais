@@ -1,6 +1,6 @@
 # A5: VAR e VEC (baseline replicado, corrigido, estendido e robustez)
 
-Gerado por R/A5_var.R em 2026-09-28 23:44. Numeros com virgula decimal. Elasticidade de longo prazo = resposta acumulada de PVD em h = 40 dividida pela de INF, ao mesmo choque ortogonal em INF (INF antes de PVD). IC 90% por bootstrap de residuos (percentil). Tabela completa em data/processed/A5_var_resultados.csv; Johansen em data/processed/A5_johansen.csv.
+Gerado por R/A5_var.R em 2026-09-28 23:51. Numeros com virgula decimal. Elasticidade de longo prazo = resposta acumulada de PVD em h = 40 dividida pela de INF, ao mesmo choque ortogonal em INF (INF antes de PVD). IC 90% por bootstrap de residuos (percentil). Tabela completa em data/processed/A5_var_resultados.csv; Johansen em data/processed/A5_johansen.csv.
 
 ## 1. Baseline replicado e corrigido, correcao a correcao
 
