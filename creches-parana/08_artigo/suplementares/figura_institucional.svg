@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="526.877656pt" height="295.43167pt" viewBox="0 0 526.877656 295.43167" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-29T00:22:02.286643</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 295.43167 
+L 526.877656 295.43167 
+L 526.877656 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 66.089764 87.382373 
+L 169.341732 87.382373 
+Q 171.538583 87.382373 171.538583 84.832347 
+L 171.538583 40.350335 
+Q 171.538583 37.800309 169.341732 37.800309 
+L 66.089764 37.800309 
+Q 63.892913 37.800309 63.892913 40.350335 
+L 63.892913 84.832347 
+Q 63.892913 87.382373 66.089764 87.382373 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #595959; stroke: #595959; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 188.014961 87.382373 
+L 291.266929 87.382373 
+Q 293.46378 87.382373 293.46378 84.832347 
+L 293.46378 40.350335 
+Q 293.46378 37.800309 291.266929 37.800309 
+L 188.014961 37.800309 
+Q 185.81811 37.800309 185.81811 40.350335 
+L 185.81811 84.832347 
+Q 185.81811 87.382373 188.014961 87.382373 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #307e3e; stroke: #307e3e; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 309.940157 87.382373 
+L 413.192126 87.382373 
+Q 415.388976 87.382373 415.388976 84.832347 
+L 415.388976 40.350335 
+Q 415.388976 37.800309 413.192126 37.800309 
+L 309.940157 37.800309 
+Q 307.743307 37.800309 307.743307 40.350335 
+L 307.743307 84.832347 
+Q 307.743307 87.382373 309.940157 87.382373 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #f2f2f2; stroke: #bfbfbf; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 66.089764 140.56316 
+L 169.341732 140.56316 
+Q 171.538583 140.56316 171.538583 138.013134 
+L 171.538583 101.407514 
+Q 171.538583 98.857489 169.341732 98.857489 
+L 66.089764 98.857489 
+Q 63.892913 98.857489 63.892913 101.407514 
+L 63.892913 138.013134 
+Q 63.892913 140.56316 66.089764 140.56316 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #f2f2f2; stroke: #bfbfbf; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 188.014961 140.56316 
+L 291.266929 140.56316 
+Q 293.46378 140.56316 293.46378 138.013134 
+L 293.46378 101.407514 
+Q 293.46378 98.857489 291.266929 98.857489 
+L 188.014961 98.857489 
+Q 185.81811 98.857489 185.81811 101.407514 
+L 185.81811 138.013134 
+Q 185.81811 140.56316 188.014961 140.56316 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #0171c1; stroke: #0171c1; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 309.940157 140.56316 
+L 413.192126 140.56316 
+Q 415.388976 140.56316 415.388976 138.013134 
+L 415.388976 101.407514 
+Q 415.388976 98.857489 413.192126 98.857489 
+L 309.940157 98.857489 
+Q 307.743307 98.857489 307.743307 101.407514 
+L 307.743307 138.013134 
+Q 307.743307 140.56316 309.940157 140.56316 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #c24c12; stroke: #c24c12; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 171.538583 62.591341 
+Q 178.678346 62.591341 185.14729 62.591341 
+" clip-path="url(#p2afdc3f871)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 182.34729 61.191341 
+L 185.14729 62.591341 
+L 182.34729 63.991341 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 239.640945 87.382373 
+Q 239.640945 93.119931 239.640945 98.186668 
+" clip-path="url(#p2afdc3f871)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 241.040945 95.386668 
+L 239.640945 98.186668 
+L 238.240945 95.386668 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 307.743307 62.591341 
+Q 300.603543 62.591341 294.1346 62.591341 
+" clip-path="url(#p2afdc3f871)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 296.9346 63.991341 
+L 294.1346 62.591341 
+L 296.9346 61.191341 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 117.715748 98.857489 
+Q 117.715748 93.119931 117.715748 88.053193 
+" clip-path="url(#p2afdc3f871)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 116.315748 90.853193 
+L 117.715748 88.053193 
+L 119.115748 90.853193 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 361.566142 87.382373 
+Q 361.566142 93.119931 361.566142 98.186668 
+" clip-path="url(#p2afdc3f871)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 362.966142 95.386668 
+L 361.566142 98.186668 
+L 360.166142 95.386668 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 66.089764 177.991163 
+L 413.192126 177.991163 
+Q 415.388976 177.991163 415.388976 175.441137 
+L 415.388976 154.588302 
+Q 415.388976 152.038276 413.192126 152.038276 
+L 66.089764 152.038276 
+Q 63.892913 152.038276 63.892913 154.588302 
+L 63.892913 175.441137 
+Q 63.892913 177.991163 66.089764 177.991163 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #d9d9d9; stroke: #d9d9d9; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 239.640945 140.56316 
+Q 239.640945 146.300718 239.640945 151.367455 
+" clip-path="url(#p2afdc3f871)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 241.040945 148.567455 
+L 239.640945 151.367455 
+L 238.240945 148.567455 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 361.566142 140.56316 
+Q 361.566142 146.300718 361.566142 151.367455 
+" clip-path="url(#p2afdc3f871)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 362.966142 148.567455 
+L 361.566142 151.367455 
+L 360.166142 148.567455 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 66.089764 212.86914 
+L 413.192126 212.86914 
+Q 415.388976 212.86914 415.388976 210.319115 
+L 415.388976 189.466279 
+Q 415.388976 186.916253 413.192126 186.916253 
+L 66.089764 186.916253 
+Q 63.892913 186.916253 63.892913 189.466279 
+L 63.892913 210.319115 
+Q 63.892913 212.86914 66.089764 212.86914 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #ffffff; stroke: #3a3a3a; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 239.640945 177.991163 
+Q 239.640945 182.453708 239.640945 186.245433 
+" clip-path="url(#p2afdc3f871)" style="fill: none; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+    <path d="M 241.040945 183.445433 
+L 239.640945 186.245433 
+L 238.240945 183.445433 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #3a3a3a; stroke: #3a3a3a; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 66.089764 242.194437 
+L 228.656693 242.194437 
+Q 230.853543 242.194437 230.853543 239.644411 
+L 230.853543 224.344256 
+Q 230.853543 221.794231 228.656693 221.794231 
+L 66.089764 221.794231 
+Q 63.892913 221.794231 63.892913 224.344256 
+L 63.892913 239.644411 
+Q 63.892913 242.194437 66.089764 242.194437 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #ffffff; stroke: #bfbfbf; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 250.625197 242.194437 
+L 413.192126 242.194437 
+Q 415.388976 242.194437 415.388976 239.644411 
+L 415.388976 224.344256 
+Q 415.388976 221.794231 413.192126 221.794231 
+L 250.625197 221.794231 
+Q 248.428346 221.794231 248.428346 224.344256 
+L 248.428346 239.644411 
+Q 248.428346 242.194437 250.625197 242.194437 
+z
+" clip-path="url(#p2afdc3f871)" style="fill: #ffffff; stroke: #bfbfbf; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 9px; font-family: 'Arial, Liberation Sans'; text-anchor: start; fill: #3a3a3a" x="63.892913" y="15.102669" transform="rotate(-0 63.892913 15.102669)">Figura 1. Arranjo institucional e financeiro do Programa Infância Feliz Paraná</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="117.715748" y="32.111438" transform="rotate(-0 117.715748 32.111438)">Critério</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="239.640945" y="32.085803" transform="rotate(-0 239.640945 32.085803)">Deliberação e regulação</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Arial, Liberation Sans'; text-anchor: middle; fill: #3a3a3a" x="361.566142" y="32.09115" transform="rotate(-0 361.566142 32.09115)">Financiamento e execução</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(101.962467 57.538558)">Casa Civil</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(73.364732 64.442513)">Estudo técnico: PCM, portes</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(86.78067 71.940921)">e regra de alocação</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(205.407117 49.293665)">CEDCA/PR (conselho</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(225.831804 56.887776)">paritário)</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(198.006257 64.386185)">Aporte do FIA e aprovação</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(201.704226 71.940921)">do estudo (Deliberações</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(209.283914 79.51261)">60/2023 e 25/2024)</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(318.829501 53.347752)">Fontes: Tesouro do Estado,</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(328.498251 61.315926)">FIA/PR e Assembleia</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(318.57411 68.233553)">Legislativa (R$ 100 milhões</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(346.781376 75.735242)">em 2024)</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(106.042701 113.965744)">Ipardes</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(73.941686 121.561496)">Estudo prévio (43 unidades)</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(90.085436 129.767014)">e bases de dados</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(195.878914 110.188376)">SEDEF (gestora do FIA/PR)</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(195.082664 117.7278)">Resoluções 212 e 219/2024:</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(219.998836 125.617224)">critério, lista,</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(206.565945 132.837272)">habilitação e repasse</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(326.353954 110.880173)">Paranacidade / SECID</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(324.600126 117.784128)">Projeto padrão, análise,</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(323.438017 125.282536)">autorização para licitar e</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #ffffff" transform="translate(348.730439 133.544382)">vistorias</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(88.938054 163.047507)">Incentivo financeiro fundo a fundo (FIA/PR para os fundos municipais), por Termo de Adesão, em</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(109.100789 170.627947)">cinco parcelas condicionadas à execução; sem convênio e sem operação de crédito</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(90.03782 197.951188)">Municípios (399): adesão, terreno, projeto de implantação, licitação, obra e prestação de contas;</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(148.205086 205.521237)">custo excedente e custeio posterior por conta do município</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(72.359478 230.305481)">Controle: TCE-PR, MP-PR, CEDCA e conselhos</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(130.839556 237.581858)">municipais</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(262.84163 230.068137)">Resultado: 303 unidades em 261 municípios</text>
+    <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; fill: #3a3a3a" transform="translate(282.098193 237.581858)">(2024); segunda etapa em 2025</text>
+   </g>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 7px; font-family: 'Arial, Liberation Sans'; text-anchor: start; fill: #5f5f5f" x="7.2" y="286.748545" transform="rotate(-0 7.2 286.748545)">Fonte: Elaboração própria a partir da Lei Estadual 21.870/2023, das Deliberações CEDCA 60/2023 e 25/2024 e das Resoluções SEDEF 212 e 219/2024 e 029/2025.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2afdc3f871">
+   <rect x="63.892913" y="7.2" width="351.496063" height="240.094488"/>
+  </clipPath>
+ </defs>
+</svg>

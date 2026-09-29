@@ -148,6 +148,24 @@ def quadro(csv,caption,fonte,nota=None):
         for p in c.paragraphs: p.paragraph_format.keep_with_next=True
     para("Fonte: "+fonte,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),size=10,spacing=1,after=0 if nota else 6,before=3)
     if nota: para("Nota: "+nota,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),size=10,spacing=1,after=6)
+def citacao(texto):
+    p=doc.add_paragraph(); p.alignment=WD_ALIGN_PARAGRAPH.JUSTIFY; p.paragraph_format.first_line_indent=Cm(0); p.paragraph_format.left_indent=Cm(4)
+    p.paragraph_format.line_spacing_rule=WD_LINE_SPACING.SINGLE; p.paragraph_format.space_before=Pt(6); p.paragraph_format.space_after=Pt(6)
+    add_text_with_notes(p,texto,10)
+def equation(texto,num):
+    from docx.enum.text import WD_TAB_ALIGNMENT
+    p=doc.add_paragraph(); p.paragraph_format.first_line_indent=Cm(0); p.paragraph_format.left_indent=Cm(0); p.alignment=WD_ALIGN_PARAGRAPH.LEFT
+    p.paragraph_format.line_spacing_rule=WD_LINE_SPACING.SINGLE; p.paragraph_format.space_before=Pt(6); p.paragraph_format.space_after=Pt(6)
+    ts=p.paragraph_format.tab_stops; ts.add_tab_stop(Cm(7.5),WD_TAB_ALIGNMENT.CENTER); ts.add_tab_stop(Cm(16),WD_TAB_ALIGNMENT.RIGHT)
+    def run(t,sub=False,sup=False):
+        r=p.add_run(t); r.font.size=Pt(11); r.font.name="Arial"; r.font.subscript=sub; r.font.superscript=sup
+    run("\t")
+    for tok in re.split(r"(_\{[^}]*\}|_\w|\^\{[^}]*\}|\^\w)",texto):
+        if not tok: continue
+        if tok.startswith("_"): run(tok[2:-1] if tok[1]=="{" else tok[1:],sub=True)
+        elif tok.startswith("^"): run(tok[2:-1] if tok[1]=="{" else tok[1:],sup=True)
+        else: run(tok)
+    run("\t("+num+")")
 def figure(caption,path,width,fonte,nota=None):
     para(caption,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),size=11,spacing=1,after=3,before=8,keep=True)
     dd,ff=os.path.split(path); alt=os.path.join(dd,"sem_rotulo",ff)
@@ -163,7 +181,7 @@ def bloco(rot,texto,rotkw,kw):
     para(f"{rotkw}: {kw}",align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),spacing=1,after=4)
 bloco("RESUMO",meta["resumo_pt"],"Palavras-chave",meta["palavras_pt"]); bloco("ABSTRACT",meta["resumo_en"],"Keywords",meta["palavras_en"]); bloco("RESUMEN",meta["resumo_es"],"Palabras clave",meta["palavras_es"])
 # ---------- corpo ----------
-DECS={"tab1_porte_ms.csv":[None,0,1,3,0,0,0,0,0,0,None,None,None,None],"tab3_beneficiados.csv":None,"tab5_cenarios_ms.csv":[None,0,1,0,1,1,1,1,1],"tab6_regional_ms.csv":[None,0,3,1,0,1,1,1]}
+DECS={"tab1_porte_ms.csv":[None,0,1,3,0,0,0,0,0,0,None,None,None,None],"tab3_beneficiados.csv":None,"tab5_cenarios_ms.csv":[None,0,1,0,1,1,1,1,1],"tab6_regional_ms.csv":[None,0,3,1,0,1,1,1],"tab_pcm_porte.csv":[None,0,1,1,1,1,1,3,3,3],"tab_aplicacao_porte.csv":[None,0,1,1,1,0,0,None,0,0,0,0]}
 in_refs=False
 for block in body.strip().split("\n\n"):
     block=block.strip()
@@ -173,6 +191,10 @@ for block in body.strip().split("\n\n"):
     if block.startswith("## "): heading(block[3:].strip(),2); continue
     m=re.match(r"!\[(.+?)\]\((.+?)\)\{width=(\d+)\}\s*\|\s*Fonte:\s*(.+?)(?:\s*\|\s*Nota:\s*(.+))?$",block,re.S)
     if m: figure(m.group(1),m.group(2),int(m.group(3)),m.group(4).strip(),(m.group(5) or "").strip() or None); continue
+    if block.startswith("CIT:"):
+        citacao(block[4:].strip()); continue
+    if block.startswith("EQ:"):
+        t=block[3:]; texto,num=t.rsplit("|",1); equation(texto.strip(),num.strip()); continue
     if block.startswith("TABLE:") or block.startswith("QUADRO:"):
         kind=block.split(":")[0]; parts=[x.strip() for x in block.split(":",1)[1].split("|")]
         csv,cap=parts[0],parts[1]; fonte=parts[2].replace("Fonte:","").strip(); nota=parts[3].replace("Nota:","").strip() if len(parts)>3 else None

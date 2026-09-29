@@ -1,0 +1,10 @@
+Porte (habitantes),Municípios,Termo populacional J·(1+PCM)/4,"Termo de piso 0,75·PCM","Termo 0,75·K",Valor contínuo L,Partes inteiras,Creches após o maior resto,Municípios contemplados
+G2 (acima de 1 milhão),1,7.6,0.2,6.1,14.0,13,14,1
+G1 (500 mil a 1 milhão),1,2.8,0.3,2.0,5.2,5,5,1
+M2 (200 a 500 mil),6,10.9,2.0,7.9,20.8,18,21,6
+M1 (100 a 200 mil),14,11.3,4.9,8.0,24.1,16,24,14
+P4 (70 a 100 mil),8,3.8,2.5,2.8,9.0,7,8,8
+P3 (40 a 70 mil),17,4.6,5.7,3.3,13.7,1,17,17
+P2 (20 a 40 mil),45,7.4,15.7,5.2,28.3,0,43,43
+P1 (até 20 mil),307,14.6,112.2,10.1,136.9,0,119,119
+Paraná,399,63.0,143.5,45.5,252.0,60,251,209

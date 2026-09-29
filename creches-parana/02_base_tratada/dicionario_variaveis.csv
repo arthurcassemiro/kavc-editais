@@ -18,3 +18,5 @@ cons_total300,Creches na distribuição consolidada (300)
 aprox,Valor contínuo J·(1+PCM) − prévia (coluna APROX. CRECHES da aba Dados)
 total_dc,Coluna TOTAL CRECHES da aba Dados (cálculo proporcional sem tetos; não é o resultado final)
 tipologia,Não contemplado / Somente técnica / Somente consolidada / Técnica e consolidada
+cedca_258,"Creches na versão de 21/05/2024 apresentada ao CEDCA (aba Conferência, 'versão atual, limitador menor'; 300 creches em 258 municípios)"
+dif_pub_cedca,Lista publicada (Res. SEDEF 219/2024) menos versão de 21/05/2024 (+1 em três municípios)
