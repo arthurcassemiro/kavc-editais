@@ -46,13 +46,22 @@ def add_footnote(paragraph,texto):
     foot_el.append(fn)
     r=paragraph.add_run(); rPr=OxmlElement("w:rPr"); va=OxmlElement("w:vertAlign"); va.set(qn("w:val"),"superscript"); rPr.append(va); r._r.append(rPr)
     ref=OxmlElement("w:footnoteReference"); ref.set(qn("w:id"),str(fid)); r._r.append(ref)
+SUB_RE=re.compile(r"(?<![\w/.-])((?:[A-Za-z]|PCM|Rank))_([A-Za-z])(?![\w])")
 def add_text_with_notes(p,text,size=12,bold=False,italic=False):
     parts=re.split(r"(\[\^\w+\])",text)
     for part in parts:
         m=re.fullmatch(r"\[\^(\w+)\]",part)
         if m: add_footnote(p,notas[m.group(1)])
         elif part:
-            r=p.add_run(part); r.font.size=Pt(size); r.bold=bold; r.italic=italic; r.font.name="Arial"
+            pos=0
+            for mm in SUB_RE.finditer(part):
+                if mm.start()>pos:
+                    r=p.add_run(part[pos:mm.start()]); r.font.size=Pt(size); r.bold=bold; r.italic=italic; r.font.name="Arial"
+                r=p.add_run(mm.group(1)); r.font.size=Pt(size); r.bold=bold; r.italic=True; r.font.name="Arial"
+                r=p.add_run(mm.group(2)); r.font.size=Pt(size); r.bold=bold; r.italic=True; r.font.name="Arial"; r.font.subscript=True
+                pos=mm.end()
+            if pos<len(part):
+                r=p.add_run(part[pos:]); r.font.size=Pt(size); r.bold=bold; r.italic=italic; r.font.name="Arial"
 def para(text,align=WD_ALIGN_PARAGRAPH.JUSTIFY,indent=Cm(1.5),size=12,bold=False,italic=False,spacing=1.5,after=0,before=0,keep=False):
     p=doc.add_paragraph(); p.alignment=align; p.paragraph_format.first_line_indent=indent
     p.paragraph_format.line_spacing_rule=WD_LINE_SPACING.ONE_POINT_FIVE if spacing==1.5 else WD_LINE_SPACING.SINGLE
@@ -237,12 +246,14 @@ def figure(caption,path,width,fonte,nota=None):
     para("Fonte: "+fonte,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),size=10,spacing=1,after=0 if nota else 6)
     if nota: para("Nota: "+nota,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),size=10,spacing=1,after=6)
 # ---------- frente ----------
-for lang in ["pt","en","es"]: para(meta[f"titulo_{lang}"],align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),bold=True,after=6)
+if meta.get("titulo_pt"):
+    for lang in ["pt","en","es"]: para(meta[f"titulo_{lang}"],align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),bold=True,after=6)
 def bloco(rot,texto,rotkw,kw):
     para(rot,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),bold=True,spacing=1,after=2,before=8)
     para(texto,align=WD_ALIGN_PARAGRAPH.JUSTIFY,indent=Cm(0),spacing=1,after=4)
     para(f"{rotkw}: {kw}",align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),spacing=1,after=4)
-bloco("RESUMO",meta["resumo_pt"],"Palavras-chave",meta["palavras_pt"]); bloco("ABSTRACT",meta["resumo_en"],"Keywords",meta["palavras_en"]); bloco("RESUMEN",meta["resumo_es"],"Palabras clave",meta["palavras_es"])
+if meta.get("titulo_pt"):
+    bloco("RESUMO",meta["resumo_pt"],"Palavras-chave",meta["palavras_pt"]); bloco("ABSTRACT",meta["resumo_en"],"Keywords",meta["palavras_en"]); bloco("RESUMEN",meta["resumo_es"],"Palabras clave",meta["palavras_es"])
 # ---------- corpo ----------
 DECS={"tab1_porte_ms.csv":[None,0,1,3,0,0,0,0,0,0,None,None,None,None],"tab3_beneficiados.csv":None,"tab5_cenarios_ms.csv":[None,0,1,0,1,1,1,1,1],"tab6_regional_ms.csv":[None,0,3,1,0,1,1,1],"tab_pcm_porte.csv":[None,0,1,1,1,1,1,3,3,3],"tab_aplicacao_porte.csv":[None,0,1,1,1,0,0,None,0,0,0,0],"tab_cenarios_v4.csv":[None,0,0,0,1,1,1],"tab1a_porte_cobertura.csv":[None,0,1,1],"tab1b_porte_fatores.csv":[None,1,1,1,3,3,3],"tab2a_calculo_grandes.csv":[None,0,1,1,1,0,0,None],"tab2b_creches_versoes.csv":[None,0,None,0,0,0,0]}
 in_refs=False

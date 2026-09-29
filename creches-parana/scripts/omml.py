@@ -55,9 +55,18 @@ class P:
                 elif cmd==',': out.append(_run(' '))
                 else: out.append(_run('\\'+cmd))
             elif c in '_^':
-                flush(); s.i+=1
+                s.i+=1
                 arg=s.group() if s.peek()=='{' else s._one()
-                base=out.pop() if out else _run('')
+                if buf:
+                    import re as _re
+                    mm=_re.search(r"[A-Za-z]+$",buf)
+                    if mm: rest,last=buf[:mm.start()],mm.group(0)
+                    else: rest,last=buf[:-1],buf[-1]
+                    buf=''
+                    if rest: out.append(_run(rest))
+                    base=_run(last)
+                else:
+                    base=out.pop() if out else _run('')
                 tag='sSub' if c=='_' else 'sSup'; part='sub' if c=='_' else 'sup'
                 out.append(f'<m:{tag}><m:e>{base}</m:e><m:{part}>{conv(arg)}</m:{part}></m:{tag}>')
             elif c=='(' or c=='[':

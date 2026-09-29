@@ -68,4 +68,14 @@ def aplicacao():
         [None,"↓",None],
         [cx("Resultado: 43 + 100 + 157 = 300 unidades; tetos menores em maio de 2024 (300 em 258 municípios); Resolução 219/2024: 303 em 261",BR,span=3,ec="#000000",b=True)],
     ])
-DIAGRAMAS={"mecanismo":mecanismo,"institucional":institucional,"financeiro":financeiro,"pcm":pcm_arquitetura,"perguntas":perguntas,"aplicacao":aplicacao}
+def blocos():
+    w=5.2; g=0.2
+    return dict(widths=[w,g,w,g,w],rows=[
+        [cx("Bloco 1. Etapa prévia\n43 unidades",FS,"#FFFFFF",b=True),None,cx("Bloco 2. Portes grandes\n30 municípios, 100 unidades",PCM,"#FFFFFF",b=True),None,cx("Bloco 3. Portes pequenos\n369 municípios, 157 unidades",G2,"#FFFFFF",b=True)],
+        [cx("Deliberação CEDCA 60/2023: índice de prioridade do Ipardes (déficit de vagas, crescimento da população de 0 a 3 anos, crianças com perfil Bolsa Família)",BR,ec=FS),None,cx("1. Cota da faixa de porte: parcela na população-alvo × 257 / (1 + 0,503)",BR,ec=PCM),None,cx("1. Ordenação pelo PCM dentro de cada faixa, excluídos os municípios da etapa prévia",BR,ec=G2)],
+        [cx("Uma unidade em cada um dos 43 municípios",BR,ec=FS),None,cx("2. Cota do município: parcela na população-alvo da faixa × cota da faixa × (1 + PCM), menos a unidade da etapa prévia",BR,ec=PCM),None,cx("2. Cotas por faixa: 27 de 62 municípios (20 a 70 mil hab.), 100 de 205 (5 a 20 mil) e 30 de 102 (até 5 mil)",BR,ec=G2)],
+        [cx("Descontada no cálculo dos blocos 2 e 3",BR,ec=FS),None,cx("3. Arredondamento: parte inteira e, depois, maior resto",BR,ec=PCM),None,cx("3. Uma unidade por município contemplado; os demais ficam como suplentes, na ordem do índice",BR,ec=G2)],
+        [None,None,cx("4. Tetos por município: 10, 8, 7, 4 e 2 unidades (de 142 para 100)",BR,ec=PCM),None,None],
+        [cx("Resultado: 43 + 100 + 157 = 300 unidades em 224 municípios (março de 2024). Tetos menores em maio de 2024: 300 unidades em 258 municípios. Resolução SEDEF 219/2024: 303 unidades em 261 municípios",CL,span=5,b=True)],
+    ])
+DIAGRAMAS={"blocos":blocos,"mecanismo":mecanismo,"institucional":institucional,"financeiro":financeiro,"pcm":pcm_arquitetura,"perguntas":perguntas,"aplicacao":aplicacao}
