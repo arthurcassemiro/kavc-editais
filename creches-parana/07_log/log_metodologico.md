@@ -61,3 +61,13 @@ Aplicada a crítica de visualização editorial recebida após a primeira versã
 - Diagramas editáveis (SVG e PPTX) em `06_diagramas/`: figura_institucional, figura_calculo_ponderado, figura_perguntas_pcm, figura_perguntas_aplicacao (`scripts/11_diagramas_institucional.py`). Gerador do DOCX com blocos `EQ:` (equações numeradas, com subscritos) e `CIT:` (citação direta longa, recuo de 4 cm, fonte 10).
 - Levantamento de literatura, legislação, benchmarking e contexto em `07_log/levantamento_literatura_contexto.md`.
 - Pendências: o artigo ficou com 21 páginas (limite do dossiê: 22; meta interna de 20); a Casa Civil não é citada como autora da metodologia nas referências; as figuras de perguntas da aplicação e os gráficos de cenários ficaram no material suplementar.
+
+## Versão 4 (29/09/2026): estudo de caso metodológico e institucional
+
+- Reposicionamento: pergunta (como converter evidências em regra efetiva de alocação), objetivo (reconstruir, sistematizar e analisar o indicador e o método de distribuição) e contribuição (indicador que ultrapassou a função informacional). Vocabulário: impacto alocativo, consequências distributivas, efeito sobre a seleção territorial; avaliação ex ante da regra por reconstrução documental, auditoria das planilhas e sensibilidade.
+- Seção do PCM com subseções por pilar (fontes, equação com coeficientes numéricos, mapa por pilar em `05_mapas/mapa_fe_educacional`, `mapa_fd_demografico`, `mapa_fs_socioeconomico`, `mapa_pcm`; `scripts/06b_mapas_pilares.py`) e posição do Paraná no Brasil; perguntas no início da metodologia; ponderação apresentada em diagrama.
+- Diagramas editáveis no próprio DOCX: construídos como tabelas do Word (`scripts/diagramas_word.py`, bloco `DIAGRAMA:` em `10_docx.py`), sem sobreposição; versões SVG/PPTX no material suplementar. Equações nativas do Word (OMML) via `scripts/omml.py` (bloco `EQ:` com sintaxe LaTeX reduzida).
+- Figura institucional dividida em processo decisório (Figura 1) e fluxo financeiro (Figura 2); Figura 6 com o mecanismo Dados → PCM → faixas e parâmetros → deliberação → lista → alocação.
+- Tabela 1 movida aos resultados; Tabela 3 de cenários contrafactuais reduzida (S2, S6 e versões da regra, incluindo a de 21/05/2024, coluna "Total (mai/2024)" da Tabela 2, conferida contra a aba Conferência).
+- Anexo IV do ajustamento do PPA (LDO 2026), enviado pelo autor, não trata de creches; usado para descrever o processo de revisão anual (`07_log/leitura_revisao_ppa.md`).
+- Versão cega: retirada a frase sobre a participação de autor na construção da metodologia; metadados do DOCX limpos.

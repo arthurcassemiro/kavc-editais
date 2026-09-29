@@ -5,7 +5,8 @@ presas à sua fonte; nota de rodapé para o material suplementar; metadados sem 
 Sintaxe do .md: '# ' e '## ' títulos; parágrafos; '![legenda](caminho){width=16} | Fonte: ... | Nota: ...';
 'TABLE: csv | Tabela N. legenda | Fonte: ... | Nota: ...' (cabeçalho em dois níveis quando o nome da coluna tem 'grupo :: coluna');
 'QUADRO: csv | Quadro N. legenda | Fonte: ...'; '[^nota]' no texto vira nota de rodapé com o texto definido em linha '[^nota]: texto'."""
-import re, os, copy, pandas as pd
+import re, os, copy, sys, pandas as pd
+sys.path.insert(0,"scripts")
 from docx import Document
 from docx.shared import Pt, Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
@@ -16,7 +17,7 @@ from docx.opc.constants import RELATIONSHIP_TYPE as RT
 from docx.opc.part import Part
 from docx.opc.packuri import PackURI
 TAB_SIZE=[9]
-SRC="08_artigo/artigo.md"; OUT="08_artigo/artigo_creches_parana_anonimizado.docx"
+SRC=os.environ.get("ARTIGO_SRC","08_artigo/artigo.md"); OUT=os.environ.get("ARTIGO_OUT","08_artigo/artigo_creches_parana_anonimizado.docx")
 txt=open(SRC,encoding="utf-8").read()
 fm,body=txt.split("---\n",2)[1:]
 meta={}
@@ -153,19 +154,77 @@ def citacao(texto):
     p.paragraph_format.line_spacing_rule=WD_LINE_SPACING.SINGLE; p.paragraph_format.space_before=Pt(6); p.paragraph_format.space_after=Pt(6)
     add_text_with_notes(p,texto,10)
 def equation(texto,num):
+    """Equação nativa (OMML) centrada, com número à direita."""
     from docx.enum.text import WD_TAB_ALIGNMENT
+    from omml import omath_inline
     p=doc.add_paragraph(); p.paragraph_format.first_line_indent=Cm(0); p.paragraph_format.left_indent=Cm(0); p.alignment=WD_ALIGN_PARAGRAPH.LEFT
-    p.paragraph_format.line_spacing_rule=WD_LINE_SPACING.SINGLE; p.paragraph_format.space_before=Pt(6); p.paragraph_format.space_after=Pt(6)
+    p.paragraph_format.line_spacing_rule=WD_LINE_SPACING.SINGLE; p.paragraph_format.space_before=Pt(6); p.paragraph_format.space_after=Pt(6); p.paragraph_format.keep_with_next=True
     ts=p.paragraph_format.tab_stops; ts.add_tab_stop(Cm(7.5),WD_TAB_ALIGNMENT.CENTER); ts.add_tab_stop(Cm(16),WD_TAB_ALIGNMENT.RIGHT)
-    def run(t,sub=False,sup=False):
-        r=p.add_run(t); r.font.size=Pt(11); r.font.name="Arial"; r.font.subscript=sub; r.font.superscript=sup
-    run("\t")
-    for tok in re.split(r"(_\{[^}]*\}|_\w|\^\{[^}]*\}|\^\w)",texto):
-        if not tok: continue
-        if tok.startswith("_"): run(tok[2:-1] if tok[1]=="{" else tok[1:],sub=True)
-        elif tok.startswith("^"): run(tok[2:-1] if tok[1]=="{" else tok[1:],sup=True)
-        else: run(tok)
-    run("\t("+num+")")
+    r=p.add_run("\t"); r.font.size=Pt(11); r.font.name="Arial"
+    p._p.append(omath_inline(texto))
+    r=p.add_run("\t("+num+")"); r.font.size=Pt(11); r.font.name="Arial"
+def _shade(cell,fill,ec):
+    tcPr=cell._tc.get_or_add_tcPr()
+    shd=OxmlElement("w:shd"); shd.set(qn("w:val"),"clear"); shd.set(qn("w:color"),"auto"); shd.set(qn("w:fill"),fill.lstrip("#")); tcPr.append(shd)
+    b=OxmlElement("w:tcBorders")
+    for side in ("top","left","bottom","right"):
+        e=OxmlElement(f"w:{side}"); e.set(qn("w:val"),"single" if ec else "nil"); e.set(qn("w:sz"),"8"); e.set(qn("w:color"),(ec or "#FFFFFF").lstrip("#")); b.append(e)
+    tcPr.append(b)
+    va=OxmlElement("w:vAlign"); va.set(qn("w:val"),"center"); tcPr.append(va)
+    for m in ("top","bottom","left","right"):
+        pass
+def diagrama(nome,caption,fonte,nota=None):
+    """Diagrama editável construído como tabela do Word (caixas = células; setas = símbolos)."""
+    from diagramas_word import DIAGRAMAS
+    spec=DIAGRAMAS[nome](); widths=spec["widths"]; rows=spec["rows"]
+    para(caption,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),size=11,spacing=1,after=3,before=8,keep=True)
+    t=doc.add_table(rows=0,cols=len(widths)); t.alignment=WD_TABLE_ALIGNMENT.CENTER; t.autofit=False
+    tblPr=t._tbl.tblPr; lay=OxmlElement("w:tblLayout"); lay.set(qn("w:type"),"fixed"); tblPr.append(lay)
+    tw=OxmlElement("w:tblW"); tw.set(qn("w:w"),str(int(sum(widths)*567))); tw.set(qn("w:type"),"dxa"); tblPr.append(tw)
+    for row in rows:
+        r=t.add_row(); row_props(r,header=False)
+        cells=r.cells; ci=0
+        for item in row:
+            if ci>=len(cells): break
+            c=cells[ci]
+            if item is None: _shade(c,"#FFFFFF",None); ci+=1; continue
+            if isinstance(item,str):
+                _shade(c,"#FFFFFF",None); p=c.paragraphs[0]; p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.first_line_indent=Cm(0); p.paragraph_format.left_indent=Cm(0)
+                rr=p.add_run(item); rr.font.size=Pt(10); rr.font.name="Arial"; ci+=1; continue
+            span=item.get("span",1)
+            if span>1: c=c.merge(cells[ci+span-1])
+            _shade(c,item["fc"],item.get("ec"))
+            for k,line in enumerate(item["t"].split("\n")):
+                p=c.paragraphs[0] if k==0 else c.add_paragraph()
+                p.alignment=WD_ALIGN_PARAGRAPH.CENTER; p.paragraph_format.first_line_indent=Cm(0); p.paragraph_format.left_indent=Cm(0)
+                p.paragraph_format.space_after=Pt(0); p.paragraph_format.space_before=Pt(0); p.paragraph_format.line_spacing_rule=WD_LINE_SPACING.SINGLE
+                rr=p.add_run(line); rr.font.size=Pt(item.get("fs",8)); rr.font.name="Arial"; rr.bold=item.get("b",False) and k==0
+                from docx.shared import RGBColor as _RGB
+                h=item.get("tc","#000000").lstrip("#"); rr.font.color.rgb=_RGB(int(h[0:2],16),int(h[2:4],16),int(h[4:6],16))
+            ci+=span
+        for j,c in enumerate(r.cells):
+            c.width=Cm(widths[min(j,len(widths)-1)])
+    grid=t._tbl.tblGrid
+    for j,gc in enumerate(grid.findall(qn("w:gridCol"))): gc.set(qn("w:w"),str(int(widths[j]*567)))
+    for r in t.rows:
+        for c in r._tr.findall(qn("w:tc")):
+            tcPr=c.find(qn("w:tcPr")); span=tcPr.find(qn("w:gridSpan"))
+            idx=list(r._tr.findall(qn("w:tc"))).index(c)
+            # largura = soma das colunas cobertas
+            start=0; k=0
+            for cc in r._tr.findall(qn("w:tc")):
+                if cc is c: break
+                sp=cc.find(qn("w:tcPr")).find(qn("w:gridSpan")); start+=int(sp.get(qn("w:val"))) if sp is not None else 1
+            n=int(span.get(qn("w:val"))) if span is not None else 1
+            wsum=sum(widths[start:start+n]); tw=tcPr.find(qn("w:tcW"))
+            if tw is None: tw=OxmlElement("w:tcW"); tcPr.append(tw)
+            tw.set(qn("w:w"),str(int(wsum*567))); tw.set(qn("w:type"),"dxa")
+            mar=OxmlElement("w:tcMar")
+            for side,v in (("top",30),("bottom",30),("left",50),("right",50)):
+                e=OxmlElement(f"w:{side}"); e.set(qn("w:w"),str(v)); e.set(qn("w:type"),"dxa"); mar.append(e)
+            tcPr.append(mar)
+    para("Fonte: "+fonte,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),size=10,spacing=1,after=0 if nota else 6,before=3)
+    if nota: para("Nota: "+nota,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),size=10,spacing=1,after=6)
 def figure(caption,path,width,fonte,nota=None):
     para(caption,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),size=11,spacing=1,after=3,before=8,keep=True)
     dd,ff=os.path.split(path); alt=os.path.join(dd,"sem_rotulo",ff)
@@ -181,7 +240,7 @@ def bloco(rot,texto,rotkw,kw):
     para(f"{rotkw}: {kw}",align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),spacing=1,after=4)
 bloco("RESUMO",meta["resumo_pt"],"Palavras-chave",meta["palavras_pt"]); bloco("ABSTRACT",meta["resumo_en"],"Keywords",meta["palavras_en"]); bloco("RESUMEN",meta["resumo_es"],"Palabras clave",meta["palavras_es"])
 # ---------- corpo ----------
-DECS={"tab1_porte_ms.csv":[None,0,1,3,0,0,0,0,0,0,None,None,None,None],"tab3_beneficiados.csv":None,"tab5_cenarios_ms.csv":[None,0,1,0,1,1,1,1,1],"tab6_regional_ms.csv":[None,0,3,1,0,1,1,1],"tab_pcm_porte.csv":[None,0,1,1,1,1,1,3,3,3],"tab_aplicacao_porte.csv":[None,0,1,1,1,0,0,None,0,0,0,0]}
+DECS={"tab1_porte_ms.csv":[None,0,1,3,0,0,0,0,0,0,None,None,None,None],"tab3_beneficiados.csv":None,"tab5_cenarios_ms.csv":[None,0,1,0,1,1,1,1,1],"tab6_regional_ms.csv":[None,0,3,1,0,1,1,1],"tab_pcm_porte.csv":[None,0,1,1,1,1,1,3,3,3],"tab_aplicacao_porte.csv":[None,0,1,1,1,0,0,None,0,0,0,0],"tab_cenarios_v4.csv":[None,0,0,0,1,1,1]}
 in_refs=False
 for block in body.strip().split("\n\n"):
     block=block.strip()
@@ -191,6 +250,10 @@ for block in body.strip().split("\n\n"):
     if block.startswith("## "): heading(block[3:].strip(),2); continue
     m=re.match(r"!\[(.+?)\]\((.+?)\)\{width=(\d+)\}\s*\|\s*Fonte:\s*(.+?)(?:\s*\|\s*Nota:\s*(.+))?$",block,re.S)
     if m: figure(m.group(1),m.group(2),int(m.group(3)),m.group(4).strip(),(m.group(5) or "").strip() or None); continue
+    if block.startswith("DIAGRAMA:"):
+        parts=[x.strip() for x in block.split(":",1)[1].split("|")]
+        nome,cap=parts[0],parts[1]; fonte=parts[2].replace("Fonte:","").strip(); nota=parts[3].replace("Nota:","").strip() if len(parts)>3 else None
+        diagrama(nome,cap,fonte,nota); continue
     if block.startswith("CIT:"):
         citacao(block[4:].strip()); continue
     if block.startswith("EQ:"):

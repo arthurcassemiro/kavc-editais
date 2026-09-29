@@ -164,3 +164,15 @@ fig_perguntas("f5","Figura 5. Perguntas da aplicação: do PCM às unidades",[
  ("5. Limites","O que o índice não capta?","Terreno, capacidade de licitar e fila local; margem de decisão delimitada e documentada",ACENTO),
 ],"figura_perguntas_aplicacao","Fonte: Elaboração própria.")
 print("institucional ok")
+# =============== Figura: mecanismo (dados -> PCM -> parâmetros -> deliberação -> lista -> alocação) ===============
+R=Reg(); W,H=16,5.6; fig,ax=canvas(W,H)
+ax.text(0,H-0.05,"Figura 6. Mecanismo: das evidências municipais à alocação do investimento",fontsize=9,color=TINTA,va="top")
+et=[("Dados municipais\nnove indicadores oficiais",CINZA_CLARO,TINTA),("PCM\nmín-máx, três pilares, pesos 2:1:2",PCM_ESC,"white"),("Faixas e parâmetros\nportes, cotas, tetos, maior resto",CINZAS[1],"white"),("Deliberação\nCEDCA aprova estudo e ranqueamento",FS_ESC,"white"),("Lista de municípios\nRes. SEDEF 219/2024",FD_ESC,"white"),("Alocação do investimento\nadesão, repasse, obra",CINZAS[2],"white")]
+w=2.35; g=(W-6*w)/5; y=H-0.75; hh=max(altura(t,w,7,pad=0.2) for t,_,_ in et)
+for k,(t,fc,tc) in enumerate(et):
+    x=k*(w+g); rbox(ax,x,y,w,t,fc=fc,ec=fc if fc!=CINZA_CLARO else BORDA,tc=tc,fs=7,pad=0.2,h=hh)
+    if k<5: rseta(ax,x+w,y-hh/2,x+w+g,y-hh/2)
+ax.set_ylim(y-hh-0.3,H)
+fig.text(0,0,"Fonte: Elaboração própria.",fontsize=7,color=TINTA2,va="top")
+salvar(fig,OUT+"figura_mecanismo"); plt.close(fig)
+exportar_pptx(R,W,H,"Figura 6. Mecanismo: das evidências municipais à alocação do investimento",OUT+"figura_mecanismo.pptx")
