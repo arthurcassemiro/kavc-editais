@@ -1,0 +1,7 @@
+Porte (habitantes),Municípios,Pop. 0–4 (%),Cota do porte,Soma de K,Parte inteira,Após maior resto,Teto por município
+G2 (acima de 1 milhão),1,12.2,23.1,29.7,29,30,10
+G1 (500 mil a 1 milhão),1,4.3,7.6,11.0,10,11,8
+M2 (200 a 500 mil),6,17.4,29.8,42.7,39,44,7
+M1 (100 a 200 mil),14,17.4,30.0,38.0,31,41,4
+P4 (70 a 100 mil),8,6.4,10.4,14.7,9,16,2
+G2 a P4,399,100.0,100.9,136.1,118,142,100 após tetos

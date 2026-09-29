@@ -138,13 +138,17 @@ def quadro(csv,caption,fonte,nota=None):
     tblPr=t._tbl.tblPr; lay=OxmlElement("w:tblLayout"); lay.set(qn("w:type"),"fixed"); tblPr.append(lay)
     for old in tblPr.findall(qn("w:tblW")): tblPr.remove(old)
     tw=OxmlElement("w:tblW"); tw.set(qn("w:w"),str(int(16.0/2.54*1440))); tw.set(qn("w:type"),"dxa"); tblPr.append(tw)
-    widths=[Cm(3.0),Cm(2.6),Cm(4.0),Cm(6.4)] if n==4 else [int(Cm(16.0)/n)]*n
+    QW={4:[3.0,4.6,4.4,4.0],8:[2.2,3.1,2.3,1.3,0.9,2.2,2.2,1.8]}
+    widths=[Cm(w) for w in QW[n]] if n in QW else [int(Cm(16.0)/n)]*n
     for j,col in enumerate(t.columns): col.width=int(widths[j])
+    grid=t._tbl.tblGrid
+    for j,gc in enumerate(grid.findall(qn("w:gridCol"))): gc.set(qn("w:w"),str(int(widths[j]/635)))
     for j,c in enumerate(df.columns): cell_text(t.rows[0].cells[j],c,bold=True,align=WD_ALIGN_PARAGRAPH.LEFT); borders(t.rows[0].cells[j],top="8",bottom="4")
     row_props(t.rows[0],True)
     for i,row in df.iterrows():
         cells=t.add_row().cells; row_props(t.rows[-1])
-        for j,v in enumerate(row): cell_text(cells[j],str(v),align=WD_ALIGN_PARAGRAPH.LEFT,size=8.5); borders(cells[j],bottom="8" if i==len(df)-1 else "2")
+        for j,v in enumerate(row): cell_text(cells[j],str(v),align=WD_ALIGN_PARAGRAPH.LEFT,size=8.5); borders(cells[j],bottom="8" if i==len(df)-1 else "2"); cells[j].width=int(widths[j])
+    for j,c in enumerate(t.rows[0].cells): c.width=int(widths[j])
     for c in t.rows[-1].cells:
         for p in c.paragraphs: p.paragraph_format.keep_with_next=True
     para("Fonte: "+fonte,align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),size=10,spacing=1,after=0 if nota else 6,before=3)
@@ -240,7 +244,7 @@ def bloco(rot,texto,rotkw,kw):
     para(f"{rotkw}: {kw}",align=WD_ALIGN_PARAGRAPH.LEFT,indent=Cm(0),spacing=1,after=4)
 bloco("RESUMO",meta["resumo_pt"],"Palavras-chave",meta["palavras_pt"]); bloco("ABSTRACT",meta["resumo_en"],"Keywords",meta["palavras_en"]); bloco("RESUMEN",meta["resumo_es"],"Palabras clave",meta["palavras_es"])
 # ---------- corpo ----------
-DECS={"tab1_porte_ms.csv":[None,0,1,3,0,0,0,0,0,0,None,None,None,None],"tab3_beneficiados.csv":None,"tab5_cenarios_ms.csv":[None,0,1,0,1,1,1,1,1],"tab6_regional_ms.csv":[None,0,3,1,0,1,1,1],"tab_pcm_porte.csv":[None,0,1,1,1,1,1,3,3,3],"tab_aplicacao_porte.csv":[None,0,1,1,1,0,0,None,0,0,0,0],"tab_cenarios_v4.csv":[None,0,0,0,1,1,1]}
+DECS={"tab1_porte_ms.csv":[None,0,1,3,0,0,0,0,0,0,None,None,None,None],"tab3_beneficiados.csv":None,"tab5_cenarios_ms.csv":[None,0,1,0,1,1,1,1,1],"tab6_regional_ms.csv":[None,0,3,1,0,1,1,1],"tab_pcm_porte.csv":[None,0,1,1,1,1,1,3,3,3],"tab_aplicacao_porte.csv":[None,0,1,1,1,0,0,None,0,0,0,0],"tab_cenarios_v4.csv":[None,0,0,0,1,1,1],"tab1a_porte_cobertura.csv":[None,0,1,1],"tab1b_porte_fatores.csv":[None,1,1,1,3,3,3],"tab2a_calculo_grandes.csv":[None,0,1,1,1,0,0,None],"tab2b_creches_versoes.csv":[None,0,None,0,0,0,0]}
 in_refs=False
 for block in body.strip().split("\n\n"):
     block=block.strip()
