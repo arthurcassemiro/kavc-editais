@@ -1,0 +1,33 @@
+MATERIAL SUPLEMENTAR
+De indicador a regra de alocação: Potencial de Creche por Município no "Programa Infância Feliz"
+
+Figuras, tabelas e mapas inseridos no texto do manuscrito, enviados também em arquivos separados.
+Cada arquivo .docx reproduz o elemento com a mesma legenda, numeração e fonte do manuscrito.
+Figuras e tabelas são editáveis no Word (as figuras são diagramas construídos com tabelas do Word).
+
+Arquivo consolidado
+  00_Material_Suplementar_completo.docx ...... todos os elementos, um por página, com índice
+
+Figuras
+  Figura_1_Processo_decisorio_e_institucional.docx ...... Figura 1 (seção 2.3)
+  Figura_2_Fluxo_financeiro_fundo_a_fundo.docx ........... Figura 2 (seção 2.3)
+  Figura_3_Arquitetura_do_PCM.docx ....................... Figura 3 (seção 3.4)
+  Figura_4_Os_tres_blocos_de_distribuicao.docx ........... Figura 4 (seção 4.1)
+
+Tabelas
+  Tabela_1_Quadro_sintese_fator_educacional.docx ......... Tabela 1 (seção 3.1)
+  Tabela_2_Quadro_sintese_fator_demografico.docx ......... Tabela 2 (seção 3.2)
+  Tabela_3_Quadro_sintese_fator_socioeconomico.docx ...... Tabela 3 (seção 3.3)
+  Tabela_4_Cobertura_de_creche_por_porte.docx ............ Tabela 4 (seção 4.2)
+  Tabela_5_Fatores_e_PCM_por_porte.docx .................. Tabela 5 (seção 4.2)
+  Tabela_6_Calculo_proporcional_por_faixas.docx .......... Tabela 6 (seção 4.2)
+  Tabela_7_Distribuicao_final.docx ....................... Tabela 7 (seção 4.2)
+  Tabelas_1_a_7_dados_editaveis.xlsx ..................... dados das sete tabelas, uma por aba
+
+Mapas (para cada mapa: .docx com legenda e fonte, PNG 300 dpi e PDF vetorial)
+  Mapa_1_Fator_educacional ............................... Mapa 1 (seção 3.1)
+  Mapa_2_Fator_demografico ............................... Mapa 2 (seção 3.2)
+  Mapa_3_Fator_socioeconomico ............................ Mapa 3 (seção 3.3)
+  Mapa_4_Potencial_de_Creche_por_Municipio ............... Mapa 4 (seção 3.4)
+
+Sistema de referência dos mapas: SIRGAS 2000, projeção policônica; malha municipal IBGE 2022.
