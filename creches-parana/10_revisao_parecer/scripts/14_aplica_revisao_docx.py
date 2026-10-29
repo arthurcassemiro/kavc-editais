@@ -29,10 +29,12 @@ def new_para_id():
             used_ids.add(v)
             return v
 
-def lang_rpr(bold=False):
+def lang_rpr(bold=False, italic=False):
     rpr = etree.Element(w('rPr'))
     if bold:
         etree.SubElement(rpr, w('b')); etree.SubElement(rpr, w('bCs'))
+    if italic:
+        etree.SubElement(rpr, w('i')); etree.SubElement(rpr, w('iCs'))
     if DESTACAR:
         h = etree.SubElement(rpr, w('highlight')); h.set(w('val'), 'yellow')
     l = etree.SubElement(rpr, w('lang')); l.set(w('val'), 'pt-BR')
@@ -52,9 +54,9 @@ def add_highlight(r):
                 pos = i; break
         rpr.insert(pos, h)
 
-def text_run(txt, bold=False):
+def text_run(txt, bold=False, italic=False):
     r = etree.Element(w('r'))
-    r.append(lang_rpr(bold))
+    r.append(lang_rpr(bold, italic))
     t = etree.SubElement(r, w('t')); t.text = txt
     t.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
     return r
@@ -89,7 +91,39 @@ def fn_ref_run(fid):
     fr = etree.SubElement(r, w('footnoteReference')); fr.set(w('id'), str(fid))
     return r
 
-TOK = re.compile(r'(\*\*.+?\*\*|⟦[^⟧]+⟧|\[\^\d+\])')
+
+def split_destacado(t, old, new):
+    """Divide o run de t em três (antes, novo destacado, depois), preservando os demais filhos do run."""
+    r = t.getparent()
+    a, b = t.text.split(old, 1)
+    filhos = list(r)
+    k = filhos.index(t)
+    rpr = r.find(w('rPr'))
+    def run_com(textos_e_filhos):
+        nr = etree.Element(w('r'))
+        if rpr is not None:
+            nr.append(copy.deepcopy(rpr))
+        for x in textos_e_filhos:
+            nr.append(x)
+        return nr
+    def novo_t(txt):
+        nt = etree.Element(w('t')); nt.text = txt
+        nt.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
+        return nt
+    depois = [copy.deepcopy(c) for c in filhos[k + 1:]]
+    for c in filhos[k + 1:]:
+        r.remove(c)
+    t.text = a
+    t.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
+    rn = run_com([novo_t(new)]); add_highlight(rn)
+    rb = run_com(([novo_t(b)] if b else []) + depois)
+    r.addnext(rn)
+    if len(rb) > (1 if rpr is not None else 0):
+        rn.addnext(rb)
+    if not a and not any(c.tag != w('rPr') and c is not t for c in r):
+        r.getparent().remove(r)
+
+TOK = re.compile(r'(\*\*.+?\*\*|\*[^*]+?\*|⟦[^⟧]+⟧|\[\^\d+\])')
 
 def build_runs(markup):
     out = []
@@ -98,6 +132,8 @@ def build_runs(markup):
             continue
         if part.startswith('**') and part.endswith('**'):
             out.append(text_run(part[2:-2], bold=True))
+        elif part.startswith('*') and part.endswith('*') and len(part) > 2:
+            out.append(text_run(part[1:-1], italic=True))
         elif part.startswith('⟦'):
             out.append(omath(part[1:-1]))
         elif part.startswith('[^'):
@@ -134,12 +170,7 @@ for s in spec.get('text_subs', []):
         if t.text and s['old'] in t.text:
             if not DESTACAR:
                 t.text = t.text.replace(s['old'], s['new'], 1); done = True; break
-            r = t.getparent(); a, b = t.text.split(s['old'], 1)
-            t.text = a; t.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
-            rn = copy.deepcopy(r); rn.find(w('t')).text = s['new']; add_highlight(rn)
-            rb = copy.deepcopy(r); rb.find(w('t')).text = b
-            r.addnext(rn); rn.addnext(rb)
-            if not a: r.getparent().remove(r)
+            split_destacado(t, s['old'], s['new'])
             done = True; break
     assert done, f"texto não encontrado no elemento {s['el']}: {s['old']}"
     log.append(f"sub {s['el']}: {s['old']!r} -> {s['new']!r}")
@@ -226,12 +257,7 @@ if spec.get('footnotes') or fn_subs or fn_repl:
                 if not DESTACAR:
                     t.text = t.text.replace(s['old'], s['new'], 1)
                 else:
-                    r = t.getparent(); a, b = t.text.split(s['old'], 1)
-                    t.text = a; t.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
-                    rn = copy.deepcopy(r); rn.find(w('t')).text = s['new']; add_highlight(rn)
-                    rb = copy.deepcopy(r); rb.find(w('t')).text = b
-                    r.addnext(rn); rn.addnext(rb)
-                    if not a: r.getparent().remove(r)
+                    split_destacado(t, s['old'], s['new'])
                 done = True; break
         assert done, s
         log.append(f"footnote_sub {s['id']}: {s['old']!r} -> {s['new']!r}")
@@ -243,7 +269,7 @@ if spec.get('footnotes') or fn_subs or fn_repl:
         for c in list(p):
             if c.tag == w('r') and c.find(w('footnoteRef')) is None:
                 p.remove(c)
-        for r in build_runs(markup):
+        for r in build_runs(markup if markup.startswith(' ') else ' ' + markup):
             p.append(r)
         log.append(f"footnote_replace {fid}: {markup[:60]!r}")
     for fid, markup in spec.get('footnotes', {}).items():
@@ -254,9 +280,33 @@ if spec.get('footnotes') or fn_subs or fn_repl:
         for c in list(p):
             if c.tag == w('r') and c.find(w('footnoteRef')) is None:
                 p.remove(c)
-        for r in build_runs(markup):
+        for r in build_runs(markup if markup.startswith(' ') else ' ' + markup):
             p.append(r)
         froot.append(nn)
         log.append(f"footnote {fid}: {markup[:60]!r}")
     fn.write(fn_path, xml_declaration=True, encoding='UTF-8', standalone=True)
+# 8. renumera as notas na ordem das chamadas no texto e grava os w:footnote nessa ordem
+doc = etree.parse(doc_path); fn = etree.parse(fn_path); froot = fn.getroot()
+refs = [r for r in doc.getroot().iter(w('footnoteReference'))]
+ordem = []
+for r in refs:
+    fid = r.get(w('id'))
+    if fid not in ordem:
+        ordem.append(fid)
+mapa = {old: str(i + 1) for i, old in enumerate(ordem)}
+for r in refs:
+    r.set(w('id'), mapa[r.get(w('id'))])
+notas = {n.get(w('id')): n for n in froot.findall(w('footnote'))}
+especiais = [n for n in froot.findall(w('footnote')) if int(n.get(w('id'))) <= 0]
+for n in froot.findall(w('footnote')):
+    froot.remove(n)
+for n in especiais:
+    froot.append(n)
+for old in ordem:
+    n = notas[old]; n.set(w('id'), mapa[old]); froot.append(n)
+sobras = [k for k in notas if int(k) > 0 and k not in ordem]
+assert not sobras, f'notas sem chamada: {sobras}'
+doc.write(doc_path, xml_declaration=True, encoding='UTF-8', standalone=True)
+fn.write(fn_path, xml_declaration=True, encoding='UTF-8', standalone=True)
+log.append('notas renumeradas: ' + ', '.join(f'{k}->{v}' for k, v in mapa.items() if k != v))
 print('\n'.join(log))

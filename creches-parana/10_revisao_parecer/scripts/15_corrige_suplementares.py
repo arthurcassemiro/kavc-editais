@@ -19,6 +19,7 @@ CELULAS = [
     ('Proporção de crianças pequenas (PC)', 7, '6ª menor', '8ª menor'),
     ('Proporção de crianças pequenas (PC)', 0, 'Proporção de crianças pequenas (PC)', 'Proporção de crianças (PC)'),
     # Tabela 6
+    ('Porte (habitantes)', 1, 'Mun/', 'Mun.'),
     ('Porte (habitantes)', 2, 'Pop. 0–4 (%)', 'Pop. 5–14 (%)'),
     ('G2 (acima de 1 milhão)', 2, '12,2', '13,5'),
     ('G1 (500 mil a 1 milhão)', 2, '4,3', '4,5'),
@@ -27,6 +28,7 @@ CELULAS = [
     ('G2 a P4', 1, '399', '30'),
     ('G2 a P4', 2, '100,0', '59,1'),
     ('G2 a P4', 3, '100,9', '101,0'),
+    ('G2 a P4', 7, '100 após tetos', '100 (cota fixa)'),
 ]
 TEXTOS = [
     ('3. Tetos por município: 10, 8, 7, 4 e 2 unidades (de 142 para 100)', '3. Cota fixa de 100 unidades, com tetos de 10, 8, 7, 4 e 2 por município'),
@@ -86,6 +88,8 @@ for f in sorted(os.listdir(src)):
         t2['F5'].value = '13,1% de 5 a 14 anos (2022)'; t2['G5'].value = '13,5% (2022)'; t2['H5'].value = '8ª menor'
         assert t6['C3'].value == 'Pop. 0–4 (%)' and t6['A9'].value == 'G2 a P4'
         t6['C3'].value = 'Pop. 5–14 (%)'
+        if t6['B3'].value == 'Mun/': t6['B3'].value = 'Mun.'
+        assert t6['H9'].value == '100 após tetos'; t6['H9'].value = '100 (cota fixa)'
         if t6['E3'].value is None: t6['E3'].value = 'K'
         for cell, v in [('C4', 13.5), ('C5', 4.5), ('C7', 17.6), ('C8', 6.1), ('B9', 30), ('C9', 59.1), ('D9', 101.0)]:
             t6[cell].value = v

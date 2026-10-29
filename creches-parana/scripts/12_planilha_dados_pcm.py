@@ -74,11 +74,11 @@ for a,t,k in linhas:
     r+=1
 r+=1
 ws.cell(row=r,column=2,value="Método").font=F(11,True); r+=1
-met=["Normalização mínimo-máximo de 0 a 100, com extremos dados pelos 399 municípios. Nos indicadores de sentido inverso (cobertura de creche, matrícula na pré-escola e no fundamental, oferta privada e IPDM), o município de menor valor recebe 100.",
+met=["Normalização mínimo-máximo de 0 a 100, com extremos dados pelos 399 municípios. Nos indicadores de sentido inverso (cobertura de creche, matrícula na pré-escola e no fundamental, oferta privada e IPDM), o município de menor valor recebe 100. Exceção: na planilha de cálculo, PC e TN são divididos pelo maior valor municipal (× 100), o que só coincidiria com o mínimo-máximo se o menor valor fosse zero, como na MI.",
 "Fator educacional: F_E = normalização de [(2 × MC + MP + OP) / 4]. Fator demográfico: F_D = normalização de [(MI + PC + TN) / 3]. Fator socioeconômico: F_S = normalização de [(BP + CU + IR) / 3].",
 "PCM = (2 × F_E + F_D + 2 × F_S) / 500, entre 0 e 1.",
 "Os indicadores normalizados das abas 2 a 4 são os valores das planilhas de cálculo do estudo; fatores e PCM são recalculados por fórmula e reproduzem exatamente os valores do estudo.",
-"Na planilha de cálculo, a coluna rotulada como população de 0 a 4 anos contém a população de 5 a 14 anos do Censo Demográfico 2022 (1.497.164 pessoas no estado) e entra no indicador PC e nas cotas dos portes grandes. Com a população de 0 a 4 anos, a correlação de postos com o PCM seria 0,99, e 154 dos 157 municípios selecionados nas faixas de menor porte se manteriam."]
+"Na planilha de cálculo, a coluna rotulada como população de 0 a 4 anos contém a população de 5 a 14 anos do Censo Demográfico 2022 (1.497.164 pessoas no estado) e entra no indicador PC e nas cotas dos portes grandes. Calculado com a população de 0 a 4 anos e com o mínimo-máximo também em PC e TN, o PCM teria correlação de postos de 0,99 com o adotado, e 153 dos 157 municípios selecionados nas faixas de menor porte se manteriam."]
 for t in met:
     c=ws.cell(row=r,column=2,value=t); ws.merge_cells(start_row=r,start_column=2,end_row=r,end_column=3); c.font=F(10); c.alignment=Alignment(wrap_text=True,vertical="top"); ws.row_dimensions[r].height=30; r+=1
 r+=1
@@ -133,8 +133,8 @@ ws2,fe_col=aba_fator("2 Fator educacional","Fator educacional (F_E)","FE",
 rodape(ws2,["F_E = normalização mínimo-máximo de [(2 × N(MC) + N(MP) + N(OP)) / 4]. Indicadores normalizados conforme as planilhas de cálculo do estudo.","Fontes: Inep (Censo Escolar 2023); IBGE (Censo Demográfico 2022)."]); fechar(ws2,"D6")
 ws3,fd_col=aba_fator("3 Fator demográfico","Fator demográfico (F_D)","FD",
  [("MI: mortalidade infantil (por mil)","mort_inf","0.0"),("PC: proporção de crianças de 5 a 14 anos","prop04","0.0%"),("TN: taxa de natalidade (por mil)","natalidade","0.00")],
- [("N(MI), sentido direto","mi_norm",None),("N(PC), sentido direto","prop04_norm",None),("N(TN), sentido direto","nat_norm",None)],[1,1,1],None,"F_D")
-rodape(ws3,["F_D = normalização mínimo-máximo de [(N(MI) + N(PC) + N(TN)) / 3].","Fontes: Ministério da Saúde (SIM e Sinasc, 2020); IBGE (Censo Demográfico 2022); Ipardes (natalidade 2022)."]); fechar(ws3,"D6")
+ [("N(MI), sentido direto","mi_norm",None),("PC ÷ maior valor × 100","prop04_norm",None),("TN ÷ maior valor × 100","nat_norm",None)],[1,1,1],None,"F_D")
+rodape(ws3,["F_D = normalização mínimo-máximo da média de N(MI), PC ÷ máximo e TN ÷ máximo, como na planilha de cálculo (PC e TN não passam pelo mínimo-máximo).","Fontes: Ministério da Saúde (SIM e Sinasc, 2020); IBGE (Censo Demográfico 2022); Ipardes (natalidade 2022)."]); fechar(ws3,"D6")
 ws4,fs_col=aba_fator("4 Fator socioeconômico","Fator socioeconômico (F_S)","FS",
  [("BP: baixo peso para a idade","desnut_prop","0.0%"),("CU: crianças no CadÚnico","cad_prop","0.0%"),("IR: IPDM renda, emprego e produção","ipdm_r","0.000")],
  [("N(BP), sentido direto","desnut_norm",None),("N(CU), sentido direto","cad_norm",None),("N(IR), sentido inverso","ipdm_norm",None)],[1,1,1],None,"F_S")
