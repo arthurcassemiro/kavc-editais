@@ -143,6 +143,24 @@ for s in spec.get('text_subs', []):
             done = True; break
     assert done, f"texto não encontrado no elemento {s['el']}: {s['old']}"
     log.append(f"sub {s['el']}: {s['old']!r} -> {s['new']!r}")
+# 1b. substituições em células de tabela: linha identificada pelo texto da primeira célula
+for s in spec.get('cell_subs', []):
+    tbl = kids[s['el']]
+    row = None
+    for tr in tbl.findall(w('tr')):
+        c0 = tr.findall(w('tc'))[0]
+        if ''.join(t.text or '' for t in c0.iter(w('t'))).strip() == s['row_first']:
+            row = tr; break
+    assert row is not None, s
+    cell = row.findall(w('tc'))[s['col']]
+    ts = [t for t in cell.iter(w('t')) if t.text == s['old']]
+    assert len(ts) == 1, (s, [t.text for t in cell.iter(w('t'))])
+    ts[0].text = s['new']
+    if DESTACAR:
+        add_highlight(ts[0].getparent())
+    log.append(f"cell {s['el']} [{s['row_first']}][{s['col']}]: {s['old']!r} -> {s['new']!r}")
+# 1c. substituições de texto em notas de rodapé existentes
+fn_subs = spec.get('footnote_subs', [])
 # 2. substituições em OMML (m:t)
 for s in spec.get('math_subs', []):
     el = kids[s['el']]
@@ -195,13 +213,40 @@ for k in spec.get('remove', []):
     body.remove(el)
 doc.write(doc_path, xml_declaration=True, encoding='UTF-8', standalone=True)
 
-# 7. notas de rodapé novas (modelo: a última nota existente)
-if spec.get('footnotes'):
+# 7. notas de rodapé: substituições e notas novas (modelo: a última nota existente)
+fn_repl = spec.get('footnote_replace', {})
+if spec.get('footnotes') or fn_subs or fn_repl:
     fn = etree.parse(fn_path)
     froot = fn.getroot()
+    for s in fn_subs:
+        note = [n for n in froot.findall(w('footnote')) if n.get(w('id')) == str(s['id'])][0]
+        done = False
+        for t in note.iter(w('t')):
+            if t.text and s['old'] in t.text:
+                if not DESTACAR:
+                    t.text = t.text.replace(s['old'], s['new'], 1)
+                else:
+                    r = t.getparent(); a, b = t.text.split(s['old'], 1)
+                    t.text = a; t.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
+                    rn = copy.deepcopy(r); rn.find(w('t')).text = s['new']; add_highlight(rn)
+                    rb = copy.deepcopy(r); rb.find(w('t')).text = b
+                    r.addnext(rn); rn.addnext(rb)
+                    if not a: r.getparent().remove(r)
+                done = True; break
+        assert done, s
+        log.append(f"footnote_sub {s['id']}: {s['old']!r} -> {s['new']!r}")
     notes = froot.findall(w('footnote'))
     model = [n for n in notes if int(n.get(w('id'))) > 0][-1]
-    for fid, markup in spec['footnotes'].items():
+    for fid, markup in fn_repl.items():
+        note = [n for n in froot.findall(w('footnote')) if n.get(w('id')) == str(fid)][0]
+        p = note.find(w('p'))
+        for c in list(p):
+            if c.tag == w('r') and c.find(w('footnoteRef')) is None:
+                p.remove(c)
+        for r in build_runs(markup):
+            p.append(r)
+        log.append(f"footnote_replace {fid}: {markup[:60]!r}")
+    for fid, markup in spec.get('footnotes', {}).items():
         nn = copy.deepcopy(model)
         nn.set(w('id'), str(fid))
         p = nn.find(w('p'))

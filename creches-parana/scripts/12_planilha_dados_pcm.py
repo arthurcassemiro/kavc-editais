@@ -78,7 +78,7 @@ met=["Normalização mínimo-máximo de 0 a 100, com extremos dados pelos 399 mu
 "Fator educacional: F_E = normalização de [(2 × MC + MP + OP) / 4]. Fator demográfico: F_D = normalização de [(MI + PC + TN) / 3]. Fator socioeconômico: F_S = normalização de [(BP + CU + IR) / 3].",
 "PCM = (2 × F_E + F_D + 2 × F_S) / 500, entre 0 e 1.",
 "Os indicadores normalizados das abas 2 a 4 são os valores das planilhas de cálculo do estudo; fatores e PCM são recalculados por fórmula e reproduzem exatamente os valores do estudo.",
-"Na planilha de cálculo, a coluna usada como população infantil do indicador PC corresponde, pela magnitude, à faixa de 0 a 9 anos; o ordenamento dos municípios não se altera (correlação de 0,998 com a faixa de 0 a 4 anos)."]
+"Na planilha de cálculo, a coluna rotulada como população de 0 a 4 anos contém a população de 5 a 14 anos do Censo Demográfico 2022 (1.497.164 pessoas no estado) e entra no indicador PC e nas cotas dos portes grandes. Com a população de 0 a 4 anos, a correlação de postos com o PCM seria 0,99, e 154 dos 157 municípios selecionados nas faixas de menor porte se manteriam."]
 for t in met:
     c=ws.cell(row=r,column=2,value=t); ws.merge_cells(start_row=r,start_column=2,end_row=r,end_column=3); c.font=F(10); c.alignment=Alignment(wrap_text=True,vertical="top"); ws.row_dimensions[r].height=30; r+=1
 r+=1
@@ -96,7 +96,7 @@ ws.sheet_properties.pageSetUpPr=PageSetupProperties(fitToPage=True); ws.page_set
 ws=wb.create_sheet("1 Indicadores"); cab(ws,"Indicadores brutos por município","Valores de origem dos nove indicadores do PCM e variáveis auxiliares. Proporções em percentual.")
 cols=[("Código IBGE",11),("Município",26),("Porte",7),("População total (2022)",12),("População de 0 a 4 anos (2022)",12),
 ("Matrículas em creche (2023)",12),("MC: cobertura de creche",11),("MP: matrícula pré-escola e fundamental por criança de 5 a 14 anos",14),("Estabelecimentos privados com creche",12),("Estabelecimentos com creche",12),("OP: oferta privada",11),
-("MI: mortalidade infantil (por mil)",12),("PC: proporção de crianças",11),("TN: taxa de natalidade (por mil)",12),
+("MI: mortalidade infantil (por mil)",12),("PC: proporção de crianças de 5 a 14 anos",12),("TN: taxa de natalidade (por mil)",12),
 ("BP: baixo peso para a idade",11),("Crianças no CadÚnico a acompanhar",12),("CU: crianças no CadÚnico",11),("IR: IPDM renda, emprego e produção",12)]
 grupos(ws,R0-2,[(1,5,"Município","BASE"),(6,11,"Fator educacional","FE"),(12,14,"Fator demográfico","FD"),(15,18,"Fator socioeconômico","FS")])
 cabecalho(ws,R0-1,cols,"BASE")
@@ -106,7 +106,7 @@ for i,row in b.iterrows():
     vals=[row["pop"],row.pop04,row.mat_creche,row.prop_creche,row.prop_pre_fund,row.oferta_priv,row.oferta_tot,row.prop_priv,row.mort_inf,row.prop04,row.natalidade,row.desnut_prop,row.cadunico,row.cad_prop,row.ipdm_r]
     for j,v in enumerate(vals,4): ws.cell(row=r,column=j,value=None if pd.isna(v) else float(v))
 corpo(ws,1,18,{1:"0",4:"#,##0",5:"#,##0",6:"#,##0",7:"0.0%",8:"0.00",9:"#,##0",10:"#,##0",11:"0.0%",12:"0.0",13:"0.0%",14:"0.00",15:"0.0%",16:"#,##0",17:"0.0%",18:"0.000"})
-rodape(ws,["Fontes: Inep (Censo Escolar 2023); IBGE (Censo Demográfico 2022); Ministério da Saúde (SIM, Sinasc, Sisvan e condicionalidades do Bolsa Família); Ipardes (natalidade 2022; IPDM 2021).","PC: coluna da planilha de cálculo; corresponde, pela magnitude, à faixa de 0 a 9 anos (ver aba Sobre)."])
+rodape(ws,["Fontes: Inep (Censo Escolar 2023); IBGE (Censo Demográfico 2022); Ministério da Saúde (SIM, Sinasc, Sisvan e condicionalidades do Bolsa Família); Ipardes (natalidade 2022; IPDM 2021).","PC: população de 5 a 14 anos sobre a população total, como na planilha de cálculo (ver aba Sobre)."])
 fechar(ws,"D6")
 # ---------------- 2-4 Fatores ----------------
 def aba_fator(nome,titulo,k,brutos,norms,pesos,colfator,lab):
@@ -132,7 +132,7 @@ ws2,fe_col=aba_fator("2 Fator educacional","Fator educacional (F_E)","FE",
  [("N(MC), sentido inverso, peso 2","creche_norm",None),("N(MP), sentido inverso, peso 1","mat_norm",None),("N(OP), sentido inverso, peso 1","priv_norm",None)],[2,1,1],None,"F_E")
 rodape(ws2,["F_E = normalização mínimo-máximo de [(2 × N(MC) + N(MP) + N(OP)) / 4]. Indicadores normalizados conforme as planilhas de cálculo do estudo.","Fontes: Inep (Censo Escolar 2023); IBGE (Censo Demográfico 2022)."]); fechar(ws2,"D6")
 ws3,fd_col=aba_fator("3 Fator demográfico","Fator demográfico (F_D)","FD",
- [("MI: mortalidade infantil (por mil)","mort_inf","0.0"),("PC: proporção de crianças","prop04","0.0%"),("TN: taxa de natalidade (por mil)","natalidade","0.00")],
+ [("MI: mortalidade infantil (por mil)","mort_inf","0.0"),("PC: proporção de crianças de 5 a 14 anos","prop04","0.0%"),("TN: taxa de natalidade (por mil)","natalidade","0.00")],
  [("N(MI), sentido direto","mi_norm",None),("N(PC), sentido direto","prop04_norm",None),("N(TN), sentido direto","nat_norm",None)],[1,1,1],None,"F_D")
 rodape(ws3,["F_D = normalização mínimo-máximo de [(N(MI) + N(PC) + N(TN)) / 3].","Fontes: Ministério da Saúde (SIM e Sinasc, 2020); IBGE (Censo Demográfico 2022); Ipardes (natalidade 2022)."]); fechar(ws3,"D6")
 ws4,fs_col=aba_fator("4 Fator socioeconômico","Fator socioeconômico (F_S)","FS",
