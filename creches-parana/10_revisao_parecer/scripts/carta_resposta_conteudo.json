@@ -1,0 +1,46 @@
+{
+ "titulo": "Resposta ao parecer",
+ "subtitulo": "Manuscrito “De indicador a regra de alocação: Potencial de Creche por Município no Programa Infância Feliz” (versão revisada)",
+ "abertura": [
+  "Agradecemos à editoria e ao parecer pela leitura cuidadosa do manuscrito. Atendemos aos cinco pontos indicados e descrevemos abaixo cada alteração, com sua localização na versão revisada. A versão com marcas destaca em amarelo todo trecho novo ou modificado.",
+  "O manuscrito continua com 22 páginas. Para acomodar os acréscimos, enxugamos o roteiro da introdução, a abertura da seção 3 e passagens da seção 2, e retiramos linhas em branco entre parágrafos, figuras e tabelas."
+ ],
+ "quadro": [
+  {
+   "ponto": "1. Detalhar, em nota, a comparabilidade do cenário populacional alternativo, caracterizando-o como análise contrafactual.",
+   "resposta": "Incluímos, ao fim da seção 4.2, um parágrafo que compara a versão de maio de 2024, aprovada pelo CEDCA/PR, com o critério apenas populacional: 258 contra 147 municípios contemplados, 6 contra 37 unidades em Curitiba, 28% contra 13% das unidades nos 80 municípios de maior PCM e 89% contra 85% das crianças de zero a quatro anos em municípios contemplados. O parágrafo registra também a versão de março, anterior à redistribuição (224 municípios, 82% das crianças).\nA nova nota caracteriza o critério como simulação contrafactual da distribuição que se observaria na ausência da regra adotada e detalha a comparabilidade: mesmas 300 unidades e 399 municípios, população de zero a quatro anos do Censo 2022, arredondamento pelo maior resto, sem PCM, faixas, cotas, tetos ou etapa prévia. Como a versão de maio inclui as 43 unidades da etapa prévia, anteriores ao índice, a nota informa o resultado com essas unidades mantidas (152 municípios) e o caráter estático da simulação.\nA primeira lição da seção 5 retoma esse contrafactual para mostrar que índice e regra de conversão decidem juntos o resultado territorial.",
+   "local": "Seção 4.2, último parágrafo; nota 8; seção 5, lição 1"
+  },
+  {
+   "ponto": "2. Fundamentar os pesos dos pilares (2, 1 e 2) e esclarecer se decorreram de decisão discricionária da gestão pública ou de critérios validados de focalização social.",
+   "resposta": "Os pesos seguem o critério de focalização social dos atos que regem o programa, coerente com a estratégia 1.2 do Plano Nacional de Educação. Esses atos priorizam a vulnerabilidade e a demanda e não fixam valores numéricos. A equipe técnica da Casa Civil converteu o critério nos pesos 2, 1 e 2, sem estimação estatística, e a análise de sensibilidade mede o efeito dessa escolha. A seção 3.4 agora explicita essa base.\nA Deliberação nº 60/2023 do CEDCA/PR incumbiu a SEDEF de definir e ordenar por prioridade as localidades de maior vulnerabilidade, risco social e elevada demanda para a educação infantil. A Lei nº 21.870/2023 destina o programa às crianças em situação de vulnerabilidade, e a estratégia 1.2 do Plano Nacional de Educação previu reduzir a menos de 10% a diferença de frequência à creche entre o quinto de renda mais alto e o mais baixo.\nA demanda priorizada aparece sobretudo na lacuna de vagas, que o fator educacional mede, e o retorno do acesso à creche é maior entre as famílias pobres (seção 2.2). Por isso, os fatores educacional e socioeconômico recebem peso 2, e o demográfico, que capta a pressão potencial da demanda por indicadores indiretos, peso 1. Os pesos foram aplicados no ranqueamento que o CEDCA/PR aprovou com o estudo, e a Deliberação nº 25/2024 registra que o estudo considerou os dados de vulnerabilidade, risco social e elevada demanda para a educação infantil. Na classificação de Decancq e Lugo (2013, referência acrescentada), trata-se de ponderação normativa, que o manual da OCDE e do JRC admite para refletir prioridades de política, lembrando que, qualquer que seja o método, os pesos expressam juízos de valor (OECD; JRC, 2008, p. 31).\nA seção 3.4 acrescenta dois argumentos técnicos, verificados a posteriori. Com correlação fraca entre os fatores (0,02 a 0,23), pesos de análise fatorial seriam pouco informativos (OECD; JRC, 2008, p. 32, 89). A variação do fator demográfico vem sobretudo da mortalidade infantil, instável nos municípios pequenos, e a qualidade dos dados, que o manual admite com ressalvas como base de ponderação (OECD; JRC, 2008, p. 32), corrobora o peso menor desse fator.\nA análise de sensibilidade passou a medir o efeito sobre a seleção. Com pesos iguais, peso 3 no fator socioeconômico, normalização por percentis ou retirada da mortalidade infantil, a correlação de postos fica entre 0,93 e 0,97, e de 138 a 146 dos 157 municípios selecionados nas faixas menores se mantêm; as trocas envolvem municípios a menos de sete centésimos das linhas de corte. A variante com peso 3 no fator socioeconômico, ainda mais focalizada na vulnerabilidade, foi a que as planilhas de março e maio usaram na faixa de 20 a 70 mil habitantes; nessa faixa, 26 dos 27 contemplados coincidem com os de maior PCM (seção 4.2).",
+   "local": "Seção 3.4, dois parágrafos após a Figura 3 e parágrafo após o Mapa 4; seção 4.2; Referências"
+  },
+  {
+   "ponto": "3. Reescrever a seção 5 (clareza, coesão, coerência e assertividade) e, se necessário, tornar as demais seções mais concisas.",
+   "resposta": "A seção 5 foi reescrita por inteiro. Ela retoma a pergunta do artigo, apresenta as três lições com a tese em destaque, situa a terceira lição na economia política do gasto público, registra as limitações e encerra com a contribuição do caso. As expressões vagas e as frases fragmentadas da versão anterior foram eliminadas.",
+   "local": "Seção 5; seções 1, 2.3 e 3 (enxugamento)"
+  },
+  {
+   "ponto": "4. Reformular as três lições, explicitando a conexão entre resultados e inferências; esclarecer os números da primeira; desdobrar o período longo da terceira.",
+   "resposta": "Lição 1: os números formam um único exemplo. Um município com o PCM médio do estado (0,48) seria contemplado na faixa de 5 a 20 mil habitantes, com corte em 0,469, e ficaria como suplente na de até 5 mil, com corte em 0,513; entre os 30 maiores, o índice apenas pondera a população. O exemplo se liga aos resultados da regra: de 224 para 258 municípios entre versões com o mesmo índice, e 147 no critério populacional.\nLição 2: apoia-se nas correlações entre os fatores (seção 3.4) e na Tabela 5.\nLição 3: foi desdobrada em frases curtas e liga a inferência ao que a reconstrução das planilhas mostrou: onde a decisão seguiu o índice e onde os ajustes posteriores passaram à frente de suplentes com PCM maior.",
+   "local": "Seção 5, lições 1 a 3"
+  },
+  {
+   "ponto": "5. Revisar o parágrafo que termina com “Então, o que explica... (MOGUES, 2015)”.",
+   "resposta": "O parágrafo foi reescrito. Ele parte da terceira lição, apresenta o argumento de Mogues (2015) em oração completa e faz a ponte com o caso: no Paraná, a decisão de investir em creches precedeu a regra, e o que ficou exposto aos determinantes de economia política do gasto foi a escolha dos municípios. O parágrafo registra que a regra explícita não impediu os ajustes posteriores e que a verificação pelos municípios depende da publicação da ordem e dos pesos.",
+   "local": "Seção 5, parágrafo após as lições"
+  }
+ ],
+ "outras_titulo": "Outras correções feitas durante a revisão",
+ "outras": [
+  "Seções 3.2 e 4.1: ao reconstruir as planilhas, verificamos que a coluna rotulada como população de 0 a 4 anos, faixa que a Resolução nº 219/2024 indica para o indicador PC, contém a população de 5 a 14 anos do Censo 2022, e que PC e TN foram divididos pelo maior valor municipal, sem a normalização mínimo-máximo. Corrigimos a descrição do indicador (texto, Tabela 2 e nota 5) e da população-alvo das cotas dos portes grandes (seção 4.1 e Tabela 6) e medimos o efeito: calculado como descrito no texto, o PCM teria correlação de postos de 0,99 com o adotado, e 153 das 157 seleções se manteriam.",
+  "Seção 4.1, Figura 4 e Tabela 6: o fator m = 0,503 é um valor digitado nas planilhas de março e maio; uma versão anterior calculava 0,438, o PCM médio ponderado pela população-alvo. O total dos portes grandes foi fixado em 100 unidades, repartidas pelo maior resto com tetos, e a alocação é a mesma com os dois valores de m. O texto, a Figura 4 e a Tabela 6 descrevem agora essa cota fixa.",
+  "Seções 3.4, 4.1 e 4.2: as planilhas de março e maio ordenaram a faixa de 20 a 70 mil habitantes por uma variante com peso 3 no fator socioeconômico, e os ajustes posteriores passaram à frente de suplentes com PCM maior; a nota 7 detalha a passagem entre as versões.",
+  "Tabelas e legendas: linha de total da Tabela 6 corrigida (30 municípios); rótulo da coluna da Tabela 7 corrigido para “Revisão 05/2024”; legendas da Tabela 3 e do Mapa 3 uniformizadas.",
+  "Material suplementar atualizado com as mesmas correções: Tabelas 2, 3, 6 e 7, Figura 4, Mapa 3, arquivo consolidado, planilha editável das tabelas e planilha de dados de construção do PCM."
+ ],
+ "fecho": [
+  "Permanecemos à disposição para novos ajustes."
+ ]
+}

@@ -1,5 +1,5 @@
 import json, sys
-# Versão 5: v4 + segunda rodada de verificação (fatos, coerência e parecer, método).
+# Versão 10 (pesos como critério de focalização, ajustes da verificação; contrafactual na lição 1); base v6. Versão 5: v4 + segunda rodada de verificação (fatos, coerência e parecer, método).
 # Índices de elemento = filhos de w:body do manuscrito de entrada (entrada/texto.txt).
 T = {}
 T["018"] = "A seção 2 situa a educação infantil no federalismo e nas evidências empíricas e descreve o programa. A seção 3 reconstrói o PCM, e a seção 4 apresenta a regra de conversão e seus resultados alocativos. A seção 5 reúne as considerações finais."
@@ -8,17 +8,19 @@ T["074"] = "**a proporção de crianças na população total (PC):** prevista p
 T["nota8"] = ("A coluna da planilha rotulada como população de 0 a 4 anos, faixa que a Resolução SEDEF nº 219/2024 indica para PC (PARANÁ, 2024a, art. 3º), contém a de 5 a 14 anos (IBGE, 2023), "
  "usada também nas cotas dos portes grandes (seção 4.1). Calculado como descrito no texto, com a população de 0 a 4 anos e o operador N também em PC e TN, o PCM teria correlação de postos de 0,99 com o adotado; "
  "153 dos 157 municípios que ele seleciona nas faixas de menor porte se manteriam, e duas unidades mudariam de município entre os 30 maiores.")
-T["113a"] = ("Os pesos da Figura 3 decorreram de decisão discricionária da gestão pública: a equipe técnica da Casa Civil os fixou, e o CEDCA/PR os aprovou com o estudo e o ranqueamento (CEDCA, 2024). "
- "Não foram estimados a partir dos dados nem extraídos de um critério de focalização previamente validado; são pesos normativos na classificação de Decancq e Lugo (2013), e mesmo pesos estatísticos expressam juízos de valor (OECD; JRC, 2008, p. 31). "
- "O juízo segue o foco da lei do programa nas crianças em situação de vulnerabilidade social (PARANÁ, 2023) e a evidência da seção 2.2, segundo a qual a lacuna de vagas é o problema que a obra resolve e o retorno do acesso é maior entre as famílias pobres. "
- "Por isso, os fatores educacional e socioeconômico recebem peso 2, e o demográfico, peso 1.")
-T["113b"] = ("Dois argumentos técnicos, verificados *a posteriori*, reforçam a escolha. Pesos de análise fatorial ou de componentes principais seriam pouco informativos, porque, com correlação fraca, é improvável que os fatores tenham uma dimensão latente comum (OECD; JRC, 2008, p. 32, 89); "
- "as correlações de postos entre eles vão de 0,02 a 0,23. A qualidade dos dados, critério que o manual admite com ressalvas (OECD; JRC, 2008, p. 32), também pesa contra o fator demográfico, cuja variação vem sobretudo da mortalidade infantil, instável nos municípios pequenos: "
- "em 2020, 133 dos 399 municípios não registraram óbito infantil, e, nos de até 5 mil habitantes, com mediana de 42 nascimentos por ano, um único óbito altera a taxa em cerca de 24 por mil. "
+T["113a"] = ("Os pesos da Figura 3 traduzem um critério de focalização social. A Deliberação nº 60/2023 do CEDCA/PR incumbiu a SEDEF de definir e ordenar por prioridade as localidades de maior vulnerabilidade, risco social e elevada demanda para a educação infantil (CEDCA, 2023, art. 2º). "
+ "A lei do programa destina as creches às crianças em situação de vulnerabilidade (PARANÁ, 2023), e o Plano Nacional de Educação fixou como estratégia reduzir a menos de 10% a diferença de frequência à creche entre o quinto de renda mais alto e o mais baixo (BRASIL, 2014, estratégia 1.2). "
+ "A demanda priorizada aparece sobretudo na lacuna de vagas, que o fator educacional mede, e o retorno do acesso à creche é maior entre as famílias pobres (seção 2.2). "
+ "Por isso, os fatores educacional e socioeconômico recebem peso 2, e o demográfico, que capta a pressão potencial da demanda por indicadores indiretos, peso 1. "
+ "A equipe técnica da Casa Civil converteu a orientação nesses valores, aplicados no ranqueamento que o CEDCA/PR aprovou com o estudo; a Deliberação nº 25/2024 registra que o estudo considerou os dados de vulnerabilidade, risco social e demanda (CEDCA, 2024). "
+ "Na classificação de Decancq e Lugo (2013), a ponderação é normativa, sem estimação estatística, e o manual da OCDE admite pesos que reflitam prioridades de política (OECD; JRC, 2008, p. 31).")
+T["113b"] = ("Dois argumentos técnicos, verificados *a posteriori*, reforçam a escolha. Com correlações de postos de 0,02 a 0,23 entre os fatores, é improvável uma dimensão latente comum, e pesos de análise fatorial ou de componentes principais seriam pouco informativos (OECD; JRC, 2008, p. 32, 89). "
+ "A qualidade dos dados, critério que o manual admite com ressalvas (OECD; JRC, 2008, p. 32), corrobora o peso menor do fator demográfico, cuja variação vem sobretudo da mortalidade infantil, instável nos municípios pequenos. "
+ "Em 2020, 133 dos 399 municípios não registraram óbito infantil, e, nos de até 5 mil habitantes, com mediana de 42 nascimentos por ano, um único óbito altera a taxa em cerca de 24 por mil. "
  "A equação (5) consolida o cálculo, e o Mapa 4 mostra o resultado:")
 T["119"] = ("Na normalização mínimo-máximo, um único município define o zero ou o cem de cada indicador, o que torna o índice sensível a valores extremos (OECD; JRC, 2008). "
- "Testamos pesos iguais, peso 3 no fator socioeconômico e 1 nos demais (variante que as planilhas de março e maio usaram na faixa de 20 a 70 mil habitantes), normalização por percentis e a retirada da mortalidade infantil. "
- "A correlação de postos com o PCM adotado fica entre 0,93 e 0,97, e de 138 a 146 dos 157 municípios que o PCM seleciona nas faixas de menor porte (seção 4.1) continuariam selecionados, com trocas a menos de sete centésimos das linhas de corte. "
+ "Testamos pesos iguais, peso 3 no fator socioeconômico e 1 nos demais (variante ainda mais focalizada na vulnerabilidade, que as planilhas de março e maio usaram na faixa de 20 a 70 mil habitantes), normalização por percentis e retirada da mortalidade infantil. "
+ "A correlação de postos com o PCM adotado fica entre 0,93 e 0,97, e de 138 a 146 dos 157 municípios que o PCM seleciona nas faixas de menor porte (seção 4.1) se manteriam, com trocas a menos de sete centésimos das linhas de corte. "
  "A seção 4 converte esse ordenamento em unidades.")
 T["139"] = ("O conjunto dos 30 municípios grandes recebeu, porém, uma cota fixa de 100 unidades, repartida pelo maior resto na proporção de ⟦K_i⟧, com tetos de 10, 8, 7, 4 e 2 unidades por município, em ordem decrescente de porte, "
  "o que reduziu o total desses municípios de 142 para 100 e o de Curitiba, de 30 para 10. Com o total fixo e os tetos, a alocação reproduzida é a mesma com os dois valores de m.")
@@ -41,8 +43,8 @@ T["nota7"] = ("O critério populacional é uma simulação contrafactual da dist
 T["162"] = ("O artigo perguntou como converter evidências de necessidade em uma regra efetiva de alocação. No caso paranaense, a resposta combinou um índice, que ordena os municípios, "
  "e uma regra de conversão, que transforma o ordenamento em unidades. Três lições decorrem dos resultados:")
 T["163"] = ("**Índice e regra decidem juntos o resultado territorial.** Com PCM igual à média estadual, 0,48 (Tabela 5), um município de 5 a 20 mil habitantes seria contemplado no bloco 3, cuja linha de corte nessa faixa ficou em 0,469. "
- "Um de até 5 mil seria suplente, pois ali o corte foi 0,513, e entre os 30 maiores o mesmo valor apenas ponderaria a população, multiplicada por 1,48 no cálculo. "
- "Com o índice inalterado, a redução dos tetos e a redistribuição das unidades elevaram de 224 para 258 os municípios contemplados, e um critério apenas populacional alcançaria 147 (seção 4). "
+ "Um de até 5 mil seria suplente, pois ali o corte foi 0,513; entre os 30 maiores, o mesmo valor apenas ponderaria a população, multiplicada por 1,48 no cálculo. "
+ "Com o índice inalterado, a redução dos tetos e a redistribuição das unidades elevaram de 224 para 258 os municípios contemplados, e o contrafactual apenas populacional da seção 4.2 alcançaria 147. "
  "A regra de conversão exige, por isso, a mesma documentação que o índice.")
 T["164"] = ("**Medir a necessidade exigiu dados de vários setores.** Os fatores reúnem registros da educação, da saúde, da assistência social e da economia regional e têm correlações de postos de 0,02 a 0,23 entre si (seção 3.4), "
  "de modo que cada um acrescenta informação própria. Como o fator educacional cresce com o porte e o socioeconômico diminui, o PCM médio fica entre 0,415 e 0,498 em todas as faixas, exceto em Curitiba (Tabela 5); "
