@@ -1,5 +1,5 @@
 import json, sys
-# Versão 10 (pesos como critério de focalização, ajustes da verificação; contrafactual na lição 1); base v6. Versão 5: v4 + segunda rodada de verificação (fatos, coerência e parecer, método).
+# Versão 13 (pesos pela lógica do objeto; contrafactual em nota técnica; lições resultado-inferência) (pesos como critério de focalização, ajustes da verificação; contrafactual na lição 1); base v6. Versão 5: v4 + segunda rodada de verificação (fatos, coerência e parecer, método).
 # Índices de elemento = filhos de w:body do manuscrito de entrada (entrada/texto.txt).
 T = {}
 T["018"] = "A seção 2 situa a educação infantil no federalismo e nas evidências empíricas e descreve o programa. A seção 3 reconstrói o PCM, e a seção 4 apresenta a regra de conversão e seus resultados alocativos. A seção 5 reúne as considerações finais."
@@ -8,15 +8,14 @@ T["074"] = "**a proporção de crianças na população total (PC):** prevista p
 T["nota8"] = ("A coluna da planilha rotulada como população de 0 a 4 anos, faixa que a Resolução SEDEF nº 219/2024 indica para PC (PARANÁ, 2024a, art. 3º), contém a de 5 a 14 anos (IBGE, 2023), "
  "usada também nas cotas dos portes grandes (seção 4.1). Calculado como descrito no texto, com a população de 0 a 4 anos e o operador N também em PC e TN, o PCM teria correlação de postos de 0,99 com o adotado; "
  "153 dos 157 municípios que ele seleciona nas faixas de menor porte se manteriam, e duas unidades mudariam de município entre os 30 maiores.")
-T["113a"] = ("Os pesos da Figura 3 traduzem um critério de focalização social. A Deliberação nº 60/2023 do CEDCA/PR incumbiu a SEDEF de definir e ordenar por prioridade as localidades de maior vulnerabilidade, risco social e elevada demanda para a educação infantil (CEDCA, 2023, art. 2º). "
- "A lei do programa destina as creches às crianças em situação de vulnerabilidade (PARANÁ, 2023), e o Plano Nacional de Educação fixou como estratégia reduzir a menos de 10% a diferença de frequência à creche entre o quinto de renda mais alto e o mais baixo (BRASIL, 2014, estratégia 1.2). "
- "A demanda priorizada aparece sobretudo na lacuna de vagas, que o fator educacional mede, e o retorno do acesso à creche é maior entre as famílias pobres (seção 2.2). "
- "Por isso, os fatores educacional e socioeconômico recebem peso 2, e o demográfico, que capta a pressão potencial da demanda por indicadores indiretos, peso 1. "
- "A equipe técnica da Casa Civil converteu a orientação nesses valores, aplicados no ranqueamento que o CEDCA/PR aprovou com o estudo; a Deliberação nº 25/2024 registra que o estudo considerou os dados de vulnerabilidade, risco social e demanda (CEDCA, 2024). "
+T["113a"] = ("Os pesos da Figura 3 seguem a focalização do programa. Como ele constrói creches para crianças em situação de vulnerabilidade (PARANÁ, 2023), os pilares ligados diretamente a esse objeto recebem peso 2: o educacional mede a lacuna de vagas que a obra preenche, e o socioeconômico, a vulnerabilidade das famílias, entre as quais o retorno do acesso à creche é maior (seção 2.2). "
+ "O demográfico tem perspectiva transversal, pois a pressão da demanda que ele mede se relaciona com as outras duas dimensões sem medir diretamente a lacuna nem a vulnerabilidade; com peso 1, permanece no índice sem desequilibrá-lo nem diluir a focalização. "
+ "A orientação é coerente com a Deliberação nº 60/2023 do CEDCA/PR, que incumbiu a SEDEF de definir e priorizar as localidades de maior vulnerabilidade, risco social e elevada demanda para a educação infantil (CEDCA, 2023, art. 2º), e com a estratégia 1.2 do Plano Nacional de Educação, que fixou a redução da desigualdade de frequência à creche entre os quintos de renda (BRASIL, 2014). "
+ "Esses atos não fixam valores; os pesos foram definidos pela equipe técnica da Casa Civil, autora do estudo (PARANÁ, 2024a), e aplicados no ranqueamento que o CEDCA/PR aprovou (CEDCA, 2024). "
  "Na classificação de Decancq e Lugo (2013), a ponderação é normativa, sem estimação estatística, e o manual da OCDE admite pesos que reflitam prioridades de política (OECD; JRC, 2008, p. 31).")
-T["113b"] = ("Dois argumentos técnicos, verificados *a posteriori*, reforçam a escolha. Com correlações de postos de 0,02 a 0,23 entre os fatores, é improvável uma dimensão latente comum, e pesos de análise fatorial ou de componentes principais seriam pouco informativos (OECD; JRC, 2008, p. 32, 89). "
- "A qualidade dos dados, critério que o manual admite com ressalvas (OECD; JRC, 2008, p. 32), corrobora o peso menor do fator demográfico, cuja variação vem sobretudo da mortalidade infantil, instável nos municípios pequenos. "
- "Em 2020, 133 dos 399 municípios não registraram óbito infantil, e, nos de até 5 mil habitantes, com mediana de 42 nascimentos por ano, um único óbito altera a taxa em cerca de 24 por mil. "
+T["113b"] = ("Dois argumentos técnicos, verificados *a posteriori*, corroboram a escolha. Com correlações de postos de 0,02 a 0,23 entre os fatores, é improvável uma dimensão latente comum, e pesos de análise fatorial seriam pouco informativos (OECD; JRC, 2008, p. 32, 89). "
+ "A qualidade dos dados, que o manual admite com ressalvas (OECD; JRC, 2008, p. 32), também desaconselha peso maior ao fator demográfico, cuja variação vem sobretudo da mortalidade infantil. "
+ "Em 2020, 133 dos 399 municípios não registraram óbito infantil, e, nos de até 5 mil habitantes, um único óbito altera a taxa em cerca de 24 por mil. "
  "A equação (5) consolida o cálculo, e o Mapa 4 mostra o resultado:")
 T["119"] = ("Na normalização mínimo-máximo, um único município define o zero ou o cem de cada indicador, o que torna o índice sensível a valores extremos (OECD; JRC, 2008). "
  "Testamos pesos iguais, peso 3 no fator socioeconômico e 1 nos demais (variante ainda mais focalizada na vulnerabilidade, que as planilhas de março e maio usaram na faixa de 20 a 70 mil habitantes), normalização por percentis e retirada da mortalidade infantil. "
@@ -32,27 +31,24 @@ T["nota6"] = ("A versão de maio reduziu os tetos dos portes grandes e retirou 3
  "as 38 unidades foram para 38 municípios, 37 deles das faixas inferiores (35 sem unidade em março), e a versão alcançou 300 unidades em 258 municípios, números anunciados em 10 de junho de 2024 (PARANÁ, 2024b). "
  "A Resolução SEDEF nº 219/2024 devolveu a unidade de Santa Terezinha de Itaipu, acrescentou uma unidade a Corbélia e a Pranchita, de 5 a 20 mil habitantes, e publicou 303 unidades em 261 municípios, "
  "com substituição do desistente pelo próximo ranqueado (PARANÁ, 2024a).")
-T["novo4_2"] = ("Para medir o efeito da distribuição adotada sobre a seleção territorial, comparamos a versão de maio de 2024, aprovada pelo CEDCA/PR, com um critério apenas populacional, "
- "que repartiria as mesmas 300 unidades em proporção à população de zero a quatro anos[^7]. A versão aprovada contemplou 258 municípios, contra 147, deu 6 unidades a Curitiba, contra 37, "
- "e destinou 28% das unidades aos 80 municípios de maior PCM, contra 13%; 89% das crianças de zero a quatro anos viviam em municípios contemplados, contra 85%. "
- "Na versão de março, anterior à redistribuição, eram 224 municípios contemplados, com 82% das crianças.")
-T["nota7"] = ("O critério populacional é uma simulação contrafactual da distribuição que se observaria na ausência da regra adotada: reparte as 300 unidades entre os 399 municípios em proporção à população de zero a quatro anos "
- "do Censo Demográfico de 2022 (IBGE, 2023), pelo maior resto usado no bloco 2 (BALINSKI; YOUNG, 2001), sem PCM, faixas, cotas, tetos ou etapa prévia. A versão de maio soma as mesmas 300 unidades e inclui as 43 da etapa prévia, anteriores ao índice; "
- "mantidas essas 43 e repartidas as outras 257 pela população, seriam 152 municípios, 31 unidades em Curitiba e 17% das unidades nos 80 municípios de maior PCM. "
- "A simulação é estática e não considera adesões, desistências nem capacidade de execução.")
+T["novo4_2"] = ("Para medir o efeito do índice e da regra sobre a seleção territorial, comparamos a versão aprovada em maio de 2024 com um contrafactual que repartiria as mesmas 300 unidades apenas pela população de zero a quatro anos[^7]. "
+ "A versão aprovada contemplou 258 municípios, contra 147, e destinou 28% das unidades aos 80 municípios de maior PCM, contra 13%; 89% das crianças de zero a quatro anos viviam em municípios contemplados, contra 85%.")
+T["nota7"] = ("Simulação contrafactual da distribuição que se observaria na ausência da regra adotada, com o mesmo total de unidades e os mesmos 399 municípios. "
+ "A nota técnica do material suplementar detalha sua construção, a comparabilidade com as versões de março e maio de 2024 e os limites da inferência.")
 T["162"] = ("O artigo perguntou como converter evidências de necessidade em uma regra efetiva de alocação. No caso paranaense, a resposta combinou um índice, que ordena os municípios, "
  "e uma regra de conversão, que transforma o ordenamento em unidades. Três lições decorrem dos resultados:")
-T["163"] = ("**Índice e regra decidem juntos o resultado territorial.** Com PCM igual à média estadual, 0,48 (Tabela 5), um município de 5 a 20 mil habitantes seria contemplado no bloco 3, cuja linha de corte nessa faixa ficou em 0,469. "
- "Um de até 5 mil seria suplente, pois ali o corte foi 0,513; entre os 30 maiores, o mesmo valor apenas ponderaria a população, multiplicada por 1,48 no cálculo. "
- "Com o índice inalterado, a redução dos tetos e a redistribuição das unidades elevaram de 224 para 258 os municípios contemplados, e o contrafactual apenas populacional da seção 4.2 alcançaria 147. "
- "A regra de conversão exige, por isso, a mesma documentação que o índice.")
-T["164"] = ("**Medir a necessidade exigiu dados de vários setores.** Os fatores reúnem registros da educação, da saúde, da assistência social e da economia regional e têm correlações de postos de 0,02 a 0,23 entre si (seção 3.4), "
- "de modo que cada um acrescenta informação própria. Como o fator educacional cresce com o porte e o socioeconômico diminui, o PCM médio fica entre 0,415 e 0,498 em todas as faixas, exceto em Curitiba (Tabela 5); "
- "um índice só educacional favoreceria as cidades maiores, e um só socioeconômico, as menores. A decisão também envolveu vários órgãos, do estudo da Casa Civil e do Ipardes à adesão dos municípios (Figura 1).")
-T["165"] = ("**A reconstrução da regra tornou verificável a margem de decisão.** Confrontada com o estudo aprovado pelo CEDCA/PR e com as planilhas, a lista publicada (PARANÁ, 2024a) mostra onde a decisão seguiu o índice e onde se afastou dele. "
- "Nas faixas de até 20 mil habitantes, o bloco 3 segue a ordem do PCM, com menos de um centésimo entre o último contemplado e o primeiro suplente, dentro da margem em que pesos alternativos trocam municípios (seção 3.4). "
- "Os municípios que entraram em maio, ao contrário, passaram à frente de suplentes com PCM maior (seção 4.2). "
- "Terreno e capacidade de licitar, que o índice não capta, entram pela adesão (PARANÁ, 2024c), e a vaga de quem desiste passa ao próximo ranqueado (PARANÁ, 2024a).")
+T["163"] = ("**Índice e regra decidem juntos o resultado territorial.** Três comparações com as mesmas 300 unidades sustentam essa lição. "
+ "A versão aprovada contemplou 258 municípios, contra 147 no contrafactual populacional, sem índice, faixas ou tetos (seção 4.2). "
+ "Entre março e maio de 2024, com o mesmo índice, a redução dos tetos e a redistribuição de 38 unidades elevaram os contemplados de 224 para 258 (seção 4.1). "
+ "No bloco 3 (seção 4.1), o mesmo PCM leva a resultados opostos conforme a faixa. Com a média estadual, 0,48 (Tabela 5), um município seria contemplado na faixa de 5 a 20 mil habitantes (corte em 0,469) e suplente na de até 5 mil (corte em 0,513). "
+ "O resultado territorial depende, portanto, também da regra de conversão, que exige a mesma documentação que o índice.")
+T["164"] = ("**Medir a necessidade exigiu dados de vários setores.** Os fatores reúnem registros da educação, da saúde, da assistência social e da economia regional e têm correlações de postos de 0,02 a 0,23 entre si (seção 3.4); cada setor acrescenta, assim, informação própria. "
+ "Como o fator educacional cresce com o porte e o socioeconômico diminui, o PCM médio fica entre 0,415 e 0,498 em todas as faixas, exceto em Curitiba (Tabela 5); um índice só educacional favoreceria as cidades maiores, e um só socioeconômico, as menores. "
+ "Sem o índice, essa informação se perde: no contrafactual populacional, os 80 municípios de maior PCM receberiam 13% das unidades, contra 28% na versão aprovada (seção 4.2).")
+T["165"] = ("**A reconstrução da regra tornou verificável a margem de decisão.** Nas faixas de até 20 mil habitantes, o bloco 3 segue a ordem do PCM. "
+ "Menos de um centésimo separa o último contemplado do primeiro suplente, distância em que pesos alternativos já trocam municípios (seção 3.4). "
+ "Os 35 municípios que entraram em maio, ao contrário, passaram à frente de suplentes com PCM maior (seção 4.2). "
+ "Confrontar a lista publicada (PARANÁ, 2024a) com o estudo e as planilhas permite, assim, separar o que decorre do índice do que decorre de ajustes posteriores.")
 T["167"] = ("A terceira lição remete à economia política do gasto público. Mogues (2015) parte da incongruência entre o retorno elevado de certos investimentos e sua negligência nas carteiras orçamentárias "
  "e atribui a alocação aos incentivos e às restrições de políticos, burocratas, grupos de interesse e doadores, às características dos bens e ao ambiente de governança. "
  "No Paraná, a decisão de investir em creches precedeu a regra, e o que ficou exposto a esses determinantes foi a escolha dos municípios. "
@@ -128,6 +124,9 @@ S["text_subs"] += [
   {"el": 103, "old": " (Mapa 3), regiões que a seção 4 mostrará entre as mais contempladas.", "new": " (Mapa 3)."},
   {"el": 131, "old": "Os blocos 2 e 3 utilizados pelo PCM respondem à seguinte questão:", "new": "Os blocos 2 e 3 aplicam o PCM de formas distintas por uma razão de escala:"},
   {"el": 144, "old": "e a cobertura de creche cresce à medida que o porte diminui, de 20,9% em Curitiba a 41,8% nos", "new": "e a cobertura de creche é menor nos portes acima de 100 mil habitantes, de 7,6% a 25,5%, e chega a 41,8% nos"},
+]
+S["text_subs"] += [
+  {"el": 141, "old": " do último contemplado é a linha de corte da faixa; abaixo dela, os demais permanecem na ordem do índice, como suplentes.", "new": " do último contemplado é a linha de corte da faixa (0,469 de 5 a 20 mil e 0,513 até 5 mil); os demais ficam como suplentes, na ordem do índice."},
 ]
 S["move_before"] = [[177, 176], [184, 183]]
 json.dump(S, open(sys.argv[1], 'w', encoding='utf8'), ensure_ascii=False, indent=1)

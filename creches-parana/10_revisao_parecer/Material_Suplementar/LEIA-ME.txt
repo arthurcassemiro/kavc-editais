@@ -8,6 +8,10 @@ Figuras e tabelas são editáveis no Word (as figuras são diagramas construído
 Arquivo consolidado
   00_Material_Suplementar_completo.docx ...... todos os elementos, um por página, com índice
 
+Nota técnica
+  Nota_tecnica_analise_contrafactual.docx (e .pdf) ... análise contrafactual sob critério apenas
+                                                    populacional (seção 4.2 e nota 8 do artigo)
+
 Figuras
   Figura_1_Processo_decisorio_e_institucional.docx ...... Figura 1 (seção 2.3)
   Figura_2_Fluxo_financeiro_fundo_a_fundo.docx ........... Figura 2 (seção 2.3)

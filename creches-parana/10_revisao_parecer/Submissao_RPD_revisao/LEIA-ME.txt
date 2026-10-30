@@ -15,6 +15,8 @@ O que subir no sistema da revista:
 4_Material_suplementar/
    Todas as figuras, tabelas e mapas em arquivos separados, já com as correções, mais a planilha
    de dados de construção do PCM (Dados_construcao_PCM.xlsx). Substituem os arquivos enviados antes.
+   Inclui a nota técnica da análise contrafactual (Nota_tecnica_analise_contrafactual.docx e .pdf),
+   pedida no ponto 1 do parecer.
    Mudaram nesta revisão: Tabelas 2, 3, 6 e 7, Figura 4, Mapa 3, o arquivo consolidado
    (00_Material_Suplementar_completo.docx), a planilha editável das tabelas e a planilha de dados.
    Os demais arquivos estão iguais aos já enviados.
