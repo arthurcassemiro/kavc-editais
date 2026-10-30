@@ -117,5 +117,16 @@ S = {
  "footnotes": {"7": T["nota7"], "8": T["nota8"]},
  "ref_insert_before": {"190": [REF_DECANCQ]},
 }
+S["text_subs"] += [
+  {"el": 2, "old": "INFÂNCIA FELIZ “", "new": "INFÂNCIA FELIZ”"},
+  {"el": 17, "old": "reconstruir essa metodologia e replicar como o indicador serviu de instrumento para essa política pública.  Com isso", "new": "reconstruir essa metodologia, replicar seus cálculos e mostrar como o indicador serviu de instrumento para essa política pública. Com isso"},
+  {"el": 35, "old": "Em maio de 2024 aprovou", "new": "Em maio de 2024, o conselho aprovou"},
+  {"el": 35, "old": "Por fim, Paranacidade, serviço social autônomo da Secretaria das Cidades,", "new": "Por fim, o Paranacidade, serviço social autônomo vinculado à Secretaria das Cidades,"},
+  {"el": 41, "old": "e regulamentado pelo Decreto Estadual nº 10.455/2014", "new": "e no Decreto Estadual nº 10.455/2014"},
+  {"el": 103, "old": " (Mapa 3), regiões que a seção 4 mostrará entre as mais contempladas.", "new": " (Mapa 3)."},
+  {"el": 131, "old": "Os blocos 2 e 3 utilizados pelo PCM respondem à seguinte questão:", "new": "Os blocos 2 e 3 aplicam o PCM de formas distintas por uma razão de escala:"},
+  {"el": 144, "old": "e a cobertura de creche cresce à medida que o porte diminui, de 20,9% em Curitiba a 41,8% nos", "new": "e a cobertura de creche é menor nos portes acima de 100 mil habitantes, de 7,6% a 25,5%, e chega a 41,8% nos"},
+]
+S["move_before"] = [[177, 176], [184, 183]]
 json.dump(S, open(sys.argv[1], 'w', encoding='utf8'), ensure_ascii=False, indent=1)
 json.dump(T, open(sys.argv[1].replace('.json','_textos.json'), 'w', encoding='utf8'), ensure_ascii=False, indent=1)

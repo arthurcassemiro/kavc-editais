@@ -237,6 +237,10 @@ for k, refs in spec.get('ref_insert_before', {}).items():
             add_highlight(runs[0])
         tgt.addprevious(p)
     log.append(f"ref_insert_before {k}: {len(refs)}")
+# 5b. mover elementos: [el, antes_de]
+for el, antes in spec.get('move_before', []):
+    kids[int(antes)].addprevious(kids[int(el)])
+    log.append(f"move {el} antes de {antes}")
 # 6. remoções
 for k in spec.get('remove', []):
     el = kids[int(k)]

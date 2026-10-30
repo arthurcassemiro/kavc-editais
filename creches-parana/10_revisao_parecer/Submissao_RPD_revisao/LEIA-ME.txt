@@ -1,0 +1,20 @@
+Revisão do manuscrito para a Revista Paranaense de Desenvolvimento (aceite condicionado a revisões)
+
+O que subir no sistema da revista:
+
+1_Artigo_revisado.docx
+   Versão revisada, sem identificação de autoria (avaliação cega). É o arquivo principal.
+
+2_Artigo_revisado_alteracoes_destacadas.docx
+   Mesmo texto, com todo trecho novo ou alterado destacado em amarelo. Use se o sistema
+   pedir a versão com as alterações marcadas.
+
+3_Resposta_ao_parecer.docx
+   Carta com a resposta ponto a ponto aos cinco itens do parecer e a lista das demais correções.
+
+4_Material_suplementar/
+   Todas as figuras, tabelas e mapas em arquivos separados, já com as correções, mais a planilha
+   de dados de construção do PCM (Dados_construcao_PCM.xlsx). Substituem os arquivos enviados antes.
+   Mudaram nesta revisão: Tabelas 2, 3, 6 e 7, Figura 4, Mapa 3, o arquivo consolidado
+   (00_Material_Suplementar_completo.docx), a planilha editável das tabelas e a planilha de dados.
+   Os demais arquivos estão iguais aos já enviados.
