@@ -133,6 +133,12 @@
    "contexto": "Lei nº 21.870, de 19 de dezembro de 2023",
    "old": "Altera a Lei nº 11.580, de 14 de novembro de 1996, que trata do Imposto sobre Operações relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, a Lei nº 14.260, de 22 de dezembro de 2003, que estabelece normas sobre o tratamento tributário pertinente  ao  Imposto  sobre  a  Propriedade  de  Veículos  Automotores  e  a  Lei  Complementar nº 231, de 17 de dezembro 2020, que estabelece normas de finanças públicas voltadas para a qualidade e a responsabilidade na gestão fiscal do Estado do Paraná e cria o Fundo de Recuperação e Estabilização Fiscal do Paraná.",
    "new": "Institui o Programa Infância Feliz Paraná."
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "§ 1º A União organizará",
+   "old": "(Brasil, 1988)",
+   "new": "(Brasil, 1988, art. 211)"
   }
  ]
 }
