@@ -1,0 +1,138 @@
+{
+ "inserir_apos": [
+  {
+   "titulo": "O PANORAMA DE POLÍTICAS PÚBLICAS SOBRE CRECHES E O PARANÁ",
+   "modelo": "A Constituição define o dever",
+   "texto": "A regra de alocação analisada neste artigo opera em um arranjo federativo no qual a oferta de creche cabe prioritariamente aos municípios, com cooperação técnica e financeira da União e dos estados. Esta seção descreve esse arranjo, resume as evidências que orientam a escolha das dimensões do índice e apresenta o Programa Infância Feliz, com os atores que participaram da decisão."
+  },
+  {
+   "titulo": "APLICAÇÃO DO PCM PARA A POLÍTICA PÚBLICA DE PRIMEIRA INFÂNCIA",
+   "modelo": "O PCM qualifica a demanda e a oferta",
+   "texto": "Esta seção passa do índice à alocação. A seção 4.1 descreve a regra que converteu o ordenamento do PCM em unidades, organizada em três blocos, e a seção 4.2 examina o resultado, comparando as versões sucessivas da lista entre si e com um critério apenas populacional."
+  }
+ ],
+ "subs": [
+  {
+   "part": "word/document.xml",
+   "contexto": "com teto de R$ 1.304.792,16",
+   "old": "(Paraná, 2024c, art. 3º e 11; 2025)",
+   "new": "(Paraná, 2024b, art. 3º e 11; 2025)"
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "custeio posterior é municipal",
+   "old": "(Paraná, 2024c, art. 12, 13 e 18)",
+   "new": "(Paraná, 2024b, art. 12, 13 e 18)"
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Os pesos da Figura 3 seguem",
+   "old": "(Paraná, 2023),",
+   "new": "(Paraná, 2023a),"
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Os pesos da Figura 3 seguem",
+   "old": "autora do estudo (Paraná, 2024a)",
+   "new": "autora do estudo (Paraná, 2024c)"
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Confrontar a lista publicada",
+   "old": "(Paraná, 2024a)",
+   "new": "(Paraná, 2024c)"
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Os resultados seguem a ordem do mecanismo",
+   "old": "até 5.000 habitantes",
+   "new": "até 5 mil habitantes"
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Lei nº 13.005",
+   "old": "https://www.planalto.gov.br/ccivil_03/leis/l9394.htm",
+   "new": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13005.htm"
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Lei nº 14.113",
+   "old": "https://www.planalto.gov.br/ccivil_03/leis/l9394.htm",
+   "new": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14113.htm"
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Resolução nº 219/2024",
+   "old": "Sedef, 2024b.",
+   "new": "Sedef, 2024c."
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "MAIOR programa do País",
+   "old": "10 jun. 2024b.",
+   "new": "10 jun. 2024."
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Resolução nº 212/2024",
+   "old": "2024b.Disponível",
+   "new": "2024b. Disponível"
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Recurso Extraordinário 1008166",
+   "old": "Acesso em: 10 nov. 2026",
+   "new": "Acesso em: 10 nov. 2026."
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Deliberação nº 25/2024",
+   "old": "Secretaria do Desenvolvimento Social e Família. Conselho",
+   "new": "Secretaria de Estado do Desenvolvimento Social e Família. Conselho"
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Deliberação nº 60/2023",
+   "old": "Secretaria do Desenvolvimento Social e Família. Conselho",
+   "new": "Secretaria de Estado do Desenvolvimento Social e Família. Conselho"
+  },
+  {
+   "part": "word/footnotes.xml",
+   "contexto": "A coluna da planilha rotulada",
+   "old": "PC (Paraná, 2024a)",
+   "new": "PC (Paraná, 2024c, art. 3º)"
+  },
+  {
+   "part": "word/footnotes.xml",
+   "contexto": "A versão de maio reduziu os tetos",
+   "old": "(Maior […], 2024b, on-line)",
+   "new": "(Maior […], 2024, on-line)"
+  },
+  {
+   "part": "word/footnotes.xml",
+   "contexto": "A versão de maio reduziu os tetos",
+   "old": "ranqueado (Paraná, 2024a)",
+   "new": "ranqueado (Paraná, 2024c)"
+  },
+  {
+   "part": "word/footnotes.xml",
+   "contexto": "(biografia do Arthur)",
+   "old": "(biografia do Arthur)",
+   "tirar_destaque": true,
+   "new": "Doutorando em Economia pela Universidade Estadual de Campinas, Campinas, São Paulo, Brasil, e pesquisador visitante no Centre for Environmental Policy do Imperial College London, Londres, Reino Unido. Mestre em Economia pela Universidade Estadual de Campinas e graduado em Ciências Econômicas pela Universidade Federal do Paraná, Curitiba, Paraná, Brasil. Atuou na Casa Civil do Governo do Paraná entre 2023 e 2025."
+  },
+  {
+   "part": "word/footnotes.xml",
+   "contexto": "(biografia do Luiz)",
+   "old": "(biografia do Luiz)",
+   "tirar_destaque": true,
+   "new": "Mestre em Economia Regional e graduado em Economia, ambos pela Universidade Estadual de Londrina, Londrina, Paraná, Brasil. Especialista em Direito Administrativo e Administração Pública. Diretor-Geral da Secretaria de Estado da Fazenda do Paraná, Curitiba, Paraná, Brasil, e Agente Fazendário do quadro da mesma secretaria. Foi Diretor de Articulação Estratégica e Acompanhamento Fiscal da Casa Civil do Governo do Paraná."
+  },
+  {
+   "part": "word/document.xml",
+   "contexto": "Lei nº 21.870, de 19 de dezembro de 2023",
+   "old": "Altera a Lei nº 11.580, de 14 de novembro de 1996, que trata do Imposto sobre Operações relativas à Circulação de Mercadorias e sobre Prestações de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação, a Lei nº 14.260, de 22 de dezembro de 2003, que estabelece normas sobre o tratamento tributário pertinente  ao  Imposto  sobre  a  Propriedade  de  Veículos  Automotores  e  a  Lei  Complementar nº 231, de 17 de dezembro 2020, que estabelece normas de finanças públicas voltadas para a qualidade e a responsabilidade na gestão fiscal do Estado do Paraná e cria o Fundo de Recuperação e Estabilização Fiscal do Paraná.",
+   "new": "Institui o Programa Infância Feliz Paraná."
+  }
+ ]
+}
